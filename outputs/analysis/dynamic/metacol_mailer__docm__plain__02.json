@@ -1,0 +1,76 @@
+{
+  "sample_id": "metacol_mailer__docm__plain__02",
+  "format": "docm",
+  "family": "metacol_mailer",
+  "variant": "plain",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 597,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 673,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 798,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 895,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1278,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 1599,
+      "source": "dynamic",
+      "behavior": "outlook_access",
+      "obj": "metacol_mailer:outlook_access",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_env",
+    "interaction_handled": true,
+    "note": "missing environment dependency: outlook",
+    "missing_dependency": "outlook",
+    "analysis_time_ms": 0.08678436279296875
+  }
+}

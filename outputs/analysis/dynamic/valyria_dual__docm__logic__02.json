@@ -1,0 +1,76 @@
+{
+  "sample_id": "valyria_dual__docm__logic__02",
+  "format": "docm",
+  "family": "valyria_dual",
+  "variant": "logic",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 257,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 300,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 478,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 869,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1162,
+      "source": "dynamic",
+      "behavior": "dead_code",
+      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 1576,
+      "source": "dynamic",
+      "behavior": "outlook_access",
+      "obj": "valyria_dual:outlook_access",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_env",
+    "interaction_handled": true,
+    "note": "missing environment dependency: outlook",
+    "missing_dependency": "outlook",
+    "analysis_time_ms": 0.08893013000488281
+  }
+}

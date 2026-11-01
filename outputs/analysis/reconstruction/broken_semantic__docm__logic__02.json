@@ -1,0 +1,43 @@
+{
+  "sample_id": "broken_semantic__docm__logic__02",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.95,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "dead_code",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.95,
+      "supported": false,
+      "obj": "logic"
+    }
+  ],
+  "chain": "delivery -> defense_evasion",
+  "status": "partial"
+}

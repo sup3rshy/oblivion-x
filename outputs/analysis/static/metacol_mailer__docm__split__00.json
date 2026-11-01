@@ -1,0 +1,81 @@
+{
+  "sample_id": "metacol_mailer__docm__split__00",
+  "format": "docm",
+  "family": "metacol_mailer",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Body =",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Send",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_access",
+      "obj": "Outlook.Application",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "string_concat",
+      "obj": "split",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": true,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "Outlook.Application",
+      "Please find the attached document.",
+      "Invoice"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 5,
+    "analysis_time_ms": 25.6500244140625,
+    "sha256": "c49d3bf3c03e3c18e2b5abc317fe027f5a108552420d56052046162ea6b155a7"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "sample_id": "slow_timeout__docm__combo__02",
+  "format": "docm",
+  "family": "slow_timeout",
+  "variant": "combo",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "shell_run",
+      "obj": "Shell \"",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:shell_run"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "cmd_run",
+      "obj": "cmd /c",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:cmd_run"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "chr_encode",
+      "obj": "encode",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "dead_code",
+      "obj": "logic",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    },
+    {
+      "id": 8,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "base64_encode",
+      "obj": "base64-blob",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": true,
+      "split": false,
+      "encode": true,
+      "logic": true
+    },
+    "recovered_payloads": [
+      "-timeout-marker",
+      "http://127.0.0.1:9090/payload.exe",
+      "http://127.0.0.1:9090/payload.exe"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 8,
+    "analysis_time_ms": 37.32037544250488,
+    "sha256": "9164ae175c49e392311427a3eb3ef7fc8108d0b3b68f46ff4f41658966479bab"
+  }
+}

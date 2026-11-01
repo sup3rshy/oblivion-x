@@ -1,0 +1,138 @@
+{
+  "sample_id": "marker_ftp__xlsm__plain__01",
+  "format": "xlsm",
+  "family": "marker_ftp",
+  "variant": "plain",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "shell_run",
+      "obj": "Shell \"",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:shell_run"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "cmd_run",
+      "obj": "cmd /c",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:cmd_run"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "ftp_upload",
+      "obj": "ftp",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:ftp_upload"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Open LogPath For",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Print #",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 8,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 9,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 10,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 11,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 11,
+    "analysis_time_ms": 18.94092559814453,
+    "sha256": "ce3d0d764f8bcd02d95d5ae19037170ffd567b0a065d55fb91a39bc2d7c815ea"
+  }
+}

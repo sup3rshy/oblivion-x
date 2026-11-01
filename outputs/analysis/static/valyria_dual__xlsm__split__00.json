@@ -1,0 +1,101 @@
+{
+  "sample_id": "valyria_dual__xlsm__split__00",
+  "format": "xlsm",
+  "family": "valyria_dual",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Send",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Body =",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Send",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/second-stage.bin",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_access",
+      "obj": "Outlook.Application",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "string_concat",
+      "obj": "split",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": true,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "http://127.0.0.1:9090/second-stage.bin",
+      "Outlook.Application"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 7,
+    "analysis_time_ms": 24.453401565551758,
+    "sha256": "164733b2689ad4a07b6c7b091afe81a865ac376257b404c4bf13e1fa8aa939f4"
+  }
+}

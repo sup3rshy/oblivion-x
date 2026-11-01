@@ -1,0 +1,153 @@
+{
+  "sample_id": "locky_ransom__xlsm__combo__02",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        5,
+        6,
+        8,
+        7
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        9
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        11,
+        12
+      ],
+      "confidence": 0.9,
+      "note": ""
+    },
+    {
+      "stage": "persistence",
+      "evidence": [
+        10
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "impact",
+      "evidence": [
+        12,
+        11
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "registry_write",
+      "evidence": [
+        10
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "HKCU\\...\\Run\\oblivionx"
+    },
+    {
+      "behavior": "file_write",
+      "evidence": [
+        12
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "%TEMP%\\oblivionx_payload.exe"
+    },
+    {
+      "behavior": "file_encrypt",
+      "evidence": [
+        11
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "xor-crypt(%TEMP%\\oblivionx_vault\\secret.txt)"
+    },
+    {
+      "behavior": "env_read",
+      "evidence": [
+        9
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        11,
+        12
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Strings split and chained with & / + (split obfuscation)"
+    },
+    {
+      "behavior": "chr_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+    },
+    {
+      "behavior": "dead_code",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Logic obfuscation: unreachable code / decoy routines"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Base64-encoded payload present"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> execution -> c2_download -> persistence -> impact",
+  "status": "ok"
+}

@@ -1,0 +1,133 @@
+{
+  "sample_id": "valyria_dual__xlsm__combo__02",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        6,
+        7,
+        9,
+        8
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        2,
+        7,
+        8
+      ],
+      "confidence": 0.9,
+      "note": ""
+    },
+    {
+      "stage": "exfiltration",
+      "evidence": [
+        3,
+        4,
+        5,
+        10
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "http_download",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "XMLHTTP"
+    },
+    {
+      "behavior": "outlook_send",
+      "evidence": [
+        3,
+        4,
+        5
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": ".Send"
+    },
+    {
+      "behavior": "outlook_access",
+      "evidence": [
+        10
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "valyria_dual:outlook_access"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        7,
+        8
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Strings split and chained with & / + (split obfuscation)"
+    },
+    {
+      "behavior": "chr_encode",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+    },
+    {
+      "behavior": "dead_code",
+      "evidence": [
+        9
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Logic obfuscation: unreachable code / decoy routines"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Base64-encoded payload present"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> c2_download -> exfiltration",
+  "status": "partial"
+}

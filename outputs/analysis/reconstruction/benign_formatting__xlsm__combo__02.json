@@ -1,0 +1,110 @@
+{
+  "sample_id": "benign_formatting__xlsm__combo__02",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        6,
+        7,
+        9,
+        8
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        6,
+        7
+      ],
+      "confidence": 0.9,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "save_as_pdf",
+      "evidence": [
+        11
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_formatting:save_as_pdf"
+    },
+    {
+      "behavior": "data_copy",
+      "evidence": [
+        10
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_formatting:data_copy"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        6,
+        7
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Strings split and chained with & / + (split obfuscation)"
+    },
+    {
+      "behavior": "chr_encode",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+    },
+    {
+      "behavior": "dead_code",
+      "evidence": [
+        9
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Logic obfuscation: unreachable code / decoy routines"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Base64-encoded payload present"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> c2_download",
+  "status": "ok"
+}

@@ -1,0 +1,165 @@
+{
+  "sample_id": "donoff_downloader__docm__plain__02",
+  "format": "docm",
+  "family": "donoff_downloader",
+  "variant": "plain",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 377,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 451,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 538,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 695,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1160,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 2095,
+      "source": "dynamic",
+      "behavior": "window_hide",
+      "obj": "donoff_downloader:window_hide",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 2874,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "Environ(TEMP/APPDATA)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 3610,
+      "source": "dynamic",
+      "behavior": "powershell_run",
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 4662,
+      "source": "dynamic",
+      "behavior": "shell_run",
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 10,
+      "t_ms": 4973,
+      "source": "dynamic",
+      "behavior": "http_download",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 11,
+      "t_ms": 5928,
+      "source": "dynamic",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 12,
+      "t_ms": 6862,
+      "source": "dynamic",
+      "behavior": "file_execute",
+      "obj": "%TEMP%\\oblivionx_payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 13,
+      "t_ms": 7387,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "%TEMP%\\oblivionx_payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 14,
+      "t_ms": 8821,
+      "source": "dynamic",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 15,
+      "t_ms": 9526,
+      "source": "dynamic",
+      "behavior": "file_execute",
+      "obj": "%TEMP%\\oblivionx_payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": null,
+    "interaction_handled": true,
+    "duration_ms": 9526,
+    "analysis_time_ms": 0.14019012451171875
+  }
+}

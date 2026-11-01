@@ -1,0 +1,125 @@
+{
+  "sample_id": "locky_ransom__xlsm__combo__00",
+  "format": "xlsm",
+  "family": "locky_ransom",
+  "variant": "combo",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 453,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 645,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 994,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 1117,
+      "source": "dynamic",
+      "behavior": "string_concat",
+      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1199,
+      "source": "dynamic",
+      "behavior": "chr_encode",
+      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 1470,
+      "source": "dynamic",
+      "behavior": "base64_encode",
+      "obj": "Base64-encoded payload present",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 1636,
+      "source": "dynamic",
+      "behavior": "dead_code",
+      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 2293,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "Environ(TEMP/APPDATA)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 3378,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "HKCU\\...\\Run\\oblivionx",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 10,
+      "t_ms": 3594,
+      "source": "dynamic",
+      "behavior": "file_encrypt",
+      "obj": "xor-crypt(%TEMP%\\oblivionx_vault\\secret.txt)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 11,
+      "t_ms": 4210,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "%TEMP%\\oblivionx_payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": null,
+    "interaction_handled": true,
+    "duration_ms": 4210,
+    "analysis_time_ms": 0.13875961303710938
+  }
+}

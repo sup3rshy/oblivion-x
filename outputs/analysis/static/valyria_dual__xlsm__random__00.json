@@ -1,0 +1,88 @@
+{
+  "sample_id": "valyria_dual__xlsm__random__00",
+  "format": "xlsm",
+  "family": "valyria_dual",
+  "variant": "random",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "http_download",
+      "obj": "XMLHTTP",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:http_download"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_access",
+      "obj": "Outlook.Application",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_access"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Send",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Body =",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Send",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": true,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 6,
+    "analysis_time_ms": 29.115676879882812,
+    "sha256": "c80a75d1df473e50fd255eba02ef9a5d97f4d2c17d77266fbd1c0f8ee0c4bc54"
+  }
+}

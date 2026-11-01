@@ -1,0 +1,72 @@
+{
+  "sample_id": "metacol_mailer__docm__logic__02",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "exfiltration",
+      "evidence": [
+        5,
+        3,
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "outlook_access",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "metacol_mailer:outlook_access"
+    },
+    {
+      "behavior": "outlook_send",
+      "evidence": [
+        3,
+        4
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": ".Body ="
+    },
+    {
+      "behavior": "dead_code",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Logic obfuscation: unreachable code / decoy routines"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> exfiltration",
+  "status": "partial"
+}

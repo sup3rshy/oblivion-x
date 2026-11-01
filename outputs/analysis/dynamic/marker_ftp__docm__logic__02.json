@@ -1,0 +1,86 @@
+{
+  "sample_id": "marker_ftp__docm__logic__02",
+  "format": "docm",
+  "family": "marker_ftp",
+  "variant": "logic",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 406,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 487,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 635,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 665,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1086,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 1319,
+      "source": "dynamic",
+      "behavior": "dead_code",
+      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 1866,
+      "source": "dynamic",
+      "behavior": "ftp_upload",
+      "obj": "ftp -s:... put oblivionx_log.txt",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_env",
+    "interaction_handled": true,
+    "note": "missing environment dependency: ftp",
+    "missing_dependency": "ftp",
+    "analysis_time_ms": 0.09179115295410156
+  }
+}

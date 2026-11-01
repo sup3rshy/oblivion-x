@@ -1,0 +1,54 @@
+{
+  "sample_id": "empty_macro__docm__combo__02",
+  "format": "docm",
+  "family": "empty_macro",
+  "variant": "combo",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 185,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 295,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 434,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 619,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "static_empty",
+    "interaction_handled": true,
+    "analysis_time_ms": 0.07462501525878906
+  }
+}

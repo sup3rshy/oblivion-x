@@ -1,0 +1,128 @@
+{
+  "sample_id": "locky_ransom__xlsm__logic__02",
+  "format": "xlsm",
+  "family": "locky_ransom",
+  "variant": "logic",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "registry_write",
+      "obj": "RegWrite",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:registry_write"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "registry_write",
+      "obj": "HKCU",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:registry_write"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Open fPath For",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Print #",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_encrypt",
+      "obj": "Xor",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_encrypt"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_encrypt",
+      "obj": "Xor",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_encrypt"
+    },
+    {
+      "id": 8,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 9,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 10,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "dead_code",
+      "obj": "logic",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": true
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 10,
+    "analysis_time_ms": 26.010990142822266,
+    "sha256": "3faca353912a999fc49582ab48a3cb3e85429be3b4c246b3f780714921749ee4"
+  }
+}

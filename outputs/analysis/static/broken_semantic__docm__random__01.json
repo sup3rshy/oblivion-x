@@ -1,0 +1,37 @@
+{
+  "sample_id": "broken_semantic__docm__random__01",
+  "format": "docm",
+  "family": "broken_semantic",
+  "variant": "random",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 1,
+    "analysis_time_ms": 18.529176712036133,
+    "sha256": "d6c6f66207c0894901d986ff9191cde14e79a370091f219b6311557537281e3b"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "sample_id": "benign_formatting__docm__split__01",
+  "format": "docm",
+  "family": "benign_formatting",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "save_as_pdf",
+      "obj": "ExportAsFixedFormat",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:save_as_pdf"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "data_copy",
+      "obj": ".Copy",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:data_copy"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "string_concat",
+      "obj": "split",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": true,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "C:\\Users\\Public\\oblivionx_format.pdf",
+      "report"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 4,
+    "analysis_time_ms": 24.35135841369629,
+    "sha256": "6dde7aa588e857f22cc9321cd9c416c03adde77a68826972361c8cb35a7fc711"
+  }
+}

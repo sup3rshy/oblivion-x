@@ -1,0 +1,55 @@
+{
+  "sample_id": "metacol_mailer__docm__random__01",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "exfiltration",
+      "evidence": [
+        5,
+        3,
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "outlook_access",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "metacol_mailer:outlook_access"
+    },
+    {
+      "behavior": "outlook_send",
+      "evidence": [
+        3,
+        4
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": ".Body ="
+    }
+  ],
+  "chain": "delivery -> exfiltration",
+  "status": "partial"
+}

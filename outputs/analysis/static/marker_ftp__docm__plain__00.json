@@ -1,0 +1,137 @@
+{
+  "sample_id": "marker_ftp__docm__plain__00",
+  "format": "docm",
+  "family": "marker_ftp",
+  "variant": "plain",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "shell_run",
+      "obj": "Shell \"",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:shell_run"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "cmd_run",
+      "obj": "cmd /c",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:cmd_run"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "ftp_upload",
+      "obj": "ftp",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:ftp_upload"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Open LogPath For",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Print #",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 8,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 9,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 10,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 11,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 11,
+    "analysis_time_ms": 20.285844802856445,
+    "sha256": "20d196355b36bb249c4f0c74f16d7c1621b8378dc9f83a7ef20ef61a9ddaa841"
+  }
+}

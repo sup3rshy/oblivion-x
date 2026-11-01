@@ -1,0 +1,95 @@
+{
+  "sample_id": "benign_formatting__docm__encode__00",
+  "format": "docm",
+  "family": "benign_formatting",
+  "variant": "encode",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 421,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 594,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 684,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 998,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1130,
+      "source": "dynamic",
+      "behavior": "chr_encode",
+      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 1305,
+      "source": "dynamic",
+      "behavior": "base64_encode",
+      "obj": "Base64-encoded payload present",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 1708,
+      "source": "dynamic",
+      "behavior": "data_copy",
+      "obj": "benign_formatting:data_copy",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 2030,
+      "source": "dynamic",
+      "behavior": "save_as_pdf",
+      "obj": "benign_formatting:save_as_pdf",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": null,
+    "interaction_handled": true,
+    "duration_ms": 2030,
+    "analysis_time_ms": 0.09703636169433594
+  }
+}

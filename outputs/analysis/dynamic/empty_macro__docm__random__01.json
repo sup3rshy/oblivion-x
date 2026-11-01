@@ -1,0 +1,34 @@
+{
+  "sample_id": "empty_macro__docm__random__01",
+  "format": "docm",
+  "family": "empty_macro",
+  "variant": "random",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 579,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 670,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "static_empty",
+    "interaction_handled": true,
+    "analysis_time_ms": 0.08606910705566406
+  }
+}

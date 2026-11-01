@@ -1,0 +1,121 @@
+{
+  "sample_id": "valyria_dual__xlsm__encode__00",
+  "format": "xlsm",
+  "family": "valyria_dual",
+  "variant": "encode",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/second-stage.bin",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:url_reference"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Send",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Body =",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_send",
+      "obj": ".Send",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:outlook_send"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 8,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "chr_encode",
+      "obj": "encode",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    },
+    {
+      "id": 9,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "base64_encode",
+      "obj": "base64-blob",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": true,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "http://127.0.0.1:9090/payload.exe",
+      "http://127.0.0.1:9090/payload.exe"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 9,
+    "analysis_time_ms": 29.13498878479004,
+    "sha256": "40abde33f12508c692bb6a1ab5bb70a82148a93127747f5441c22fd6cce749a1"
+  }
+}

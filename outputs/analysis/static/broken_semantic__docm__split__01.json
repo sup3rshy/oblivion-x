@@ -1,0 +1,37 @@
+{
+  "sample_id": "broken_semantic__docm__split__01",
+  "format": "docm",
+  "family": "broken_semantic",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 1,
+    "analysis_time_ms": 25.919198989868164,
+    "sha256": "f4f46bbae7481cb80858d7c4f9175c08e8dd869a77d12ce047ba6ba217366ae3"
+  }
+}

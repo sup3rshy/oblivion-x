@@ -1,0 +1,56 @@
+{
+  "sample_id": "slow_timeout__docm__split__00",
+  "format": "docm",
+  "family": "slow_timeout",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 309,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 426,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 581,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 882,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_timeout",
+    "interaction_handled": true,
+    "note": "busy loop exceeded analysis time limit",
+    "duration_ms": 120000,
+    "analysis_time_ms": 0.09679794311523438
+  }
+}

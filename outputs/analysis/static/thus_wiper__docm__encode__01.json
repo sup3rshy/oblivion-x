@@ -1,0 +1,100 @@
+{
+  "sample_id": "thus_wiper__docm__encode__01",
+  "format": "docm",
+  "family": "thus_wiper",
+  "variant": "encode",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_delete",
+      "obj": "Kill",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_delete"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "chr_encode",
+      "obj": "encode",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "base64_encode",
+      "obj": "base64-blob",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": true,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "http://127.0.0.1:9090/payload.exe",
+      "http://127.0.0.1:9090/payload.exe"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 7,
+    "analysis_time_ms": 25.58279037475586,
+    "sha256": "80b3a161789ecd05aee9821209492dac282b5d40316774b5b279d27611993a67"
+  }
+}

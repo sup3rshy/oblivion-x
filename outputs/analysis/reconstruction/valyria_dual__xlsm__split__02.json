@@ -1,0 +1,101 @@
+{
+  "sample_id": "valyria_dual__xlsm__split__02",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        5,
+        6
+      ],
+      "confidence": 0.9,
+      "note": ""
+    },
+    {
+      "stage": "exfiltration",
+      "evidence": [
+        2,
+        3,
+        4,
+        7
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "outlook_send",
+      "evidence": [
+        2,
+        3,
+        4
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": ".Send"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/second-stage.bin"
+    },
+    {
+      "behavior": "http_download",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "XMLHTTP"
+    },
+    {
+      "behavior": "outlook_access",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "valyria_dual:outlook_access"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Strings split and chained with & / + (split obfuscation)"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> c2_download -> exfiltration",
+  "status": "partial"
+}

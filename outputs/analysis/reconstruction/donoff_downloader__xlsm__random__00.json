@@ -1,0 +1,138 @@
+{
+  "sample_id": "donoff_downloader__xlsm__random__00",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        7,
+        6,
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        8,
+        9,
+        12
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "impact",
+      "evidence": [
+        10,
+        13,
+        11
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "shell_run",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ..."
+    },
+    {
+      "behavior": "powershell_run",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command ..."
+    },
+    {
+      "behavior": "http_download",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        9,
+        12
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "file_execute",
+      "evidence": [
+        10,
+        13
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "%TEMP%\\oblivionx_payload.exe"
+    },
+    {
+      "behavior": "window_hide",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "donoff_downloader:window_hide"
+    },
+    {
+      "behavior": "env_read",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
+    },
+    {
+      "behavior": "file_write",
+      "evidence": [
+        11
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "%TEMP%\\oblivionx_payload.exe"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> execution -> c2_download -> impact",
+  "status": "ok"
+}

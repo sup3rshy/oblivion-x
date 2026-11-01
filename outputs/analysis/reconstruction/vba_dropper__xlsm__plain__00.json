@@ -1,0 +1,82 @@
+{
+  "sample_id": "vba_dropper__xlsm__plain__00",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        7,
+        6
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "impact",
+      "evidence": [
+        9,
+        8,
+        10
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "shell_run",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ..."
+    },
+    {
+      "behavior": "file_write",
+      "evidence": [
+        9
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "%TEMP%\\oblivionx_payload.exe"
+    },
+    {
+      "behavior": "env_read",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
+    },
+    {
+      "behavior": "file_execute",
+      "evidence": [
+        8,
+        10
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "%TEMP%\\oblivionx_payload.exe"
+    }
+  ],
+  "chain": "delivery -> execution -> impact",
+  "status": "ok"
+}

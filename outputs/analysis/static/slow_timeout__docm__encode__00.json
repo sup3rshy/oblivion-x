@@ -1,0 +1,90 @@
+{
+  "sample_id": "slow_timeout__docm__encode__00",
+  "format": "docm",
+  "family": "slow_timeout",
+  "variant": "encode",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "shell_run",
+      "obj": "Shell C",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:shell_run"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "chr_encode",
+      "obj": "encode",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "base64_encode",
+      "obj": "base64-blob",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": true,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "http://127.0.0.1:9090/payload.exe",
+      "http://127.0.0.1:9090/payload.exe"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 6,
+    "analysis_time_ms": 25.954246520996094,
+    "sha256": "e7aff41969569e706f0c27b760a932c012877f72daeb5f38f82122507b7e1d7c"
+  }
+}

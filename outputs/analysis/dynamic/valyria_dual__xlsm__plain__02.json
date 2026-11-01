@@ -1,0 +1,76 @@
+{
+  "sample_id": "valyria_dual__xlsm__plain__02",
+  "format": "xlsm",
+  "family": "valyria_dual",
+  "variant": "plain",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 382,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 413,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 435,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 601,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 839,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 1139,
+      "source": "dynamic",
+      "behavior": "outlook_access",
+      "obj": "valyria_dual:outlook_access",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_env",
+    "interaction_handled": true,
+    "note": "missing environment dependency: outlook",
+    "missing_dependency": "outlook",
+    "analysis_time_ms": 0.4513263702392578
+  }
+}

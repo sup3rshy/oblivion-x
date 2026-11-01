@@ -1,0 +1,45 @@
+{
+  "sample_id": "thus_wiper__docm__logic__01",
+  "format": "docm",
+  "family": "thus_wiper",
+  "variant": "logic",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 430,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 457,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 893,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_date",
+    "interaction_handled": true,
+    "note": "payload gated by date; only entry observed",
+    "analysis_time_ms": 0.07963180541992188
+  }
+}

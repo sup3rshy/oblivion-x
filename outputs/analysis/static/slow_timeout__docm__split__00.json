@@ -1,0 +1,79 @@
+{
+  "sample_id": "slow_timeout__docm__split__00",
+  "format": "docm",
+  "family": "slow_timeout",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "shell_run",
+      "obj": "Shell \"",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:shell_run"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "cmd_run",
+      "obj": "cmd /c",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:cmd_run"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "cmd_run",
+      "obj": "cmd /c",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "string_concat",
+      "obj": "split",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": true,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "cmd /c echo oblivionx-timeout-marker"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 5,
+    "analysis_time_ms": 28.91063690185547,
+    "sha256": "882b7c639ad43489fc5b46f84502c93c9c071b3b55f96234038ed07c2766e036"
+  }
+}

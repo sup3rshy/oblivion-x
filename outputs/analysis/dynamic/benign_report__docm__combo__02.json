@@ -1,0 +1,125 @@
+{
+  "sample_id": "benign_report__docm__combo__02",
+  "format": "docm",
+  "family": "benign_report",
+  "variant": "combo",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 382,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 408,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 530,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 789,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1000,
+      "source": "dynamic",
+      "behavior": "string_concat",
+      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 1223,
+      "source": "dynamic",
+      "behavior": "chr_encode",
+      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 1298,
+      "source": "dynamic",
+      "behavior": "base64_encode",
+      "obj": "Base64-encoded payload present",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 1395,
+      "source": "dynamic",
+      "behavior": "dead_code",
+      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 1989,
+      "source": "dynamic",
+      "behavior": "data_copy",
+      "obj": "benign_report:data_copy",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 10,
+      "t_ms": 2154,
+      "source": "dynamic",
+      "behavior": "print_document",
+      "obj": "benign_report:print_document",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 11,
+      "t_ms": 2641,
+      "source": "dynamic",
+      "behavior": "save_as_pdf",
+      "obj": "benign_report:save_as_pdf",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": null,
+    "interaction_handled": true,
+    "duration_ms": 2641,
+    "analysis_time_ms": 0.12922286987304688
+  }
+}

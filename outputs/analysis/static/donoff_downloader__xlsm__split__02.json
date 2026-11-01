@@ -1,0 +1,143 @@
+{
+  "sample_id": "donoff_downloader__xlsm__split__02",
+  "format": "xlsm",
+  "family": "donoff_downloader",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "shell_run",
+      "obj": ".Run c",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:shell_run"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "http_download",
+      "obj": "DownloadFile",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:http_download"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_execute",
+      "obj": "Invoke-Item",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_execute"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_execute",
+      "obj": ".Run cmd, 0",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_execute"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 8,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "powershell_run",
+      "obj": "powershell",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 9,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "window_hide",
+      "obj": "-WindowStyle Hidden",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 10,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "powershell_run",
+      "obj": "ExecutionPolicy",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 11,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "string_concat",
+      "obj": "split",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": true,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "http://127.0.0.1:9090/payload.exe",
+      "\\oblivionx_payload.exe",
+      "powershell.exe -NoProfile -WindowStyle Hidden ",
+      "-ExecutionPolicy Bypass -Command "
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 11,
+    "analysis_time_ms": 23.488521575927734,
+    "sha256": "2a7bfb9cfd0152c57cb8324f97f460b75dd684f6e762e00a3866fbb3d5e7329b"
+  }
+}

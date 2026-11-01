@@ -1,0 +1,77 @@
+{
+  "sample_id": "benign_report__docm__logic__00",
+  "format": "docm",
+  "family": "benign_report",
+  "variant": "logic",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "save_as_pdf",
+      "obj": "ExportAsFixedFormat",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:save_as_pdf"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "print_document",
+      "obj": "PrintOut",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:print_document"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "data_copy",
+      "obj": ".Copy",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:data_copy"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "dead_code",
+      "obj": "logic",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": true
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 5,
+    "analysis_time_ms": 19.957542419433594,
+    "sha256": "75cf28c5150f37c30e60a541393fbc93226548a5073ab8a80ae06f0f37eb3f0a"
+  }
+}

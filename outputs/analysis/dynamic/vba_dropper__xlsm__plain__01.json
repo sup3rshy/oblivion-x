@@ -1,0 +1,105 @@
+{
+  "sample_id": "vba_dropper__xlsm__plain__01",
+  "format": "xlsm",
+  "family": "vba_dropper",
+  "variant": "plain",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 508,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 664,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 854,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 1284,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1902,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "Environ(TEMP/APPDATA)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 2184,
+      "source": "dynamic",
+      "behavior": "shell_run",
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 3277,
+      "source": "dynamic",
+      "behavior": "file_execute",
+      "obj": "%TEMP%\\oblivionx_payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 3515,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "%TEMP%\\oblivionx_payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 4039,
+      "source": "dynamic",
+      "behavior": "file_execute",
+      "obj": "%TEMP%\\oblivionx_payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": null,
+    "interaction_handled": true,
+    "duration_ms": 4039,
+    "analysis_time_ms": 0.10704994201660156
+  }
+}

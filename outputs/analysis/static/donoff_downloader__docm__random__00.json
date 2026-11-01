@@ -1,0 +1,127 @@
+{
+  "sample_id": "donoff_downloader__docm__random__00",
+  "format": "docm",
+  "family": "donoff_downloader",
+  "variant": "random",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "shell_run",
+      "obj": ".Run l",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:shell_run"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "powershell_run",
+      "obj": "powershell",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:powershell_run"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "powershell_run",
+      "obj": "ExecutionPolicy",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:powershell_run"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "http_download",
+      "obj": "DownloadFile",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:http_download"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:url_reference"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_execute",
+      "obj": "Invoke-Item",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_execute"
+    },
+    {
+      "id": 8,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_execute",
+      "obj": ".Run lckhv437, 0",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_execute"
+    },
+    {
+      "id": 9,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "window_hide",
+      "obj": "-WindowStyle Hidden",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:window_hide"
+    },
+    {
+      "id": 10,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": true,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 10,
+    "analysis_time_ms": 22.00794219970703,
+    "sha256": "bc55791250415b165c689473e17ee647616050954ae35b7eed496ef8cb2f730e"
+  }
+}

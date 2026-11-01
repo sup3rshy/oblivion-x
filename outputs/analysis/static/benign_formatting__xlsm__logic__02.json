@@ -1,0 +1,88 @@
+{
+  "sample_id": "benign_formatting__xlsm__logic__02",
+  "format": "xlsm",
+  "family": "benign_formatting",
+  "variant": "logic",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "save_as_pdf",
+      "obj": "ExportAsFixedFormat",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:save_as_pdf"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "save_as_pdf",
+      "obj": "xlTypePDF",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:save_as_pdf"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "data_copy",
+      "obj": ".Range(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:data_copy"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "data_copy",
+      "obj": ".Copy",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:data_copy"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "dead_code",
+      "obj": "logic",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": true
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 6,
+    "analysis_time_ms": 21.645069122314453,
+    "sha256": "be27b5015fa4738e94398f4aef7f74bc9c006f11489c7163838d76d54d383a54"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "sample_id": "benign_formatting__docm__split__02",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "save_as_pdf",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_formatting:save_as_pdf"
+    },
+    {
+      "behavior": "data_copy",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_formatting:data_copy"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Strings split and chained with & / + (split obfuscation)"
+    }
+  ],
+  "chain": "delivery -> defense_evasion",
+  "status": "ok"
+}

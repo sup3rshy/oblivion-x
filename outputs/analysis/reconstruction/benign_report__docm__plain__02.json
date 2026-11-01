@@ -1,0 +1,53 @@
+{
+  "sample_id": "benign_report__docm__plain__02",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "save_as_pdf",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_report:save_as_pdf"
+    },
+    {
+      "behavior": "print_document",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_report:print_document"
+    },
+    {
+      "behavior": "data_copy",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_report:data_copy"
+    }
+  ],
+  "chain": "delivery",
+  "status": "ok"
+}

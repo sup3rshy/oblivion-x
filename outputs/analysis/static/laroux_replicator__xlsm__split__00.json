@@ -1,0 +1,100 @@
+{
+  "sample_id": "laroux_replicator__xlsm__split__00",
+  "format": "xlsm",
+  "family": "laroux_replicator",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "office_template_infect",
+      "obj": "SaveCopyAs",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:office_template_infect"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "SaveCopyAs",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "startup_write",
+      "obj": "XLSTART",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "office_template_infect",
+      "obj": "XLSTART",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "string_concat",
+      "obj": "split",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": true,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "\\Microsoft\\Excel\\XLSTART\\oblivionx_infected.xlsm"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 7,
+    "analysis_time_ms": 26.158809661865234,
+    "sha256": "c18ee95ed5f1da4ea8e6559086780fa8cbccbb697f00c1ef8cdf0b79b30e9ac7"
+  }
+}

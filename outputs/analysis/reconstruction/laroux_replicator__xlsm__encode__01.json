@@ -1,0 +1,133 @@
+{
+  "sample_id": "laroux_replicator__xlsm__encode__01",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        5,
+        6
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        7,
+        8
+      ],
+      "confidence": 0.9,
+      "note": ""
+    },
+    {
+      "stage": "persistence",
+      "evidence": [
+        9,
+        8
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "impact",
+      "evidence": [
+        10
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "startup_write",
+      "evidence": [
+        9
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "laroux_replicator:startup_write"
+    },
+    {
+      "behavior": "office_template_infect",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "SaveCopyAs XLSTART\\oblivionx_infected.xlsm"
+    },
+    {
+      "behavior": "file_write",
+      "evidence": [
+        10
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "%TEMP%\\oblivionx_payload.exe"
+    },
+    {
+      "behavior": "env_read",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        7,
+        8
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "chr_encode",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Base64-encoded payload present"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> execution -> c2_download -> persistence -> impact",
+  "status": "ok"
+}

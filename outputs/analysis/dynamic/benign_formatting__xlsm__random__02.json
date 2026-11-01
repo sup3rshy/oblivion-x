@@ -1,0 +1,65 @@
+{
+  "sample_id": "benign_formatting__xlsm__random__02",
+  "format": "xlsm",
+  "family": "benign_formatting",
+  "variant": "random",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 398,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 557,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 951,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 1394,
+      "source": "dynamic",
+      "behavior": "data_copy",
+      "obj": "benign_formatting:data_copy",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1550,
+      "source": "dynamic",
+      "behavior": "save_as_pdf",
+      "obj": "benign_formatting:save_as_pdf",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": null,
+    "interaction_handled": true,
+    "duration_ms": 1550,
+    "analysis_time_ms": 0.087738037109375
+  }
+}

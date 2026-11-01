@@ -1,0 +1,56 @@
+{
+  "sample_id": "slow_timeout__docm__combo__01",
+  "format": "docm",
+  "family": "slow_timeout",
+  "variant": "combo",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 262,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 461,
+      "source": "dynamic",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 484,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 810,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_timeout",
+    "interaction_handled": true,
+    "note": "busy loop exceeded analysis time limit",
+    "duration_ms": 120000,
+    "analysis_time_ms": 0.07915496826171875
+  }
+}

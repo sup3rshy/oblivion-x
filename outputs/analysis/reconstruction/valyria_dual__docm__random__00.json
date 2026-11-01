@@ -1,0 +1,74 @@
+{
+  "sample_id": "valyria_dual__docm__random__00",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "note": ""
+    },
+    {
+      "stage": "exfiltration",
+      "evidence": [
+        5,
+        4,
+        5,
+        6
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "http_download",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "XMLHTTP"
+    },
+    {
+      "behavior": "outlook_access",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "valyria_dual:outlook_access"
+    },
+    {
+      "behavior": "outlook_send",
+      "evidence": [
+        4,
+        5,
+        6
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": ".Send"
+    }
+  ],
+  "chain": "delivery -> c2_download -> exfiltration",
+  "status": "partial"
+}

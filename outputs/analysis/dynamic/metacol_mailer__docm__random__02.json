@@ -1,0 +1,56 @@
+{
+  "sample_id": "metacol_mailer__docm__random__02",
+  "format": "docm",
+  "family": "metacol_mailer",
+  "variant": "random",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 584,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 762,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 1185,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 1713,
+      "source": "dynamic",
+      "behavior": "outlook_access",
+      "obj": "metacol_mailer:outlook_access",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_env",
+    "interaction_handled": true,
+    "note": "missing environment dependency: outlook",
+    "missing_dependency": "outlook",
+    "analysis_time_ms": 0.11277198791503906
+  }
+}

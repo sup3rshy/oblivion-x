@@ -1,0 +1,5739 @@
+{
+  "experiment": "E3",
+  "title": "Obfuscation vs observability (RQ4)",
+  "static_recall_by_variant": {
+    "combo": {
+      "mean": 0.875282962187724,
+      "std": 0.21372435811315588,
+      "n": 63
+    },
+    "encode": {
+      "mean": 0.8798907441764583,
+      "std": 0.21871966213497135,
+      "n": 63
+    },
+    "logic": {
+      "mean": 0.9226551226551226,
+      "std": 0.21360769418147935,
+      "n": 63
+    },
+    "plain": {
+      "mean": 0.917989417989418,
+      "std": 0.21530166115616536,
+      "n": 63
+    },
+    "random": {
+      "mean": 0.8989417989417989,
+      "std": 0.21604931072957087,
+      "n": 63
+    },
+    "split": {
+      "mean": 0.8816498316498317,
+      "std": 0.23101190729620252,
+      "n": 63
+    }
+  },
+  "dynamic_recall_by_variant": {
+    "combo": {
+      "mean": 0.7764172335600908,
+      "std": 0.3284826071752716,
+      "n": 63
+    },
+    "encode": {
+      "mean": 0.7675170068027212,
+      "std": 0.317503995618503,
+      "n": 63
+    },
+    "logic": {
+      "mean": 0.776077097505669,
+      "std": 0.29868559570702696,
+      "n": 63
+    },
+    "plain": {
+      "mean": 0.7814814814814816,
+      "std": 0.3046250059956926,
+      "n": 63
+    },
+    "random": {
+      "mean": 0.7867724867724869,
+      "std": 0.30111724251589583,
+      "n": 63
+    },
+    "split": {
+      "mean": 0.7715419501133788,
+      "std": 0.30066736068426575,
+      "n": 63
+    }
+  },
+  "detection_by_variant": {
+    "combo": {
+      "precision": 1.0,
+      "recall": 0.8916666666666667,
+      "tp": 214,
+      "fp": 0,
+      "fn": 26
+    },
+    "encode": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 60,
+      "fp": 0,
+      "fn": 0
+    },
+    "logic": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 60,
+      "fp": 0,
+      "fn": 0
+    },
+    "plain": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "random": {
+      "precision": 1.0,
+      "recall": 0.9,
+      "tp": 54,
+      "fp": 0,
+      "fn": 6
+    },
+    "split": {
+      "precision": 1.0,
+      "recall": 0.9,
+      "tp": 54,
+      "fp": 0,
+      "fn": 6
+    }
+  },
+  "deobfuscation_success_by_variant": {
+    "combo": {
+      "mean": 1.0,
+      "n": 60
+    },
+    "encode": {
+      "mean": 1.0,
+      "n": 60
+    },
+    "split": {
+      "mean": 0.9,
+      "n": 60
+    }
+  },
+  "static_recall_by_family_variant": {
+    "benign_formatting": {
+      "combo": {
+        "mean": 1.0
+      },
+      "encode": {
+        "mean": 1.0
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 1.0
+      },
+      "split": {
+        "mean": 1.0
+      }
+    },
+    "benign_report": {
+      "combo": {
+        "mean": 0.9375
+      },
+      "encode": {
+        "mean": 1.0
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 1.0
+      },
+      "split": {
+        "mean": 1.0
+      }
+    },
+    "broken_semantic": {
+      "combo": {
+        "mean": 0.8000000000000002
+      },
+      "encode": {
+        "mean": 1.0
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 1.0
+      },
+      "split": {
+        "mean": 0.5
+      }
+    },
+    "donoff_downloader": {
+      "combo": {
+        "mean": 0.9230769230769232
+      },
+      "encode": {
+        "mean": 0.9090909090909091
+      },
+      "logic": {
+        "mean": 0.9
+      },
+      "plain": {
+        "mean": 0.888888888888889
+      },
+      "random": {
+        "mean": 0.888888888888889
+      },
+      "split": {
+        "mean": 0.9
+      }
+    },
+    "donoff_interaction": {
+      "combo": {
+        "mean": 0.9285714285714285
+      },
+      "encode": {
+        "mean": 0.9166666666666666
+      },
+      "logic": {
+        "mean": 0.9090909090909091
+      },
+      "plain": {
+        "mean": 0.9
+      },
+      "random": {
+        "mean": 0.9
+      },
+      "split": {
+        "mean": 0.9090909090909091
+      }
+    },
+    "empty_macro": {
+      "combo": {
+        "mean": 0.0
+      },
+      "encode": {
+        "mean": 0.0
+      },
+      "logic": {
+        "mean": 0.0
+      },
+      "plain": {
+        "mean": 0.0
+      },
+      "random": {
+        "mean": 0.0
+      },
+      "split": {
+        "mean": 0.0
+      }
+    },
+    "laroux_replicator": {
+      "combo": {
+        "mean": 1.0
+      },
+      "encode": {
+        "mean": 1.0
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 1.0
+      },
+      "split": {
+        "mean": 1.0
+      }
+    },
+    "locky_ransom": {
+      "combo": {
+        "mean": 1.0
+      },
+      "encode": {
+        "mean": 1.0
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 1.0
+      },
+      "split": {
+        "mean": 1.0
+      }
+    },
+    "marker_ftp": {
+      "combo": {
+        "mean": 1.0
+      },
+      "encode": {
+        "mean": 1.0
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 1.0
+      },
+      "split": {
+        "mean": 1.0
+      }
+    },
+    "metacol_mailer": {
+      "combo": {
+        "mean": 0.8571428571428571
+      },
+      "encode": {
+        "mean": 0.8000000000000002
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 1.0
+      },
+      "split": {
+        "mean": 1.0
+      }
+    },
+    "slow_timeout": {
+      "combo": {
+        "mean": 0.8095238095238094
+      },
+      "encode": {
+        "mean": 0.8000000000000002
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 1.0
+      },
+      "split": {
+        "mean": 1.0
+      }
+    },
+    "thus_wiper": {
+      "combo": {
+        "mean": 0.8571428571428571
+      },
+      "encode": {
+        "mean": 1.0
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 1.0
+      },
+      "split": {
+        "mean": 0.75
+      }
+    },
+    "valyria_dual": {
+      "combo": {
+        "mean": 0.9259259259259259
+      },
+      "encode": {
+        "mean": 0.7142857142857143
+      },
+      "logic": {
+        "mean": 1.0
+      },
+      "plain": {
+        "mean": 1.0
+      },
+      "random": {
+        "mean": 0.7999999999999999
+      },
+      "split": {
+        "mean": 0.9444444444444445
+      }
+    },
+    "vba_dropper": {
+      "combo": {
+        "mean": 0.7777777777777778
+      },
+      "encode": {
+        "mean": 0.8571428571428571
+      },
+      "logic": {
+        "mean": 0.8333333333333334
+      },
+      "plain": {
+        "mean": 0.7999999999999999
+      },
+      "random": {
+        "mean": 0.7999999999999999
+      },
+      "split": {
+        "mean": 0.8333333333333334
+      }
+    }
+  },
+  "per_sample": [
+    {
+      "id": "donoff_downloader__docm__plain__00",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__docm__plain__01",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__docm__plain__02",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__docm__random__00",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__docm__random__01",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__docm__random__02",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__docm__split__00",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "donoff_downloader__docm__split__01",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "donoff_downloader__docm__split__02",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "donoff_downloader__docm__encode__00",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "donoff_downloader__docm__encode__01",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "donoff_downloader__docm__encode__02",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "donoff_downloader__docm__logic__00",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__docm__logic__01",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__docm__logic__02",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__docm__combo__00",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_recall": 0.9230769230769231,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "donoff_downloader__docm__combo__01",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_recall": 0.9230769230769231,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 7
+    },
+    {
+      "id": "donoff_downloader__docm__combo__02",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_recall": 0.9230769230769231,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "donoff_downloader__xlsm__plain__00",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__xlsm__plain__01",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__xlsm__plain__02",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__xlsm__random__00",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__xlsm__random__01",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__xlsm__random__02",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_recall": 0.8888888888888888,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__xlsm__split__00",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "donoff_downloader__xlsm__split__01",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "donoff_downloader__xlsm__split__02",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "donoff_downloader__xlsm__encode__00",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "donoff_downloader__xlsm__encode__01",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "donoff_downloader__xlsm__encode__02",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "donoff_downloader__xlsm__logic__00",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__xlsm__logic__01",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__xlsm__logic__02",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_downloader__xlsm__combo__00",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_recall": 0.9230769230769231,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "donoff_downloader__xlsm__combo__01",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_recall": 0.9230769230769231,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 7
+    },
+    {
+      "id": "donoff_downloader__xlsm__combo__02",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_recall": 0.9230769230769231,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "metacol_mailer__docm__plain__00",
+      "family": "metacol_mailer",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "metacol_mailer__docm__plain__01",
+      "family": "metacol_mailer",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "metacol_mailer__docm__plain__02",
+      "family": "metacol_mailer",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "metacol_mailer__docm__random__00",
+      "family": "metacol_mailer",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "metacol_mailer__docm__random__01",
+      "family": "metacol_mailer",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "metacol_mailer__docm__random__02",
+      "family": "metacol_mailer",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "metacol_mailer__docm__split__00",
+      "family": "metacol_mailer",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "metacol_mailer__docm__split__01",
+      "family": "metacol_mailer",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "metacol_mailer__docm__split__02",
+      "family": "metacol_mailer",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "metacol_mailer__docm__encode__00",
+      "family": "metacol_mailer",
+      "variant": "encode",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.8,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "metacol_mailer__docm__encode__01",
+      "family": "metacol_mailer",
+      "variant": "encode",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.8,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "metacol_mailer__docm__encode__02",
+      "family": "metacol_mailer",
+      "variant": "encode",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.8,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "metacol_mailer__docm__logic__00",
+      "family": "metacol_mailer",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "metacol_mailer__docm__logic__01",
+      "family": "metacol_mailer",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "metacol_mailer__docm__logic__02",
+      "family": "metacol_mailer",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "metacol_mailer__docm__combo__00",
+      "family": "metacol_mailer",
+      "variant": "combo",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 0.8571428571428571,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "metacol_mailer__docm__combo__01",
+      "family": "metacol_mailer",
+      "variant": "combo",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 0.8571428571428571,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "metacol_mailer__docm__combo__02",
+      "family": "metacol_mailer",
+      "variant": "combo",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 0.8571428571428571,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "laroux_replicator__xlsm__plain__00",
+      "family": "laroux_replicator",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "laroux_replicator__xlsm__plain__01",
+      "family": "laroux_replicator",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "laroux_replicator__xlsm__plain__02",
+      "family": "laroux_replicator",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "laroux_replicator__xlsm__random__00",
+      "family": "laroux_replicator",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "laroux_replicator__xlsm__random__01",
+      "family": "laroux_replicator",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "laroux_replicator__xlsm__random__02",
+      "family": "laroux_replicator",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "laroux_replicator__xlsm__split__00",
+      "family": "laroux_replicator",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "laroux_replicator__xlsm__split__01",
+      "family": "laroux_replicator",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "laroux_replicator__xlsm__split__02",
+      "family": "laroux_replicator",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "laroux_replicator__xlsm__encode__00",
+      "family": "laroux_replicator",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "laroux_replicator__xlsm__encode__01",
+      "family": "laroux_replicator",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "laroux_replicator__xlsm__encode__02",
+      "family": "laroux_replicator",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "laroux_replicator__xlsm__logic__00",
+      "family": "laroux_replicator",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "laroux_replicator__xlsm__logic__01",
+      "family": "laroux_replicator",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "laroux_replicator__xlsm__logic__02",
+      "family": "laroux_replicator",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "laroux_replicator__xlsm__combo__00",
+      "family": "laroux_replicator",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "laroux_replicator__xlsm__combo__01",
+      "family": "laroux_replicator",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "laroux_replicator__xlsm__combo__02",
+      "family": "laroux_replicator",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "locky_ransom__docm__plain__00",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__docm__plain__01",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__docm__plain__02",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__docm__random__00",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__docm__random__01",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__docm__random__02",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__docm__split__00",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "locky_ransom__docm__split__01",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "locky_ransom__docm__split__02",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "locky_ransom__docm__encode__00",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "locky_ransom__docm__encode__01",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "locky_ransom__docm__encode__02",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "locky_ransom__docm__logic__00",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__docm__logic__01",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__docm__logic__02",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__docm__combo__00",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 7
+    },
+    {
+      "id": "locky_ransom__docm__combo__01",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "locky_ransom__docm__combo__02",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "locky_ransom__xlsm__plain__00",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__xlsm__plain__01",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__xlsm__plain__02",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__xlsm__random__00",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__xlsm__random__01",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__xlsm__random__02",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__xlsm__split__00",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "locky_ransom__xlsm__split__01",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "locky_ransom__xlsm__split__02",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "locky_ransom__xlsm__encode__00",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "locky_ransom__xlsm__encode__01",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "locky_ransom__xlsm__encode__02",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "locky_ransom__xlsm__logic__00",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__xlsm__logic__01",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__xlsm__logic__02",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "locky_ransom__xlsm__combo__00",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 7
+    },
+    {
+      "id": "locky_ransom__xlsm__combo__01",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "locky_ransom__xlsm__combo__02",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "vba_dropper__docm__plain__00",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__docm__plain__01",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__docm__plain__02",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__docm__random__00",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__docm__random__01",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__docm__random__02",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__docm__split__00",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "vba_dropper__docm__split__01",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "vba_dropper__docm__split__02",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "vba_dropper__docm__encode__00",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "vba_dropper__docm__encode__01",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "vba_dropper__docm__encode__02",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "vba_dropper__docm__logic__00",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__docm__logic__01",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__docm__logic__02",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__docm__combo__00",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_recall": 0.7777777777777778,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "vba_dropper__docm__combo__01",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_recall": 0.7777777777777778,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "vba_dropper__docm__combo__02",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_recall": 0.7777777777777778,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "vba_dropper__xlsm__plain__00",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__xlsm__plain__01",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__xlsm__plain__02",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__xlsm__random__00",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__xlsm__random__01",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__xlsm__random__02",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__xlsm__split__00",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "vba_dropper__xlsm__split__01",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "vba_dropper__xlsm__split__02",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "vba_dropper__xlsm__encode__00",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "vba_dropper__xlsm__encode__01",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "vba_dropper__xlsm__encode__02",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "vba_dropper__xlsm__logic__00",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__xlsm__logic__01",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__xlsm__logic__02",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "vba_dropper__xlsm__combo__00",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_recall": 0.7777777777777778,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "vba_dropper__xlsm__combo__01",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_recall": 0.7777777777777778,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "vba_dropper__xlsm__combo__02",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_recall": 0.7777777777777778,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "marker_ftp__docm__plain__00",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__docm__plain__01",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__docm__plain__02",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__docm__random__00",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__docm__random__01",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__docm__random__02",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__docm__split__00",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7142857142857143,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "marker_ftp__docm__split__01",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "marker_ftp__docm__split__02",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "marker_ftp__docm__encode__00",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.625,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "marker_ftp__docm__encode__01",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "marker_ftp__docm__encode__02",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "marker_ftp__docm__logic__00",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7142857142857143,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__docm__logic__01",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7142857142857143,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__docm__logic__02",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7142857142857143,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__docm__combo__00",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "marker_ftp__docm__combo__01",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "marker_ftp__docm__combo__02",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.8,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "marker_ftp__xlsm__plain__00",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__xlsm__plain__01",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__xlsm__plain__02",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__xlsm__random__00",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__xlsm__random__01",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__xlsm__random__02",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__xlsm__split__00",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "marker_ftp__xlsm__split__01",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7142857142857143,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "marker_ftp__xlsm__split__02",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7142857142857143,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "marker_ftp__xlsm__encode__00",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "marker_ftp__xlsm__encode__01",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "marker_ftp__xlsm__encode__02",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.75,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "marker_ftp__xlsm__logic__00",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__xlsm__logic__01",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7142857142857143,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__xlsm__logic__02",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.7142857142857143,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "marker_ftp__xlsm__combo__00",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.8,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "marker_ftp__xlsm__combo__01",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.8,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "marker_ftp__xlsm__combo__02",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.8,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "thus_wiper__docm__plain__00",
+      "family": "thus_wiper",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__plain__01",
+      "family": "thus_wiper",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__plain__02",
+      "family": "thus_wiper",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__random__00",
+      "family": "thus_wiper",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__random__01",
+      "family": "thus_wiper",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__random__02",
+      "family": "thus_wiper",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__split__00",
+      "family": "thus_wiper",
+      "variant": "split",
+      "static_recall": 0.75,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__split__01",
+      "family": "thus_wiper",
+      "variant": "split",
+      "static_recall": 0.75,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__split__02",
+      "family": "thus_wiper",
+      "variant": "split",
+      "static_recall": 0.75,
+      "dynamic_recall": 0.25,
+      "detected": [],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__encode__00",
+      "family": "thus_wiper",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.2,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "thus_wiper__docm__encode__01",
+      "family": "thus_wiper",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.4,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "thus_wiper__docm__encode__02",
+      "family": "thus_wiper",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.2,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "thus_wiper__docm__logic__00",
+      "family": "thus_wiper",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__logic__01",
+      "family": "thus_wiper",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.25,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__logic__02",
+      "family": "thus_wiper",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "thus_wiper__docm__combo__00",
+      "family": "thus_wiper",
+      "variant": "combo",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 0.2857142857142857,
+      "detected": [
+        "encode",
+        "logic"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "thus_wiper__docm__combo__01",
+      "family": "thus_wiper",
+      "variant": "combo",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 0.14285714285714285,
+      "detected": [
+        "encode",
+        "logic"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "thus_wiper__docm__combo__02",
+      "family": "thus_wiper",
+      "variant": "combo",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 0.2857142857142857,
+      "detected": [
+        "encode",
+        "logic"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "valyria_dual__docm__plain__00",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.4,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__docm__plain__01",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.4,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__docm__plain__02",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.4,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__docm__random__00",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.4,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__docm__random__01",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.4,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__docm__random__02",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.4,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__docm__split__00",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "valyria_dual__docm__split__01",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "valyria_dual__docm__split__02",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "valyria_dual__docm__encode__00",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_recall": 0.7142857142857143,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "valyria_dual__docm__encode__01",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_recall": 0.7142857142857143,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "valyria_dual__docm__encode__02",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_recall": 0.7142857142857143,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "valyria_dual__docm__logic__00",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__docm__logic__01",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__docm__logic__02",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__docm__combo__00",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_recall": 0.7777777777777778,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "valyria_dual__docm__combo__01",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "valyria_dual__docm__combo__02",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "valyria_dual__xlsm__plain__00",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.4,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__xlsm__plain__01",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.4,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__xlsm__plain__02",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.4,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__xlsm__random__00",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.4,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__xlsm__random__01",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.4,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__xlsm__random__02",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.4,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__xlsm__split__00",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_recall": 0.8333333333333334,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "valyria_dual__xlsm__split__01",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "valyria_dual__xlsm__split__02",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "valyria_dual__xlsm__encode__00",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_recall": 0.7142857142857143,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "valyria_dual__xlsm__encode__01",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_recall": 0.7142857142857143,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "valyria_dual__xlsm__encode__02",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_recall": 0.7142857142857143,
+      "dynamic_recall": 0.5714285714285714,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "valyria_dual__xlsm__logic__00",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__xlsm__logic__01",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__xlsm__logic__02",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "valyria_dual__xlsm__combo__00",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_recall": 0.7777777777777778,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "valyria_dual__xlsm__combo__01",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 5
+    },
+    {
+      "id": "valyria_dual__xlsm__combo__02",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.6666666666666666,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "benign_formatting__docm__plain__00",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__docm__plain__01",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__docm__plain__02",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__docm__random__00",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__docm__random__01",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__docm__random__02",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__docm__split__00",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__docm__split__01",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__docm__split__02",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__docm__encode__00",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__docm__encode__01",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__docm__encode__02",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__docm__logic__00",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__docm__logic__01",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__docm__logic__02",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__docm__combo__00",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "benign_formatting__docm__combo__01",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "benign_formatting__docm__combo__02",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "benign_formatting__xlsm__plain__00",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__xlsm__plain__01",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__xlsm__plain__02",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__xlsm__random__00",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__xlsm__random__01",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__xlsm__random__02",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__xlsm__split__00",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__xlsm__split__01",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__xlsm__split__02",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__xlsm__encode__00",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__xlsm__encode__01",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__xlsm__encode__02",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_formatting__xlsm__logic__00",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__xlsm__logic__01",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__xlsm__logic__02",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_formatting__xlsm__combo__00",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "benign_formatting__xlsm__combo__01",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "benign_formatting__xlsm__combo__02",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "benign_report__docm__plain__00",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__docm__plain__01",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__docm__plain__02",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__docm__random__00",
+      "family": "benign_report",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__docm__random__01",
+      "family": "benign_report",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__docm__random__02",
+      "family": "benign_report",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__docm__split__00",
+      "family": "benign_report",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "benign_report__docm__split__01",
+      "family": "benign_report",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "benign_report__docm__split__02",
+      "family": "benign_report",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "benign_report__docm__encode__00",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_report__docm__encode__01",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_report__docm__encode__02",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_report__docm__logic__00",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__docm__logic__01",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__docm__logic__02",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__docm__combo__00",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_recall": 0.875,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "benign_report__docm__combo__01",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_recall": 0.875,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "benign_report__docm__combo__02",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_recall": 0.875,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "benign_report__xlsm__plain__00",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__xlsm__plain__01",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__xlsm__plain__02",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__xlsm__random__00",
+      "family": "benign_report",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__xlsm__random__01",
+      "family": "benign_report",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__xlsm__random__02",
+      "family": "benign_report",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__xlsm__split__00",
+      "family": "benign_report",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "benign_report__xlsm__split__01",
+      "family": "benign_report",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "benign_report__xlsm__split__02",
+      "family": "benign_report",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "benign_report__xlsm__encode__00",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_report__xlsm__encode__01",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_report__xlsm__encode__02",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "benign_report__xlsm__logic__00",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__xlsm__logic__01",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__xlsm__logic__02",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "benign_report__xlsm__combo__00",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "benign_report__xlsm__combo__01",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "benign_report__xlsm__combo__02",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "donoff_interaction__docm__plain__00",
+      "family": "donoff_interaction",
+      "variant": "plain",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_interaction__docm__plain__01",
+      "family": "donoff_interaction",
+      "variant": "plain",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_interaction__docm__plain__02",
+      "family": "donoff_interaction",
+      "variant": "plain",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_interaction__docm__random__00",
+      "family": "donoff_interaction",
+      "variant": "random",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_interaction__docm__random__01",
+      "family": "donoff_interaction",
+      "variant": "random",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_interaction__docm__random__02",
+      "family": "donoff_interaction",
+      "variant": "random",
+      "static_recall": 0.9,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_interaction__docm__split__00",
+      "family": "donoff_interaction",
+      "variant": "split",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "donoff_interaction__docm__split__01",
+      "family": "donoff_interaction",
+      "variant": "split",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "donoff_interaction__docm__split__02",
+      "family": "donoff_interaction",
+      "variant": "split",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 4
+    },
+    {
+      "id": "donoff_interaction__docm__encode__00",
+      "family": "donoff_interaction",
+      "variant": "encode",
+      "static_recall": 0.9166666666666666,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "donoff_interaction__docm__encode__01",
+      "family": "donoff_interaction",
+      "variant": "encode",
+      "static_recall": 0.9166666666666666,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "donoff_interaction__docm__encode__02",
+      "family": "donoff_interaction",
+      "variant": "encode",
+      "static_recall": 0.9166666666666666,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "donoff_interaction__docm__logic__00",
+      "family": "donoff_interaction",
+      "variant": "logic",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_interaction__docm__logic__01",
+      "family": "donoff_interaction",
+      "variant": "logic",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_interaction__docm__logic__02",
+      "family": "donoff_interaction",
+      "variant": "logic",
+      "static_recall": 0.9090909090909091,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "donoff_interaction__docm__combo__00",
+      "family": "donoff_interaction",
+      "variant": "combo",
+      "static_recall": 0.9285714285714286,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "donoff_interaction__docm__combo__01",
+      "family": "donoff_interaction",
+      "variant": "combo",
+      "static_recall": 0.9285714285714286,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 7
+    },
+    {
+      "id": "donoff_interaction__docm__combo__02",
+      "family": "donoff_interaction",
+      "variant": "combo",
+      "static_recall": 0.9285714285714286,
+      "dynamic_recall": 1.0,
+      "detected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 6
+    },
+    {
+      "id": "broken_semantic__docm__plain__00",
+      "family": "broken_semantic",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__plain__01",
+      "family": "broken_semantic",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__plain__02",
+      "family": "broken_semantic",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__random__00",
+      "family": "broken_semantic",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__random__01",
+      "family": "broken_semantic",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__random__02",
+      "family": "broken_semantic",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 1.0,
+      "detected": [],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__split__00",
+      "family": "broken_semantic",
+      "variant": "split",
+      "static_recall": 0.5,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__split__01",
+      "family": "broken_semantic",
+      "variant": "split",
+      "static_recall": 0.5,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__split__02",
+      "family": "broken_semantic",
+      "variant": "split",
+      "static_recall": 0.5,
+      "dynamic_recall": 0.5,
+      "detected": [],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__encode__00",
+      "family": "broken_semantic",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "broken_semantic__docm__encode__01",
+      "family": "broken_semantic",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "broken_semantic__docm__encode__02",
+      "family": "broken_semantic",
+      "variant": "encode",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "broken_semantic__docm__logic__00",
+      "family": "broken_semantic",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__logic__01",
+      "family": "broken_semantic",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__logic__02",
+      "family": "broken_semantic",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.5,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "broken_semantic__docm__combo__00",
+      "family": "broken_semantic",
+      "variant": "combo",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.2,
+      "detected": [
+        "encode",
+        "logic"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "broken_semantic__docm__combo__01",
+      "family": "broken_semantic",
+      "variant": "combo",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.2,
+      "detected": [
+        "encode",
+        "logic"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "broken_semantic__docm__combo__02",
+      "family": "broken_semantic",
+      "variant": "combo",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.2,
+      "detected": [
+        "encode",
+        "logic"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "empty_macro__docm__plain__00",
+      "family": "empty_macro",
+      "variant": "plain",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__plain__01",
+      "family": "empty_macro",
+      "variant": "plain",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__plain__02",
+      "family": "empty_macro",
+      "variant": "plain",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__random__00",
+      "family": "empty_macro",
+      "variant": "random",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__random__01",
+      "family": "empty_macro",
+      "variant": "random",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__random__02",
+      "family": "empty_macro",
+      "variant": "random",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__split__00",
+      "family": "empty_macro",
+      "variant": "split",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__split__01",
+      "family": "empty_macro",
+      "variant": "split",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__split__02",
+      "family": "empty_macro",
+      "variant": "split",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__encode__00",
+      "family": "empty_macro",
+      "variant": "encode",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__encode__01",
+      "family": "empty_macro",
+      "variant": "encode",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__encode__02",
+      "family": "empty_macro",
+      "variant": "encode",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__logic__00",
+      "family": "empty_macro",
+      "variant": "logic",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__logic__01",
+      "family": "empty_macro",
+      "variant": "logic",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__logic__02",
+      "family": "empty_macro",
+      "variant": "logic",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__combo__00",
+      "family": "empty_macro",
+      "variant": "combo",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__combo__01",
+      "family": "empty_macro",
+      "variant": "combo",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "empty_macro__docm__combo__02",
+      "family": "empty_macro",
+      "variant": "combo",
+      "static_recall": 0.0,
+      "dynamic_recall": 0.0,
+      "detected": [],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__plain__00",
+      "family": "slow_timeout",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__plain__01",
+      "family": "slow_timeout",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__plain__02",
+      "family": "slow_timeout",
+      "variant": "plain",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [],
+      "expected": [],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__random__00",
+      "family": "slow_timeout",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__random__01",
+      "family": "slow_timeout",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__random__02",
+      "family": "slow_timeout",
+      "variant": "random",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.3333333333333333,
+      "detected": [
+        "random"
+      ],
+      "expected": [
+        "random"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__split__00",
+      "family": "slow_timeout",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.25,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "slow_timeout__docm__split__01",
+      "family": "slow_timeout",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.25,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "slow_timeout__docm__split__02",
+      "family": "slow_timeout",
+      "variant": "split",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.25,
+      "detected": [
+        "split"
+      ],
+      "expected": [
+        "split"
+      ],
+      "recovered_payloads": 1
+    },
+    {
+      "id": "slow_timeout__docm__encode__00",
+      "family": "slow_timeout",
+      "variant": "encode",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.2,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "slow_timeout__docm__encode__01",
+      "family": "slow_timeout",
+      "variant": "encode",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.2,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "slow_timeout__docm__encode__02",
+      "family": "slow_timeout",
+      "variant": "encode",
+      "static_recall": 0.8,
+      "dynamic_recall": 0.2,
+      "detected": [
+        "encode"
+      ],
+      "expected": [
+        "encode"
+      ],
+      "recovered_payloads": 2
+    },
+    {
+      "id": "slow_timeout__docm__logic__00",
+      "family": "slow_timeout",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.25,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__logic__01",
+      "family": "slow_timeout",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.25,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__logic__02",
+      "family": "slow_timeout",
+      "variant": "logic",
+      "static_recall": 1.0,
+      "dynamic_recall": 0.25,
+      "detected": [
+        "logic"
+      ],
+      "expected": [
+        "logic"
+      ],
+      "recovered_payloads": 0
+    },
+    {
+      "id": "slow_timeout__docm__combo__00",
+      "family": "slow_timeout",
+      "variant": "combo",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 0.14285714285714285,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "slow_timeout__docm__combo__01",
+      "family": "slow_timeout",
+      "variant": "combo",
+      "static_recall": 0.7142857142857143,
+      "dynamic_recall": 0.14285714285714285,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    },
+    {
+      "id": "slow_timeout__docm__combo__02",
+      "family": "slow_timeout",
+      "variant": "combo",
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 0.14285714285714285,
+      "detected": [
+        "encode",
+        "logic",
+        "random"
+      ],
+      "expected": [
+        "encode",
+        "logic",
+        "random",
+        "split"
+      ],
+      "recovered_payloads": 3
+    }
+  ]
+}

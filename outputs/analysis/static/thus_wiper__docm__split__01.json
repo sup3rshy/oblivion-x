@@ -1,0 +1,57 @@
+{
+  "sample_id": "thus_wiper__docm__split__01",
+  "format": "docm",
+  "family": "thus_wiper",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_delete",
+      "obj": "Kill",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_delete"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 3,
+    "analysis_time_ms": 20.4923152923584,
+    "sha256": "83180042b3bfcedbd2dab23d5bbb2fe64aeb81970264c95a50018f69136dfd20"
+  }
+}

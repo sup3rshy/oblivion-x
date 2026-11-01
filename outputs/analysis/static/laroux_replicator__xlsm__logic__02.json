@@ -1,0 +1,98 @@
+{
+  "sample_id": "laroux_replicator__xlsm__logic__02",
+  "format": "xlsm",
+  "family": "laroux_replicator",
+  "variant": "logic",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "startup_write",
+      "obj": "XLSTART",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:startup_write"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "office_template_infect",
+      "obj": "XLSTART",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:office_template_infect"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "office_template_infect",
+      "obj": "SaveCopyAs",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:office_template_infect"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "SaveCopyAs",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "dead_code",
+      "obj": "logic",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": true
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 7,
+    "analysis_time_ms": 19.333839416503906,
+    "sha256": "3c16066400337289bf6b3b686e8821998b8ff8ba306f223cf4a409b81b9c88c8"
+  }
+}

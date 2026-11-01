@@ -1,0 +1,66 @@
+{
+  "sample_id": "marker_ftp__xlsm__plain__01",
+  "format": "xlsm",
+  "family": "marker_ftp",
+  "variant": "plain",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 308,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 331,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 473,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 760,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1305,
+      "source": "dynamic",
+      "behavior": "ftp_upload",
+      "obj": "ftp -s:... put oblivionx_log.txt",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_env",
+    "interaction_handled": true,
+    "note": "missing environment dependency: ftp",
+    "missing_dependency": "ftp",
+    "analysis_time_ms": 0.12755393981933594
+  }
+}

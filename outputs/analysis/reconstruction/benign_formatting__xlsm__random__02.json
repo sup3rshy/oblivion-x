@@ -1,0 +1,44 @@
+{
+  "sample_id": "benign_formatting__xlsm__random__02",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "save_as_pdf",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_formatting:save_as_pdf"
+    },
+    {
+      "behavior": "data_copy",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_formatting:data_copy"
+    }
+  ],
+  "chain": "delivery",
+  "status": "ok"
+}

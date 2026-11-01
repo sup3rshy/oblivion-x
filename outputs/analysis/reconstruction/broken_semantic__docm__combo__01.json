@@ -1,0 +1,82 @@
+{
+  "sample_id": "broken_semantic__docm__combo__01",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        4,
+        5,
+        6
+      ],
+      "confidence": 0.95,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        2,
+        3
+      ],
+      "confidence": 0.9,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        2,
+        3
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "chr_encode",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.95,
+      "supported": false,
+      "obj": "encode"
+    },
+    {
+      "behavior": "dead_code",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.95,
+      "supported": false,
+      "obj": "logic"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.95,
+      "supported": false,
+      "obj": "base64-blob"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> c2_download",
+  "status": "partial"
+}

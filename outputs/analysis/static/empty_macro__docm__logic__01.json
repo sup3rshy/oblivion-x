@@ -1,0 +1,26 @@
+{
+  "sample_id": "empty_macro__docm__logic__01",
+  "format": "docm",
+  "family": "empty_macro",
+  "variant": "logic",
+  "events": [],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 0,
+    "analysis_time_ms": 17.895936965942383,
+    "sha256": "317df162c3f0d4947511c53f930076f473c6964374d2ba40107a162cbca78142"
+  }
+}

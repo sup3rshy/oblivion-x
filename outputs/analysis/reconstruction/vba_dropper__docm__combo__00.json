@@ -1,0 +1,148 @@
+{
+  "sample_id": "vba_dropper__docm__combo__00",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        6,
+        8,
+        7,
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        10,
+        9
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        6,
+        7
+      ],
+      "confidence": 0.9,
+      "note": ""
+    },
+    {
+      "stage": "impact",
+      "evidence": [
+        12,
+        11,
+        13
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "shell_run",
+      "evidence": [
+        10
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ..."
+    },
+    {
+      "behavior": "file_write",
+      "evidence": [
+        12
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "%TEMP%\\oblivionx_payload.exe"
+    },
+    {
+      "behavior": "env_read",
+      "evidence": [
+        9
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        6,
+        7
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "chr_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+    },
+    {
+      "behavior": "dead_code",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Logic obfuscation: unreachable code / decoy routines"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Base64-encoded payload present"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Strings split and chained with & / + (split obfuscation)"
+    },
+    {
+      "behavior": "file_execute",
+      "evidence": [
+        11,
+        13
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "%TEMP%\\oblivionx_payload.exe"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> execution -> c2_download -> impact",
+  "status": "ok"
+}

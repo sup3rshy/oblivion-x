@@ -1,0 +1,79 @@
+{
+  "sample_id": "benign_report__docm__split__01",
+  "format": "docm",
+  "family": "benign_report",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "save_as_pdf",
+      "obj": "ExportAsFixedFormat",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:save_as_pdf"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "print_document",
+      "obj": "PrintOut",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:print_document"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "data_copy",
+      "obj": ".Copy",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:data_copy"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "string_concat",
+      "obj": "split",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": true,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "C:\\Users\\Public\\oblivionx_report.pdf"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 5,
+    "analysis_time_ms": 33.28847885131836,
+    "sha256": "48d6c59d2894a6d4ac4845cddfa51202583e117e4bfad3ab9f8cbebd5e36521f"
+  }
+}

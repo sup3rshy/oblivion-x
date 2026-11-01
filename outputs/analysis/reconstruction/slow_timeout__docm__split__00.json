@@ -1,0 +1,72 @@
+{
+  "sample_id": "slow_timeout__docm__split__00",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.95,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        2,
+        3,
+        4
+      ],
+      "confidence": 0.9,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "shell_run",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Shell \""
+    },
+    {
+      "behavior": "cmd_run",
+      "evidence": [
+        3,
+        4
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "cmd /c"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.95,
+      "supported": false,
+      "obj": "split"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> execution",
+  "status": "partial"
+}

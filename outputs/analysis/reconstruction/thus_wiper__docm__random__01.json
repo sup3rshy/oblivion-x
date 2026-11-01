@@ -1,0 +1,60 @@
+{
+  "sample_id": "thus_wiper__docm__random__01",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.85,
+      "note": ""
+    },
+    {
+      "stage": "impact",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "file_delete",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Kill"
+    },
+    {
+      "behavior": "env_read",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Environ("
+    }
+  ],
+  "chain": "delivery -> execution -> impact",
+  "status": "partial"
+}

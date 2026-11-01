@@ -1,0 +1,55 @@
+{
+  "sample_id": "broken_semantic__docm__encode__00",
+  "format": "docm",
+  "family": "broken_semantic",
+  "variant": "encode",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 558,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 646,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 762,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 1062,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_semantic",
+    "interaction_handled": true,
+    "error_detail": "Sub or Function not defined",
+    "analysis_time_ms": 0.2040863037109375
+  }
+}

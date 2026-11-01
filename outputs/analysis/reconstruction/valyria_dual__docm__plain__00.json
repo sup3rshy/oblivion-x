@@ -1,0 +1,84 @@
+{
+  "sample_id": "valyria_dual__docm__plain__00",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        2,
+        3
+      ],
+      "confidence": 0.85,
+      "note": ""
+    },
+    {
+      "stage": "exfiltration",
+      "evidence": [
+        6,
+        5,
+        6,
+        7
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "http_download",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "XMLHTTP"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/second-stage.bin"
+    },
+    {
+      "behavior": "outlook_access",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "valyria_dual:outlook_access"
+    },
+    {
+      "behavior": "outlook_send",
+      "evidence": [
+        5,
+        6,
+        7
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": ".Send"
+    }
+  ],
+  "chain": "delivery -> c2_download -> exfiltration",
+  "status": "partial"
+}

@@ -1,0 +1,173 @@
+{
+  "sample_id": "marker_ftp__docm__combo__00",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        4,
+        5,
+        7,
+        6
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        2,
+        3,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "confidence": 0.85,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        13,
+        14
+      ],
+      "confidence": 0.9,
+      "note": ""
+    },
+    {
+      "stage": "exfiltration",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "impact",
+      "evidence": [
+        5,
+        6
+      ],
+      "confidence": 0.85,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "shell_run",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Shell \""
+    },
+    {
+      "behavior": "cmd_run",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "cmd /c"
+    },
+    {
+      "behavior": "ftp_upload",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "ftp -s:... put oblivionx_log.txt"
+    },
+    {
+      "behavior": "file_write",
+      "evidence": [
+        5,
+        6
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Open logPath For"
+    },
+    {
+      "behavior": "env_read",
+      "evidence": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Environ("
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        13,
+        14
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Strings split and chained with & / + (split obfuscation)"
+    },
+    {
+      "behavior": "chr_encode",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+    },
+    {
+      "behavior": "dead_code",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Logic obfuscation: unreachable code / decoy routines"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Base64-encoded payload present"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> execution -> c2_download -> exfiltration -> impact",
+  "status": "partial"
+}

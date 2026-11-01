@@ -1,0 +1,3435 @@
+{
+  "experiment": "E8",
+  "title": "Performance / resource analysis",
+  "n": 378,
+  "total_time_ms_mean": 30.097791126796178,
+  "total_time_ms_std": 66.83537096695913,
+  "total_time_ms_p50": 24.86860752105713,
+  "total_time_ms_p95": 40.22481441497803,
+  "throughput_samples_per_sec": 33.225029564036554,
+  "static_time_ms_mean": 29.9685865482956,
+  "dynamic_time_ms_mean": 0.12920457850057612,
+  "by_family_ms_mean": {
+    "benign_formatting": 25.059686766730415,
+    "benign_report": 24.726370970408123,
+    "broken_semantic": 21.35099305046929,
+    "donoff_downloader": 28.228527969784206,
+    "donoff_interaction": 24.60108862982856,
+    "empty_macro": 27.439316113789875,
+    "laroux_replicator": 23.503740628560383,
+    "locky_ransom": 65.85625145170424,
+    "marker_ftp": 27.737028068966335,
+    "metacol_mailer": 27.136021190219456,
+    "slow_timeout": 32.243357764350044,
+    "thus_wiper": 23.970683415730793,
+    "valyria_dual": 27.58834759394328,
+    "vba_dropper": 26.707993613349068
+  },
+  "completion_rate": 0.9523809523809523,
+  "timeout_rate": 0.047619047619047616,
+  "note": "dynamic_time_ms is the cost of the deterministic telemetry simulator; real Office execution time is reported separately when --dynamic-source windows traces are used.",
+  "per_sample": [
+    {
+      "id": "donoff_downloader__docm__plain__00",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_time_ms": 87.2957706451416,
+      "dynamic_time_ms": 0.13875961303710938,
+      "total_time_ms": 87.43453025817871,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__plain__01",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_time_ms": 27.301549911499023,
+      "dynamic_time_ms": 0.16164779663085938,
+      "total_time_ms": 27.463197708129883,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__plain__02",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_time_ms": 24.430036544799805,
+      "dynamic_time_ms": 0.14019012451171875,
+      "total_time_ms": 24.570226669311523,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__random__00",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_time_ms": 22.00794219970703,
+      "dynamic_time_ms": 0.12040138244628906,
+      "total_time_ms": 22.12834358215332,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__random__01",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_time_ms": 19.144296646118164,
+      "dynamic_time_ms": 0.118255615234375,
+      "total_time_ms": 19.26255226135254,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__random__02",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_time_ms": 26.84307098388672,
+      "dynamic_time_ms": 0.10776519775390625,
+      "total_time_ms": 26.950836181640625,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__split__00",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_time_ms": 23.433446884155273,
+      "dynamic_time_ms": 0.15091896057128906,
+      "total_time_ms": 23.584365844726562,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__split__01",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_time_ms": 27.39262580871582,
+      "dynamic_time_ms": 0.12683868408203125,
+      "total_time_ms": 27.51946449279785,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__split__02",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_time_ms": 29.826879501342773,
+      "dynamic_time_ms": 0.194549560546875,
+      "total_time_ms": 30.02142906188965,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__encode__00",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_time_ms": 26.99136734008789,
+      "dynamic_time_ms": 0.26154518127441406,
+      "total_time_ms": 27.252912521362305,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__encode__01",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_time_ms": 22.897005081176758,
+      "dynamic_time_ms": 0.11658668518066406,
+      "total_time_ms": 23.013591766357422,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__encode__02",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_time_ms": 24.967432022094727,
+      "dynamic_time_ms": 0.2510547637939453,
+      "total_time_ms": 25.218486785888672,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__logic__00",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_time_ms": 33.23793411254883,
+      "dynamic_time_ms": 0.17189979553222656,
+      "total_time_ms": 33.409833908081055,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__logic__01",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_time_ms": 31.79144859313965,
+      "dynamic_time_ms": 0.12326240539550781,
+      "total_time_ms": 31.914710998535156,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__logic__02",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_time_ms": 30.45058250427246,
+      "dynamic_time_ms": 0.14710426330566406,
+      "total_time_ms": 30.597686767578125,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__combo__00",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_time_ms": 30.345678329467773,
+      "dynamic_time_ms": 0.12183189392089844,
+      "total_time_ms": 30.467510223388672,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__combo__01",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_time_ms": 28.960227966308594,
+      "dynamic_time_ms": 0.22125244140625,
+      "total_time_ms": 29.181480407714844,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__docm__combo__02",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_time_ms": 29.024124145507812,
+      "dynamic_time_ms": 0.16951560974121094,
+      "total_time_ms": 29.193639755249023,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__plain__00",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_time_ms": 29.5562744140625,
+      "dynamic_time_ms": 0.1361370086669922,
+      "total_time_ms": 29.692411422729492,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__plain__01",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_time_ms": 26.337146759033203,
+      "dynamic_time_ms": 0.13184547424316406,
+      "total_time_ms": 26.468992233276367,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__plain__02",
+      "family": "donoff_downloader",
+      "variant": "plain",
+      "static_time_ms": 22.72653579711914,
+      "dynamic_time_ms": 0.11658668518066406,
+      "total_time_ms": 22.843122482299805,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__random__00",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_time_ms": 28.563737869262695,
+      "dynamic_time_ms": 0.29730796813964844,
+      "total_time_ms": 28.861045837402344,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__random__01",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_time_ms": 28.43165397644043,
+      "dynamic_time_ms": 0.13709068298339844,
+      "total_time_ms": 28.568744659423828,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__random__02",
+      "family": "donoff_downloader",
+      "variant": "random",
+      "static_time_ms": 30.068159103393555,
+      "dynamic_time_ms": 0.1308917999267578,
+      "total_time_ms": 30.199050903320312,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__split__00",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_time_ms": 24.352073669433594,
+      "dynamic_time_ms": 0.11706352233886719,
+      "total_time_ms": 24.46913719177246,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__split__01",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_time_ms": 23.421525955200195,
+      "dynamic_time_ms": 0.13208389282226562,
+      "total_time_ms": 23.55360984802246,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__split__02",
+      "family": "donoff_downloader",
+      "variant": "split",
+      "static_time_ms": 23.488521575927734,
+      "dynamic_time_ms": 0.12946128845214844,
+      "total_time_ms": 23.617982864379883,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__encode__00",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_time_ms": 23.01621437072754,
+      "dynamic_time_ms": 0.1277923583984375,
+      "total_time_ms": 23.144006729125977,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__encode__01",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_time_ms": 38.04373741149902,
+      "dynamic_time_ms": 0.11682510375976562,
+      "total_time_ms": 38.16056251525879,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__encode__02",
+      "family": "donoff_downloader",
+      "variant": "encode",
+      "static_time_ms": 22.803068161010742,
+      "dynamic_time_ms": 0.11515617370605469,
+      "total_time_ms": 22.918224334716797,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__logic__00",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_time_ms": 24.262666702270508,
+      "dynamic_time_ms": 0.11157989501953125,
+      "total_time_ms": 24.37424659729004,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__logic__01",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_time_ms": 24.68132972717285,
+      "dynamic_time_ms": 0.152587890625,
+      "total_time_ms": 24.83391761779785,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__logic__02",
+      "family": "donoff_downloader",
+      "variant": "logic",
+      "static_time_ms": 28.83601188659668,
+      "dynamic_time_ms": 0.1957416534423828,
+      "total_time_ms": 29.031753540039062,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__combo__00",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_time_ms": 22.67909049987793,
+      "dynamic_time_ms": 0.11730194091796875,
+      "total_time_ms": 22.7963924407959,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__combo__01",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_time_ms": 19.8516845703125,
+      "dynamic_time_ms": 0.11873245239257812,
+      "total_time_ms": 19.970417022705078,
+      "failure": null
+    },
+    {
+      "id": "donoff_downloader__xlsm__combo__02",
+      "family": "donoff_downloader",
+      "variant": "combo",
+      "static_time_ms": 23.398160934448242,
+      "dynamic_time_ms": 0.1404285430908203,
+      "total_time_ms": 23.538589477539062,
+      "failure": null
+    },
+    {
+      "id": "metacol_mailer__docm__plain__00",
+      "family": "metacol_mailer",
+      "variant": "plain",
+      "static_time_ms": 19.63639259338379,
+      "dynamic_time_ms": 0.13113021850585938,
+      "total_time_ms": 19.76752281188965,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__plain__01",
+      "family": "metacol_mailer",
+      "variant": "plain",
+      "static_time_ms": 23.093461990356445,
+      "dynamic_time_ms": 0.8454322814941406,
+      "total_time_ms": 23.938894271850586,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__plain__02",
+      "family": "metacol_mailer",
+      "variant": "plain",
+      "static_time_ms": 19.763469696044922,
+      "dynamic_time_ms": 0.08678436279296875,
+      "total_time_ms": 19.85025405883789,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__random__00",
+      "family": "metacol_mailer",
+      "variant": "random",
+      "static_time_ms": 24.075746536254883,
+      "dynamic_time_ms": 0.09870529174804688,
+      "total_time_ms": 24.17445182800293,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__random__01",
+      "family": "metacol_mailer",
+      "variant": "random",
+      "static_time_ms": 34.17205810546875,
+      "dynamic_time_ms": 0.1709461212158203,
+      "total_time_ms": 34.34300422668457,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__random__02",
+      "family": "metacol_mailer",
+      "variant": "random",
+      "static_time_ms": 40.10581970214844,
+      "dynamic_time_ms": 0.11277198791503906,
+      "total_time_ms": 40.21859169006348,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__split__00",
+      "family": "metacol_mailer",
+      "variant": "split",
+      "static_time_ms": 25.6500244140625,
+      "dynamic_time_ms": 0.09012222290039062,
+      "total_time_ms": 25.74014663696289,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__split__01",
+      "family": "metacol_mailer",
+      "variant": "split",
+      "static_time_ms": 23.671865463256836,
+      "dynamic_time_ms": 0.14019012451171875,
+      "total_time_ms": 23.812055587768555,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__split__02",
+      "family": "metacol_mailer",
+      "variant": "split",
+      "static_time_ms": 24.466991424560547,
+      "dynamic_time_ms": 0.10585784912109375,
+      "total_time_ms": 24.57284927368164,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__encode__00",
+      "family": "metacol_mailer",
+      "variant": "encode",
+      "static_time_ms": 30.269145965576172,
+      "dynamic_time_ms": 0.11706352233886719,
+      "total_time_ms": 30.38620948791504,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__encode__01",
+      "family": "metacol_mailer",
+      "variant": "encode",
+      "static_time_ms": 36.83114051818848,
+      "dynamic_time_ms": 0.09703636169433594,
+      "total_time_ms": 36.92817687988281,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__encode__02",
+      "family": "metacol_mailer",
+      "variant": "encode",
+      "static_time_ms": 25.519847869873047,
+      "dynamic_time_ms": 0.10085105895996094,
+      "total_time_ms": 25.620698928833008,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__logic__00",
+      "family": "metacol_mailer",
+      "variant": "logic",
+      "static_time_ms": 22.735595703125,
+      "dynamic_time_ms": 0.09417533874511719,
+      "total_time_ms": 22.829771041870117,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__logic__01",
+      "family": "metacol_mailer",
+      "variant": "logic",
+      "static_time_ms": 20.31993865966797,
+      "dynamic_time_ms": 0.08654594421386719,
+      "total_time_ms": 20.406484603881836,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__logic__02",
+      "family": "metacol_mailer",
+      "variant": "logic",
+      "static_time_ms": 25.62713623046875,
+      "dynamic_time_ms": 0.13256072998046875,
+      "total_time_ms": 25.75969696044922,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__combo__00",
+      "family": "metacol_mailer",
+      "variant": "combo",
+      "static_time_ms": 32.99689292907715,
+      "dynamic_time_ms": 0.2028942108154297,
+      "total_time_ms": 33.19978713989258,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__combo__01",
+      "family": "metacol_mailer",
+      "variant": "combo",
+      "static_time_ms": 25.571107864379883,
+      "dynamic_time_ms": 0.10776519775390625,
+      "total_time_ms": 25.67887306213379,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "metacol_mailer__docm__combo__02",
+      "family": "metacol_mailer",
+      "variant": "combo",
+      "static_time_ms": 31.05926513671875,
+      "dynamic_time_ms": 0.16164779663085938,
+      "total_time_ms": 31.22091293334961,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "laroux_replicator__xlsm__plain__00",
+      "family": "laroux_replicator",
+      "variant": "plain",
+      "static_time_ms": 31.87704086303711,
+      "dynamic_time_ms": 0.14281272888183594,
+      "total_time_ms": 32.019853591918945,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__plain__01",
+      "family": "laroux_replicator",
+      "variant": "plain",
+      "static_time_ms": 29.908418655395508,
+      "dynamic_time_ms": 0.14591217041015625,
+      "total_time_ms": 30.054330825805664,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__plain__02",
+      "family": "laroux_replicator",
+      "variant": "plain",
+      "static_time_ms": 30.725717544555664,
+      "dynamic_time_ms": 0.263214111328125,
+      "total_time_ms": 30.98893165588379,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__random__00",
+      "family": "laroux_replicator",
+      "variant": "random",
+      "static_time_ms": 31.145095825195312,
+      "dynamic_time_ms": 0.10061264038085938,
+      "total_time_ms": 31.245708465576172,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__random__01",
+      "family": "laroux_replicator",
+      "variant": "random",
+      "static_time_ms": 22.018909454345703,
+      "dynamic_time_ms": 0.1621246337890625,
+      "total_time_ms": 22.181034088134766,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__random__02",
+      "family": "laroux_replicator",
+      "variant": "random",
+      "static_time_ms": 19.048690795898438,
+      "dynamic_time_ms": 0.09751319885253906,
+      "total_time_ms": 19.146203994750977,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__split__00",
+      "family": "laroux_replicator",
+      "variant": "split",
+      "static_time_ms": 26.158809661865234,
+      "dynamic_time_ms": 0.10085105895996094,
+      "total_time_ms": 26.259660720825195,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__split__01",
+      "family": "laroux_replicator",
+      "variant": "split",
+      "static_time_ms": 18.800735473632812,
+      "dynamic_time_ms": 0.10061264038085938,
+      "total_time_ms": 18.901348114013672,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__split__02",
+      "family": "laroux_replicator",
+      "variant": "split",
+      "static_time_ms": 19.99640464782715,
+      "dynamic_time_ms": 0.095367431640625,
+      "total_time_ms": 20.091772079467773,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__encode__00",
+      "family": "laroux_replicator",
+      "variant": "encode",
+      "static_time_ms": 19.53125,
+      "dynamic_time_ms": 0.10347366333007812,
+      "total_time_ms": 19.634723663330078,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__encode__01",
+      "family": "laroux_replicator",
+      "variant": "encode",
+      "static_time_ms": 23.79608154296875,
+      "dynamic_time_ms": 0.29969215393066406,
+      "total_time_ms": 24.095773696899414,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__encode__02",
+      "family": "laroux_replicator",
+      "variant": "encode",
+      "static_time_ms": 20.36571502685547,
+      "dynamic_time_ms": 0.10156631469726562,
+      "total_time_ms": 20.467281341552734,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__logic__00",
+      "family": "laroux_replicator",
+      "variant": "logic",
+      "static_time_ms": 19.605636596679688,
+      "dynamic_time_ms": 0.09465217590332031,
+      "total_time_ms": 19.700288772583008,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__logic__01",
+      "family": "laroux_replicator",
+      "variant": "logic",
+      "static_time_ms": 20.084619522094727,
+      "dynamic_time_ms": 0.09846687316894531,
+      "total_time_ms": 20.183086395263672,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__logic__02",
+      "family": "laroux_replicator",
+      "variant": "logic",
+      "static_time_ms": 19.333839416503906,
+      "dynamic_time_ms": 0.09703636169433594,
+      "total_time_ms": 19.430875778198242,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__combo__00",
+      "family": "laroux_replicator",
+      "variant": "combo",
+      "static_time_ms": 22.101402282714844,
+      "dynamic_time_ms": 0.102996826171875,
+      "total_time_ms": 22.20439910888672,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__combo__01",
+      "family": "laroux_replicator",
+      "variant": "combo",
+      "static_time_ms": 22.535324096679688,
+      "dynamic_time_ms": 0.10347366333007812,
+      "total_time_ms": 22.638797760009766,
+      "failure": null
+    },
+    {
+      "id": "laroux_replicator__xlsm__combo__02",
+      "family": "laroux_replicator",
+      "variant": "combo",
+      "static_time_ms": 23.722171783447266,
+      "dynamic_time_ms": 0.1010894775390625,
+      "total_time_ms": 23.823261260986328,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__plain__00",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_time_ms": 21.935224533081055,
+      "dynamic_time_ms": 0.1316070556640625,
+      "total_time_ms": 22.066831588745117,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__plain__01",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_time_ms": 20.27297019958496,
+      "dynamic_time_ms": 0.09799003601074219,
+      "total_time_ms": 20.370960235595703,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__plain__02",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_time_ms": 19.577980041503906,
+      "dynamic_time_ms": 0.11849403381347656,
+      "total_time_ms": 19.696474075317383,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__random__00",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_time_ms": 30.736684799194336,
+      "dynamic_time_ms": 0.1125335693359375,
+      "total_time_ms": 30.849218368530273,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__random__01",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_time_ms": 28.736591339111328,
+      "dynamic_time_ms": 0.13756752014160156,
+      "total_time_ms": 28.87415885925293,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__random__02",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_time_ms": 29.017210006713867,
+      "dynamic_time_ms": 0.11992454528808594,
+      "total_time_ms": 29.137134552001953,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__split__00",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_time_ms": 54.787635803222656,
+      "dynamic_time_ms": 0.2193450927734375,
+      "total_time_ms": 55.006980895996094,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__split__01",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_time_ms": 1319.875955581665,
+      "dynamic_time_ms": 0.1595020294189453,
+      "total_time_ms": 1320.035457611084,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__split__02",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_time_ms": 37.89186477661133,
+      "dynamic_time_ms": 0.1685619354248047,
+      "total_time_ms": 38.06042671203613,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__encode__00",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_time_ms": 38.066864013671875,
+      "dynamic_time_ms": 0.18739700317382812,
+      "total_time_ms": 38.2542610168457,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__encode__01",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_time_ms": 37.131547927856445,
+      "dynamic_time_ms": 0.1480579376220703,
+      "total_time_ms": 37.279605865478516,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__encode__02",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_time_ms": 42.952775955200195,
+      "dynamic_time_ms": 0.25081634521484375,
+      "total_time_ms": 43.20359230041504,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__logic__00",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_time_ms": 26.041746139526367,
+      "dynamic_time_ms": 0.10991096496582031,
+      "total_time_ms": 26.151657104492188,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__logic__01",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_time_ms": 20.392179489135742,
+      "dynamic_time_ms": 0.15020370483398438,
+      "total_time_ms": 20.542383193969727,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__logic__02",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_time_ms": 25.255680084228516,
+      "dynamic_time_ms": 0.1163482666015625,
+      "total_time_ms": 25.372028350830078,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__combo__00",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_time_ms": 29.84929084777832,
+      "dynamic_time_ms": 0.11730194091796875,
+      "total_time_ms": 29.96659278869629,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__combo__01",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_time_ms": 28.11741828918457,
+      "dynamic_time_ms": 0.12493133544921875,
+      "total_time_ms": 28.24234962463379,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__docm__combo__02",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_time_ms": 26.278972625732422,
+      "dynamic_time_ms": 0.20956993103027344,
+      "total_time_ms": 26.488542556762695,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__plain__00",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_time_ms": 27.397871017456055,
+      "dynamic_time_ms": 0.1537799835205078,
+      "total_time_ms": 27.551651000976562,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__plain__01",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_time_ms": 29.62970733642578,
+      "dynamic_time_ms": 0.10061264038085938,
+      "total_time_ms": 29.73031997680664,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__plain__02",
+      "family": "locky_ransom",
+      "variant": "plain",
+      "static_time_ms": 22.629261016845703,
+      "dynamic_time_ms": 0.16045570373535156,
+      "total_time_ms": 22.789716720581055,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__random__00",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_time_ms": 23.920536041259766,
+      "dynamic_time_ms": 0.12063980102539062,
+      "total_time_ms": 24.041175842285156,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__random__01",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_time_ms": 25.12073516845703,
+      "dynamic_time_ms": 0.19669532775878906,
+      "total_time_ms": 25.31743049621582,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__random__02",
+      "family": "locky_ransom",
+      "variant": "random",
+      "static_time_ms": 30.056238174438477,
+      "dynamic_time_ms": 0.10204315185546875,
+      "total_time_ms": 30.158281326293945,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__split__00",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_time_ms": 28.061389923095703,
+      "dynamic_time_ms": 0.14328956604003906,
+      "total_time_ms": 28.204679489135742,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__split__01",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_time_ms": 26.540040969848633,
+      "dynamic_time_ms": 0.12135505676269531,
+      "total_time_ms": 26.661396026611328,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__split__02",
+      "family": "locky_ransom",
+      "variant": "split",
+      "static_time_ms": 32.70459175109863,
+      "dynamic_time_ms": 0.11539459228515625,
+      "total_time_ms": 32.81998634338379,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__encode__00",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_time_ms": 24.48272705078125,
+      "dynamic_time_ms": 0.1270771026611328,
+      "total_time_ms": 24.609804153442383,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__encode__01",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_time_ms": 23.439645767211914,
+      "dynamic_time_ms": 0.14591217041015625,
+      "total_time_ms": 23.58555793762207,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__encode__02",
+      "family": "locky_ransom",
+      "variant": "encode",
+      "static_time_ms": 24.282217025756836,
+      "dynamic_time_ms": 0.12540817260742188,
+      "total_time_ms": 24.407625198364258,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__logic__00",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_time_ms": 33.99038314819336,
+      "dynamic_time_ms": 0.11157989501953125,
+      "total_time_ms": 34.10196304321289,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__logic__01",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_time_ms": 26.84926986694336,
+      "dynamic_time_ms": 0.10514259338378906,
+      "total_time_ms": 26.95441246032715,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__logic__02",
+      "family": "locky_ransom",
+      "variant": "logic",
+      "static_time_ms": 26.010990142822266,
+      "dynamic_time_ms": 0.13327598571777344,
+      "total_time_ms": 26.14426612854004,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__combo__00",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_time_ms": 36.26656532287598,
+      "dynamic_time_ms": 0.13875961303710938,
+      "total_time_ms": 36.405324935913086,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__combo__01",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_time_ms": 38.15412521362305,
+      "dynamic_time_ms": 0.2148151397705078,
+      "total_time_ms": 38.368940353393555,
+      "failure": null
+    },
+    {
+      "id": "locky_ransom__xlsm__combo__02",
+      "family": "locky_ransom",
+      "variant": "combo",
+      "static_time_ms": 49.184560775756836,
+      "dynamic_time_ms": 0.18930435180664062,
+      "total_time_ms": 49.37386512756348,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__plain__00",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_time_ms": 32.811641693115234,
+      "dynamic_time_ms": 0.1766681671142578,
+      "total_time_ms": 32.98830986022949,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__plain__01",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_time_ms": 31.751155853271484,
+      "dynamic_time_ms": 0.12493133544921875,
+      "total_time_ms": 31.876087188720703,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__plain__02",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_time_ms": 35.75277328491211,
+      "dynamic_time_ms": 0.13327598571777344,
+      "total_time_ms": 35.88604927062988,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__random__00",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_time_ms": 18.64767074584961,
+      "dynamic_time_ms": 0.09918212890625,
+      "total_time_ms": 18.74685287475586,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__random__01",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_time_ms": 22.639751434326172,
+      "dynamic_time_ms": 0.10466575622558594,
+      "total_time_ms": 22.744417190551758,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__random__02",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_time_ms": 21.399974822998047,
+      "dynamic_time_ms": 0.20003318786621094,
+      "total_time_ms": 21.600008010864258,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__split__00",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_time_ms": 21.316051483154297,
+      "dynamic_time_ms": 0.11610984802246094,
+      "total_time_ms": 21.432161331176758,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__split__01",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_time_ms": 24.204492568969727,
+      "dynamic_time_ms": 0.10919570922851562,
+      "total_time_ms": 24.313688278198242,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__split__02",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_time_ms": 23.807525634765625,
+      "dynamic_time_ms": 0.11038780212402344,
+      "total_time_ms": 23.91791343688965,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__encode__00",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_time_ms": 25.065898895263672,
+      "dynamic_time_ms": 0.10848045349121094,
+      "total_time_ms": 25.174379348754883,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__encode__01",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_time_ms": 26.390552520751953,
+      "dynamic_time_ms": 0.10776519775390625,
+      "total_time_ms": 26.49831771850586,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__encode__02",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_time_ms": 20.888805389404297,
+      "dynamic_time_ms": 0.12421607971191406,
+      "total_time_ms": 21.01302146911621,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__logic__00",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_time_ms": 22.784948348999023,
+      "dynamic_time_ms": 0.11348724365234375,
+      "total_time_ms": 22.898435592651367,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__logic__01",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_time_ms": 22.18341827392578,
+      "dynamic_time_ms": 0.1506805419921875,
+      "total_time_ms": 22.33409881591797,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__logic__02",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_time_ms": 25.207996368408203,
+      "dynamic_time_ms": 0.10943412780761719,
+      "total_time_ms": 25.31743049621582,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__combo__00",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_time_ms": 25.156259536743164,
+      "dynamic_time_ms": 0.12969970703125,
+      "total_time_ms": 25.285959243774414,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__combo__01",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_time_ms": 22.70650863647461,
+      "dynamic_time_ms": 0.11968612670898438,
+      "total_time_ms": 22.826194763183594,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__docm__combo__02",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_time_ms": 23.120880126953125,
+      "dynamic_time_ms": 0.14400482177734375,
+      "total_time_ms": 23.26488494873047,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__plain__00",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_time_ms": 25.156497955322266,
+      "dynamic_time_ms": 0.11229515075683594,
+      "total_time_ms": 25.2687931060791,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__plain__01",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_time_ms": 19.604921340942383,
+      "dynamic_time_ms": 0.10704994201660156,
+      "total_time_ms": 19.711971282958984,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__plain__02",
+      "family": "vba_dropper",
+      "variant": "plain",
+      "static_time_ms": 22.365570068359375,
+      "dynamic_time_ms": 0.10395050048828125,
+      "total_time_ms": 22.469520568847656,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__random__00",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_time_ms": 24.362564086914062,
+      "dynamic_time_ms": 0.14710426330566406,
+      "total_time_ms": 24.509668350219727,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__random__01",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_time_ms": 27.689695358276367,
+      "dynamic_time_ms": 0.11706352233886719,
+      "total_time_ms": 27.806758880615234,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__random__02",
+      "family": "vba_dropper",
+      "variant": "random",
+      "static_time_ms": 21.526813507080078,
+      "dynamic_time_ms": 0.10323524475097656,
+      "total_time_ms": 21.630048751831055,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__split__00",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_time_ms": 20.738840103149414,
+      "dynamic_time_ms": 0.1361370086669922,
+      "total_time_ms": 20.874977111816406,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__split__01",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_time_ms": 22.565364837646484,
+      "dynamic_time_ms": 0.09965896606445312,
+      "total_time_ms": 22.665023803710938,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__split__02",
+      "family": "vba_dropper",
+      "variant": "split",
+      "static_time_ms": 26.299476623535156,
+      "dynamic_time_ms": 0.10085105895996094,
+      "total_time_ms": 26.400327682495117,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__encode__00",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_time_ms": 21.420955657958984,
+      "dynamic_time_ms": 0.10561943054199219,
+      "total_time_ms": 21.526575088500977,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__encode__01",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_time_ms": 33.19430351257324,
+      "dynamic_time_ms": 0.14138221740722656,
+      "total_time_ms": 33.33568572998047,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__encode__02",
+      "family": "vba_dropper",
+      "variant": "encode",
+      "static_time_ms": 62.22391128540039,
+      "dynamic_time_ms": 0.18715858459472656,
+      "total_time_ms": 62.41106986999512,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__logic__00",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_time_ms": 41.97812080383301,
+      "dynamic_time_ms": 0.1609325408935547,
+      "total_time_ms": 42.13905334472656,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__logic__01",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_time_ms": 31.81910514831543,
+      "dynamic_time_ms": 0.25153160095214844,
+      "total_time_ms": 32.07063674926758,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__logic__02",
+      "family": "vba_dropper",
+      "variant": "logic",
+      "static_time_ms": 35.86220741271973,
+      "dynamic_time_ms": 0.14066696166992188,
+      "total_time_ms": 36.00287437438965,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__combo__00",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_time_ms": 22.977828979492188,
+      "dynamic_time_ms": 0.12183189392089844,
+      "total_time_ms": 23.099660873413086,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__combo__01",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_time_ms": 24.019241333007812,
+      "dynamic_time_ms": 0.13256072998046875,
+      "total_time_ms": 24.15180206298828,
+      "failure": null
+    },
+    {
+      "id": "vba_dropper__xlsm__combo__02",
+      "family": "vba_dropper",
+      "variant": "combo",
+      "static_time_ms": 27.178525924682617,
+      "dynamic_time_ms": 0.11658668518066406,
+      "total_time_ms": 27.29511260986328,
+      "failure": null
+    },
+    {
+      "id": "marker_ftp__docm__plain__00",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_time_ms": 20.285844802856445,
+      "dynamic_time_ms": 0.08749961853027344,
+      "total_time_ms": 20.37334442138672,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__plain__01",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_time_ms": 19.692182540893555,
+      "dynamic_time_ms": 0.1423358917236328,
+      "total_time_ms": 19.834518432617188,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__plain__02",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_time_ms": 20.19047737121582,
+      "dynamic_time_ms": 0.09417533874511719,
+      "total_time_ms": 20.284652709960938,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__random__00",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_time_ms": 27.016401290893555,
+      "dynamic_time_ms": 0.091552734375,
+      "total_time_ms": 27.107954025268555,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__random__01",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_time_ms": 25.321006774902344,
+      "dynamic_time_ms": 0.09679794311523438,
+      "total_time_ms": 25.417804718017578,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__random__02",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_time_ms": 27.73308753967285,
+      "dynamic_time_ms": 0.08606910705566406,
+      "total_time_ms": 27.819156646728516,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__split__00",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_time_ms": 24.654865264892578,
+      "dynamic_time_ms": 0.39839744567871094,
+      "total_time_ms": 25.05326271057129,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__split__01",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_time_ms": 34.677982330322266,
+      "dynamic_time_ms": 0.08988380432128906,
+      "total_time_ms": 34.767866134643555,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__split__02",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_time_ms": 20.648956298828125,
+      "dynamic_time_ms": 0.08893013000488281,
+      "total_time_ms": 20.737886428833008,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__encode__00",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_time_ms": 24.648427963256836,
+      "dynamic_time_ms": 0.164031982421875,
+      "total_time_ms": 24.81245994567871,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__encode__01",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_time_ms": 24.626970291137695,
+      "dynamic_time_ms": 0.3643035888671875,
+      "total_time_ms": 24.991273880004883,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__encode__02",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_time_ms": 29.979228973388672,
+      "dynamic_time_ms": 0.14543533325195312,
+      "total_time_ms": 30.124664306640625,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__logic__00",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_time_ms": 30.376672744750977,
+      "dynamic_time_ms": 0.14925003051757812,
+      "total_time_ms": 30.525922775268555,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__logic__01",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_time_ms": 25.920391082763672,
+      "dynamic_time_ms": 0.11086463928222656,
+      "total_time_ms": 26.0312557220459,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__logic__02",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_time_ms": 28.219223022460938,
+      "dynamic_time_ms": 0.09179115295410156,
+      "total_time_ms": 28.31101417541504,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__combo__00",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_time_ms": 24.745464324951172,
+      "dynamic_time_ms": 0.09417533874511719,
+      "total_time_ms": 24.83963966369629,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__combo__01",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_time_ms": 29.266834259033203,
+      "dynamic_time_ms": 0.14162063598632812,
+      "total_time_ms": 29.40845489501953,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__docm__combo__02",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_time_ms": 29.911279678344727,
+      "dynamic_time_ms": 0.09894371032714844,
+      "total_time_ms": 30.010223388671875,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__plain__00",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_time_ms": 20.797014236450195,
+      "dynamic_time_ms": 0.08153915405273438,
+      "total_time_ms": 20.87855339050293,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__plain__01",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_time_ms": 18.94092559814453,
+      "dynamic_time_ms": 0.12755393981933594,
+      "total_time_ms": 19.068479537963867,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__plain__02",
+      "family": "marker_ftp",
+      "variant": "plain",
+      "static_time_ms": 23.98681640625,
+      "dynamic_time_ms": 0.1590251922607422,
+      "total_time_ms": 24.145841598510742,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__random__00",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_time_ms": 28.764009475708008,
+      "dynamic_time_ms": 0.09131431579589844,
+      "total_time_ms": 28.855323791503906,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__random__01",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_time_ms": 24.154186248779297,
+      "dynamic_time_ms": 0.09417533874511719,
+      "total_time_ms": 24.248361587524414,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__random__02",
+      "family": "marker_ftp",
+      "variant": "random",
+      "static_time_ms": 21.135568618774414,
+      "dynamic_time_ms": 0.1354217529296875,
+      "total_time_ms": 21.2709903717041,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__split__00",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_time_ms": 19.769668579101562,
+      "dynamic_time_ms": 0.0934600830078125,
+      "total_time_ms": 19.863128662109375,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__split__01",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_time_ms": 33.419132232666016,
+      "dynamic_time_ms": 0.14209747314453125,
+      "total_time_ms": 33.56122970581055,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__split__02",
+      "family": "marker_ftp",
+      "variant": "split",
+      "static_time_ms": 24.828433990478516,
+      "dynamic_time_ms": 0.08821487426757812,
+      "total_time_ms": 24.916648864746094,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__encode__00",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_time_ms": 59.38315391540527,
+      "dynamic_time_ms": 0.11944770812988281,
+      "total_time_ms": 59.502601623535156,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__encode__01",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_time_ms": 34.0275764465332,
+      "dynamic_time_ms": 0.156402587890625,
+      "total_time_ms": 34.18397903442383,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__encode__02",
+      "family": "marker_ftp",
+      "variant": "encode",
+      "static_time_ms": 40.67659378051758,
+      "dynamic_time_ms": 0.13017654418945312,
+      "total_time_ms": 40.80677032470703,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__logic__00",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_time_ms": 22.536754608154297,
+      "dynamic_time_ms": 0.148773193359375,
+      "total_time_ms": 22.685527801513672,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__logic__01",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_time_ms": 29.572725296020508,
+      "dynamic_time_ms": 0.09679794311523438,
+      "total_time_ms": 29.669523239135742,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__logic__02",
+      "family": "marker_ftp",
+      "variant": "logic",
+      "static_time_ms": 38.70725631713867,
+      "dynamic_time_ms": 0.110626220703125,
+      "total_time_ms": 38.8178825378418,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__combo__00",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_time_ms": 27.881145477294922,
+      "dynamic_time_ms": 0.10251998901367188,
+      "total_time_ms": 27.983665466308594,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__combo__01",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_time_ms": 30.902385711669922,
+      "dynamic_time_ms": 0.10371208190917969,
+      "total_time_ms": 31.0060977935791,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "marker_ftp__xlsm__combo__02",
+      "family": "marker_ftp",
+      "variant": "combo",
+      "static_time_ms": 26.517152786254883,
+      "dynamic_time_ms": 0.09989738464355469,
+      "total_time_ms": 26.617050170898438,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "thus_wiper__docm__plain__00",
+      "family": "thus_wiper",
+      "variant": "plain",
+      "static_time_ms": 22.28236198425293,
+      "dynamic_time_ms": 0.20647048950195312,
+      "total_time_ms": 22.488832473754883,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__plain__01",
+      "family": "thus_wiper",
+      "variant": "plain",
+      "static_time_ms": 26.93319320678711,
+      "dynamic_time_ms": 0.08702278137207031,
+      "total_time_ms": 27.02021598815918,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__plain__02",
+      "family": "thus_wiper",
+      "variant": "plain",
+      "static_time_ms": 21.665334701538086,
+      "dynamic_time_ms": 0.10657310485839844,
+      "total_time_ms": 21.771907806396484,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__random__00",
+      "family": "thus_wiper",
+      "variant": "random",
+      "static_time_ms": 21.8813419342041,
+      "dynamic_time_ms": 0.09274482727050781,
+      "total_time_ms": 21.97408676147461,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__random__01",
+      "family": "thus_wiper",
+      "variant": "random",
+      "static_time_ms": 26.231050491333008,
+      "dynamic_time_ms": 0.08678436279296875,
+      "total_time_ms": 26.317834854125977,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__random__02",
+      "family": "thus_wiper",
+      "variant": "random",
+      "static_time_ms": 23.576974868774414,
+      "dynamic_time_ms": 0.08654594421386719,
+      "total_time_ms": 23.66352081298828,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__split__00",
+      "family": "thus_wiper",
+      "variant": "split",
+      "static_time_ms": 17.503976821899414,
+      "dynamic_time_ms": 0.08487701416015625,
+      "total_time_ms": 17.58885383605957,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__split__01",
+      "family": "thus_wiper",
+      "variant": "split",
+      "static_time_ms": 20.4923152923584,
+      "dynamic_time_ms": 0.07963180541992188,
+      "total_time_ms": 20.57194709777832,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__split__02",
+      "family": "thus_wiper",
+      "variant": "split",
+      "static_time_ms": 22.51148223876953,
+      "dynamic_time_ms": 0.09393692016601562,
+      "total_time_ms": 22.605419158935547,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__encode__00",
+      "family": "thus_wiper",
+      "variant": "encode",
+      "static_time_ms": 33.37812423706055,
+      "dynamic_time_ms": 0.10538101196289062,
+      "total_time_ms": 33.48350524902344,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__encode__01",
+      "family": "thus_wiper",
+      "variant": "encode",
+      "static_time_ms": 25.58279037475586,
+      "dynamic_time_ms": 0.07748603820800781,
+      "total_time_ms": 25.660276412963867,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__encode__02",
+      "family": "thus_wiper",
+      "variant": "encode",
+      "static_time_ms": 21.044015884399414,
+      "dynamic_time_ms": 0.12993812561035156,
+      "total_time_ms": 21.173954010009766,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__logic__00",
+      "family": "thus_wiper",
+      "variant": "logic",
+      "static_time_ms": 20.528554916381836,
+      "dynamic_time_ms": 0.07700920104980469,
+      "total_time_ms": 20.60556411743164,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__logic__01",
+      "family": "thus_wiper",
+      "variant": "logic",
+      "static_time_ms": 29.268264770507812,
+      "dynamic_time_ms": 0.07963180541992188,
+      "total_time_ms": 29.347896575927734,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__logic__02",
+      "family": "thus_wiper",
+      "variant": "logic",
+      "static_time_ms": 21.712064743041992,
+      "dynamic_time_ms": 0.07772445678710938,
+      "total_time_ms": 21.7897891998291,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__combo__00",
+      "family": "thus_wiper",
+      "variant": "combo",
+      "static_time_ms": 23.1935977935791,
+      "dynamic_time_ms": 0.07748603820800781,
+      "total_time_ms": 23.27108383178711,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__combo__01",
+      "family": "thus_wiper",
+      "variant": "combo",
+      "static_time_ms": 22.840499877929688,
+      "dynamic_time_ms": 0.09822845458984375,
+      "total_time_ms": 22.93872833251953,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "thus_wiper__docm__combo__02",
+      "family": "thus_wiper",
+      "variant": "combo",
+      "static_time_ms": 29.12306785583496,
+      "dynamic_time_ms": 0.07581710815429688,
+      "total_time_ms": 29.198884963989258,
+      "failure": "dynamic_date"
+    },
+    {
+      "id": "valyria_dual__docm__plain__00",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_time_ms": 19.942283630371094,
+      "dynamic_time_ms": 0.08440017700195312,
+      "total_time_ms": 20.026683807373047,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__plain__01",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_time_ms": 21.95906639099121,
+      "dynamic_time_ms": 0.11706352233886719,
+      "total_time_ms": 22.076129913330078,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__plain__02",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_time_ms": 25.72154998779297,
+      "dynamic_time_ms": 0.18405914306640625,
+      "total_time_ms": 25.905609130859375,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__random__00",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_time_ms": 28.11288833618164,
+      "dynamic_time_ms": 0.11038780212402344,
+      "total_time_ms": 28.223276138305664,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__random__01",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_time_ms": 24.788618087768555,
+      "dynamic_time_ms": 0.08726119995117188,
+      "total_time_ms": 24.875879287719727,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__random__02",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_time_ms": 30.34377098083496,
+      "dynamic_time_ms": 0.11301040649414062,
+      "total_time_ms": 30.4567813873291,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__split__00",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_time_ms": 24.067401885986328,
+      "dynamic_time_ms": 0.11134147644042969,
+      "total_time_ms": 24.178743362426758,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__split__01",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_time_ms": 22.604703903198242,
+      "dynamic_time_ms": 0.08893013000488281,
+      "total_time_ms": 22.693634033203125,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__split__02",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_time_ms": 25.537490844726562,
+      "dynamic_time_ms": 0.11944770812988281,
+      "total_time_ms": 25.656938552856445,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__encode__00",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_time_ms": 32.43541717529297,
+      "dynamic_time_ms": 0.15163421630859375,
+      "total_time_ms": 32.58705139160156,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__encode__01",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_time_ms": 24.72233772277832,
+      "dynamic_time_ms": 0.13899803161621094,
+      "total_time_ms": 24.86133575439453,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__encode__02",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_time_ms": 21.565914154052734,
+      "dynamic_time_ms": 0.09107589721679688,
+      "total_time_ms": 21.65699005126953,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__logic__00",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_time_ms": 22.53270149230957,
+      "dynamic_time_ms": 0.1392364501953125,
+      "total_time_ms": 22.671937942504883,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__logic__01",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_time_ms": 22.63164520263672,
+      "dynamic_time_ms": 0.08821487426757812,
+      "total_time_ms": 22.719860076904297,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__logic__02",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_time_ms": 27.06623077392578,
+      "dynamic_time_ms": 0.08893013000488281,
+      "total_time_ms": 27.155160903930664,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__combo__00",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_time_ms": 20.866870880126953,
+      "dynamic_time_ms": 0.091552734375,
+      "total_time_ms": 20.958423614501953,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__combo__01",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_time_ms": 22.210121154785156,
+      "dynamic_time_ms": 0.125885009765625,
+      "total_time_ms": 22.33600616455078,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__docm__combo__02",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_time_ms": 25.03824234008789,
+      "dynamic_time_ms": 0.18930435180664062,
+      "total_time_ms": 25.22754669189453,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__plain__00",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_time_ms": 28.13887596130371,
+      "dynamic_time_ms": 0.11539459228515625,
+      "total_time_ms": 28.254270553588867,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__plain__01",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_time_ms": 31.29410743713379,
+      "dynamic_time_ms": 0.10657310485839844,
+      "total_time_ms": 31.400680541992188,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__plain__02",
+      "family": "valyria_dual",
+      "variant": "plain",
+      "static_time_ms": 31.54277801513672,
+      "dynamic_time_ms": 0.4513263702392578,
+      "total_time_ms": 31.994104385375977,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__random__00",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_time_ms": 29.115676879882812,
+      "dynamic_time_ms": 0.11897087097167969,
+      "total_time_ms": 29.234647750854492,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__random__01",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_time_ms": 31.952857971191406,
+      "dynamic_time_ms": 0.10466575622558594,
+      "total_time_ms": 32.05752372741699,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__random__02",
+      "family": "valyria_dual",
+      "variant": "random",
+      "static_time_ms": 34.69085693359375,
+      "dynamic_time_ms": 0.09703636169433594,
+      "total_time_ms": 34.787893295288086,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__split__00",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_time_ms": 24.453401565551758,
+      "dynamic_time_ms": 0.15306472778320312,
+      "total_time_ms": 24.60646629333496,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__split__01",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_time_ms": 37.21451759338379,
+      "dynamic_time_ms": 0.1304149627685547,
+      "total_time_ms": 37.344932556152344,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__split__02",
+      "family": "valyria_dual",
+      "variant": "split",
+      "static_time_ms": 29.087305068969727,
+      "dynamic_time_ms": 0.10585784912109375,
+      "total_time_ms": 29.19316291809082,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__encode__00",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_time_ms": 29.13498878479004,
+      "dynamic_time_ms": 0.14257431030273438,
+      "total_time_ms": 29.277563095092773,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__encode__01",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_time_ms": 28.265714645385742,
+      "dynamic_time_ms": 0.10371208190917969,
+      "total_time_ms": 28.369426727294922,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__encode__02",
+      "family": "valyria_dual",
+      "variant": "encode",
+      "static_time_ms": 29.956340789794922,
+      "dynamic_time_ms": 0.1494884490966797,
+      "total_time_ms": 30.1058292388916,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__logic__00",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_time_ms": 36.04626655578613,
+      "dynamic_time_ms": 0.10585784912109375,
+      "total_time_ms": 36.15212440490723,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__logic__01",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_time_ms": 29.381513595581055,
+      "dynamic_time_ms": 0.09822845458984375,
+      "total_time_ms": 29.4797420501709,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__logic__02",
+      "family": "valyria_dual",
+      "variant": "logic",
+      "static_time_ms": 22.771835327148438,
+      "dynamic_time_ms": 0.11444091796875,
+      "total_time_ms": 22.886276245117188,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__combo__00",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_time_ms": 27.90069580078125,
+      "dynamic_time_ms": 0.1633167266845703,
+      "total_time_ms": 28.06401252746582,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__combo__01",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_time_ms": 28.67865562438965,
+      "dynamic_time_ms": 0.11157989501953125,
+      "total_time_ms": 28.79023551940918,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "valyria_dual__xlsm__combo__02",
+      "family": "valyria_dual",
+      "variant": "combo",
+      "static_time_ms": 36.75436973571777,
+      "dynamic_time_ms": 0.15926361083984375,
+      "total_time_ms": 36.91363334655762,
+      "failure": "dynamic_env"
+    },
+    {
+      "id": "benign_formatting__docm__plain__00",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_time_ms": 35.7050895690918,
+      "dynamic_time_ms": 0.12373924255371094,
+      "total_time_ms": 35.82882881164551,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__plain__01",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_time_ms": 28.859615325927734,
+      "dynamic_time_ms": 0.1125335693359375,
+      "total_time_ms": 28.972148895263672,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__plain__02",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_time_ms": 25.65479278564453,
+      "dynamic_time_ms": 0.11301040649414062,
+      "total_time_ms": 25.767803192138672,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__random__00",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_time_ms": 32.914161682128906,
+      "dynamic_time_ms": 0.10967254638671875,
+      "total_time_ms": 33.023834228515625,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__random__01",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_time_ms": 29.616355895996094,
+      "dynamic_time_ms": 0.09202957153320312,
+      "total_time_ms": 29.708385467529297,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__random__02",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_time_ms": 26.474952697753906,
+      "dynamic_time_ms": 0.13709068298339844,
+      "total_time_ms": 26.612043380737305,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__split__00",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_time_ms": 20.978212356567383,
+      "dynamic_time_ms": 0.10919570922851562,
+      "total_time_ms": 21.0874080657959,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__split__01",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_time_ms": 24.35135841369629,
+      "dynamic_time_ms": 0.13971328735351562,
+      "total_time_ms": 24.491071701049805,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__split__02",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_time_ms": 22.478103637695312,
+      "dynamic_time_ms": 0.10156631469726562,
+      "total_time_ms": 22.579669952392578,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__encode__00",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_time_ms": 20.21932601928711,
+      "dynamic_time_ms": 0.09703636169433594,
+      "total_time_ms": 20.316362380981445,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__encode__01",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_time_ms": 26.127099990844727,
+      "dynamic_time_ms": 0.10037422180175781,
+      "total_time_ms": 26.227474212646484,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__encode__02",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_time_ms": 32.44471549987793,
+      "dynamic_time_ms": 0.09441375732421875,
+      "total_time_ms": 32.53912925720215,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__logic__00",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_time_ms": 21.840333938598633,
+      "dynamic_time_ms": 0.0934600830078125,
+      "total_time_ms": 21.933794021606445,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__logic__01",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_time_ms": 20.936250686645508,
+      "dynamic_time_ms": 0.09822845458984375,
+      "total_time_ms": 21.03447914123535,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__logic__02",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_time_ms": 33.29038619995117,
+      "dynamic_time_ms": 0.1087188720703125,
+      "total_time_ms": 33.399105072021484,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__combo__00",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_time_ms": 20.059823989868164,
+      "dynamic_time_ms": 0.13589859008789062,
+      "total_time_ms": 20.195722579956055,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__combo__01",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_time_ms": 23.00715446472168,
+      "dynamic_time_ms": 0.15473365783691406,
+      "total_time_ms": 23.161888122558594,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__docm__combo__02",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_time_ms": 22.32193946838379,
+      "dynamic_time_ms": 0.11229515075683594,
+      "total_time_ms": 22.434234619140625,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__plain__00",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_time_ms": 21.24166488647461,
+      "dynamic_time_ms": 0.09036064147949219,
+      "total_time_ms": 21.3320255279541,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__plain__01",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_time_ms": 24.21402931213379,
+      "dynamic_time_ms": 0.2582073211669922,
+      "total_time_ms": 24.47223663330078,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__plain__02",
+      "family": "benign_formatting",
+      "variant": "plain",
+      "static_time_ms": 23.3919620513916,
+      "dynamic_time_ms": 0.09775161743164062,
+      "total_time_ms": 23.489713668823242,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__random__00",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_time_ms": 45.97163200378418,
+      "dynamic_time_ms": 0.19025802612304688,
+      "total_time_ms": 46.16189002990723,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__random__01",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_time_ms": 26.13997459411621,
+      "dynamic_time_ms": 0.10466575622558594,
+      "total_time_ms": 26.244640350341797,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__random__02",
+      "family": "benign_formatting",
+      "variant": "random",
+      "static_time_ms": 25.53105354309082,
+      "dynamic_time_ms": 0.087738037109375,
+      "total_time_ms": 25.618791580200195,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__split__00",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_time_ms": 19.273996353149414,
+      "dynamic_time_ms": 0.09560585021972656,
+      "total_time_ms": 19.36960220336914,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__split__01",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_time_ms": 19.957304000854492,
+      "dynamic_time_ms": 0.091552734375,
+      "total_time_ms": 20.048856735229492,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__split__02",
+      "family": "benign_formatting",
+      "variant": "split",
+      "static_time_ms": 27.523517608642578,
+      "dynamic_time_ms": 0.15115737915039062,
+      "total_time_ms": 27.67467498779297,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__encode__00",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_time_ms": 20.759105682373047,
+      "dynamic_time_ms": 0.1289844512939453,
+      "total_time_ms": 20.888090133666992,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__encode__01",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_time_ms": 22.20463752746582,
+      "dynamic_time_ms": 0.1583099365234375,
+      "total_time_ms": 22.362947463989258,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__encode__02",
+      "family": "benign_formatting",
+      "variant": "encode",
+      "static_time_ms": 23.380041122436523,
+      "dynamic_time_ms": 0.10704994201660156,
+      "total_time_ms": 23.487091064453125,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__logic__00",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_time_ms": 25.792837142944336,
+      "dynamic_time_ms": 0.10013580322265625,
+      "total_time_ms": 25.892972946166992,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__logic__01",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_time_ms": 19.047975540161133,
+      "dynamic_time_ms": 0.08845329284667969,
+      "total_time_ms": 19.136428833007812,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__logic__02",
+      "family": "benign_formatting",
+      "variant": "logic",
+      "static_time_ms": 21.645069122314453,
+      "dynamic_time_ms": 0.10013580322265625,
+      "total_time_ms": 21.74520492553711,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__combo__00",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_time_ms": 21.916627883911133,
+      "dynamic_time_ms": 0.10037422180175781,
+      "total_time_ms": 22.01700210571289,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__combo__01",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_time_ms": 22.521018981933594,
+      "dynamic_time_ms": 0.10776519775390625,
+      "total_time_ms": 22.6287841796875,
+      "failure": null
+    },
+    {
+      "id": "benign_formatting__xlsm__combo__02",
+      "family": "benign_formatting",
+      "variant": "combo",
+      "static_time_ms": 20.155668258666992,
+      "dynamic_time_ms": 0.1087188720703125,
+      "total_time_ms": 20.264387130737305,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__plain__00",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_time_ms": 16.413450241088867,
+      "dynamic_time_ms": 0.0934600830078125,
+      "total_time_ms": 16.50691032409668,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__plain__01",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_time_ms": 19.559144973754883,
+      "dynamic_time_ms": 0.14734268188476562,
+      "total_time_ms": 19.70648765563965,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__plain__02",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_time_ms": 21.209716796875,
+      "dynamic_time_ms": 0.102996826171875,
+      "total_time_ms": 21.312713623046875,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__random__00",
+      "family": "benign_report",
+      "variant": "random",
+      "static_time_ms": 19.884109497070312,
+      "dynamic_time_ms": 0.09131431579589844,
+      "total_time_ms": 19.97542381286621,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__random__01",
+      "family": "benign_report",
+      "variant": "random",
+      "static_time_ms": 18.562793731689453,
+      "dynamic_time_ms": 0.10275840759277344,
+      "total_time_ms": 18.665552139282227,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__random__02",
+      "family": "benign_report",
+      "variant": "random",
+      "static_time_ms": 19.77849006652832,
+      "dynamic_time_ms": 0.11420249938964844,
+      "total_time_ms": 19.89269256591797,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__split__00",
+      "family": "benign_report",
+      "variant": "split",
+      "static_time_ms": 28.179645538330078,
+      "dynamic_time_ms": 0.15401840209960938,
+      "total_time_ms": 28.333663940429688,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__split__01",
+      "family": "benign_report",
+      "variant": "split",
+      "static_time_ms": 33.28847885131836,
+      "dynamic_time_ms": 0.17118453979492188,
+      "total_time_ms": 33.45966339111328,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__split__02",
+      "family": "benign_report",
+      "variant": "split",
+      "static_time_ms": 25.896787643432617,
+      "dynamic_time_ms": 0.09632110595703125,
+      "total_time_ms": 25.99310874938965,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__encode__00",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_time_ms": 28.245925903320312,
+      "dynamic_time_ms": 0.12063980102539062,
+      "total_time_ms": 28.366565704345703,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__encode__01",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_time_ms": 24.272918701171875,
+      "dynamic_time_ms": 0.12612342834472656,
+      "total_time_ms": 24.3990421295166,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__encode__02",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_time_ms": 20.636796951293945,
+      "dynamic_time_ms": 0.0934600830078125,
+      "total_time_ms": 20.730257034301758,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__logic__00",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_time_ms": 19.957542419433594,
+      "dynamic_time_ms": 0.14543533325195312,
+      "total_time_ms": 20.102977752685547,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__logic__01",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_time_ms": 19.93107795715332,
+      "dynamic_time_ms": 0.10442733764648438,
+      "total_time_ms": 20.035505294799805,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__logic__02",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_time_ms": 21.23570442199707,
+      "dynamic_time_ms": 0.11157989501953125,
+      "total_time_ms": 21.3472843170166,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__combo__00",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_time_ms": 27.292251586914062,
+      "dynamic_time_ms": 0.12135505676269531,
+      "total_time_ms": 27.413606643676758,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__combo__01",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_time_ms": 20.357608795166016,
+      "dynamic_time_ms": 0.10156631469726562,
+      "total_time_ms": 20.45917510986328,
+      "failure": null
+    },
+    {
+      "id": "benign_report__docm__combo__02",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_time_ms": 22.160053253173828,
+      "dynamic_time_ms": 0.12922286987304688,
+      "total_time_ms": 22.289276123046875,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__plain__00",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_time_ms": 18.91183853149414,
+      "dynamic_time_ms": 0.27632713317871094,
+      "total_time_ms": 19.18816566467285,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__plain__01",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_time_ms": 16.791343688964844,
+      "dynamic_time_ms": 0.16546249389648438,
+      "total_time_ms": 16.956806182861328,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__plain__02",
+      "family": "benign_report",
+      "variant": "plain",
+      "static_time_ms": 20.3855037689209,
+      "dynamic_time_ms": 0.09107589721679688,
+      "total_time_ms": 20.476579666137695,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__random__00",
+      "family": "benign_report",
+      "variant": "random",
+      "static_time_ms": 24.64151382446289,
+      "dynamic_time_ms": 0.11420249938964844,
+      "total_time_ms": 24.75571632385254,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__random__01",
+      "family": "benign_report",
+      "variant": "random",
+      "static_time_ms": 26.00860595703125,
+      "dynamic_time_ms": 0.09584426879882812,
+      "total_time_ms": 26.104450225830078,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__random__02",
+      "family": "benign_report",
+      "variant": "random",
+      "static_time_ms": 21.933317184448242,
+      "dynamic_time_ms": 0.11181831359863281,
+      "total_time_ms": 22.045135498046875,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__split__00",
+      "family": "benign_report",
+      "variant": "split",
+      "static_time_ms": 24.501562118530273,
+      "dynamic_time_ms": 0.1571178436279297,
+      "total_time_ms": 24.658679962158203,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__split__01",
+      "family": "benign_report",
+      "variant": "split",
+      "static_time_ms": 23.60057830810547,
+      "dynamic_time_ms": 0.15616416931152344,
+      "total_time_ms": 23.756742477416992,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__split__02",
+      "family": "benign_report",
+      "variant": "split",
+      "static_time_ms": 23.55813980102539,
+      "dynamic_time_ms": 0.09894371032714844,
+      "total_time_ms": 23.65708351135254,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__encode__00",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_time_ms": 22.40610122680664,
+      "dynamic_time_ms": 0.09942054748535156,
+      "total_time_ms": 22.505521774291992,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__encode__01",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_time_ms": 21.483421325683594,
+      "dynamic_time_ms": 0.17952919006347656,
+      "total_time_ms": 21.66295051574707,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__encode__02",
+      "family": "benign_report",
+      "variant": "encode",
+      "static_time_ms": 44.77381706237793,
+      "dynamic_time_ms": 0.19812583923339844,
+      "total_time_ms": 44.97194290161133,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__logic__00",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_time_ms": 40.08769989013672,
+      "dynamic_time_ms": 0.1723766326904297,
+      "total_time_ms": 40.26007652282715,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__logic__01",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_time_ms": 32.738685607910156,
+      "dynamic_time_ms": 0.2033710479736328,
+      "total_time_ms": 32.94205665588379,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__logic__02",
+      "family": "benign_report",
+      "variant": "logic",
+      "static_time_ms": 32.16409683227539,
+      "dynamic_time_ms": 0.14853477478027344,
+      "total_time_ms": 32.312631607055664,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__combo__00",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_time_ms": 31.057357788085938,
+      "dynamic_time_ms": 0.1704692840576172,
+      "total_time_ms": 31.227827072143555,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__combo__01",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_time_ms": 29.006004333496094,
+      "dynamic_time_ms": 0.19216537475585938,
+      "total_time_ms": 29.198169708251953,
+      "failure": null
+    },
+    {
+      "id": "benign_report__xlsm__combo__02",
+      "family": "benign_report",
+      "variant": "combo",
+      "static_time_ms": 24.37138557434082,
+      "dynamic_time_ms": 0.10752677917480469,
+      "total_time_ms": 24.478912353515625,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__plain__00",
+      "family": "donoff_interaction",
+      "variant": "plain",
+      "static_time_ms": 31.05306625366211,
+      "dynamic_time_ms": 0.14448165893554688,
+      "total_time_ms": 31.197547912597656,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__plain__01",
+      "family": "donoff_interaction",
+      "variant": "plain",
+      "static_time_ms": 22.16482162475586,
+      "dynamic_time_ms": 0.2148151397705078,
+      "total_time_ms": 22.379636764526367,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__plain__02",
+      "family": "donoff_interaction",
+      "variant": "plain",
+      "static_time_ms": 22.546768188476562,
+      "dynamic_time_ms": 0.12373924255371094,
+      "total_time_ms": 22.670507431030273,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__random__00",
+      "family": "donoff_interaction",
+      "variant": "random",
+      "static_time_ms": 23.725509643554688,
+      "dynamic_time_ms": 0.11134147644042969,
+      "total_time_ms": 23.836851119995117,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__random__01",
+      "family": "donoff_interaction",
+      "variant": "random",
+      "static_time_ms": 31.11863136291504,
+      "dynamic_time_ms": 0.13589859008789062,
+      "total_time_ms": 31.25452995300293,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__random__02",
+      "family": "donoff_interaction",
+      "variant": "random",
+      "static_time_ms": 23.383140563964844,
+      "dynamic_time_ms": 0.12063980102539062,
+      "total_time_ms": 23.503780364990234,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__split__00",
+      "family": "donoff_interaction",
+      "variant": "split",
+      "static_time_ms": 25.16627311706543,
+      "dynamic_time_ms": 0.11968612670898438,
+      "total_time_ms": 25.285959243774414,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__split__01",
+      "family": "donoff_interaction",
+      "variant": "split",
+      "static_time_ms": 27.095556259155273,
+      "dynamic_time_ms": 0.1628398895263672,
+      "total_time_ms": 27.25839614868164,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__split__02",
+      "family": "donoff_interaction",
+      "variant": "split",
+      "static_time_ms": 28.01036834716797,
+      "dynamic_time_ms": 0.14638900756835938,
+      "total_time_ms": 28.156757354736328,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__encode__00",
+      "family": "donoff_interaction",
+      "variant": "encode",
+      "static_time_ms": 22.90654182434082,
+      "dynamic_time_ms": 0.12159347534179688,
+      "total_time_ms": 23.028135299682617,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__encode__01",
+      "family": "donoff_interaction",
+      "variant": "encode",
+      "static_time_ms": 22.41802215576172,
+      "dynamic_time_ms": 0.11658668518066406,
+      "total_time_ms": 22.534608840942383,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__encode__02",
+      "family": "donoff_interaction",
+      "variant": "encode",
+      "static_time_ms": 23.15211296081543,
+      "dynamic_time_ms": 0.4436969757080078,
+      "total_time_ms": 23.595809936523438,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__logic__00",
+      "family": "donoff_interaction",
+      "variant": "logic",
+      "static_time_ms": 24.46269989013672,
+      "dynamic_time_ms": 0.11563301086425781,
+      "total_time_ms": 24.578332901000977,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__logic__01",
+      "family": "donoff_interaction",
+      "variant": "logic",
+      "static_time_ms": 22.147178649902344,
+      "dynamic_time_ms": 0.171661376953125,
+      "total_time_ms": 22.31884002685547,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__logic__02",
+      "family": "donoff_interaction",
+      "variant": "logic",
+      "static_time_ms": 22.725582122802734,
+      "dynamic_time_ms": 0.17213821411132812,
+      "total_time_ms": 22.897720336914062,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__combo__00",
+      "family": "donoff_interaction",
+      "variant": "combo",
+      "static_time_ms": 20.786523818969727,
+      "dynamic_time_ms": 0.11467933654785156,
+      "total_time_ms": 20.901203155517578,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__combo__01",
+      "family": "donoff_interaction",
+      "variant": "combo",
+      "static_time_ms": 23.42510223388672,
+      "dynamic_time_ms": 0.3376007080078125,
+      "total_time_ms": 23.76270294189453,
+      "failure": null
+    },
+    {
+      "id": "donoff_interaction__docm__combo__02",
+      "family": "donoff_interaction",
+      "variant": "combo",
+      "static_time_ms": 23.536205291748047,
+      "dynamic_time_ms": 0.1220703125,
+      "total_time_ms": 23.658275604248047,
+      "failure": null
+    },
+    {
+      "id": "broken_semantic__docm__plain__00",
+      "family": "broken_semantic",
+      "variant": "plain",
+      "static_time_ms": 19.65165138244629,
+      "dynamic_time_ms": 0.06937980651855469,
+      "total_time_ms": 19.721031188964844,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__plain__01",
+      "family": "broken_semantic",
+      "variant": "plain",
+      "static_time_ms": 17.83466339111328,
+      "dynamic_time_ms": 0.16260147094726562,
+      "total_time_ms": 17.997264862060547,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__plain__02",
+      "family": "broken_semantic",
+      "variant": "plain",
+      "static_time_ms": 19.090890884399414,
+      "dynamic_time_ms": 0.07200241088867188,
+      "total_time_ms": 19.162893295288086,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__random__00",
+      "family": "broken_semantic",
+      "variant": "random",
+      "static_time_ms": 19.052982330322266,
+      "dynamic_time_ms": 0.07033348083496094,
+      "total_time_ms": 19.123315811157227,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__random__01",
+      "family": "broken_semantic",
+      "variant": "random",
+      "static_time_ms": 18.529176712036133,
+      "dynamic_time_ms": 0.10156631469726562,
+      "total_time_ms": 18.6307430267334,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__random__02",
+      "family": "broken_semantic",
+      "variant": "random",
+      "static_time_ms": 19.24419403076172,
+      "dynamic_time_ms": 0.07772445678710938,
+      "total_time_ms": 19.321918487548828,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__split__00",
+      "family": "broken_semantic",
+      "variant": "split",
+      "static_time_ms": 22.043228149414062,
+      "dynamic_time_ms": 0.08106231689453125,
+      "total_time_ms": 22.124290466308594,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__split__01",
+      "family": "broken_semantic",
+      "variant": "split",
+      "static_time_ms": 25.919198989868164,
+      "dynamic_time_ms": 0.07367134094238281,
+      "total_time_ms": 25.992870330810547,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__split__02",
+      "family": "broken_semantic",
+      "variant": "split",
+      "static_time_ms": 21.819591522216797,
+      "dynamic_time_ms": 0.08034706115722656,
+      "total_time_ms": 21.899938583374023,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__encode__00",
+      "family": "broken_semantic",
+      "variant": "encode",
+      "static_time_ms": 21.338701248168945,
+      "dynamic_time_ms": 0.2040863037109375,
+      "total_time_ms": 21.542787551879883,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__encode__01",
+      "family": "broken_semantic",
+      "variant": "encode",
+      "static_time_ms": 18.021345138549805,
+      "dynamic_time_ms": 0.08893013000488281,
+      "total_time_ms": 18.110275268554688,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__encode__02",
+      "family": "broken_semantic",
+      "variant": "encode",
+      "static_time_ms": 22.90964126586914,
+      "dynamic_time_ms": 0.07939338684082031,
+      "total_time_ms": 22.98903465270996,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__logic__00",
+      "family": "broken_semantic",
+      "variant": "logic",
+      "static_time_ms": 22.716999053955078,
+      "dynamic_time_ms": 0.08797645568847656,
+      "total_time_ms": 22.804975509643555,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__logic__01",
+      "family": "broken_semantic",
+      "variant": "logic",
+      "static_time_ms": 19.353866577148438,
+      "dynamic_time_ms": 0.06961822509765625,
+      "total_time_ms": 19.423484802246094,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__logic__02",
+      "family": "broken_semantic",
+      "variant": "logic",
+      "static_time_ms": 22.147655487060547,
+      "dynamic_time_ms": 0.07605552673339844,
+      "total_time_ms": 22.223711013793945,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__combo__00",
+      "family": "broken_semantic",
+      "variant": "combo",
+      "static_time_ms": 18.10169219970703,
+      "dynamic_time_ms": 0.07176399230957031,
+      "total_time_ms": 18.1734561920166,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__combo__01",
+      "family": "broken_semantic",
+      "variant": "combo",
+      "static_time_ms": 23.87261390686035,
+      "dynamic_time_ms": 0.07081031799316406,
+      "total_time_ms": 23.943424224853516,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "broken_semantic__docm__combo__02",
+      "family": "broken_semantic",
+      "variant": "combo",
+      "static_time_ms": 31.023263931274414,
+      "dynamic_time_ms": 0.10919570922851562,
+      "total_time_ms": 31.13245964050293,
+      "failure": "dynamic_semantic"
+    },
+    {
+      "id": "empty_macro__docm__plain__00",
+      "family": "empty_macro",
+      "variant": "plain",
+      "static_time_ms": 43.409109115600586,
+      "dynamic_time_ms": 0.11658668518066406,
+      "total_time_ms": 43.52569580078125,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__plain__01",
+      "family": "empty_macro",
+      "variant": "plain",
+      "static_time_ms": 43.964385986328125,
+      "dynamic_time_ms": 0.13828277587890625,
+      "total_time_ms": 44.10266876220703,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__plain__02",
+      "family": "empty_macro",
+      "variant": "plain",
+      "static_time_ms": 46.55957221984863,
+      "dynamic_time_ms": 0.10824203491210938,
+      "total_time_ms": 46.66781425476074,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__random__00",
+      "family": "empty_macro",
+      "variant": "random",
+      "static_time_ms": 39.087772369384766,
+      "dynamic_time_ms": 0.13113021850585938,
+      "total_time_ms": 39.218902587890625,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__random__01",
+      "family": "empty_macro",
+      "variant": "random",
+      "static_time_ms": 30.801057815551758,
+      "dynamic_time_ms": 0.08606910705566406,
+      "total_time_ms": 30.887126922607422,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__random__02",
+      "family": "empty_macro",
+      "variant": "random",
+      "static_time_ms": 26.498794555664062,
+      "dynamic_time_ms": 0.09179115295410156,
+      "total_time_ms": 26.590585708618164,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__split__00",
+      "family": "empty_macro",
+      "variant": "split",
+      "static_time_ms": 21.286725997924805,
+      "dynamic_time_ms": 0.0743865966796875,
+      "total_time_ms": 21.361112594604492,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__split__01",
+      "family": "empty_macro",
+      "variant": "split",
+      "static_time_ms": 24.941205978393555,
+      "dynamic_time_ms": 0.1068115234375,
+      "total_time_ms": 25.048017501831055,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__split__02",
+      "family": "empty_macro",
+      "variant": "split",
+      "static_time_ms": 24.832487106323242,
+      "dynamic_time_ms": 0.1049041748046875,
+      "total_time_ms": 24.93739128112793,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__encode__00",
+      "family": "empty_macro",
+      "variant": "encode",
+      "static_time_ms": 30.33590316772461,
+      "dynamic_time_ms": 0.06937980651855469,
+      "total_time_ms": 30.405282974243164,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__encode__01",
+      "family": "empty_macro",
+      "variant": "encode",
+      "static_time_ms": 23.478031158447266,
+      "dynamic_time_ms": 0.12254714965820312,
+      "total_time_ms": 23.60057830810547,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__encode__02",
+      "family": "empty_macro",
+      "variant": "encode",
+      "static_time_ms": 20.83730697631836,
+      "dynamic_time_ms": 0.07677078247070312,
+      "total_time_ms": 20.914077758789062,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__logic__00",
+      "family": "empty_macro",
+      "variant": "logic",
+      "static_time_ms": 16.32380485534668,
+      "dynamic_time_ms": 0.0762939453125,
+      "total_time_ms": 16.40009880065918,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__logic__01",
+      "family": "empty_macro",
+      "variant": "logic",
+      "static_time_ms": 17.895936965942383,
+      "dynamic_time_ms": 0.07343292236328125,
+      "total_time_ms": 17.969369888305664,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__logic__02",
+      "family": "empty_macro",
+      "variant": "logic",
+      "static_time_ms": 21.779537200927734,
+      "dynamic_time_ms": 0.11038780212402344,
+      "total_time_ms": 21.889925003051758,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__combo__00",
+      "family": "empty_macro",
+      "variant": "combo",
+      "static_time_ms": 25.426864624023438,
+      "dynamic_time_ms": 0.07414817810058594,
+      "total_time_ms": 25.501012802124023,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__combo__01",
+      "family": "empty_macro",
+      "variant": "combo",
+      "static_time_ms": 16.52050018310547,
+      "dynamic_time_ms": 0.08177757263183594,
+      "total_time_ms": 16.602277755737305,
+      "failure": "static_empty"
+    },
+    {
+      "id": "empty_macro__docm__combo__02",
+      "family": "empty_macro",
+      "variant": "combo",
+      "static_time_ms": 18.21112632751465,
+      "dynamic_time_ms": 0.07462501525878906,
+      "total_time_ms": 18.285751342773438,
+      "failure": "static_empty"
+    },
+    {
+      "id": "slow_timeout__docm__plain__00",
+      "family": "slow_timeout",
+      "variant": "plain",
+      "static_time_ms": 32.66191482543945,
+      "dynamic_time_ms": 0.10156631469726562,
+      "total_time_ms": 32.76348114013672,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__plain__01",
+      "family": "slow_timeout",
+      "variant": "plain",
+      "static_time_ms": 25.86078643798828,
+      "dynamic_time_ms": 0.07748603820800781,
+      "total_time_ms": 25.93827247619629,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__plain__02",
+      "family": "slow_timeout",
+      "variant": "plain",
+      "static_time_ms": 20.276546478271484,
+      "dynamic_time_ms": 0.08296966552734375,
+      "total_time_ms": 20.359516143798828,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__random__00",
+      "family": "slow_timeout",
+      "variant": "random",
+      "static_time_ms": 30.037403106689453,
+      "dynamic_time_ms": 0.09655952453613281,
+      "total_time_ms": 30.133962631225586,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__random__01",
+      "family": "slow_timeout",
+      "variant": "random",
+      "static_time_ms": 40.54975509643555,
+      "dynamic_time_ms": 0.1277923583984375,
+      "total_time_ms": 40.677547454833984,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__random__02",
+      "family": "slow_timeout",
+      "variant": "random",
+      "static_time_ms": 27.0693302154541,
+      "dynamic_time_ms": 0.08153915405273438,
+      "total_time_ms": 27.150869369506836,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__split__00",
+      "family": "slow_timeout",
+      "variant": "split",
+      "static_time_ms": 28.91063690185547,
+      "dynamic_time_ms": 0.09679794311523438,
+      "total_time_ms": 29.007434844970703,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__split__01",
+      "family": "slow_timeout",
+      "variant": "split",
+      "static_time_ms": 23.451566696166992,
+      "dynamic_time_ms": 0.09417533874511719,
+      "total_time_ms": 23.54574203491211,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__split__02",
+      "family": "slow_timeout",
+      "variant": "split",
+      "static_time_ms": 21.344900131225586,
+      "dynamic_time_ms": 0.08177757263183594,
+      "total_time_ms": 21.426677703857422,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__encode__00",
+      "family": "slow_timeout",
+      "variant": "encode",
+      "static_time_ms": 25.954246520996094,
+      "dynamic_time_ms": 0.09179115295410156,
+      "total_time_ms": 26.046037673950195,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__encode__01",
+      "family": "slow_timeout",
+      "variant": "encode",
+      "static_time_ms": 44.182538986206055,
+      "dynamic_time_ms": 0.24199485778808594,
+      "total_time_ms": 44.42453384399414,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__encode__02",
+      "family": "slow_timeout",
+      "variant": "encode",
+      "static_time_ms": 37.869930267333984,
+      "dynamic_time_ms": 0.1354217529296875,
+      "total_time_ms": 38.00535202026367,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__logic__00",
+      "family": "slow_timeout",
+      "variant": "logic",
+      "static_time_ms": 42.63949394226074,
+      "dynamic_time_ms": 0.11277198791503906,
+      "total_time_ms": 42.75226593017578,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__logic__01",
+      "family": "slow_timeout",
+      "variant": "logic",
+      "static_time_ms": 40.5731201171875,
+      "dynamic_time_ms": 0.2090930938720703,
+      "total_time_ms": 40.78221321105957,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__logic__02",
+      "family": "slow_timeout",
+      "variant": "logic",
+      "static_time_ms": 36.00907325744629,
+      "dynamic_time_ms": 0.08559226989746094,
+      "total_time_ms": 36.09466552734375,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__combo__00",
+      "family": "slow_timeout",
+      "variant": "combo",
+      "static_time_ms": 33.515214920043945,
+      "dynamic_time_ms": 0.08487701416015625,
+      "total_time_ms": 33.6000919342041,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__combo__01",
+      "family": "slow_timeout",
+      "variant": "combo",
+      "static_time_ms": 30.148744583129883,
+      "dynamic_time_ms": 0.07915496826171875,
+      "total_time_ms": 30.2278995513916,
+      "failure": "dynamic_timeout"
+    },
+    {
+      "id": "slow_timeout__docm__combo__02",
+      "family": "slow_timeout",
+      "variant": "combo",
+      "static_time_ms": 37.32037544250488,
+      "dynamic_time_ms": 0.12350082397460938,
+      "total_time_ms": 37.44387626647949,
+      "failure": "dynamic_timeout"
+    }
+  ]
+}

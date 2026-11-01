@@ -1,0 +1,75 @@
+{
+  "sample_id": "benign_report__docm__plain__00",
+  "format": "docm",
+  "family": "benign_report",
+  "variant": "plain",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 519,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 578,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 1028,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 1190,
+      "source": "dynamic",
+      "behavior": "data_copy",
+      "obj": "benign_report:data_copy",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 5,
+      "t_ms": 1695,
+      "source": "dynamic",
+      "behavior": "print_document",
+      "obj": "benign_report:print_document",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 1945,
+      "source": "dynamic",
+      "behavior": "save_as_pdf",
+      "obj": "benign_report:save_as_pdf",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": null,
+    "interaction_handled": true,
+    "duration_ms": 1945,
+    "analysis_time_ms": 0.0934600830078125
+  }
+}

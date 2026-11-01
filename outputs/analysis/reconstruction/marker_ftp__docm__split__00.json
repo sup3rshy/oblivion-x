@@ -1,0 +1,124 @@
+{
+  "sample_id": "marker_ftp__docm__split__00",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "confidence": 0.85,
+      "note": ""
+    },
+    {
+      "stage": "exfiltration",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "impact",
+      "evidence": [
+        4,
+        5
+      ],
+      "confidence": 0.85,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "shell_run",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Shell \""
+    },
+    {
+      "behavior": "cmd_run",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "cmd /c"
+    },
+    {
+      "behavior": "file_write",
+      "evidence": [
+        4,
+        5
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Open LogPath For"
+    },
+    {
+      "behavior": "env_read",
+      "evidence": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Environ("
+    },
+    {
+      "behavior": "ftp_upload",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "ftp -s:... put oblivionx_log.txt"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Strings split and chained with & / + (split obfuscation)"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> execution -> exfiltration -> impact",
+  "status": "partial"
+}

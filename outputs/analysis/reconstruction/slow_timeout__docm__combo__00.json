@@ -1,0 +1,109 @@
+{
+  "sample_id": "slow_timeout__docm__combo__00",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        6,
+        7,
+        8
+      ],
+      "confidence": 0.95,
+      "note": ""
+    },
+    {
+      "stage": "execution",
+      "evidence": [
+        2,
+        3
+      ],
+      "confidence": 0.85,
+      "note": ""
+    },
+    {
+      "stage": "c2_download",
+      "evidence": [
+        4,
+        5
+      ],
+      "confidence": 0.9,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "shell_run",
+      "evidence": [
+        2
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "Shell \""
+    },
+    {
+      "behavior": "cmd_run",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": "cmd /c"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        4,
+        5
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "http://127.0.0.1:9090/payload.exe"
+    },
+    {
+      "behavior": "chr_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.95,
+      "supported": false,
+      "obj": "encode"
+    },
+    {
+      "behavior": "dead_code",
+      "evidence": [
+        7
+      ],
+      "confidence": 0.95,
+      "supported": false,
+      "obj": "logic"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.95,
+      "supported": false,
+      "obj": "base64-blob"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> execution -> c2_download",
+  "status": "partial"
+}

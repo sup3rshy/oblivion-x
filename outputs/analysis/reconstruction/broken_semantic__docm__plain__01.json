@@ -1,0 +1,26 @@
+{
+  "sample_id": "broken_semantic__docm__plain__01",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    }
+  ],
+  "chain": "delivery",
+  "status": "partial"
+}

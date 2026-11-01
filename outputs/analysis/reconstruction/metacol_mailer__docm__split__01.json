@@ -1,0 +1,72 @@
+{
+  "sample_id": "metacol_mailer__docm__split__01",
+  "stages": [
+    {
+      "stage": "delivery",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "defense_evasion",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "note": ""
+    },
+    {
+      "stage": "exfiltration",
+      "evidence": [
+        2,
+        3,
+        6
+      ],
+      "confidence": 0.99,
+      "note": ""
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "macro_entry",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Document_Open"
+    },
+    {
+      "behavior": "outlook_send",
+      "evidence": [
+        2,
+        3
+      ],
+      "confidence": 0.85,
+      "supported": false,
+      "obj": ".Body ="
+    },
+    {
+      "behavior": "outlook_access",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "metacol_mailer:outlook_access"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Strings split and chained with & / + (split obfuscation)"
+    }
+  ],
+  "chain": "delivery -> defense_evasion -> exfiltration",
+  "status": "partial"
+}

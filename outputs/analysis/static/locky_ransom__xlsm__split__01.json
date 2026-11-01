@@ -1,0 +1,143 @@
+{
+  "sample_id": "locky_ransom__xlsm__split__01",
+  "format": "xlsm",
+  "family": "locky_ransom",
+  "variant": "split",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Workbook_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "registry_write",
+      "obj": "RegWrite",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:registry_write"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "registry_write",
+      "obj": "HKCU",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:registry_write"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Open fPath For",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Print #",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_encrypt",
+      "obj": "Xor",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_encrypt"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_encrypt",
+      "obj": "Xor",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_encrypt"
+    },
+    {
+      "id": 8,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 9,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 10,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "registry_write",
+      "obj": "HKCU",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 11,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "string_concat",
+      "obj": "split",
+      "args": {},
+      "confidence": 0.95,
+      "evidence": ""
+    }
+  ],
+  "meta": {
+    "n_modules": 3,
+    "modules": [
+      "ThisWorkbook",
+      "Sheet1",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": true,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [
+      "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\oblivionx",
+      "\\oblivionx_lock.exe",
+      "\\oblivionx_vault\\secret.txt",
+      "top secret marker data"
+    ],
+    "status": "ok",
+    "deobfuscation_applied": true,
+    "behavior_count": 11,
+    "analysis_time_ms": 26.540040969848633,
+    "sha256": "a697b336428e2ba1ccc42c4194a6afc6124a8d0caf9c4658bac6646b203220c3"
+  }
+}

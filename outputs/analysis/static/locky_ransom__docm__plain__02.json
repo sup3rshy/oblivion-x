@@ -1,0 +1,117 @@
+{
+  "sample_id": "locky_ransom__docm__plain__02",
+  "format": "docm",
+  "family": "locky_ransom",
+  "variant": "plain",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "macro_entry",
+      "obj": "Sub Document_Open",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:macro_entry"
+    },
+    {
+      "id": 2,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "registry_write",
+      "obj": "RegWrite",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:registry_write"
+    },
+    {
+      "id": 3,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "registry_write",
+      "obj": "HKCU",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:registry_write"
+    },
+    {
+      "id": 4,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Open fPath For",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 5,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_write",
+      "obj": "Print #",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_write"
+    },
+    {
+      "id": 6,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_encrypt",
+      "obj": "Xor",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_encrypt"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "file_encrypt",
+      "obj": "Xor",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:file_encrypt"
+    },
+    {
+      "id": 8,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    },
+    {
+      "id": 9,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "env_read",
+      "obj": "Environ(",
+      "args": {},
+      "confidence": 0.85,
+      "evidence": "static:env_read"
+    }
+  ],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 9,
+    "analysis_time_ms": 19.577980041503906,
+    "sha256": "2f98ca668b49a52ca2c1ed0c4afe16541591585704d7d26be987b016076831ee"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "sample_id": "empty_macro__docm__random__00",
+  "format": "docm",
+  "family": "empty_macro",
+  "variant": "random",
+  "events": [],
+  "meta": {
+    "n_modules": 2,
+    "modules": [
+      "ThisDocument",
+      "NewMacros"
+    ],
+    "obfuscation_detected": {
+      "random": false,
+      "split": false,
+      "encode": false,
+      "logic": false
+    },
+    "recovered_payloads": [],
+    "status": "ok",
+    "deobfuscation_applied": false,
+    "behavior_count": 0,
+    "analysis_time_ms": 39.087772369384766,
+    "sha256": "682077ac061a71cfc65741c4515c15808fdbfeaa7c6e2ee44ceadbefd029bb4a"
+  }
+}

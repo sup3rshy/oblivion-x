@@ -1,0 +1,45 @@
+{
+  "sample_id": "broken_semantic__docm__combo__00",
+  "format": "docm",
+  "family": "broken_semantic",
+  "variant": "combo",
+  "events": [
+    {
+      "id": 1,
+      "t_ms": 355,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 2,
+      "t_ms": 408,
+      "source": "dynamic",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 708,
+      "source": "dynamic",
+      "behavior": "macro_entry",
+      "obj": "Document_Open",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    }
+  ],
+  "meta": {
+    "simulated": true,
+    "failure": "dynamic_semantic",
+    "interaction_handled": true,
+    "error_detail": "Sub or Function not defined",
+    "analysis_time_ms": 0.07176399230957031
+  }
+}
