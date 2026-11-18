@@ -150,13 +150,12 @@
     "recovered_payloads": [
       "\\oblivionx_log.txt",
       "marker-ftp-log: simulated exfiltration data",
-      "\\oblivionx_ftp.txt",
-      "\\oblivionx_log.txt"
+      "\\oblivionx_ftp.txt"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
     "behavior_count": 13,
-    "analysis_time_ms": 20.648956298828125,
+    "analysis_time_ms": 21.785259246826172,
     "sha256": "70855b4bbb83b6dd28723c6a60b7bf8bbbd3ca8d94690b7281f5f18e10abe904"
   }
 }

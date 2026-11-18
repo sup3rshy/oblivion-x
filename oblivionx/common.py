@@ -8,7 +8,7 @@ evaluation all speak the same language.
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -320,12 +320,14 @@ FAILURE_CLASSES: List[str] = [
     "static_empty",          # no VBA code
     "static_corrupted",      # unparsable macro
     "static_password",       # password-protected VBA project
+    "static_av_blocked",     # corpus file missing/unreadable (AV quarantine)
     "dynamic_semantic",      # runtime error in original macro
     "dynamic_instrumentation",  # error introduced by instrumentation
     "dynamic_timeout",       # exceeded time limit
     "dynamic_interaction",   # gated on user interaction that was not handled
     "dynamic_env",           # missing environment dependency (Outlook/FTP)
     "dynamic_date",          # date-triggered payload did not fire
+    "dynamic_missing_trace", # requested real trace but no log was found
 ]
 
 # --------------------------------------------------------------------------

@@ -13,6 +13,8 @@ The simulator models:
 """
 from __future__ import annotations
 
+import datetime
+import hashlib
 import random
 from typing import Any, Dict, List, Optional
 
@@ -22,19 +24,15 @@ from oblivionx.telemetry.schema import Event, SampleAnalysis
 # stage -> typical behaviors ordering helper
 _NOISE_POOL = ["file_write", "env_read", "registry_write"]
 
+# Fixed analysis date for the simulator. Using ``date.today()`` would make
+# date-gated samples (thus_wiper) change behaviour on December 13 and make
+# the reported experiments non-reproducible.
+ANALYSIS_DATE = datetime.date(2024, 1, 1)
+
 
 def _stable_seed(text: str) -> int:
     """Process-independent seed (``hash()`` is salted per interpreter)."""
-    import hashlib
     return int.from_bytes(hashlib.sha256(text.encode()).digest()[:4], "big")
-
-
-def _env_now(date_hint: Optional[Any] = None):
-    """The simulator's notion of 'today' (injectable for date gates)."""
-    import datetime
-    if date_hint is not None:
-        return date_hint
-    return datetime.date.today()
 
 
 def simulate_sample(sample_id: str, ground_truth: Dict[str, Any],
@@ -46,6 +44,8 @@ def simulate_sample(sample_id: str, ground_truth: Dict[str, Any],
                     rng: Optional[random.Random] = None) -> SampleAnalysis:
     """Simulate the dynamic analysis of one sample."""
     rng = rng or random.Random(0x0B1F17E ^ _stable_seed(sample_id))
+    if date_now is None:
+        date_now = ANALYSIS_DATE
     gt = ground_truth
     sa = SampleAnalysis(sample_id=sample_id, family=family, variant=variant,
                         format=fmt)
@@ -97,8 +97,7 @@ def simulate_sample(sample_id: str, ground_truth: Dict[str, Any],
         sa.meta["duration_ms"] = timeout_ms
         return sa
 
-    if gt.get("date_trigger") and not (date_now is not None
-                                       and date_now.month == 12
+    if gt.get("date_trigger") and not (date_now.month == 12
                                        and date_now.day == 13):
         sa.meta["failure"] = "dynamic_date"
         sa.meta["note"] = "payload gated by date; only entry observed"

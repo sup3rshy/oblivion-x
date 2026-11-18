@@ -11,12 +11,10 @@ timestamps (dynamic) or without (static reports).
 """
 from __future__ import annotations
 
-import json
 import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, Optional
 
-from oblivionx.common import BEHAVIOR_DEFS
 from oblivionx.telemetry.schema import Event, SampleAnalysis
 
 # ---------------------------------------------------------------------------
@@ -38,12 +36,19 @@ def parse_vba_trace(text: str, sample_id: str, family: str = "",
         parts = line.split("\t")
         action = parts[0] if parts else ""
         obj = parts[1] if len(parts) > 1 else ""
-        t_sec = float(parts[2]) if len(parts) > 2 and parts[2] else None
+        t_sec = None
+        if len(parts) > 2 and parts[2].strip():
+            try:
+                t_sec = float(parts[2])
+            except ValueError:
+                t_sec = None
         behavior = _map_action(action, obj)
         if behavior is None:
             continue
         eid += 1
-        sa.add(Event(id=eid, t_ms=int(t_sec * 1000) if t_sec else None,
+        sa.add(Event(id=eid,
+                     t_ms=int(round(t_sec * 1000))
+                     if t_sec is not None else None,
                      source="dynamic", behavior=behavior, obj=obj,
                      confidence=0.99, evidence=f"trace:{action}"))
     return sa

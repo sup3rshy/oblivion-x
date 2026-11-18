@@ -1,9 +1,9 @@
 {
   "experiment": "E2",
   "title": "Static vs dynamic observability (RQ2)",
-  "mean_static_recall": 0.8960683129333922,
+  "mean_static_recall": 0.9052477871922316,
   "mean_dynamic_recall": 0.7766345427059713,
-  "mean_view_jaccard": 0.600024534548344,
+  "mean_view_jaccard": 0.6015672672418705,
   "most_static_missed": [
     [
       "file_write",
@@ -18,29 +18,25 @@
       26
     ],
     [
-      "outlook_access",
-      12
-    ],
-    [
-      "http_download",
-      10
-    ],
-    [
       "url_reference",
       6
     ],
     [
+      "outlook_access",
+      3
+    ],
+    [
       "cmd_run",
-      4
+      1
     ]
   ],
   "most_dynamic_missed": [
     [
-      "outlook_send",
+      "cmd_run",
       54
     ],
     [
-      "cmd_run",
+      "outlook_send",
       54
     ],
     [
@@ -56,14 +52,6 @@
       36
     ],
     [
-      "file_delete",
-      18
-    ],
-    [
-      "string_concat",
-      18
-    ],
-    [
       "base64_encode",
       18
     ],
@@ -73,6 +61,14 @@
     ],
     [
       "dead_code",
+      18
+    ],
+    [
+      "file_delete",
+      18
+    ],
+    [
+      "string_concat",
       18
     ],
     [
@@ -95,19 +91,15 @@
     ],
     [
       "cmd_run",
-      50
+      53
+    ],
+    [
+      "http_download",
+      36
     ],
     [
       "url_reference",
       30
-    ],
-    [
-      "http_download",
-      26
-    ],
-    [
-      "file_delete",
-      18
     ],
     [
       "base64_encode",
@@ -119,6 +111,10 @@
     ],
     [
       "dead_code",
+      18
+    ],
+    [
+      "file_delete",
       18
     ],
     [
@@ -144,12 +140,12 @@
       36
     ],
     [
-      "outlook_access",
-      12
-    ],
-    [
       "string_concat",
       11
+    ],
+    [
+      "outlook_access",
+      3
     ]
   ],
   "by_family": {
@@ -209,15 +205,15 @@
     },
     "metacol_mailer": {
       "n": 18,
-      "static_recall": 0.9428571428571428,
+      "static_recall": 0.9761904761904763,
       "dynamic_recall": 0.7484126984126984,
-      "gap": -0.19444444444444442
+      "gap": -0.22777777777777786
     },
     "slow_timeout": {
       "n": 18,
-      "static_recall": 0.9349206349206349,
+      "static_recall": 0.9682539682539684,
       "dynamic_recall": 0.25158730158730164,
-      "gap": -0.6833333333333333
+      "gap": -0.7166666666666668
     },
     "thus_wiper": {
       "n": 18,
@@ -227,9 +223,9 @@
     },
     "valyria_dual": {
       "n": 36,
-      "static_recall": 0.8974426807760142,
+      "static_recall": 0.9604938271604938,
       "dynamic_recall": 0.5063492063492064,
-      "gap": -0.39109347442680775
+      "gap": -0.45414462081128737
     },
     "vba_dropper": {
       "n": 36,
@@ -2283,6 +2279,7 @@
         "base64_encode",
         "chr_encode",
         "macro_entry",
+        "outlook_access",
         "outlook_send",
         "url_reference"
       ],
@@ -2300,9 +2297,7 @@
         "outlook_access",
         "outlook_send"
       ],
-      "static_missed": [
-        "outlook_access"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "outlook_send"
       ],
@@ -2310,7 +2305,7 @@
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.8,
+      "static_recall": 1.0,
       "dynamic_recall": 0.8
     },
     {
@@ -2321,6 +2316,7 @@
         "base64_encode",
         "chr_encode",
         "macro_entry",
+        "outlook_access",
         "outlook_send",
         "url_reference"
       ],
@@ -2339,9 +2335,7 @@
         "outlook_access",
         "outlook_send"
       ],
-      "static_missed": [
-        "outlook_access"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "outlook_send"
       ],
@@ -2349,7 +2343,7 @@
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.8,
+      "static_recall": 1.0,
       "dynamic_recall": 0.8
     },
     {
@@ -2360,6 +2354,7 @@
         "base64_encode",
         "chr_encode",
         "macro_entry",
+        "outlook_access",
         "outlook_send",
         "url_reference"
       ],
@@ -2377,9 +2372,7 @@
         "outlook_access",
         "outlook_send"
       ],
-      "static_missed": [
-        "outlook_access"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "outlook_send"
       ],
@@ -2387,7 +2380,7 @@
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.8,
+      "static_recall": 1.0,
       "dynamic_recall": 0.8
     },
     {
@@ -8386,6 +8379,7 @@
       "family": "valyria_dual",
       "variant": "split",
       "static_observed": [
+        "http_download",
         "macro_entry",
         "outlook_access",
         "outlook_send",
@@ -8407,19 +8401,18 @@
         "string_concat",
         "url_reference"
       ],
-      "static_missed": [
-        "http_download"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "http_download",
         "outlook_send",
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.8333333333333334,
+      "static_recall": 1.0,
       "dynamic_recall": 0.5
     },
     {
@@ -8509,7 +8502,9 @@
       "static_observed": [
         "base64_encode",
         "chr_encode",
+        "http_download",
         "macro_entry",
+        "outlook_access",
         "outlook_send",
         "url_reference"
       ],
@@ -8530,20 +8525,18 @@
         "outlook_send",
         "url_reference"
       ],
-      "static_missed": [
-        "http_download",
-        "outlook_access"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "http_download",
         "outlook_send",
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.7142857142857143,
+      "static_recall": 1.0,
       "dynamic_recall": 0.5714285714285714
     },
     {
@@ -8553,7 +8546,9 @@
       "static_observed": [
         "base64_encode",
         "chr_encode",
+        "http_download",
         "macro_entry",
+        "outlook_access",
         "outlook_send",
         "url_reference"
       ],
@@ -8574,20 +8569,18 @@
         "outlook_send",
         "url_reference"
       ],
-      "static_missed": [
-        "http_download",
-        "outlook_access"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "http_download",
         "outlook_send",
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.7142857142857143,
+      "static_recall": 1.0,
       "dynamic_recall": 0.5714285714285714
     },
     {
@@ -8597,7 +8590,9 @@
       "static_observed": [
         "base64_encode",
         "chr_encode",
+        "http_download",
         "macro_entry",
+        "outlook_access",
         "outlook_send",
         "url_reference"
       ],
@@ -8618,20 +8613,18 @@
         "outlook_send",
         "url_reference"
       ],
-      "static_missed": [
-        "http_download",
-        "outlook_access"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "http_download",
         "outlook_send",
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.7142857142857143,
+      "static_recall": 1.0,
       "dynamic_recall": 0.5714285714285714
     },
     {
@@ -8768,6 +8761,7 @@
         "base64_encode",
         "chr_encode",
         "dead_code",
+        "http_download",
         "macro_entry",
         "outlook_access",
         "outlook_send",
@@ -8794,7 +8788,6 @@
         "url_reference"
       ],
       "static_missed": [
-        "http_download",
         "string_concat"
       ],
       "dynamic_missed": [
@@ -8803,10 +8796,11 @@
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.7777777777777778,
+      "static_recall": 0.8888888888888888,
       "dynamic_recall": 0.6666666666666666
     },
     {
@@ -9144,6 +9138,7 @@
       "family": "valyria_dual",
       "variant": "split",
       "static_observed": [
+        "http_download",
         "macro_entry",
         "outlook_access",
         "outlook_send",
@@ -9166,19 +9161,18 @@
         "string_concat",
         "url_reference"
       ],
-      "static_missed": [
-        "http_download"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "http_download",
         "outlook_send",
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.8333333333333334,
+      "static_recall": 1.0,
       "dynamic_recall": 0.5
     },
     {
@@ -9269,7 +9263,9 @@
       "static_observed": [
         "base64_encode",
         "chr_encode",
+        "http_download",
         "macro_entry",
+        "outlook_access",
         "outlook_send",
         "url_reference"
       ],
@@ -9290,20 +9286,18 @@
         "outlook_send",
         "url_reference"
       ],
-      "static_missed": [
-        "http_download",
-        "outlook_access"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "http_download",
         "outlook_send",
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.7142857142857143,
+      "static_recall": 1.0,
       "dynamic_recall": 0.5714285714285714
     },
     {
@@ -9313,7 +9307,9 @@
       "static_observed": [
         "base64_encode",
         "chr_encode",
+        "http_download",
         "macro_entry",
+        "outlook_access",
         "outlook_send",
         "url_reference"
       ],
@@ -9334,20 +9330,18 @@
         "outlook_send",
         "url_reference"
       ],
-      "static_missed": [
-        "http_download",
-        "outlook_access"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "http_download",
         "outlook_send",
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.7142857142857143,
+      "static_recall": 1.0,
       "dynamic_recall": 0.5714285714285714
     },
     {
@@ -9357,7 +9351,9 @@
       "static_observed": [
         "base64_encode",
         "chr_encode",
+        "http_download",
         "macro_entry",
+        "outlook_access",
         "outlook_send",
         "url_reference"
       ],
@@ -9378,20 +9374,18 @@
         "outlook_send",
         "url_reference"
       ],
-      "static_missed": [
-        "http_download",
-        "outlook_access"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "http_download",
         "outlook_send",
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.7142857142857143,
+      "static_recall": 1.0,
       "dynamic_recall": 0.5714285714285714
     },
     {
@@ -9527,6 +9521,7 @@
         "base64_encode",
         "chr_encode",
         "dead_code",
+        "http_download",
         "macro_entry",
         "outlook_access",
         "outlook_send",
@@ -9555,7 +9550,6 @@
         "url_reference"
       ],
       "static_missed": [
-        "http_download",
         "string_concat"
       ],
       "dynamic_missed": [
@@ -9564,10 +9558,11 @@
         "url_reference"
       ],
       "static_only": [
+        "http_download",
         "outlook_send",
         "url_reference"
       ],
-      "static_recall": 0.7777777777777778,
+      "static_recall": 0.8888888888888888,
       "dynamic_recall": 0.6666666666666666
     },
     {
@@ -14101,6 +14096,7 @@
       "static_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "macro_entry",
         "shell_run",
         "url_reference"
@@ -14116,9 +14112,7 @@
         "macro_entry",
         "shell_run"
       ],
-      "static_missed": [
-        "cmd_run"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "base64_encode",
         "chr_encode",
@@ -14128,10 +14122,11 @@
       "static_only": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "shell_run",
         "url_reference"
       ],
-      "static_recall": 0.8,
+      "static_recall": 1.0,
       "dynamic_recall": 0.2
     },
     {
@@ -14141,6 +14136,7 @@
       "static_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "macro_entry",
         "shell_run",
         "url_reference"
@@ -14157,9 +14153,7 @@
         "macro_entry",
         "shell_run"
       ],
-      "static_missed": [
-        "cmd_run"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "base64_encode",
         "chr_encode",
@@ -14169,10 +14163,11 @@
       "static_only": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "shell_run",
         "url_reference"
       ],
-      "static_recall": 0.8,
+      "static_recall": 1.0,
       "dynamic_recall": 0.2
     },
     {
@@ -14182,6 +14177,7 @@
       "static_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "macro_entry",
         "shell_run",
         "url_reference"
@@ -14199,9 +14195,7 @@
         "macro_entry",
         "shell_run"
       ],
-      "static_missed": [
-        "cmd_run"
-      ],
+      "static_missed": [],
       "dynamic_missed": [
         "base64_encode",
         "chr_encode",
@@ -14211,10 +14205,11 @@
       "static_only": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "shell_run",
         "url_reference"
       ],
-      "static_recall": 0.8,
+      "static_recall": 1.0,
       "dynamic_recall": 0.2
     },
     {

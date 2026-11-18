@@ -58,6 +58,16 @@
       "id": 6,
       "t_ms": null,
       "source": "static",
+      "behavior": "http_download",
+      "obj": "XMLHTTP",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 7,
+      "t_ms": null,
+      "source": "static",
       "behavior": "outlook_access",
       "obj": "Outlook.Application",
       "args": {},
@@ -65,7 +75,7 @@
       "evidence": "static:recovered"
     },
     {
-      "id": 7,
+      "id": 8,
       "t_ms": null,
       "source": "static",
       "behavior": "string_concat",
@@ -89,12 +99,13 @@
     },
     "recovered_payloads": [
       "http://127.0.0.1:9090/second-stage.bin",
+      "MSXML2.XMLHTTP",
       "Outlook.Application"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 7,
-    "analysis_time_ms": 24.067401885986328,
+    "behavior_count": 8,
+    "analysis_time_ms": 18.840551376342773,
     "sha256": "b373b11558b710b1ca271e42a8e132d51189e31352682e7a47b396ec0e3b96b6"
   }
 }

@@ -51,6 +51,6 @@
     "interaction_handled": true,
     "note": "busy loop exceeded analysis time limit",
     "duration_ms": 120000,
-    "analysis_time_ms": 0.08153915405273438
+    "analysis_time_ms": 0.07939338684082031
   }
 }

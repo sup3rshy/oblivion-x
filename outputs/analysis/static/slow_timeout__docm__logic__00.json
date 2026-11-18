@@ -61,7 +61,7 @@
     "status": "ok",
     "deobfuscation_applied": false,
     "behavior_count": 4,
-    "analysis_time_ms": 42.63949394226074,
+    "analysis_time_ms": 18.026113510131836,
     "sha256": "3e774436812492cedaedda6b38ed2288c0fabb9847a037d724c5355fbbb5392b"
   }
 }

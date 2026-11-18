@@ -132,12 +132,13 @@
       "http://127.0.0.1:9090/payload.exe",
       "\\oblivionx_payload.exe",
       "powershell.exe -NoProfile -WindowStyle Hidden ",
-      "-ExecutionPolicy Bypass -Command "
+      "-ExecutionPolicy Bypass -Command ",
+      "WScript.Shell"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
     "behavior_count": 11,
-    "analysis_time_ms": 24.352073669433594,
+    "analysis_time_ms": 20.525217056274414,
     "sha256": "3f095f4764e287e58615c3ceead75e33525c2280e6bf243a02e0d2d51e4fa8c7"
   }
 }

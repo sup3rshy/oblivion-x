@@ -29,6 +29,6 @@
     "simulated": true,
     "failure": "static_empty",
     "interaction_handled": true,
-    "analysis_time_ms": 0.0762939453125
+    "analysis_time_ms": 0.06866455078125
   }
 }

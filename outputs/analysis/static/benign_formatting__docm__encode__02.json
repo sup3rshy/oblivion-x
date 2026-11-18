@@ -48,16 +48,6 @@
       "id": 5,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
-      "args": {},
-      "confidence": 0.9,
-      "evidence": "static:recovered"
-    },
-    {
-      "id": 6,
-      "t_ms": null,
-      "source": "static",
       "behavior": "chr_encode",
       "obj": "encode",
       "args": {},
@@ -65,7 +55,7 @@
       "evidence": ""
     },
     {
-      "id": 7,
+      "id": 6,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -88,13 +78,14 @@
       "logic": false
     },
     "recovered_payloads": [
-      "http://127.0.0.1:9090/payload.exe",
+      "C:\\Users\\Public\\oblivionx_format.pdf",
+      "report",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 7,
-    "analysis_time_ms": 32.44471549987793,
+    "behavior_count": 6,
+    "analysis_time_ms": 19.944190979003906,
     "sha256": "920eb50e30210034aa26b44764f7f2f51dbcc9bda829ea294eb9ead785680c97"
   }
 }

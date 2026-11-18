@@ -71,6 +71,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: ftp",
     "missing_dependency": "ftp",
-    "analysis_time_ms": 0.14925003051757812
+    "analysis_time_ms": 0.09870529174804688
   }
 }

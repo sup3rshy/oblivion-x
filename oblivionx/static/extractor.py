@@ -9,10 +9,10 @@ from __future__ import annotations
 import hashlib
 import zipfile
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List
 
 import olefile
-from oletools.olevba import VBA_Project, _extract_vba
+from oletools.olevba import _extract_vba
 
 MODULE_EXTS = {0x21: ".bas", 0x22: ".cls", 0x19: ".bas"}
 
@@ -25,26 +25,23 @@ def extract_modules(path: Path) -> List[Dict[str, Any]]:
     modules: List[Dict[str, Any]] = []
     if zipfile.is_zipfile(path):
         # OOXML: word/vbaProject.bin or xl/vbaProject.bin
-        zf = zipfile.ZipFile(path)
-        vba_name = next((n for n in zf.namelist()
-                         if n.endswith("vbaProject.bin")), None)
-        if vba_name is None:
-            return modules
-        ole = olefile.OleFileIO(zf.read(vba_name))
+        with zipfile.ZipFile(path) as zf:
+            vba_name = next((n for n in zf.namelist()
+                             if n.endswith("vbaProject.bin")), None)
+            if vba_name is None:
+                return modules
+            payload = zf.read(vba_name)
         try:
-            modules = _extract_ole(ole)
+            with olefile.OleFileIO(payload) as ole:
+                return _extract_ole(ole)
         except Exception:
             return []
-        ole.close()
-        zf.close()
-        return modules
-    if olefile.isOleFile(data):
-        ole = olefile.OleFileIO(data)
+    if olefile.isOleFile(data=data):
         try:
-            modules = _extract_ole(ole)
+            with olefile.OleFileIO(data) as ole:
+                modules = _extract_ole(ole)
         except Exception:
             return []
-        ole.close()
     return modules
 
 

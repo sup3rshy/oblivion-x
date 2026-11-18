@@ -1,6 +1,6 @@
 # Oblivion-X — Experiment Report
 
-> Generated from `outputs/eval/E1..E8*.json`. Dynamic telemetry is produced by the deterministic Linux simulator unless stated otherwise; static analysis runs on the real Office files built by Word/Excel COM automation.
+> Generated from the E1..E8 JSON artifacts. Dynamic telemetry is produced by the deterministic Linux simulator unless stated otherwise; static analysis runs on the corpus Office files (Word/Excel COM-authored or offline-built with the pure-Python MS-OVBA writer).
 
 ## E1 — Reproduce Oblivion (pre-processing taxonomy)
 
@@ -18,31 +18,31 @@ Oblivion's pre-processing classification applied to the 378-sample controlled co
 | no_file | 0 |
 
 - `extracted` counts modules, not samples (900 modules over 378 files).
-- `empty` = the 18 `empty_macro` samples (project present, no code); `interaction` = the 18 MsgBox-gated samples; everything else is a standard `.bas + .cls` project.
+- `empty` = the 18 samples whose project has no executable code; `interaction` = the 18 MsgBox-gated samples; everything else is a standard `.bas + .cls` project.
 
 ## E2 — Static vs dynamic observability (RQ2)
 
 | Measure | Value |
 |---|---|
-| Mean static behavior recall | 0.896 |
+| Mean static behavior recall | 0.905 |
 | Mean dynamic behavior recall | 0.777 |
-| Mean view agreement (Jaccard) | 0.600 |
+| Mean view agreement (Jaccard) | 0.602 |
 
 Behaviors seen by exactly one view (ground-truth only):
 
 | Behavior | Static only | Dynamic only |
 |---|---|---|
 | file_write | 11 | 54 |
-| outlook_send | 54 | 0 |
 | shell_run | 54 | 0 |
-| cmd_run | 50 | 0 |
+| outlook_send | 54 | 0 |
+| cmd_run | 53 | 0 |
 | file_execute | 0 | 36 |
+| http_download | 36 | 0 |
 | url_reference | 30 | 0 |
-| http_download | 26 | 0 |
-| chr_encode | 18 | 0 |
 | file_delete | 18 | 0 |
 | dead_code | 18 | 0 |
 | base64_encode | 18 | 0 |
+| chr_encode | 18 | 0 |
 | string_concat | 3 | 11 |
 
 Reading: static analysis sees *intent* (URLs, `Outlook.Send`, `Shell`/`cmd` strings) even when the runtime gate never opens, while dynamic analysis sees *effects* of spawned processes (`file_write`/`file_execute` from PowerShell) that never appear in the VBA source. Neither view alone is sufficient.
@@ -51,15 +51,15 @@ Reading: static analysis sees *intent* (URLs, `Outlook.Send`, `Shell`/`cmd` stri
 
 | Variant | Static recall | Dynamic recall | Detection precision | Detection recall | Deobf. success |
 |---|---|---|---|---|---|
-| combo | 0.875 | 0.776 | 1.000 | 0.892 | 1.000 |
-| encode | 0.880 | 0.768 | 1.000 | 1.000 | 1.000 |
+| combo | 0.879 | 0.776 | 1.000 | 0.892 | 1.000 |
+| encode | 0.926 | 0.768 | 1.000 | 1.000 | 1.000 |
 | logic | 0.923 | 0.776 | 1.000 | 1.000 | n/a |
 | plain | 0.918 | 0.781 | n/a | n/a | n/a |
 | random | 0.899 | 0.787 | 1.000 | 0.900 | n/a |
-| split | 0.882 | 0.772 | 1.000 | 0.900 | 0.900 |
+| split | 0.887 | 0.772 | 1.000 | 0.900 | 0.900 |
 
 - Detection precision is 1.0 for every technique: no plain sample trips a heuristic.
-- Split/encode/combination detection misses the variants where the transform had too little material to rewrite (short macros); deobfuscation still recovers the hidden literal in 90-100% of the recoverable variants.
+- Split/encode/combination detection misses the variants where the transform had too little material to rewrite (short macros); deobfuscation still recovers the hidden literal in 90%-100% of the recoverable variants.
 - Static recall barely changes across variants because the analyzer scans the obfuscated source directly; what drops is *literal* visibility (URLs, API names), which is why deobfuscation matters for reconstruction rather than for recall.
 
 ## E4 — Temporal segmentation stage separation (RQ3)
@@ -91,7 +91,7 @@ Reading: static analysis sees *intent* (URLs, `Outlook.Send`, `Shell`/`cmd` stri
 
 | Metric | Value |
 |---|---|
-| Behavior recall | 0.981 |
+| Behavior recall | 0.987 |
 | Behavior precision | 0.968 |
 | Evidence precision | 1.000 |
 | Stage accuracy (LCS F1) | 0.963 |
@@ -100,9 +100,9 @@ Reading: static analysis sees *intent* (URLs, `Outlook.Send`, `Shell`/`cmd` stri
 | Analysis completion rate | 0.952 |
 | Execution success rate | 0.571 |
 | Timeout rate | 0.048 |
-| Deobfuscation success | 0.921 |
-| Analysis time/sample (ms) | 0.1 |
-| Unsupported behavior claim rate | 0.217 |
+| Deobfuscation success | 0.967 |
+| Analysis time/sample (ms) | 21.0 |
+| Unsupported behavior claim rate | 0.220 |
 
 ### Samples whose macro ran to completion
 
@@ -118,7 +118,7 @@ Reading: static analysis sees *intent* (URLs, `Outlook.Send`, `Shell`/`cmd` stri
 | Execution success rate | 1.000 |
 | Timeout rate | 0.000 |
 | Deobfuscation success | 1.000 |
-| Analysis time/sample (ms) | 0.1 |
+| Analysis time/sample (ms) | 21.4 |
 | Unsupported behavior claim rate | 0.031 |
 
 ### Per family
@@ -135,12 +135,12 @@ Reading: static analysis sees *intent* (URLs, `Outlook.Send`, `Shell`/`cmd` stri
 | locky_ransom | 36 | 1.000 | 0.962 | 0.970 | 0.944 | 1.000 |
 | marker_ftp | 36 | 1.000 | 0.966 | 0.970 | 0.944 | 1.000 |
 | metacol_mailer | 18 | 1.000 | 0.951 | 0.952 | 0.917 | 1.000 |
-| slow_timeout | 18 | 0.935 | 0.942 | 0.952 | 0.917 | 1.000 |
+| slow_timeout | 18 | 0.968 | 0.947 | 0.952 | 0.917 | 1.000 |
 | thus_wiper | 18 | 0.935 | 0.948 | 0.939 | 0.933 | 0.958 |
-| valyria_dual | 36 | 0.927 | 1.000 | 1.000 | 1.000 | 1.000 |
+| valyria_dual | 36 | 0.967 | 1.000 | 1.000 | 1.000 | 1.000 |
 | vba_dropper | 36 | 1.000 | 0.962 | 0.963 | 0.933 | 1.000 |
 
-Reading: on samples that actually execute, behavior recall is 1.0 and stage accuracy ~0.96. The gap on the full set comes from environment-gated families whose later stages never run: the reconstructor correctly reports only the observable prefix and marks the rest unsupported instead of inventing it.
+Reading: on samples that actually execute, behavior recall is 1.000 and stage accuracy 0.964. The gap on the full set comes from environment-gated families whose later stages never run: the reconstructor correctly reports only the observable prefix and marks the rest unsupported instead of inventing it.
 
 ## E7 — Failure analysis
 
@@ -163,12 +163,12 @@ Reading: on samples that actually execute, behavior recall is 1.0 and stage accu
 | Measure | Value |
 |---|---|
 | Samples | 378 |
-| Mean time/sample (ms) | 30.1 |
-| Std (ms) | 66.8 |
-| p50 (ms) | 24.9 |
-| p95 (ms) | 40.2 |
-| Throughput (samples/s) | 33.2 |
-| Static time/sample (ms) | 30.0 |
+| Mean time/sample (ms) | 21.0 |
+| Std (ms) | 4.0 |
+| p50 (ms) | 20.3 |
+| p95 (ms) | 26.1 |
+| Throughput (samples/s) | 47.7 |
+| Static time/sample (ms) | 20.9 |
 | Simulator time/sample (ms) | 0.1 |
 | Completion rate | 0.952 |
 | Timeout rate | 0.048 |

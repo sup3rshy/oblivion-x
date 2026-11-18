@@ -98,16 +98,6 @@
       "id": 10,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
-      "args": {},
-      "confidence": 0.9,
-      "evidence": "static:recovered"
-    },
-    {
-      "id": 11,
-      "t_ms": null,
-      "source": "static",
       "behavior": "string_concat",
       "obj": "split",
       "args": {},
@@ -115,7 +105,7 @@
       "evidence": ""
     },
     {
-      "id": 12,
+      "id": 11,
       "t_ms": null,
       "source": "static",
       "behavior": "chr_encode",
@@ -125,7 +115,7 @@
       "evidence": ""
     },
     {
-      "id": 13,
+      "id": 12,
       "t_ms": null,
       "source": "static",
       "behavior": "dead_code",
@@ -135,7 +125,7 @@
       "evidence": ""
     },
     {
-      "id": 14,
+      "id": 13,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -163,13 +153,12 @@
       "\\oblivionx_lock.exe",
       "\\oblivionx_vault\\secret.txt",
       "top secret marker data",
-      "http://127.0.0.1:9090/payload.exe",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 14,
-    "analysis_time_ms": 29.84929084777832,
+    "behavior_count": 13,
+    "analysis_time_ms": 23.174047470092773,
     "sha256": "051ca1c538c5e83efcae74920a97551ace9b8fe89752972a66308996a09933d2"
   }
 }

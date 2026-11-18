@@ -22,10 +22,10 @@ stages separate in time.
 
 | RQ | Question | Experiment | Result |
 |---|---|---|---|
-| RQ1 | How many behaviors does the system reconstruct vs ground truth? | E6 | behavior recall **0.981** (1.000 on completed runs) |
-| RQ2 | What do static and dynamic analysis each miss? | E2 | static recall **0.896**, dynamic **0.777**, view Jaccard **0.600** |
+| RQ1 | How many behaviors does the system reconstruct vs ground truth? | E6 | behavior recall **0.987** (1.000 on completed runs) |
+| RQ2 | What do static and dynamic analysis each miss? | E2 | static recall **0.905**, dynamic **0.777**, view Jaccard **0.602** |
 | RQ3 | Does temporal segmentation separate attack stages? | E4 | boundary F1 **0.636** at N=5, purity **0.929** at N=10 |
-| RQ4 | How much does obfuscation reduce observability? | E3 | static recall 0.875–0.923 across variants; detection precision 1.0 |
+| RQ4 | How much does obfuscation reduce observability? | E3 | static recall 0.879–0.926 across variants; detection precision 1.0 |
 | RQ5 | Can the attack chain be reconstructed from evidence instead of a label? | E6 | stage accuracy **0.963**, evidence precision **1.000**, chain built from event IDs |
 
 ## 4. Mandatory experiments E1–E8
@@ -48,14 +48,14 @@ Run with `./.venv/bin/python -m oblivionx eval all`. The markdown report is
 
 | # | Metric | Definition in code | Value (all / completed runs) |
 |---|---|---|---|
-| 1 | Behavior Recall | `metrics.py:evaluate_sample` | 0.981 / 1.000 |
+| 1 | Behavior Recall | `metrics.py:evaluate_sample` | 0.987 / 1.000 |
 | 2 | Evidence Precision | claims with ≥1 event / claims | 1.000 / 1.000 |
 | 3 | Stage accuracy | LCS F1 of ordered stage chain | 0.963 / 0.964 |
 | 4 | Analysis completion rate | not timeout/crash | 0.952 / 1.000 |
 | 5 | Timeout rate | `dynamic_timeout` | 0.048 / 0.000 |
-| 6 | Deobfuscation success | hidden literal recovered (split/encode/combo) | 0.921 / 1.000 |
-| 7 | Analysis time/sample | static + telemetry ms | 21.2 ms mean, p95 31.0 ms |
-| 8 | Unsupported behavior claim rate | claims without direct evidence | 0.217 / 0.031 |
+| 6 | Deobfuscation success | hidden literal recovered (split/encode/combo) | 0.967 / 1.000 |
+| 7 | Analysis time/sample | static + telemetry ms | 21.0 ms mean, p95 26.1 ms |
+| 8 | Unsupported behavior claim rate | claims without direct evidence | 0.220 / 0.031 |
 
 Two auxiliary rates are reported alongside: **behavior precision** (0.968)
 and **execution success** (0.571 — the macro ran without an environment/date/
@@ -65,7 +65,7 @@ interaction gate).
 
 | Task | Scope | Code |
 |---|---|---|
-| 1. Office/macro corpus | 378 safe samples, 14 families × 2 formats × 6 variants × 3 seeds | `corpus/` + `scripts/build_corpus_windows.ps1` |
+| 1. Office/macro corpus | 378 safe samples, 14 families (docm/xlsm where applicable) × 6 variants × 3 seeds | `corpus/` + `scripts/build_corpus_windows.ps1` |
 | 2. Oblivion reproduction | pre-processing taxonomy, static extraction/deobfuscation | `static/`, E1 |
 | 3. Telemetry + temporal segmentation | normalized event schema, Bon-APT segmentation | `telemetry/`, `simulate/` |
 | 4. Reconstruction / evaluation / error analysis | stage chain, 8 metrics, E1–E8 | `reconstruction/`, `eval/` |
@@ -114,3 +114,24 @@ interaction gate).
   statements", which includes the `empty_macro` family only.
 - Stage accuracy uses an order-preserving LCS F1, not exact positional
   equality, because a missed middle stage should not zero the whole chain.
+
+## 10. Reproducibility and engineering quality
+
+- **Offline corpus build.** `python -m oblivionx corpus build` assembles the
+  generated sources into oletools-readable `.docm`/`.xlsm` files with the
+  pure-Python MS-OVBA/CFB writer. A full 378-sample offline build reproduces
+  the same taxonomy and metrics as the Word/Excel-authored corpus, without
+  Windows or Office. Files are byte-reproducible (fixed project IDs and zip
+  timestamps); existing samples are skipped unless `--overwrite` is passed.
+- **Determinism.** The simulator uses a fixed analysis date
+  (`2024-01-01`) so date-gated samples do not change behaviour on December
+  13; JSON tie-breaking is explicit (`_top` in `eval/experiments.py`); corpus
+  source generation is seeded.
+- **Tests.** `tests/` contains 100+ offline unit and end-to-end tests
+  covering extraction, deobfuscation, schema, segmentation, simulation,
+  reconstruction, metrics, experiments, report generation and the CLI.
+  `make test` runs them; `make lint` runs ruff; CI runs both on Python 3.10,
+  3.11 and 3.12.
+- **Packaging.** `pyproject.toml` declares dependencies, package data
+  (`oblivionx/resources/*`), the `oblivionx` console script and the
+  pytest/ruff configuration.

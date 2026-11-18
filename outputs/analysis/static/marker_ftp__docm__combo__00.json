@@ -138,16 +138,6 @@
       "id": 14,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
-      "args": {},
-      "confidence": 0.9,
-      "evidence": "static:recovered"
-    },
-    {
-      "id": 15,
-      "t_ms": null,
-      "source": "static",
       "behavior": "string_concat",
       "obj": "split",
       "args": {},
@@ -155,7 +145,7 @@
       "evidence": ""
     },
     {
-      "id": 16,
+      "id": 15,
       "t_ms": null,
       "source": "static",
       "behavior": "chr_encode",
@@ -165,7 +155,7 @@
       "evidence": ""
     },
     {
-      "id": 17,
+      "id": 16,
       "t_ms": null,
       "source": "static",
       "behavior": "dead_code",
@@ -175,7 +165,7 @@
       "evidence": ""
     },
     {
-      "id": 18,
+      "id": 17,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -198,15 +188,15 @@
       "logic": true
     },
     "recovered_payloads": [
+      "x_log.txt",
       "marker-ftp-log: simulated exfiltration data",
       "\\oblivionx_ftp.txt",
-      "http://127.0.0.1:9090/payload.exe",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 18,
-    "analysis_time_ms": 24.745464324951172,
+    "behavior_count": 17,
+    "analysis_time_ms": 21.223783493041992,
     "sha256": "0c55383e1af34e1ada6d947382d4bb2c6fa70c354a2da767503b4d4529253ee0"
   }
 }

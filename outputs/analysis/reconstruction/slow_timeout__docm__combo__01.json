@@ -12,9 +12,9 @@
     {
       "stage": "defense_evasion",
       "evidence": [
+        4,
         5,
-        6,
-        7
+        6
       ],
       "confidence": 0.95,
       "note": ""
@@ -30,8 +30,7 @@
     {
       "stage": "c2_download",
       "evidence": [
-        3,
-        4
+        3
       ],
       "confidence": 0.9,
       "note": ""
@@ -59,8 +58,7 @@
     {
       "behavior": "url_reference",
       "evidence": [
-        3,
-        4
+        3
       ],
       "confidence": 0.9,
       "supported": false,
@@ -69,7 +67,7 @@
     {
       "behavior": "chr_encode",
       "evidence": [
-        5
+        4
       ],
       "confidence": 0.95,
       "supported": false,
@@ -78,7 +76,7 @@
     {
       "behavior": "dead_code",
       "evidence": [
-        6
+        5
       ],
       "confidence": 0.95,
       "supported": false,
@@ -87,7 +85,7 @@
     {
       "behavior": "base64_encode",
       "evidence": [
-        7
+        6
       ],
       "confidence": 0.95,
       "supported": false,

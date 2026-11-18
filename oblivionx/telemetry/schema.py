@@ -7,7 +7,7 @@ evaluation are source-agnostic.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, field, asdict
+from dataclasses import MISSING, asdict, dataclass, field
 from typing import Any, Dict, List, Optional
 
 # ---------------------------------------------------------------------------
@@ -41,8 +41,15 @@ class Event:
 
     @staticmethod
     def from_dict(d: Dict[str, Any]) -> "Event":
-        return Event(**{k: d.get(k, Event.__dataclass_fields__[k].default)
-                        for k in Event.__dataclass_fields__})
+        values: Dict[str, Any] = {}
+        for name, field_def in Event.__dataclass_fields__.items():
+            if name in d:
+                values[name] = d[name]
+            elif field_def.default_factory is not MISSING:
+                values[name] = field_def.default_factory()
+            else:
+                values[name] = field_def.default
+        return Event(**values)
 
 
 @dataclass

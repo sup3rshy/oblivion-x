@@ -78,16 +78,6 @@
       "id": 8,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
-      "args": {},
-      "confidence": 0.9,
-      "evidence": "static:recovered"
-    },
-    {
-      "id": 9,
-      "t_ms": null,
-      "source": "static",
       "behavior": "chr_encode",
       "obj": "encode",
       "args": {},
@@ -95,7 +85,7 @@
       "evidence": ""
     },
     {
-      "id": 10,
+      "id": 9,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -119,13 +109,13 @@
       "logic": false
     },
     "recovered_payloads": [
-      "http://127.0.0.1:9090/payload.exe",
+      "A1:D20",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 10,
-    "analysis_time_ms": 22.40610122680664,
+    "behavior_count": 9,
+    "analysis_time_ms": 26.37958526611328,
     "sha256": "0f459f23786271532911b88f3648eb8c3417bcbfe4ecf565f4b08a1f42e9072c"
   }
 }

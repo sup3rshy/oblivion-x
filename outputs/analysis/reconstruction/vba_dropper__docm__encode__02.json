@@ -30,8 +30,7 @@
     {
       "stage": "c2_download",
       "evidence": [
-        6,
-        7
+        6
       ],
       "confidence": 0.9,
       "note": ""
@@ -87,8 +86,7 @@
     {
       "behavior": "url_reference",
       "evidence": [
-        6,
-        7
+        6
       ],
       "confidence": 0.9,
       "supported": false,

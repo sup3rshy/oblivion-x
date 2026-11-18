@@ -18,8 +18,15 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 
-from oblivionx.common import BEHAVIOR_DEFS, STAGE_ORDER
 from oblivionx.telemetry.schema import Reconstruction, SampleAnalysis
+
+# Failures that mean the analysis itself did not complete. Environment,
+# date, interaction and semantic failures are valid observations: the
+# pipeline still reconstructs the observable prefix.
+_INCOMPLETE_FAILURES = {
+    "dynamic_timeout", "dynamic_missing_trace", "crash", "static_error",
+    "static_corrupted", "static_av_blocked", "av_blocked",
+}
 
 
 @dataclass
@@ -77,7 +84,8 @@ def _stage_label_scores(gt_stages: List[str], rec: Reconstruction
     hit = lcs_length(gt_stages, rec_stages)
     precision = hit / len(rec_stages)
     recall = hit / len(gt_stages)
-    acc = 2 * precision * recall / (precision + recall + 1e-9)
+    acc = (2 * precision * recall / (precision + recall)
+           if precision + recall else 0.0)
     return acc, precision, recall
 
 
@@ -123,15 +131,15 @@ def evaluate_sample(sa: SampleAnalysis, rec: Reconstruction,
     failure = sa.meta.get("failure")
     m.failure = failure
     m.timed_out = failure == "dynamic_timeout"
-    m.completed = failure not in ("dynamic_timeout", "crash", "static_error",
-                                  "static_corrupted")
+    m.completed = failure not in _INCOMPLETE_FAILURES
     m.execution_success = failure is None
 
     # 6. deobfuscation success. Only split/encode/combo hide recoverable
     # payloads; random identifiers and logic dead code do not, so they are
     # not applicable (None) rather than failures.
     variant = sa.variant
-    if variant in ("split", "encode", "combo"):
+    if (variant in ("split", "encode", "combo")
+            and sa.family != "empty_macro"):
         recovered = sa.meta.get("recovered_payloads", []) or []
         # Success = at least one hidden literal was recovered. This matches
         # the per-variant measure in E3.

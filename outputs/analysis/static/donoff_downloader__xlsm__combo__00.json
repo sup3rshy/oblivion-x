@@ -118,16 +118,6 @@
       "id": 12,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
-      "args": {},
-      "confidence": 0.9,
-      "evidence": "static:recovered"
-    },
-    {
-      "id": 13,
-      "t_ms": null,
-      "source": "static",
       "behavior": "string_concat",
       "obj": "split",
       "args": {},
@@ -135,7 +125,7 @@
       "evidence": ""
     },
     {
-      "id": 14,
+      "id": 13,
       "t_ms": null,
       "source": "static",
       "behavior": "chr_encode",
@@ -145,7 +135,7 @@
       "evidence": ""
     },
     {
-      "id": 15,
+      "id": 14,
       "t_ms": null,
       "source": "static",
       "behavior": "dead_code",
@@ -155,7 +145,7 @@
       "evidence": ""
     },
     {
-      "id": 16,
+      "id": 15,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -180,16 +170,17 @@
     },
     "recovered_payloads": [
       "http://127.0.0.1",
+      "payload.exe",
       "\\oblivionx_payload.exe",
       "powershell.exe -NoProfile -WindowStyle Hidden ",
       "-ExecutionPolicy Bypass -Command ",
-      "http://127.0.0.1:9090/payload.exe",
+      "WScript.Shell",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 16,
-    "analysis_time_ms": 22.67909049987793,
+    "behavior_count": 15,
+    "analysis_time_ms": 25.126934051513672,
     "sha256": "2ba3c17f49774c2f877e02a13a6cb0e7cb0f8baed652516eb0d148f9ea3d464e"
   }
 }

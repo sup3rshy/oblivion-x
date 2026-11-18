@@ -500,14 +500,14 @@ def build_cfb(root_children: Dict[str, bytes],
         chain(first_minifat, mini_fat_sectors)
     if mini_stream_sectors:
         chain(first_mini, mini_stream_sectors)
-    for e, start, count in regular_map:
+    for _e, start, count in regular_map:
         chain(start, count)
 
     # ---- miniFAT ----------------------------------------------------------------
     mini_fat = bytearray()
     if n_mini_sectors > 0:
         mini_fat = bytearray(struct.pack("<I", ENDOFCHAIN) * n_mini_sectors)
-        for e, start, count in mini_sector_map:
+        for _e, start, count in mini_sector_map:
             for i in range(count):
                 struct.pack_into("<I", mini_fat, (start + i) * 4,
                                  (start + i + 1) if i < count - 1 else ENDOFCHAIN)
@@ -562,7 +562,7 @@ def build_cfb(root_children: Dict[str, bytes],
         out += mini_fat.ljust(mini_fat_sectors * SECTOR_SIZE, b"\x00")
     if mini_stream_sectors:
         out += mini_stream.ljust(mini_stream_sectors * SECTOR_SIZE, b"\x00")
-    for e, start, count in regular_map:
+    for e, _start, count in regular_map:
         data = next(d for (ee, d) in regular_parts if ee is e)
         out += data.ljust(count * SECTOR_SIZE, b"\x00")
     return bytes(out)
@@ -615,10 +615,11 @@ def build_vba_project_bin(modules: List[Tuple[str, str, str]],
         "dir": msovba_compress(build_dir_stream(mods, project_name)),
         "_VBA_PROJECT": _vba_project_blob(host),
     }
-    for name, kind, code in mods:
-        # uncompiled module: PLAIN source code (no performance cache, no
-        # compression container) per MS-OVBA 2.3.4.3 for uncompiled modules.
-        vba_streams[name] = code
+    for name, _kind, code in mods:
+        # Uncompiled module: the source is still wrapped in the MS-OVBA
+        # compressed container; only the performance cache is absent
+        # (MODULEOFFSET points at the start of the decompressed stream).
+        vba_streams[name] = msovba_compress(code)
 
     return build_cfb(
         {"PROJECT": build_project_stream(mods, project_name, host, project_id),

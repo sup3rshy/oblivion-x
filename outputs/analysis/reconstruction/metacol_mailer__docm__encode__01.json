@@ -21,7 +21,6 @@
     {
       "stage": "c2_download",
       "evidence": [
-        4,
         5
       ],
       "confidence": 0.9,
@@ -59,9 +58,17 @@
       "obj": ".Body ="
     },
     {
+      "behavior": "outlook_access",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "metacol_mailer:outlook_access"
+    },
+    {
       "behavior": "url_reference",
       "evidence": [
-        4,
         5
       ],
       "confidence": 0.9,
@@ -85,15 +92,6 @@
       "confidence": 0.99,
       "supported": true,
       "obj": "Base64-encoded payload present"
-    },
-    {
-      "behavior": "outlook_access",
-      "evidence": [
-        6
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "metacol_mailer:outlook_access"
     }
   ],
   "chain": "delivery -> defense_evasion -> c2_download -> exfiltration",

@@ -17,8 +17,13 @@ import hashlib
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from oblivionx.common import (BEHAVIOR_DEFS, FAMILIES,
-                              OBFUSCATION_TECHNIQUES, STAGE_ORDER, write_json)
+from oblivionx.common import (
+    BEHAVIOR_DEFS,
+    FAMILIES,
+    OBFUSCATION_TECHNIQUES,
+    STAGE_ORDER,
+    write_json,
+)
 from oblivionx.corpus.obfuscators import obfuscate_sample
 from oblivionx.corpus.vba_sources import build_sample_sources
 

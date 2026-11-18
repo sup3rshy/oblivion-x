@@ -40,6 +40,6 @@
     "failure": "dynamic_date",
     "interaction_handled": true,
     "note": "payload gated by date; only entry observed",
-    "analysis_time_ms": 0.10538101196289062
+    "analysis_time_ms": 0.08177757263183594
   }
 }

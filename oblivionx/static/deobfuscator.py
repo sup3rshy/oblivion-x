@@ -11,7 +11,6 @@ import ast
 import base64
 import math
 import re
-import string
 from typing import Dict, List, Optional, Tuple
 
 # ---------------------------------------------------------------------------
@@ -92,21 +91,51 @@ def _strip_comments(source: str) -> str:
 # Static deobfuscation
 # ---------------------------------------------------------------------------
 
+_SAFE_BINOPS = {
+    ast.Add: lambda a, b: a + b,
+    ast.Sub: lambda a, b: a - b,
+    ast.Mult: lambda a, b: a * b,
+    ast.Div: lambda a, b: a / b,
+    ast.FloorDiv: lambda a, b: a // b,
+    ast.Mod: lambda a, b: a % b,
+}
+_SAFE_UNARYOPS = {ast.UAdd: lambda a: +a, ast.USub: lambda a: -a}
+
+
+def _safe_eval(node: ast.AST) -> float:
+    """Evaluate a tiny arithmetic AST without calling ``eval``.
+
+    VBA constants only need integer arithmetic (``113 - 1``, ``64 + 3``);
+    allowing arbitrary Python expressions here would turn corpus input into
+    code execution.
+    """
+    if isinstance(node, ast.Expression):
+        return _safe_eval(node.body)
+    if isinstance(node, ast.Constant) and isinstance(node.value,
+                                                     (int, float, str)):
+        return node.value
+    if isinstance(node, ast.UnaryOp) and type(node.op) in _SAFE_UNARYOPS:
+        return _SAFE_UNARYOPS[type(node.op)](_safe_eval(node.operand))
+    if isinstance(node, ast.BinOp) and type(node.op) in _SAFE_BINOPS:
+        return _SAFE_BINOPS[type(node.op)](_safe_eval(node.left),
+                                           _safe_eval(node.right))
+    raise ValueError(f"unsupported expression: {ast.dump(node)}")
+
+
 def eval_const_expr(expr: str) -> Optional[str]:
     """Evaluate simple VBA constant expressions: Chr(n) & Chr(m) ...,
     "lit" & "lit", arithmetic inside Chr()."""
     expr = expr.strip()
     try:
         def repl_chr(m: "re.Match") -> str:
-            n = m.group(1).strip()
+            n = m.group(2).strip()
             # allow simple arithmetic like 113 - 1
             val = _eval_int(n)
             return repr(chr(val))
         expr2 = re.sub(r"Chr(W)?\$?\s*\(\s*([^()]+)\s*\)", repl_chr, expr)
         # translate & to +
         expr2 = expr2.replace("&", "+")
-        node = ast.parse(expr2, mode="eval")
-        val = eval(compile(node, "<vba>", "eval"), {"__builtins__": {}})
+        val = _safe_eval(ast.parse(expr2, mode="eval"))
         return str(val)
     except Exception:
         return None
@@ -115,10 +144,9 @@ def eval_const_expr(expr: str) -> Optional[str]:
 def _eval_int(expr: str) -> int:
     expr = expr.strip().replace("&", "+")
     try:
-        node = ast.parse(expr, mode="eval")
-        return int(eval(compile(node, "<vba>", "eval"), {"__builtins__": {}}))
-    except Exception:
-        raise ValueError("not an int expr")
+        return int(_safe_eval(ast.parse(expr, mode="eval")))
+    except Exception as exc:
+        raise ValueError("not an int expr") from exc
 
 
 def eval_concat_expr(expr: str) -> Optional[str]:
@@ -156,11 +184,13 @@ def recover_payloads(source: str) -> List[str]:
         if val:
             found.append(val)
     # literal concatenations
-    for m in re.finditer(r'(?:"[^"]*"\s*&\s*){2,}"[^"]*"', source):
+    for m in re.finditer(r'(?:"[^"]*"\s*&\s*)+"[^"]*"', source):
         val = eval_concat_expr(m.group(0))
         if val:
             found.append(val)
     # base64
-    for b64, raw in decode_base64_blobs(source):
+    for _b64, raw in decode_base64_blobs(source):
         found.append(raw.decode("latin-1"))
-    return found
+    # Preserve first-seen order while removing duplicate recoveries (the
+    # same literal can appear in several concatenation chains).
+    return list(dict.fromkeys(found))

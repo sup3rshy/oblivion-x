@@ -22,8 +22,8 @@
       "stage": "c2_download",
       "evidence": [
         2,
-        6,
-        7
+        8,
+        6
       ],
       "confidence": 0.9,
       "note": ""
@@ -54,8 +54,7 @@
       "behavior": "url_reference",
       "evidence": [
         2,
-        6,
-        7
+        8
       ],
       "confidence": 0.9,
       "supported": false,
@@ -71,6 +70,24 @@
       "confidence": 0.85,
       "supported": false,
       "obj": ".Send"
+    },
+    {
+      "behavior": "http_download",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "XMLHTTP"
+    },
+    {
+      "behavior": "outlook_access",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "valyria_dual:outlook_access"
     },
     {
       "behavior": "chr_encode",
@@ -89,15 +106,6 @@
       "confidence": 0.99,
       "supported": true,
       "obj": "Base64-encoded payload present"
-    },
-    {
-      "behavior": "outlook_access",
-      "evidence": [
-        8
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "valyria_dual:outlook_access"
     }
   ],
   "chain": "delivery -> defense_evasion -> c2_download -> exfiltration",

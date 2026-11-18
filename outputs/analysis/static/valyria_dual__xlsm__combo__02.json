@@ -58,8 +58,8 @@
       "id": 6,
       "t_ms": null,
       "source": "static",
-      "behavior": "outlook_access",
-      "obj": "Outlook.Application",
+      "behavior": "http_download",
+      "obj": "XMLHTTP",
       "args": {},
       "confidence": 0.9,
       "evidence": "static:recovered"
@@ -68,8 +68,8 @@
       "id": 7,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
+      "behavior": "outlook_access",
+      "obj": "Outlook.Application",
       "args": {},
       "confidence": 0.9,
       "evidence": "static:recovered"
@@ -140,14 +140,14 @@
     },
     "recovered_payloads": [
       "vrj://127.0.0.1:9090/second-stage.bin",
+      "MSXML2.XMLHTTP",
       "Outlook.Application",
-      "http://127.0.0.1:9090/payload.exe",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
     "behavior_count": 12,
-    "analysis_time_ms": 36.75436973571777,
+    "analysis_time_ms": 22.835731506347656,
     "sha256": "9bbaa8f7b044a61f6a89a9df6e0a6ca43fb2781952236fa8e913eb26b0bc3fb9"
   }
 }

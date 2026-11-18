@@ -23,8 +23,7 @@
     {
       "stage": "c2_download",
       "evidence": [
-        4,
-        5
+        4
       ],
       "confidence": 0.9,
       "note": ""
@@ -61,8 +60,7 @@
     {
       "behavior": "url_reference",
       "evidence": [
-        4,
-        5
+        4
       ],
       "confidence": 0.9,
       "supported": false,

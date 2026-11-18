@@ -14,9 +14,9 @@ pre-processing taxonomy, (ii) normalizes static indicators and dynamic
 telemetry into one event schema, (iii) reconstructs an ordered attack-stage
 chain from evidence, and (iv) uses Bon-APT-style temporal segmentation to
 test whether stages separate in time. On a controlled 378-sample corpus with
-ground truth we obtain behavior recall 0.981, evidence precision 1.000, stage
+ground truth we obtain behavior recall 0.987, evidence precision 1.000, stage
 accuracy 0.963 (LCS F1) and completion 0.952. Static analysis alone recalls
-0.896 of ground-truth behaviors and dynamic analysis 0.777, but their union is
+0.905 of ground-truth behaviors and dynamic analysis 0.777, but their union is
 complementary: static sees intent that gates never execute, dynamic sees
 process effects absent from the source. Segmentation peaks at N=5 with
 boundary F1 0.636. We discuss failure classes and argue that stage
@@ -178,9 +178,9 @@ corpus exercises the classes Oblivion cares about.
 
 | Measure | Value |
 |---|---|
-| Mean static behavior recall | 0.896 |
+| Mean static behavior recall | 0.905 |
 | Mean dynamic behavior recall | 0.777 |
-| Mean view agreement (Jaccard) | 0.600 |
+| Mean view agreement (Jaccard) | 0.602 |
 
 Ground-truth behaviors seen by only one view:
 
@@ -200,7 +200,7 @@ Static analysis sees **intent**: URL literals, `Outlook.Send`, `Shell` and
 prevents execution. Dynamic analysis sees **effects**: `file_write` and
 `file_execute` performed by a spawned PowerShell process never appear in the
 VBA source. The two views are therefore complementary, and a reconstruction
-that fuses them is strictly better than either alone. The low Jaccard (0.600)
+that fuses them is strictly better than either alone. The low Jaccard (0.602)
 quantifies how different the two views are.
 
 ### E3 — Obfuscation vs observability (RQ4)
@@ -209,13 +209,13 @@ quantifies how different the two views are.
 |---|---|---|---|---|---|
 | plain | 0.918 | 0.781 | n/a | n/a | n/a |
 | random | 0.899 | 0.787 | 1.000 | 0.900 | n/a |
-| split | 0.882 | 0.772 | 1.000 | 0.900 | 0.900 |
-| encode | 0.880 | 0.768 | 1.000 | 1.000 | 1.000 |
+| split | 0.887 | 0.772 | 1.000 | 0.900 | 0.900 |
+| encode | 0.926 | 0.768 | 1.000 | 1.000 | 1.000 |
 | logic | 0.923 | 0.776 | 1.000 | 1.000 | n/a |
-| combo | 0.875 | 0.776 | 1.000 | 0.892 | 1.000 |
+| combo | 0.879 | 0.776 | 1.000 | 0.892 | 1.000 |
 
 Two findings are worth stressing. First, **behavior-level recall is almost
-insensitive to obfuscation** (0.875–0.923) because the analyzer reasons over
+insensitive to obfuscation** (0.879–0.926) because the analyzer reasons over
 the obfuscated source directly; what obfuscation destroys is *literal*
 visibility (URLs, API names), which is why deobfuscation is needed to
 reconstruct concrete evidence. Second, the detector never fires on a plain
@@ -253,7 +253,7 @@ All 378 samples:
 
 | Metric | Value |
 |---|---|
-| Behavior recall | 0.981 |
+| Behavior recall | 0.987 |
 | Behavior precision | 0.968 |
 | Evidence precision | 1.000 |
 | Stage accuracy (LCS F1) | 0.963 |
@@ -262,8 +262,8 @@ All 378 samples:
 | Completion rate | 0.952 |
 | Execution success rate | 0.571 |
 | Timeout rate | 0.048 |
-| Deobfuscation success | 0.921 |
-| Unsupported claim rate | 0.217 |
+| Deobfuscation success | 0.967 |
+| Unsupported claim rate | 0.220 |
 
 Samples whose macro ran to completion (n=216):
 
@@ -280,7 +280,7 @@ Per-family stage accuracy ranges from 0.878 (broken macro) to 1.000
 entirely due to environment-gated families: when Outlook or FTP is absent,
 later stages never execute, so the ground truth contains behaviors that no
 telemetry can support. The reconstructor reports the observable prefix and
-marks the rest unsupported (0.217 overall vs 0.031 on completed runs) rather
+marks the rest unsupported (0.220 overall vs 0.031 on completed runs) rather
 than inventing them. This is the desired behavior for RQ5: the chain is
 built from evidence, and its confidence is honest about what was not seen.
 
@@ -306,10 +306,10 @@ consistently.
 
 | Measure | Value |
 |---|---|
-| Mean time/sample | 21.2 ms |
-| p50 / p95 | 19.7 / 31.0 ms |
-| Throughput | 47.2 samples/s |
-| Static time/sample | 21.1 ms |
+| Mean time/sample | 21.0 ms |
+| p50 / p95 | 20.3 / 26.1 ms |
+| Throughput | 47.7 samples/s |
+| Static time/sample | 20.9 ms |
 | Telemetry time/sample | 0.1 ms |
 | Completion / timeout | 0.952 / 0.048 |
 
@@ -324,13 +324,13 @@ the output carries event IDs, and evidence precision is 1.000: nothing is
 claimed without an observation. The unsupported rate is a feature, not a bug
 — it exposes exactly the stages that a sandbox could not reach.
 
-**Static and dynamic are not redundant.** The Jaccard of 0.600 and the
+**Static and dynamic are not redundant.** The Jaccard of 0.602 and the
 disjoint miss lists show that neither view subsumes the other. Fusion is
 necessary for both coverage and concreteness.
 
 **Obfuscation shifts the problem from recall to evidence.** Behavior recall
 is stable, but literal recovery is what allows a claim to name a URL or a
-command. Deobfuscation success of 0.92 (and 1.0 on completed runs) is
+command. Deobfuscation success of 0.97 (and 1.0 on completed runs) is
 therefore the metric that matters for operational output.
 
 **Segmentation is a diagnostic, not a replacement.** Boundary F1 peaks at

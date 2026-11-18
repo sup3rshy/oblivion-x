@@ -1,21 +1,16 @@
 """Experiments E1-E8 drivers (per the project plan, Section 4)."""
 from __future__ import annotations
 
-import json
 import re
 import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List
 
 import numpy as np
 
-from oblivionx.common import (BEHAVIOR_DEFS, FAMILIES, read_json, write_json,
-                              STAGE_ORDER)
+from oblivionx.common import BEHAVIOR_DEFS, STAGE_ORDER, read_json, write_json
 from oblivionx.eval.metrics import aggregate, evaluate_sample
 from oblivionx.reconstruction.reconstruct import reconstruct
-from oblivionx.static.analyzer import analyze_static
-from oblivionx.static.deobfuscator import recover_payloads
-from oblivionx.static.extractor import all_sources, extract_modules
 from oblivionx.telemetry.schema import Event, SampleAnalysis
 
 
@@ -27,12 +22,22 @@ def _load_gt(corpus_dir: Path) -> Dict[str, Any]:
     return read_json(Path(corpus_dir) / "ground_truth.json")
 
 
+def _top(counter: Dict[str, int], n: int) -> List[Any]:
+    """Deterministic ``Counter.most_common``: ties broken by name.
+
+    Plain ``most_common`` preserves insertion order, and the insertion order
+    of counters built from sets varies with Python's hash seed.
+    """
+    return sorted(counter.items(), key=lambda kv: (-kv[1], kv[0]))[:n]
+
+
 def _has_executable_code(source: str) -> bool:
     """True if a module contains statements, not just Attribute metadata
     and empty Sub/End Sub scaffolding."""
     for line in source.splitlines():
         s = line.strip()
-        if not s or s.lower().startswith("attribute"):
+        if (not s or s.lower().startswith("attribute")
+                or s.startswith("'") or s.lower().startswith("rem ")):
             continue
         low = s.lower()
         if re.fullmatch(r"(public |private |friend )?(sub|function)\s+\w+.*", low):
@@ -58,6 +63,7 @@ def experiment_E1(corpus_dir: Path, analysis_dir: Path,
               "cls": 0, "bas_cls": 0, "other": 0, "extracted": 0,
               "no_file": 0}
     per_sample = {}
+    gt_all = _load_gt(corpus_dir)
     for m in _load_manifest(corpus_dir):
         sid = m["id"]
         f = corpus_dir / "samples" / f"{sid}.{m['format']}"
@@ -66,7 +72,7 @@ def experiment_E1(corpus_dir: Path, analysis_dir: Path,
             per_sample[sid] = "no_file"
             continue
         mods = extract_modules(f)
-        gt = _load_gt(corpus_dir).get(sid, m.get("ground_truth", {}))
+        gt = gt_all.get(sid, m.get("ground_truth", {}))
         has_code = any(_has_executable_code(x["source"]) for x in mods)
         if not mods or not has_code:
             label = "empty"
@@ -82,6 +88,10 @@ def experiment_E1(corpus_dir: Path, analysis_dir: Path,
     report = {
         "experiment": "E1",
         "title": "Reproduce Oblivion (pre-processing taxonomy)",
+        "n_samples": len(per_sample),
+        "n_files": sum(counts[k] for k in
+                       ("empty", "corrupted", "interaction", "cls",
+                        "bas_cls", "other")),
         "counts": counts,
         "per_sample": per_sample,
     }
@@ -118,7 +128,7 @@ def experiment_E2(corpus_dir: Path, analysis_dir: Path,
             "dynamic_recall": len(g_beh & d_beh) / max(len(g_beh), 1),
         })
     # aggregate static misses (RQ2: what does each miss?)
-    from collections import Counter, defaultdict
+    from collections import Counter
     static_miss = Counter(b for r in rows for b in r["static_missed"])
     dynamic_miss = Counter(b for r in rows for b in r["dynamic_missed"])
     # unique *ground-truth* behaviors: seen by one view but not the other
@@ -157,10 +167,10 @@ def experiment_E2(corpus_dir: Path, analysis_dir: Path,
         "mean_static_recall": static_recall,
         "mean_dynamic_recall": dynamic_recall,
         "mean_view_jaccard": float(np.mean(jaccard)) if jaccard else 0.0,
-        "most_static_missed": static_miss.most_common(15),
-        "most_dynamic_missed": dynamic_miss.most_common(15),
-        "static_only": static_only.most_common(15),
-        "dynamic_only": dynamic_only.most_common(15),
+        "most_static_missed": _top(static_miss, 15),
+        "most_dynamic_missed": _top(dynamic_miss, 15),
+        "static_only": _top(static_only, 15),
+        "dynamic_only": _top(dynamic_only, 15),
         "by_family": family_table,
         "per_sample": rows,
     }
@@ -198,7 +208,6 @@ def experiment_E3(corpus_dir: Path, analysis_dir: Path,
       * obfuscation *detection* (heuristics vs the known variant label);
       * static deobfuscation success (payload recovery).
     """
-    from oblivionx.static.deobfuscator import detect_obfuscation
     gt = _load_gt(corpus_dir)
     by_variant: Dict[str, List[float]] = {}
     by_variant_dyn: Dict[str, List[float]] = {}
@@ -288,6 +297,7 @@ def _segment_quality(events: List[Event], stage_of: Dict[str, str],
                      n_seg: int) -> Dict[str, float]:
     """Purity, stage concentration and boundary F1 for one segmentation."""
     from collections import Counter
+
     from oblivionx.telemetry.segmentation import segment_events
     labels = [stage_of.get(e.behavior, "benign") for e in events]
     buckets = segment_events(events, n_seg)
@@ -362,7 +372,6 @@ def experiment_E4(corpus_dir: Path, analysis_dir: Path,
     sequence.
     """
     from oblivionx.telemetry.segmentation import BONAPT_CONFIGS
-    gt = _load_gt(corpus_dir)
     stage_of = {b: BEHAVIOR_DEFS[b].stage for b in BEHAVIOR_DEFS
                 if BEHAVIOR_DEFS[b].stage}
     configs = sorted(set(BONAPT_CONFIGS) | {1, 5, 10, 20})
@@ -519,7 +528,6 @@ def experiment_E5(corpus_dir: Path, analysis_dir: Path,
 def experiment_E6(corpus_dir: Path, analysis_dir: Path,
                   out_dir: Path) -> Dict[str, Any]:
     gt = _load_gt(corpus_dir)
-    from oblivionx.eval.metrics import evaluate_sample
     metrics = []
     families: Dict[str, List[Dict[str, Any]]] = {}
     for m in _load_manifest(corpus_dir):
@@ -556,6 +564,12 @@ def _merge(analysis_dir: Path, sid: str, m: Dict[str, Any]) -> SampleAnalysis:
     merged.events = [Event.from_dict(e) for e in sta["events"]] + \
         [Event.from_dict(e) for e in dyn["events"]]
     merged.meta = {**sta.get("meta", {}), **dyn.get("meta", {})}
+    merged.meta["analysis_time_ms"] = (
+        sta.get("meta", {}).get("analysis_time_ms", 0.0)
+        + dyn.get("meta", {}).get("analysis_time_ms", 0.0))
+    if (sta.get("meta", {}).get("failure")
+            and not dyn.get("meta", {}).get("failure")):
+        merged.meta["failure"] = sta["meta"]["failure"]
     return merged
 
 
@@ -580,6 +594,7 @@ def experiment_E7(corpus_dir: Path, analysis_dir: Path,
     The difference isolates failures that interaction handling can recover.
     """
     from collections import Counter
+
     from oblivionx.simulate.simulator import simulate_sample
     gt = _load_gt(corpus_dir)
     env = {"outlook": False, "ftp": False}
@@ -669,7 +684,6 @@ def experiment_E7(corpus_dir: Path, analysis_dir: Path,
 
 def experiment_E8(corpus_dir: Path, analysis_dir: Path,
                   out_dir: Path) -> Dict[str, Any]:
-    gt = _load_gt(corpus_dir)
     rows = []
     for m in _load_manifest(corpus_dir):
         sid = m["id"]

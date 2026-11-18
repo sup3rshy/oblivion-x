@@ -38,8 +38,8 @@
       "id": 4,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
+      "behavior": "outlook_access",
+      "obj": "Outlook.Application",
       "args": {},
       "confidence": 0.9,
       "evidence": "static:recovered"
@@ -88,13 +88,14 @@
       "logic": false
     },
     "recovered_payloads": [
-      "http://127.0.0.1:9090/payload.exe",
+      "Outlook.Application",
+      "Invoice",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
     "behavior_count": 7,
-    "analysis_time_ms": 36.83114051818848,
+    "analysis_time_ms": 20.80368995666504,
     "sha256": "d0f68fb280ec6714c24380060f24caf46d18b63d15f828d6d04013f245d5a5e6"
   }
 }

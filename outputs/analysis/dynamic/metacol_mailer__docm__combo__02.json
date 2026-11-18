@@ -91,6 +91,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.16164779663085938
+    "analysis_time_ms": 0.10585784912109375
   }
 }

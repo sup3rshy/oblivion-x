@@ -60,6 +60,6 @@
     "failure": "dynamic_semantic",
     "interaction_handled": true,
     "error_detail": "Sub or Function not defined",
-    "analysis_time_ms": 0.10156631469726562
+    "analysis_time_ms": 0.07581710815429688
   }
 }

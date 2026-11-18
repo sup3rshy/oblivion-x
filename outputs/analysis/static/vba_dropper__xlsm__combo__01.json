@@ -68,16 +68,6 @@
       "id": 7,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
-      "args": {},
-      "confidence": 0.9,
-      "evidence": "static:recovered"
-    },
-    {
-      "id": 8,
-      "t_ms": null,
-      "source": "static",
       "behavior": "chr_encode",
       "obj": "encode",
       "args": {},
@@ -85,7 +75,7 @@
       "evidence": ""
     },
     {
-      "id": 9,
+      "id": 8,
       "t_ms": null,
       "source": "static",
       "behavior": "dead_code",
@@ -95,7 +85,7 @@
       "evidence": ""
     },
     {
-      "id": 10,
+      "id": 9,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -121,13 +111,12 @@
     "recovered_payloads": [
       "MZ-this-is-an-inert-marker-stub",
       "ionx_stub.exe",
-      "http://127.0.0.1:9090/payload.exe",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 10,
-    "analysis_time_ms": 24.019241333007812,
+    "behavior_count": 9,
+    "analysis_time_ms": 20.01214027404785,
     "sha256": "83e6951985252d7bb3406fa162679fa923400ddd66d7b8a67e3668a135d529a7"
   }
 }

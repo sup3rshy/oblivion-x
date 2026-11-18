@@ -48,16 +48,6 @@
       "id": 5,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
-      "args": {},
-      "confidence": 0.9,
-      "evidence": "static:recovered"
-    },
-    {
-      "id": 6,
-      "t_ms": null,
-      "source": "static",
       "behavior": "chr_encode",
       "obj": "encode",
       "args": {},
@@ -65,7 +55,7 @@
       "evidence": ""
     },
     {
-      "id": 7,
+      "id": 6,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -88,13 +78,13 @@
       "logic": false
     },
     "recovered_payloads": [
-      "http://127.0.0.1:9090/payload.exe",
+      "\\oblivionx_wipe_test\\*.*",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 7,
-    "analysis_time_ms": 33.37812423706055,
+    "behavior_count": 6,
+    "analysis_time_ms": 18.396377563476562,
     "sha256": "00947f0ca24e97b100180dd4bb67a5644f26d809e2b3906510f4b2298d1ef904"
   }
 }

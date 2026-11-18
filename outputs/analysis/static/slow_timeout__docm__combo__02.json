@@ -38,8 +38,8 @@
       "id": 4,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
+      "behavior": "cmd_run",
+      "obj": "cmd /c",
       "args": {},
       "confidence": 0.9,
       "evidence": "static:recovered"
@@ -98,14 +98,14 @@
       "logic": true
     },
     "recovered_payloads": [
+      "cmd /c echo ",
       "-timeout-marker",
-      "http://127.0.0.1:9090/payload.exe",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
     "behavior_count": 8,
-    "analysis_time_ms": 37.32037544250488,
+    "analysis_time_ms": 20.34616470336914,
     "sha256": "9164ae175c49e392311427a3eb3ef7fc8108d0b3b68f46ff4f41658966479bab"
   }
 }

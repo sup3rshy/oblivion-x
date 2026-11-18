@@ -1,6 +1,8 @@
 {
   "experiment": "E1",
   "title": "Reproduce Oblivion (pre-processing taxonomy)",
+  "n_samples": 378,
+  "n_files": 378,
   "counts": {
     "empty": 18,
     "corrupted": 0,

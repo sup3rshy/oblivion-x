@@ -21,15 +21,15 @@
     {
       "stage": "execution",
       "evidence": [
-        2
+        2,
+        3
       ],
-      "confidence": 0.85,
+      "confidence": 0.9,
       "note": ""
     },
     {
       "stage": "c2_download",
       "evidence": [
-        3,
         4
       ],
       "confidence": 0.9,
@@ -56,9 +56,17 @@
       "obj": "Shell C"
     },
     {
+      "behavior": "cmd_run",
+      "evidence": [
+        3
+      ],
+      "confidence": 0.9,
+      "supported": false,
+      "obj": "cmd /c"
+    },
+    {
       "behavior": "url_reference",
       "evidence": [
-        3,
         4
       ],
       "confidence": 0.9,

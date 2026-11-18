@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import time
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 
 from oblivionx.common import read_json, write_json
 from oblivionx.reconstruction.reconstruct import reconstruct
@@ -56,7 +56,7 @@ def run_pipeline(corpus_dir: Path, out_dir: Path,
             sa_static.meta = {"analysis_time_ms": (time.time() - t0) * 1000,
                               "n_modules": 0, "obfuscation_detected": {},
                               "recovered_payloads": [], "status": "error",
-                              "failure": "av_blocked",
+                              "failure": "static_av_blocked",
                               "note": "corpus build failed (AV file-permission error)"}
         write_json(sa_static.to_dict(), out_dir / "static" / f"{sid}.json")
 
@@ -84,8 +84,16 @@ def run_pipeline(corpus_dir: Path, out_dir: Path,
         merged = SampleAnalysis(sample_id=sid, family=m["family"],
                                 variant=m["variant"], format=m["format"])
         merged.events = sa_static.events + sa_dyn.events
-        merged.meta = {**sa_dyn.meta, "n_static": len(sa_static.events),
-                       "n_dynamic": len(sa_dyn.events)}
+        merged.meta = {**sa_dyn.meta,
+                       "n_static": len(sa_static.events),
+                       "n_dynamic": len(sa_dyn.events),
+                       "analysis_time_ms":
+                           sa_static.meta.get("analysis_time_ms", 0.0)
+                           + sa_dyn.meta.get("analysis_time_ms", 0.0)}
+        # A static-side failure (missing/unreadable file) is an analysis
+        # failure even if the dynamic side produced a synthetic trace.
+        if sa_static.meta.get("failure") and not merged.meta.get("failure"):
+            merged.meta["failure"] = sa_static.meta["failure"]
         rec = reconstruct(merged)
         write_json(rec.to_dict(), out_dir / "reconstruction" / f"{sid}.json")
         results[sid] = "ok"

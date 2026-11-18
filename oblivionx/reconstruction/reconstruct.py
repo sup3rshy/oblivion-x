@@ -8,11 +8,16 @@ claims as supported/unsupported based on direct telemetry evidence.
 """
 from __future__ import annotations
 
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List
 
-from oblivionx.common import BEHAVIOR_DEFS, STAGE_ORDER, stage_index
-from oblivionx.telemetry.schema import (BehaviorClaim, Event, Reconstruction,
-                                        SampleAnalysis, StageClaim)
+from oblivionx.common import BEHAVIOR_DEFS, STAGE_ORDER
+from oblivionx.telemetry.schema import (
+    BehaviorClaim,
+    Event,
+    Reconstruction,
+    SampleAnalysis,
+    StageClaim,
+)
 
 # minimum confidence for an event to count as evidence
 _MIN_CONF = 0.5
@@ -48,7 +53,10 @@ def reconstruct(sa: SampleAnalysis) -> Reconstruction:
     # stage claims: behaviors grouped by their stage
     stages: Dict[str, StageClaim] = {}
     for claim in rec.behaviors:
-        stage = BEHAVIOR_DEFS[claim.behavior].stage
+        bdef = BEHAVIOR_DEFS.get(claim.behavior)
+        if bdef is None:
+            continue
+        stage = bdef.stage
         if stage is None:
             continue
         if stage not in stages:

@@ -118,16 +118,6 @@
       "id": 12,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
-      "args": {},
-      "confidence": 0.9,
-      "evidence": "static:recovered"
-    },
-    {
-      "id": 13,
-      "t_ms": null,
-      "source": "static",
       "behavior": "chr_encode",
       "obj": "encode",
       "args": {},
@@ -135,7 +125,7 @@
       "evidence": ""
     },
     {
-      "id": 14,
+      "id": 13,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -159,13 +149,13 @@
       "logic": false
     },
     "recovered_payloads": [
-      "http://127.0.0.1:9090/payload.exe",
+      "WScript.Shell",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 14,
-    "analysis_time_ms": 22.803068161010742,
+    "behavior_count": 13,
+    "analysis_time_ms": 19.901037216186523,
     "sha256": "fda4c896f12972e5cac9387a2e681691a0318764b3456ee85a32322419669c7a"
   }
 }

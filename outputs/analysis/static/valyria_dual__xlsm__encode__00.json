@@ -58,14 +58,24 @@
       "id": 6,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
+      "behavior": "http_download",
+      "obj": "XMLHTTP",
       "args": {},
       "confidence": 0.9,
       "evidence": "static:recovered"
     },
     {
       "id": 7,
+      "t_ms": null,
+      "source": "static",
+      "behavior": "outlook_access",
+      "obj": "Outlook.Application",
+      "args": {},
+      "confidence": 0.9,
+      "evidence": "static:recovered"
+    },
+    {
+      "id": 8,
       "t_ms": null,
       "source": "static",
       "behavior": "url_reference",
@@ -75,7 +85,7 @@
       "evidence": "static:recovered"
     },
     {
-      "id": 8,
+      "id": 9,
       "t_ms": null,
       "source": "static",
       "behavior": "chr_encode",
@@ -85,7 +95,7 @@
       "evidence": ""
     },
     {
-      "id": 9,
+      "id": 10,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -109,13 +119,14 @@
       "logic": false
     },
     "recovered_payloads": [
-      "http://127.0.0.1:9090/payload.exe",
+      "MSXML2.XMLHTTP",
+      "Outlook.Application",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 9,
-    "analysis_time_ms": 29.13498878479004,
+    "behavior_count": 10,
+    "analysis_time_ms": 20.41339874267578,
     "sha256": "40abde33f12508c692bb6a1ab5bb70a82148a93127747f5441c22fd6cce749a1"
   }
 }

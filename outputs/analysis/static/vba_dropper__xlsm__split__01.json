@@ -80,13 +80,12 @@
     },
     "recovered_payloads": [
       "\\oblivionx_stub.exe",
-      "MZ-this-is-an-inert-marker-stub",
-      "\\oblivionx_stub.exe"
+      "MZ-this-is-an-inert-marker-stub"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
     "behavior_count": 6,
-    "analysis_time_ms": 22.565364837646484,
+    "analysis_time_ms": 20.285606384277344,
     "sha256": "caf3abdef10e50fca589e33ebbb17b5d44ecd05682bf182068ef40cb36b326e3"
   }
 }

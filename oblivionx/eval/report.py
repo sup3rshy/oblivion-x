@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
@@ -218,17 +219,23 @@ def write_markdown_report(eval_dir: Path, out_path: Path,
     add = parts.append
 
     add("# Oblivion-X — Experiment Report\n")
-    add("> Generated from `outputs/eval/E1..E8*.json`. Dynamic telemetry is "
+    add("> Generated from the E1..E8 JSON artifacts. Dynamic telemetry is "
         "produced by the deterministic Linux simulator unless stated "
-        "otherwise; static analysis runs on the real Office files built by "
-        "Word/Excel COM automation.\n")
+        "otherwise; static analysis runs on the corpus Office files "
+        "(Word/Excel COM-authored or offline-built with the pure-Python "
+        "MS-OVBA writer).\n")
 
     # E1 -----------------------------------------------------------------
     e1 = read_json(eval_dir / "E1_reproduce_oblivion.json")
     add("## E1 — Reproduce Oblivion (pre-processing taxonomy)\n")
-    add("Oblivion's pre-processing classification applied to the 378-sample "
-        "controlled corpus (cf. paper Table 1):\n")
     c = e1["counts"]
+    n_files = e1.get("n_files")
+    if n_files is None:
+        n_files = sum(c.get(k, 0) for k in
+                      ("empty", "corrupted", "interaction", "cls",
+                       "bas_cls", "other"))
+    add(f"Oblivion's pre-processing classification applied to the "
+        f"{n_files}-sample controlled corpus (cf. paper Table 1):\n")
     parts.extend(_table(
         ["Category", "Count"],
         [[k, c.get(k, 0)] for k in
@@ -236,10 +243,11 @@ def write_markdown_report(eval_dir: Path, out_path: Path,
           "extracted", "no_file")]))
     add("")
     add(f"- `extracted` counts modules, not samples "
-        f"({c.get('extracted', 0)} modules over 378 files).")
-    add(f"- `empty` = the 18 `empty_macro` samples (project present, no "
-        f"code); `interaction` = the 18 MsgBox-gated samples; everything "
-        f"else is a standard `.bas + .cls` project.\n")
+        f"({c.get('extracted', 0)} modules over {n_files} files).")
+    add(f"- `empty` = the {c.get('empty', 0)} samples whose project has no "
+        f"executable code; `interaction` = the {c.get('interaction', 0)} "
+        f"MsgBox-gated samples; everything else is a standard `.bas + .cls` "
+        f"project.\n")
 
     # E2 -----------------------------------------------------------------
     e2 = read_json(eval_dir / "E2_static_vs_dynamic.json")
@@ -290,10 +298,16 @@ def write_markdown_report(eval_dir: Path, out_path: Path,
     add("")
     add("- Detection precision is 1.0 for every technique: no plain sample "
         "trips a heuristic.")
-    add("- Split/encode/combination detection misses the variants where the "
-        "transform had too little material to rewrite (short macros); "
-        "deobfuscation still recovers the hidden literal in 90-100% of the "
-        "recoverable variants.")
+    deob_vals = [v.get("mean") for v in deob.values()
+                 if v.get("mean") is not None]
+    if deob_vals:
+        add(f"- Split/encode/combination detection misses the variants where "
+            f"the transform had too little material to rewrite (short "
+            f"macros); deobfuscation still recovers the hidden literal in "
+            f"{min(deob_vals):.0%}-{max(deob_vals):.0%} of the recoverable "
+            f"variants.")
+    else:
+        add("- No recoverable obfuscation variant was present in the corpus.")
     add("- Static recall barely changes across variants because the analyzer "
         "scans the obfuscated source directly; what drops is *literal* "
         "visibility (URLs, API names), which is why deobfuscation matters "
@@ -311,12 +325,14 @@ def write_markdown_report(eval_dir: Path, out_path: Path,
           _fmt(by_n[n]["boundary_f1"]), _fmt(by_n[n]["boundary_precision"]),
           _fmt(by_n[n]["boundary_recall"])] for n in xs]))
     add("")
-    add(f"- Best boundary F1 at **N={e4.get('best_n_by_boundary_f1')}** "
-        f"({_fmt(by_n[str(e4.get('best_n_by_boundary_f1'))]['boundary_f1'])}).")
-    add("- Purity increases monotonically with N, but boundary F1 peaks at "
-        "N=5: too many segments fragment stages and produce spurious "
-        "boundaries. Bon-APT's fixed multi-scale configuration is therefore "
-        "justified, but N=5 is the informative scale for this corpus.\n")
+    best_n = e4.get("best_n_by_boundary_f1")
+    add(f"- Best boundary F1 at **N={best_n}** "
+        f"({_fmt(by_n[str(best_n)]['boundary_f1'])}).")
+    add(f"- Purity increases monotonically with N, but boundary F1 peaks at "
+        f"N={best_n}: too many segments fragment stages and produce spurious "
+        f"boundaries. Bon-APT's fixed multi-scale configuration is therefore "
+        f"justified, but N={best_n} is the informative scale for this "
+        f"corpus.\n")
 
     # E5 -----------------------------------------------------------------
     e5 = read_json(eval_dir / "E5_ground_truth.json")
@@ -352,11 +368,13 @@ def write_markdown_report(eval_dir: Path, out_path: Path,
               _fmt(v["stage_precision"]), _fmt(v["stage_recall"])]
              for f, v in fam.items()]))
         add("")
-    add("Reading: on samples that actually execute, behavior recall is 1.0 "
-        "and stage accuracy ~0.96. The gap on the full set comes from "
-        "environment-gated families whose later stages never run: the "
-        "reconstructor correctly reports only the observable prefix and "
-        "marks the rest unsupported instead of inventing it.\n")
+    success = e6.get("aggregate_execution_success", {})
+    add(f"Reading: on samples that actually execute, behavior recall is "
+        f"{_fmt(success.get('behavior_recall'))} and stage accuracy "
+        f"{_fmt(success.get('stage_accuracy'))}. The gap on the full set "
+        f"comes from environment-gated families whose later stages never "
+        f"run: the reconstructor correctly reports only the observable "
+        f"prefix and marks the rest unsupported instead of inventing it.\n")
 
     # E7 -----------------------------------------------------------------
     e7 = read_json(eval_dir / "E7_failures.json")

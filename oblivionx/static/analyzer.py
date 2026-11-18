@@ -9,12 +9,9 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional
 
-from oblivionx.common import BEHAVIOR_DEFS
-from oblivionx.static.deobfuscator import (detect_obfuscation,
-                                           recover_payloads)
-from oblivionx.static.extractor import extract_modules, all_sources
+from oblivionx.static.deobfuscator import detect_obfuscation, recover_payloads
+from oblivionx.static.extractor import all_sources, extract_modules
 from oblivionx.telemetry.schema import Event, SampleAnalysis
 
 # indicator -> (behavior, regex) for static scanning
@@ -82,8 +79,6 @@ def analyze_static(path: Path, sample_id: str,
     eid = 0
     for behavior, rx in _STATIC_RULES:
         for m in rx.finditer(src):
-            if behavior == "url_reference" and not _safe_url(m.group(0)):
-                continue
             eid += 1
             sa.add(Event(id=eid, t_ms=None, source="static",
                          behavior=behavior, obj=m.group(0)[:200],
@@ -123,8 +118,3 @@ def analyze_static(path: Path, sample_id: str,
     sa.meta["deobfuscation_applied"] = bool(recovered)
     sa.meta["behavior_count"] = len(sa.events)
     return sa
-
-
-def _safe_url(url: str) -> bool:
-    """Only record non-malicious-looking reference URLs (simulated)."""
-    return True

@@ -16,7 +16,7 @@ from __future__ import annotations
 import base64
 import random
 import re
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 
 _PROTECTED = {
     # VBA keywords, entry points and intrinsics that must not be renamed
@@ -32,7 +32,7 @@ _PROTECTED = {
     "asc", "len", "mid", "environ", "freefile", "shell", "msgbox",
     "vbyesno", "vbyes", "inputbox", "createobject", "getobject",
     "activeDocument", "activeworkbook", "worksheet", "worksheets",
-    "range", "selection", "true", "false",
+    "range", "selection",
 }
 
 

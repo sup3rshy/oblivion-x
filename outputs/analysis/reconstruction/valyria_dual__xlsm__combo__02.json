@@ -24,7 +24,7 @@
       "stage": "c2_download",
       "evidence": [
         2,
-        7,
+        6,
         8
       ],
       "confidence": 0.9,
@@ -55,9 +55,10 @@
     {
       "behavior": "http_download",
       "evidence": [
-        2
+        2,
+        6
       ],
-      "confidence": 0.85,
+      "confidence": 0.9,
       "supported": false,
       "obj": "XMLHTTP"
     },
@@ -84,7 +85,6 @@
     {
       "behavior": "url_reference",
       "evidence": [
-        7,
         8
       ],
       "confidence": 0.9,

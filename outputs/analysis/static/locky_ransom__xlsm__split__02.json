@@ -129,6 +129,7 @@
       "logic": false
     },
     "recovered_payloads": [
+      "WScript.Shell",
       "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\oblivionx",
       "\\oblivionx_lock.exe",
       "\\oblivionx_vault\\secret.txt",
@@ -137,7 +138,7 @@
     "status": "ok",
     "deobfuscation_applied": true,
     "behavior_count": 11,
-    "analysis_time_ms": 32.70459175109863,
+    "analysis_time_ms": 20.909786224365234,
     "sha256": "f4a2775e481635d3564cc9ed6cba2ade61f2b16767778ccb30a505f5cef3d243"
   }
 }

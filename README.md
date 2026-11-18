@@ -51,20 +51,43 @@ scripts/
 third_party/oblivion/    upstream Oblivion repo (E1 reproduction)
 outputs/                 corpus, analysis artifacts, experiment reports
 docs/                    paper summaries, plan mapping, paper draft
+tests/                   offline unit + end-to-end tests
+pyproject.toml           packaging, dependencies, pytest/ruff config
+Makefile                 common workflows (test, lint, corpus, eval, report)
 ```
 
-## Quickstart (Linux side)
+## Installation
+
+Python 3.10+ is required.
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -e ".[dev]"
+```
+
+The package installs an `oblivionx` console script; `python -m oblivionx`
+works without installation from the repository root.
+
+## Quickstart (Linux, fully offline)
 
 ```bash
 .venv/bin/python -m oblivionx corpus generate --out outputs/corpus
-.venv/bin/python -m oblivionx pipeline run --corpus outputs/corpus --out outputs/analysis
-.venv/bin/python -m oblivionx eval all --corpus outputs/corpus \
+.venv/bin/python -m oblivionx corpus build    --corpus outputs/corpus
+.venv/bin/python -m oblivionx pipeline run    --corpus outputs/corpus --out outputs/analysis
+.venv/bin/python -m oblivionx eval all        --corpus outputs/corpus \
     --analysis outputs/analysis --out outputs/eval
 .venv/bin/python -m oblivionx report          # markdown report + figures
 ```
 
-Building the real `.docm`/`.xlsm` corpus requires Windows + Office
-(this repo's machine qualifies):
+`corpus build` assembles the generated sources into `.docm`/`.xlsm` files
+with the pure-Python MS-OVBA/CFB writer. It needs no Windows or Office and
+produces oletools-readable files, enough for the static pipeline and the
+simulator. It skips existing files unless `--overwrite` is passed, so a
+Word/Excel-authored corpus is never clobbered by accident.
+
+For files that must actually execute in Office, use the COM builder on
+Windows (authoritative; the binary artifacts under `outputs/corpus/samples`
+in this repository were produced this way):
 
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -File scripts\dismiss_activation.ps1 -Seconds 3600   # background
@@ -73,13 +96,24 @@ powershell.exe -ExecutionPolicy Bypass -File scripts\build_corpus_windows.ps1 `
     -OutDir D:\oblivion\outputs\corpus\samples
 ```
 
-The pure-Python `msovba.py` writer also produces files that oletools parses
-correctly (usable for static-only workflows); Word-authored files are used
-for anything that must actually execute.
+## Tests
+
+```bash
+make test          # pytest
+make lint          # ruff
+make check         # both
+make test-cov      # coverage
+```
+
+The test suite builds a small offline corpus in a temporary directory and
+exercises extraction, obfuscation detection/deobfuscation, the simulator,
+reconstruction, all eight metrics/experiments and report generation. CI runs
+lint + tests on Python 3.10, 3.11 and 3.12.
 
 ## Corpus (controlled ground truth — E5)
 
-378 samples = 14 families × 2 formats × 6 obfuscation variants × 3 seeds.
+378 samples = 14 families × (docm/xlsm where applicable) ×
+6 obfuscation variants × 3 seeds.
 All "malicious" families are **simulated, inert** (URLs point at
 127.0.0.1, payloads are markers, "encryption" is reversible XOR on a
 sandbox folder) so the corpus is safe to execute anywhere.

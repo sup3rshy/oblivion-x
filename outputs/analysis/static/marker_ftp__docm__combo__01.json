@@ -138,16 +138,6 @@
       "id": 14,
       "t_ms": null,
       "source": "static",
-      "behavior": "url_reference",
-      "obj": "http://127.0.0.1:9090/payload.exe",
-      "args": {},
-      "confidence": 0.9,
-      "evidence": "static:recovered"
-    },
-    {
-      "id": 15,
-      "t_ms": null,
-      "source": "static",
       "behavior": "string_concat",
       "obj": "split",
       "args": {},
@@ -155,7 +145,7 @@
       "evidence": ""
     },
     {
-      "id": 16,
+      "id": 15,
       "t_ms": null,
       "source": "static",
       "behavior": "chr_encode",
@@ -165,7 +155,7 @@
       "evidence": ""
     },
     {
-      "id": 17,
+      "id": 16,
       "t_ms": null,
       "source": "static",
       "behavior": "dead_code",
@@ -175,7 +165,7 @@
       "evidence": ""
     },
     {
-      "id": 18,
+      "id": 17,
       "t_ms": null,
       "source": "static",
       "behavior": "base64_encode",
@@ -201,13 +191,12 @@
       "marker-ftp-log: simulated exfiltration data",
       "\\oblivionx_ftp.txt",
       "ionx_log.txt",
-      "http://127.0.0.1:9090/payload.exe",
       "http://127.0.0.1:9090/payload.exe"
     ],
     "status": "ok",
     "deobfuscation_applied": true,
-    "behavior_count": 18,
-    "analysis_time_ms": 29.266834259033203,
+    "behavior_count": 17,
+    "analysis_time_ms": 20.880937576293945,
     "sha256": "814adfb2bc5f7943cc64f5806c760fbed1a2cbebec2e83a24e21c788d8b08ea1"
   }
 }
