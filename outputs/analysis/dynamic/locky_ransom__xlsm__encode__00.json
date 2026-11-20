@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 611,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 537,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 724,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 734,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "t_ms": 1208,
+      "t_ms": 1218,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,27 +36,27 @@
     },
     {
       "id": 4,
-      "t_ms": 1406,
+      "t_ms": 2011,
       "source": "dynamic",
-      "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "behavior": "base64_encode",
+      "obj": "locky_ransom:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 5,
-      "t_ms": 1674,
+      "t_ms": 3083,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "chr_encode",
+      "obj": "locky_ransom:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 2374,
+      "t_ms": 3783,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 2866,
+      "t_ms": 4275,
       "source": "dynamic",
       "behavior": "registry_write",
       "obj": "HKCU\\...\\Run\\oblivionx",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 3551,
+      "t_ms": 4960,
       "source": "dynamic",
       "behavior": "file_encrypt",
       "obj": "xor-crypt(%TEMP%\\oblivionx_vault\\secret.txt)",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 3797,
+      "t_ms": 5206,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -99,7 +99,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 3797,
-    "analysis_time_ms": 0.09918212890625
+    "duration_ms": 5206,
+    "analysis_time_ms": 0.072479248046875
   }
 }

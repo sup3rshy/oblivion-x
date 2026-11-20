@@ -7,7 +7,7 @@
     {
       "id": 1,
       "t_ms": 275,
-      "source": "dynamic",
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -17,8 +17,8 @@
     {
       "id": 2,
       "t_ms": 428,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -27,7 +27,7 @@
     {
       "id": 3,
       "t_ms": 454,
-      "source": "dynamic",
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 698,
+      "t_ms": 770,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -50,6 +50,6 @@
     "failure": "dynamic_date",
     "interaction_handled": true,
     "note": "payload gated by date; only entry observed",
-    "analysis_time_ms": 0.095367431640625
+    "analysis_time_ms": 0.06341934204101562
   }
 }

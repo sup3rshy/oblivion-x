@@ -6,18 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 272,
-      "source": "dynamic",
-      "behavior": "registry_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 2,
-      "t_ms": 363,
-      "source": "dynamic",
+      "t_ms": 399,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -25,9 +15,19 @@
       "evidence": "sim"
     },
     {
+      "id": 2,
+      "t_ms": 465,
+      "source": "os",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 3,
-      "t_ms": 392,
-      "source": "dynamic",
+      "t_ms": 533,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 771,
+      "t_ms": 912,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1174,
+      "t_ms": 1315,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "metacol_mailer:outlook_access",
@@ -61,6 +61,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.08082389831542969
+    "analysis_time_ms": 0.04076957702636719
   }
 }

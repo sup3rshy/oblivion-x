@@ -7,7 +7,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 965
     },
     {
       "stage": "defense_evasion",
@@ -15,16 +16,18 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1255
     },
     {
       "stage": "c2_download",
       "evidence": [
-        5,
-        6
+        8,
+        7
       ],
-      "confidence": 0.9,
-      "note": ""
+      "confidence": 0.99,
+      "note": "",
+      "first_seen_ms": 2254
     },
     {
       "stage": "exfiltration",
@@ -32,10 +35,11 @@
         2,
         3,
         4,
-        7
+        9
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 359
     }
   ],
   "behaviors": [
@@ -62,25 +66,25 @@
     {
       "behavior": "url_reference",
       "evidence": [
-        5
+        8
       ],
-      "confidence": 0.9,
-      "supported": false,
-      "obj": "http://127.0.0.1:9090/second-stage.bin"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "http://127.0.0.1:9090/payload.exe"
     },
     {
       "behavior": "http_download",
       "evidence": [
-        6
+        7
       ],
-      "confidence": 0.9,
-      "supported": false,
-      "obj": "XMLHTTP"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "http://127.0.0.1:9090/payload.exe"
     },
     {
       "behavior": "outlook_access",
       "evidence": [
-        7
+        9
       ],
       "confidence": 0.99,
       "supported": true,
@@ -93,7 +97,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "valyria_dual:string_concat"
     }
   ],
   "chain": "delivery -> defense_evasion -> c2_download -> exfiltration",

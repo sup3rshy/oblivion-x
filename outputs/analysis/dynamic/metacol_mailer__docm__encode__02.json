@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 499,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 414,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 555,
-      "source": "dynamic",
+      "t_ms": 442,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 596,
-      "source": "dynamic",
+      "t_ms": 496,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 851,
+      "t_ms": 751,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,27 +46,27 @@
     },
     {
       "id": 5,
-      "t_ms": 1033,
+      "t_ms": 1482,
       "source": "dynamic",
-      "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "behavior": "base64_encode",
+      "obj": "metacol_mailer:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1326,
+      "t_ms": 2657,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "chr_encode",
+      "obj": "metacol_mailer:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1725,
+      "t_ms": 3056,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "metacol_mailer:outlook_access",
@@ -81,6 +81,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.09226799011230469
+    "analysis_time_ms": 0.062465667724609375
   }
 }

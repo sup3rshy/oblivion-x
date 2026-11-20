@@ -7,19 +7,21 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 861
     },
     {
       "stage": "defense_evasion",
       "evidence": [
         10,
-        6,
-        7,
         9,
-        8
+        7,
+        8,
+        6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2011
     },
     {
       "stage": "execution",
@@ -29,7 +31,8 @@
         12
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 5588
     },
     {
       "stage": "c2_download",
@@ -39,7 +42,8 @@
         18
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 8417
     },
     {
       "stage": "impact",
@@ -49,7 +53,8 @@
         17
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 9710
     }
   ],
   "behaviors": [
@@ -130,11 +135,11 @@
     {
       "behavior": "string_concat",
       "evidence": [
-        6
+        9
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "donoff_downloader:string_concat"
     },
     {
       "behavior": "chr_encode",
@@ -143,25 +148,25 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+      "obj": "donoff_downloader:chr_encode"
     },
     {
       "behavior": "dead_code",
-      "evidence": [
-        9
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
-    },
-    {
-      "behavior": "base64_encode",
       "evidence": [
         8
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "donoff_downloader:dead_code"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "donoff_downloader:base64_encode"
     },
     {
       "behavior": "file_write",

@@ -7,18 +7,20 @@
         3
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 648
     },
     {
       "stage": "defense_evasion",
       "evidence": [
-        4,
-        5,
         7,
-        6
+        5,
+        6,
+        4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1845
     },
     {
       "stage": "execution",
@@ -26,7 +28,8 @@
         8
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 5594
     },
     {
       "stage": "c2_download",
@@ -34,7 +37,8 @@
         11
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 7399
     },
     {
       "stage": "persistence",
@@ -42,7 +46,8 @@
         9
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 6036
     },
     {
       "stage": "impact",
@@ -51,7 +56,8 @@
         10
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 6277
     }
   ],
   "behaviors": [
@@ -112,11 +118,11 @@
     {
       "behavior": "string_concat",
       "evidence": [
-        4
+        7
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "locky_ransom:string_concat"
     },
     {
       "behavior": "chr_encode",
@@ -125,25 +131,25 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+      "obj": "locky_ransom:chr_encode"
     },
     {
       "behavior": "dead_code",
-      "evidence": [
-        7
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
-    },
-    {
-      "behavior": "base64_encode",
       "evidence": [
         6
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "locky_ransom:dead_code"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "locky_ransom:base64_encode"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> c2_download -> persistence -> impact",

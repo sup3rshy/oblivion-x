@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 308,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 263,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 331,
-      "source": "dynamic",
+      "t_ms": 286,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 473,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 428,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 760,
+      "t_ms": 808,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,7 +46,37 @@
     },
     {
       "id": 5,
-      "t_ms": 1305,
+      "t_ms": 1240,
+      "source": "dynamic",
+      "behavior": "cmd_run",
+      "obj": "cmd /c ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 1639,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "Environ(TEMP/APPDATA)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 2773,
+      "source": "dynamic",
+      "behavior": "shell_run",
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 3210,
       "source": "dynamic",
       "behavior": "ftp_upload",
       "obj": "ftp -s:... put oblivionx_log.txt",
@@ -61,6 +91,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: ftp",
     "missing_dependency": "ftp",
-    "analysis_time_ms": 0.09107589721679688
+    "analysis_time_ms": 0.056743621826171875
   }
 }

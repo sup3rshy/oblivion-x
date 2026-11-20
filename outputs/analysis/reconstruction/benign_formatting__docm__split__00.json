@@ -7,7 +7,8 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 835
     },
     {
       "stage": "defense_evasion",
@@ -15,7 +16,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1058
     }
   ],
   "behaviors": [
@@ -53,7 +55,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "benign_formatting:string_concat"
     }
   ],
   "chain": "delivery -> defense_evasion",

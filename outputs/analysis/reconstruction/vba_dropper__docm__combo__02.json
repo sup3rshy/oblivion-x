@@ -7,18 +7,20 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 951
     },
     {
       "stage": "defense_evasion",
       "evidence": [
         6,
-        8,
         7,
-        5
+        5,
+        8
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1621
     },
     {
       "stage": "execution",
@@ -27,7 +29,8 @@
         9
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 5096
     },
     {
       "stage": "c2_download",
@@ -35,7 +38,8 @@
         6
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2552
     },
     {
       "stage": "impact",
@@ -45,7 +49,8 @@
         13
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 7253
     }
   ],
   "behaviors": [
@@ -101,34 +106,34 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+      "obj": "vba_dropper:chr_encode"
     },
     {
       "behavior": "dead_code",
-      "evidence": [
-        8
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
-    },
-    {
-      "behavior": "base64_encode",
       "evidence": [
         7
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "vba_dropper:dead_code"
     },
     {
-      "behavior": "string_concat",
+      "behavior": "base64_encode",
       "evidence": [
         5
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "vba_dropper:base64_encode"
+    },
+    {
+      "behavior": "string_concat",
+      "evidence": [
+        8
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "vba_dropper:string_concat"
     },
     {
       "behavior": "file_execute",

@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 418,
-      "source": "dynamic",
+      "t_ms": 430,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 443,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 573,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 515,
-      "source": "dynamic",
+      "t_ms": 598,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 680,
-      "source": "dynamic",
+      "t_ms": 670,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 887,
+      "t_ms": 1161,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,7 +56,7 @@
     },
     {
       "id": 6,
-      "t_ms": 1117,
+      "t_ms": 1318,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_report:data_copy",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 1379,
+      "t_ms": 1548,
       "source": "dynamic",
       "behavior": "print_document",
       "obj": "benign_report:print_document",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 1943,
+      "t_ms": 1810,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_report:save_as_pdf",
@@ -89,7 +89,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 1943,
-    "analysis_time_ms": 0.09965896606445312
+    "duration_ms": 1810,
+    "analysis_time_ms": 0.06461143493652344
   }
 }

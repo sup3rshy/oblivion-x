@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 562,
-      "source": "dynamic",
+      "t_ms": 546,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 730,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 668,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 811,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 809,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1134,
+      "t_ms": 1132,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,17 +46,17 @@
     },
     {
       "id": 5,
-      "t_ms": 1298,
+      "t_ms": 1791,
       "source": "dynamic",
       "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "obj": "benign_formatting:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1708,
+      "t_ms": 2201,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_formatting:data_copy",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 2000,
+      "t_ms": 2493,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_formatting:save_as_pdf",
@@ -79,7 +79,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 2000,
-    "analysis_time_ms": 0.11086463928222656
+    "duration_ms": 2493,
+    "analysis_time_ms": 0.05626678466796875
   }
 }

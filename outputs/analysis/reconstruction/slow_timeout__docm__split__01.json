@@ -7,7 +7,8 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 725
     },
     {
       "stage": "defense_evasion",
@@ -15,7 +16,8 @@
         4
       ],
       "confidence": 0.95,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 725
     },
     {
       "stage": "execution",
@@ -24,7 +26,8 @@
         3
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 383
     }
   ],
   "behaviors": [

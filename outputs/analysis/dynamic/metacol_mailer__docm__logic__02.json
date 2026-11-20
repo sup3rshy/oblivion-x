@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 199,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 226,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 219,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 425,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "t_ms": 713,
+      "t_ms": 919,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,17 +36,17 @@
     },
     {
       "id": 4,
-      "t_ms": 918,
+      "t_ms": 1740,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "metacol_mailer:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 5,
-      "t_ms": 1493,
+      "t_ms": 2315,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "metacol_mailer:outlook_access",
@@ -61,6 +61,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.16927719116210938
+    "analysis_time_ms": 0.05269050598144531
   }
 }

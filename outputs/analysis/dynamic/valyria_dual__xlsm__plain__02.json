@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 382,
-      "source": "dynamic",
+      "t_ms": 389,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 413,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 486,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 435,
-      "source": "dynamic",
+      "t_ms": 682,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 601,
-      "source": "dynamic",
+      "t_ms": 704,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 839,
+      "t_ms": 1197,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,7 +56,27 @@
     },
     {
       "id": 6,
-      "t_ms": 1139,
+      "t_ms": 2134,
+      "source": "dynamic",
+      "behavior": "http_download",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 3033,
+      "source": "dynamic",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 3271,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "valyria_dual:outlook_access",
@@ -71,6 +91,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.12874603271484375
+    "analysis_time_ms": 0.053882598876953125
   }
 }

@@ -7,7 +7,8 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1131
     },
     {
       "stage": "execution",
@@ -16,7 +17,8 @@
         3
       ],
       "confidence": 0.85,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 707
     }
   ],
   "behaviors": [

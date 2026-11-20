@@ -7,7 +7,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 995
     },
     {
       "stage": "execution",
@@ -15,7 +16,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2074
     },
     {
       "stage": "persistence",
@@ -24,7 +26,8 @@
         7
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3208
     },
     {
       "stage": "impact",
@@ -32,7 +35,8 @@
         9
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 4812
     }
   ],
   "behaviors": [

@@ -68,11 +68,20 @@ def simulate_sample(sample_id: str, ground_truth: Dict[str, Any],
         return True
 
     # ---- benign startup noise -------------------------------------------
-    # Low confidence: below the reconstruction threshold (_MIN_CONF=0.5),
-    # so noise never becomes a behavior claim.
+    # Low confidence and tagged ``source="os"``: below the reconstruction
+    # threshold (_MIN_CONF=0.5) so noise never becomes a behavior claim, and
+    # not "dynamic" so it never counts as macro evidence in E2/E4. Noise
+    # happens before the macro runs, so it is recorded even when the macro
+    # itself times out — but it still respects the analysis budget.
     for _ in range(rng.randint(2, 4)):
-        add(rng.choice(_NOISE_POOL), "startup-noise",
-            dt=rng.randint(20, 200), conf=0.3)
+        step = rng.randint(20, 200)
+        if t + step > timeout_ms:
+            break
+        t += step
+        eid += 1
+        sa.add(Event(id=eid, t_ms=t, source="os",
+                     behavior=rng.choice(_NOISE_POOL), obj="startup-noise",
+                     confidence=0.3, evidence="sim"))
 
     # ---- failure modes -----------------------------------------------------
     expected = gt.get("expected_failure")
@@ -112,22 +121,19 @@ def simulate_sample(sample_id: str, ground_truth: Dict[str, Any],
     if gt.get("interaction"):
         add("msgbox_gate", "Enable content?", dt=rng.randint(300, 800))
 
-    # obfuscation behaviors fire during execution (variable building)
-    for b in ("string_concat", "chr_encode", "base64_encode", "dead_code"):
-        if b in behaviors and b in BEHAVIOR_DEFS:
-            add(b, BEHAVIOR_DEFS[b].description, dt=rng.randint(50, 300))
+    # obfuscation behaviors are *part of* the defense_evasion stage: they
+    # fire when the macro builds its strings, i.e. during stage replay below
+    # (emitting them before the entry point would make the stage order
+    # impossible to recover from timestamps).
 
-    # per-stage behaviors, in stage order
+    # per-stage behaviors, in stage order. A family with an unavailable
+    # dependency (Outlook, FTP) performs every stage up to the one that needs
+    # it, attempts the interaction there, fails, and stops: the attempt is
+    # therefore emitted at the exfiltration stage, not before the entry point.
     env_dep = gt.get("env_dep")
+    env_attempt = None
     if env_dep and not env_available.get(env_dep, True):
-        # The macro attempts to use the missing dependency, then fails.
-        attempt = "outlook_access" if env_dep == "outlook" else "ftp_upload"
-        if attempt in BEHAVIOR_DEFS:
-            add(attempt, _sim_obj(attempt, family), dt=rng.randint(200, 600))
-        sa.meta["failure"] = "dynamic_env"
-        sa.meta["note"] = f"missing environment dependency: {env_dep}"
-        sa.meta["missing_dependency"] = env_dep
-        return sa
+        env_attempt = "outlook_access" if env_dep == "outlook" else "ftp_upload"
 
     stage_behaviors: Dict[str, List[str]] = {}
     for b in behaviors:
@@ -135,15 +141,42 @@ def simulate_sample(sample_id: str, ground_truth: Dict[str, Any],
         if st is not None:
             stage_behaviors.setdefault(st, []).append(b)
 
+    # A behavior implies its catalog stage even when the family spec does not
+    # list that stage (obfuscation behaviors are added by the corpus variant,
+    # not by the family). Without this, `string_concat` on a family without
+    # `defense_evasion` would be in the ground truth but never executed.
+    replay_stages = set(stages) | set(stage_behaviors)
+
     for stage in STAGE_ORDER:
-        if stage not in stages:
+        if stage not in replay_stages:
             continue
+        if env_attempt and stage == "exfiltration":
+            if env_attempt in BEHAVIOR_DEFS:
+                add(env_attempt, _sim_obj(env_attempt, family),
+                    dt=rng.randint(200, 600))
+            sa.meta["failure"] = "dynamic_env"
+            sa.meta["note"] = f"missing environment dependency: {env_dep}"
+            sa.meta["missing_dependency"] = env_dep
+            return sa
         for b in stage_behaviors.get(stage, []):
-            if b in ("string_concat", "chr_encode", "base64_encode",
-                     "dead_code", "macro_entry", "msgbox_gate"):
+            if b in ("macro_entry", "msgbox_gate"):
                 continue
+            # Stage behaviors not listed for this family (e.g. a runtime
+            # obfuscation behavior the family spec does not enumerate) are
+            # emitted with their catalog stage's turn.
             if not add(b, _sim_obj(b, family), dt=rng.randint(200, 1200)):
                 return sa
+
+    # A family without an exfiltration stage but with a missing dependency
+    # still attempts it after its own stages have run.
+    if env_attempt:
+        if env_attempt in BEHAVIOR_DEFS:
+            add(env_attempt, _sim_obj(env_attempt, family),
+                dt=rng.randint(200, 600))
+        sa.meta["failure"] = "dynamic_env"
+        sa.meta["note"] = f"missing environment dependency: {env_dep}"
+        sa.meta["missing_dependency"] = env_dep
+        return sa
 
     # benign, stage-less behaviors (formatting, printing, PDF export) are
     # executed at the end of the macro, after the stage replay.

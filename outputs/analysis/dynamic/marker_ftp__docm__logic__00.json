@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 489,
-      "source": "dynamic",
+      "t_ms": 540,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 523,
-      "source": "dynamic",
+      "t_ms": 560,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 685,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 651,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1153,
+      "t_ms": 1119,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,17 +46,47 @@
     },
     {
       "id": 5,
-      "t_ms": 1424,
+      "t_ms": 2204,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "marker_ftp:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1758,
+      "t_ms": 2673,
+      "source": "dynamic",
+      "behavior": "cmd_run",
+      "obj": "cmd /c ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 3042,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "Environ(TEMP/APPDATA)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 4180,
+      "source": "dynamic",
+      "behavior": "shell_run",
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 4623,
       "source": "dynamic",
       "behavior": "ftp_upload",
       "obj": "ftp -s:... put oblivionx_log.txt",
@@ -71,6 +101,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: ftp",
     "missing_dependency": "ftp",
-    "analysis_time_ms": 0.09870529174804688
+    "analysis_time_ms": 0.07891654968261719
   }
 }

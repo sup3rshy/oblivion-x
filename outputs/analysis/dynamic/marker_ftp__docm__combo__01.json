@@ -6,18 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 369,
-      "source": "dynamic",
-      "behavior": "env_read",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 2,
-      "t_ms": 519,
-      "source": "dynamic",
+      "t_ms": 326,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -25,8 +15,18 @@
       "evidence": "sim"
     },
     {
+      "id": 2,
+      "t_ms": 476,
+      "source": "os",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 3,
-      "t_ms": 728,
+      "t_ms": 819,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,47 +36,77 @@
     },
     {
       "id": 4,
-      "t_ms": 849,
+      "t_ms": 1421,
       "source": "dynamic",
-      "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "behavior": "base64_encode",
+      "obj": "marker_ftp:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 5,
-      "t_ms": 999,
+      "t_ms": 2540,
       "source": "dynamic",
       "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "obj": "marker_ftp:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1278,
+      "t_ms": 3516,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "dead_code",
+      "obj": "marker_ftp:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1522,
+      "t_ms": 4308,
       "source": "dynamic",
-      "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "behavior": "string_concat",
+      "obj": "marker_ftp:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 8,
-      "t_ms": 2018,
+      "t_ms": 4776,
+      "source": "dynamic",
+      "behavior": "cmd_run",
+      "obj": "cmd /c ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 5877,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "Environ(TEMP/APPDATA)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 10,
+      "t_ms": 6785,
+      "source": "dynamic",
+      "behavior": "shell_run",
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 11,
+      "t_ms": 7125,
       "source": "dynamic",
       "behavior": "ftp_upload",
       "obj": "ftp -s:... put oblivionx_log.txt",
@@ -91,6 +121,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: ftp",
     "missing_dependency": "ftp",
-    "analysis_time_ms": 0.13518333435058594
+    "analysis_time_ms": 0.0591278076171875
   }
 }

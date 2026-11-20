@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 299,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 193,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 352,
-      "source": "dynamic",
+      "t_ms": 246,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,18 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 524,
-      "source": "dynamic",
-      "behavior": "registry_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 4,
-      "t_ms": 582,
-      "source": "dynamic",
+      "t_ms": 418,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -45,8 +35,18 @@
       "evidence": "sim"
     },
     {
+      "id": 4,
+      "t_ms": 476,
+      "source": "os",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 5,
-      "t_ms": 882,
+      "t_ms": 776,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -60,6 +60,6 @@
     "failure": "dynamic_semantic",
     "interaction_handled": true,
     "error_detail": "Sub or Function not defined",
-    "analysis_time_ms": 0.09441375732421875
+    "analysis_time_ms": 0.04696846008300781
   }
 }

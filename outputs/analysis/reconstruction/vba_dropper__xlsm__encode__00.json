@@ -7,16 +7,18 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1330
     },
     {
       "stage": "defense_evasion",
       "evidence": [
-        6,
-        7
+        7,
+        6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2036
     },
     {
       "stage": "execution",
@@ -25,7 +27,8 @@
         8
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3508
     },
     {
       "stage": "c2_download",
@@ -33,7 +36,8 @@
         6
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2036
     },
     {
       "stage": "impact",
@@ -43,7 +47,8 @@
         12
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 4947
     }
   ],
   "behaviors": [
@@ -95,20 +100,20 @@
     {
       "behavior": "chr_encode",
       "evidence": [
-        6
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
-    },
-    {
-      "behavior": "base64_encode",
-      "evidence": [
         7
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "vba_dropper:chr_encode"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "vba_dropper:base64_encode"
     },
     {
       "behavior": "file_execute",

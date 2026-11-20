@@ -7,8 +7,8 @@
     {
       "id": 1,
       "t_ms": 486,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -17,7 +17,7 @@
     {
       "id": 2,
       "t_ms": 596,
-      "source": "dynamic",
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -29,6 +29,6 @@
     "simulated": true,
     "failure": "static_empty",
     "interaction_handled": true,
-    "analysis_time_ms": 0.08988380432128906
+    "analysis_time_ms": 0.03528594970703125
   }
 }

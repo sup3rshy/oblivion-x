@@ -35,33 +35,33 @@
   },
   "dynamic_recall_by_variant": {
     "combo": {
-      "mean": 0.7764172335600908,
-      "std": 0.3284826071752716,
+      "mean": 0.8182161753590327,
+      "std": 0.331964442219253,
       "n": 63
     },
     "encode": {
-      "mean": 0.7675170068027212,
-      "std": 0.317503995618503,
+      "mean": 0.8173469387755103,
+      "std": 0.31736057916550064,
       "n": 63
     },
     "logic": {
-      "mean": 0.776077097505669,
-      "std": 0.29868559570702696,
+      "mean": 0.8350340136054422,
+      "std": 0.2861930445147404,
       "n": 63
     },
     "plain": {
-      "mean": 0.7814814814814816,
-      "std": 0.3046250059956926,
+      "mean": 0.861904761904762,
+      "std": 0.264265455155629,
       "n": 63
     },
     "random": {
-      "mean": 0.7867724867724869,
-      "std": 0.30111724251589583,
+      "mean": 0.853968253968254,
+      "std": 0.2707640617266275,
       "n": 63
     },
     "split": {
-      "mean": 0.7715419501133788,
-      "std": 0.30066736068426575,
+      "mean": 0.8344671201814059,
+      "std": 0.2782205273398956,
       "n": 63
     }
   },
@@ -2469,7 +2469,7 @@
       "family": "marker_ftp",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 1.0,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -2479,7 +2479,7 @@
       "family": "marker_ftp",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 1.0,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -2489,7 +2489,7 @@
       "family": "marker_ftp",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 1.0,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -2499,7 +2499,7 @@
       "family": "marker_ftp",
       "variant": "random",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 1.0,
       "detected": [
         "random"
       ],
@@ -2513,7 +2513,7 @@
       "family": "marker_ftp",
       "variant": "random",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 1.0,
       "detected": [
         "random"
       ],
@@ -2527,7 +2527,7 @@
       "family": "marker_ftp",
       "variant": "random",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "random"
       ],
@@ -2541,7 +2541,7 @@
       "family": "marker_ftp",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143,
+      "dynamic_recall": 1.0,
       "detected": [
         "split"
       ],
@@ -2555,7 +2555,7 @@
       "family": "marker_ftp",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "split"
       ],
@@ -2569,7 +2569,7 @@
       "family": "marker_ftp",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 1.0,
       "detected": [
         "split"
       ],
@@ -2583,7 +2583,7 @@
       "family": "marker_ftp",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.625,
+      "dynamic_recall": 1.0,
       "detected": [
         "encode"
       ],
@@ -2597,7 +2597,7 @@
       "family": "marker_ftp",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.75,
+      "dynamic_recall": 1.0,
       "detected": [
         "encode"
       ],
@@ -2611,7 +2611,7 @@
       "family": "marker_ftp",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.75,
+      "dynamic_recall": 0.875,
       "detected": [
         "encode"
       ],
@@ -2625,7 +2625,7 @@
       "family": "marker_ftp",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143,
+      "dynamic_recall": 1.0,
       "detected": [
         "logic"
       ],
@@ -2639,7 +2639,7 @@
       "family": "marker_ftp",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143,
+      "dynamic_recall": 1.0,
       "detected": [
         "logic"
       ],
@@ -2653,7 +2653,7 @@
       "family": "marker_ftp",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143,
+      "dynamic_recall": 1.0,
       "detected": [
         "logic"
       ],
@@ -2667,7 +2667,7 @@
       "family": "marker_ftp",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7,
+      "dynamic_recall": 1.0,
       "detected": [
         "encode",
         "logic",
@@ -2687,7 +2687,7 @@
       "family": "marker_ftp",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7,
+      "dynamic_recall": 1.0,
       "detected": [
         "encode",
         "logic",
@@ -2707,7 +2707,7 @@
       "family": "marker_ftp",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.8,
+      "dynamic_recall": 1.0,
       "detected": [
         "encode",
         "logic",
@@ -2727,7 +2727,7 @@
       "family": "marker_ftp",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -2737,7 +2737,7 @@
       "family": "marker_ftp",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 1.0,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -2747,7 +2747,7 @@
       "family": "marker_ftp",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 1.0,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -2757,7 +2757,7 @@
       "family": "marker_ftp",
       "variant": "random",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "random"
       ],
@@ -2771,7 +2771,7 @@
       "family": "marker_ftp",
       "variant": "random",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 1.0,
       "detected": [
         "random"
       ],
@@ -2785,7 +2785,7 @@
       "family": "marker_ftp",
       "variant": "random",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 1.0,
       "detected": [
         "random"
       ],
@@ -2799,7 +2799,7 @@
       "family": "marker_ftp",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "split"
       ],
@@ -2813,7 +2813,7 @@
       "family": "marker_ftp",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "split"
       ],
@@ -2827,7 +2827,7 @@
       "family": "marker_ftp",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143,
+      "dynamic_recall": 1.0,
       "detected": [
         "split"
       ],
@@ -2841,7 +2841,7 @@
       "family": "marker_ftp",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 1.0,
       "detected": [
         "encode"
       ],
@@ -2855,7 +2855,7 @@
       "family": "marker_ftp",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.75,
+      "dynamic_recall": 0.875,
       "detected": [
         "encode"
       ],
@@ -2869,7 +2869,7 @@
       "family": "marker_ftp",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.75,
+      "dynamic_recall": 1.0,
       "detected": [
         "encode"
       ],
@@ -2883,7 +2883,7 @@
       "family": "marker_ftp",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 1.0,
       "detected": [
         "logic"
       ],
@@ -2897,7 +2897,7 @@
       "family": "marker_ftp",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "logic"
       ],
@@ -2911,7 +2911,7 @@
       "family": "marker_ftp",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143,
+      "dynamic_recall": 1.0,
       "detected": [
         "logic"
       ],
@@ -2925,7 +2925,7 @@
       "family": "marker_ftp",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.8,
+      "dynamic_recall": 0.9,
       "detected": [
         "encode",
         "logic",
@@ -2945,7 +2945,7 @@
       "family": "marker_ftp",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.8,
+      "dynamic_recall": 1.0,
       "detected": [
         "encode",
         "logic",
@@ -2965,7 +2965,7 @@
       "family": "marker_ftp",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.8,
+      "dynamic_recall": 1.0,
       "detected": [
         "encode",
         "logic",
@@ -2985,7 +2985,7 @@
       "family": "thus_wiper",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 0.3333333333333333,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -3005,7 +3005,7 @@
       "family": "thus_wiper",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.3333333333333333,
+      "dynamic_recall": 0.6666666666666666,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -3027,7 +3027,7 @@
       "family": "thus_wiper",
       "variant": "random",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 0.3333333333333333,
       "detected": [],
       "expected": [
         "random"
@@ -3075,7 +3075,7 @@
       "family": "thus_wiper",
       "variant": "split",
       "static_recall": 0.75,
-      "dynamic_recall": 0.25,
+      "dynamic_recall": 0.5,
       "detected": [],
       "expected": [
         "split"
@@ -3101,7 +3101,7 @@
       "family": "thus_wiper",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.2,
       "detected": [
         "encode"
       ],
@@ -3189,7 +3189,7 @@
       "family": "thus_wiper",
       "variant": "combo",
       "static_recall": 0.8571428571428571,
-      "dynamic_recall": 0.14285714285714285,
+      "dynamic_recall": 0.2857142857142857,
       "detected": [
         "encode",
         "logic"
@@ -3207,7 +3207,7 @@
       "family": "thus_wiper",
       "variant": "combo",
       "static_recall": 0.8571428571428571,
-      "dynamic_recall": 0.2857142857142857,
+      "dynamic_recall": 0.14285714285714285,
       "detected": [
         "encode",
         "logic"
@@ -3225,7 +3225,7 @@
       "family": "valyria_dual",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -3235,7 +3235,7 @@
       "family": "valyria_dual",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -3245,7 +3245,7 @@
       "family": "valyria_dual",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -3255,7 +3255,7 @@
       "family": "valyria_dual",
       "variant": "random",
       "static_recall": 0.8,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [
         "random"
       ],
@@ -3269,7 +3269,7 @@
       "family": "valyria_dual",
       "variant": "random",
       "static_recall": 0.8,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [
         "random"
       ],
@@ -3283,7 +3283,7 @@
       "family": "valyria_dual",
       "variant": "random",
       "static_recall": 0.8,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [
         "random"
       ],
@@ -3297,7 +3297,7 @@
       "family": "valyria_dual",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "split"
       ],
@@ -3311,7 +3311,7 @@
       "family": "valyria_dual",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "split"
       ],
@@ -3325,7 +3325,7 @@
       "family": "valyria_dual",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "split"
       ],
@@ -3339,7 +3339,7 @@
       "family": "valyria_dual",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "encode"
       ],
@@ -3353,7 +3353,7 @@
       "family": "valyria_dual",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "encode"
       ],
@@ -3367,7 +3367,7 @@
       "family": "valyria_dual",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "encode"
       ],
@@ -3381,7 +3381,7 @@
       "family": "valyria_dual",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "logic"
       ],
@@ -3395,7 +3395,7 @@
       "family": "valyria_dual",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "logic"
       ],
@@ -3409,7 +3409,7 @@
       "family": "valyria_dual",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "logic"
       ],
@@ -3423,7 +3423,7 @@
       "family": "valyria_dual",
       "variant": "combo",
       "static_recall": 0.8888888888888888,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 0.8888888888888888,
       "detected": [
         "encode",
         "logic",
@@ -3442,7 +3442,7 @@
       "family": "valyria_dual",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 0.8888888888888888,
       "detected": [
         "encode",
         "logic",
@@ -3462,7 +3462,7 @@
       "family": "valyria_dual",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 0.8888888888888888,
       "detected": [
         "encode",
         "logic",
@@ -3482,7 +3482,7 @@
       "family": "valyria_dual",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -3492,7 +3492,7 @@
       "family": "valyria_dual",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -3502,7 +3502,7 @@
       "family": "valyria_dual",
       "variant": "plain",
       "static_recall": 1.0,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [],
       "expected": [],
       "recovered_payloads": 0
@@ -3512,7 +3512,7 @@
       "family": "valyria_dual",
       "variant": "random",
       "static_recall": 0.8,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [
         "random"
       ],
@@ -3526,7 +3526,7 @@
       "family": "valyria_dual",
       "variant": "random",
       "static_recall": 0.8,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [
         "random"
       ],
@@ -3540,7 +3540,7 @@
       "family": "valyria_dual",
       "variant": "random",
       "static_recall": 0.8,
-      "dynamic_recall": 0.4,
+      "dynamic_recall": 0.8,
       "detected": [
         "random"
       ],
@@ -3554,7 +3554,7 @@
       "family": "valyria_dual",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "split"
       ],
@@ -3568,7 +3568,7 @@
       "family": "valyria_dual",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "split"
       ],
@@ -3582,7 +3582,7 @@
       "family": "valyria_dual",
       "variant": "split",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "split"
       ],
@@ -3596,7 +3596,7 @@
       "family": "valyria_dual",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "encode"
       ],
@@ -3610,7 +3610,7 @@
       "family": "valyria_dual",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "encode"
       ],
@@ -3624,7 +3624,7 @@
       "family": "valyria_dual",
       "variant": "encode",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714,
+      "dynamic_recall": 0.8571428571428571,
       "detected": [
         "encode"
       ],
@@ -3638,7 +3638,7 @@
       "family": "valyria_dual",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "logic"
       ],
@@ -3652,7 +3652,7 @@
       "family": "valyria_dual",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "logic"
       ],
@@ -3666,7 +3666,7 @@
       "family": "valyria_dual",
       "variant": "logic",
       "static_recall": 1.0,
-      "dynamic_recall": 0.5,
+      "dynamic_recall": 0.8333333333333334,
       "detected": [
         "logic"
       ],
@@ -3680,7 +3680,7 @@
       "family": "valyria_dual",
       "variant": "combo",
       "static_recall": 0.8888888888888888,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 0.8888888888888888,
       "detected": [
         "encode",
         "logic",
@@ -3699,7 +3699,7 @@
       "family": "valyria_dual",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 0.8888888888888888,
       "detected": [
         "encode",
         "logic",
@@ -3719,7 +3719,7 @@
       "family": "valyria_dual",
       "variant": "combo",
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666,
+      "dynamic_recall": 0.8888888888888888,
       "detected": [
         "encode",
         "logic",

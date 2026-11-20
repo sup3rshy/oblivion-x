@@ -7,7 +7,8 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 834
     },
     {
       "stage": "defense_evasion",
@@ -17,7 +18,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1256
     },
     {
       "stage": "execution",
@@ -27,7 +29,8 @@
         8
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3427
     },
     {
       "stage": "c2_download",
@@ -37,7 +40,8 @@
         15
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 6559
     },
     {
       "stage": "impact",
@@ -47,7 +51,8 @@
         14
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 8606
     }
   ],
   "behaviors": [
@@ -141,7 +146,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
+      "obj": "donoff_interaction:dead_code"
     },
     {
       "behavior": "file_write",

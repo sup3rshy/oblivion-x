@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 270,
-      "source": "dynamic",
+      "t_ms": 254,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 331,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 332,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 423,
-      "source": "dynamic",
+      "t_ms": 393,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 702,
+      "t_ms": 738,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -50,6 +50,6 @@
     "failure": "dynamic_date",
     "interaction_handled": true,
     "note": "payload gated by date; only entry observed",
-    "analysis_time_ms": 0.07581710815429688
+    "analysis_time_ms": 0.11444091796875
   }
 }

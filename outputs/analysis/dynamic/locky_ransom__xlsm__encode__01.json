@@ -6,18 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 220,
-      "source": "dynamic",
-      "behavior": "registry_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 2,
-      "t_ms": 313,
-      "source": "dynamic",
+      "t_ms": 347,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -25,10 +15,20 @@
       "evidence": "sim"
     },
     {
+      "id": 2,
+      "t_ms": 418,
+      "source": "os",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 3,
-      "t_ms": 452,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 617,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 893,
+      "t_ms": 1058,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,27 +46,27 @@
     },
     {
       "id": 5,
-      "t_ms": 1045,
+      "t_ms": 1668,
       "source": "dynamic",
-      "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "behavior": "base64_encode",
+      "obj": "locky_ransom:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1263,
+      "t_ms": 2542,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "chr_encode",
+      "obj": "locky_ransom:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 2030,
+      "t_ms": 3309,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 2649,
+      "t_ms": 3928,
       "source": "dynamic",
       "behavior": "registry_write",
       "obj": "HKCU\\...\\Run\\oblivionx",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 2902,
+      "t_ms": 4181,
       "source": "dynamic",
       "behavior": "file_encrypt",
       "obj": "xor-crypt(%TEMP%\\oblivionx_vault\\secret.txt)",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 3517,
+      "t_ms": 4796,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -109,7 +109,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 3517,
-    "analysis_time_ms": 0.11396408081054688
+    "duration_ms": 4796,
+    "analysis_time_ms": 0.07128715515136719
   }
 }

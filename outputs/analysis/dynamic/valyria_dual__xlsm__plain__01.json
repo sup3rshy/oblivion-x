@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 469,
-      "source": "dynamic",
+      "t_ms": 457,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 566,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 514,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 660,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 699,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 754,
-      "source": "dynamic",
+      "t_ms": 833,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1097,
+      "t_ms": 1176,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,7 +56,27 @@
     },
     {
       "id": 6,
-      "t_ms": 1638,
+      "t_ms": 2059,
+      "source": "dynamic",
+      "behavior": "http_download",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 2445,
+      "source": "dynamic",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 2978,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "valyria_dual:outlook_access",
@@ -71,6 +91,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.08225440979003906
+    "analysis_time_ms": 0.05626678466796875
   }
 }

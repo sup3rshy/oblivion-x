@@ -7,7 +7,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1222
     },
     {
       "stage": "defense_evasion",
@@ -15,7 +16,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1744
     },
     {
       "stage": "execution",
@@ -23,7 +25,8 @@
         7
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2103
     },
     {
       "stage": "persistence",
@@ -31,7 +34,8 @@
         8
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2673
     },
     {
       "stage": "impact",
@@ -40,7 +44,8 @@
         9
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2947
     }
   ],
   "behaviors": [
@@ -96,7 +101,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
+      "obj": "locky_ransom:dead_code"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> persistence -> impact",

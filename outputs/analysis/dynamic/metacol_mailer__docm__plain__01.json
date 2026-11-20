@@ -7,7 +7,7 @@
     {
       "id": 1,
       "t_ms": 424,
-      "source": "dynamic",
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -17,8 +17,8 @@
     {
       "id": 2,
       "t_ms": 611,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "t_ms": 1065,
+      "t_ms": 939,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1650,
+      "t_ms": 1511,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "metacol_mailer:outlook_access",
@@ -51,6 +51,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.08153915405273438
+    "analysis_time_ms": 0.05555152893066406
   }
 }

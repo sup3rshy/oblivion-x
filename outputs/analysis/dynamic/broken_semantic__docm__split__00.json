@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 388,
-      "source": "dynamic",
+      "t_ms": 377,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 490,
-      "source": "dynamic",
+      "t_ms": 470,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 517,
-      "source": "dynamic",
+      "t_ms": 515,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 817,
+      "t_ms": 815,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -50,6 +50,6 @@
     "failure": "dynamic_semantic",
     "interaction_handled": true,
     "error_detail": "Sub or Function not defined",
-    "analysis_time_ms": 0.072479248046875
+    "analysis_time_ms": 0.04482269287109375
   }
 }

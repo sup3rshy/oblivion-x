@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 560,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 532,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 735,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 593,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 794,
-      "source": "dynamic",
+      "t_ms": 663,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 937,
-      "source": "dynamic",
+      "t_ms": 758,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1246,
+      "t_ms": 1067,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,47 +56,47 @@
     },
     {
       "id": 6,
-      "t_ms": 1536,
+      "t_ms": 2229,
       "source": "dynamic",
-      "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "behavior": "base64_encode",
+      "obj": "locky_ransom:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1776,
+      "t_ms": 3189,
       "source": "dynamic",
       "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "obj": "locky_ransom:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 8,
-      "t_ms": 1891,
+      "t_ms": 3651,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "dead_code",
+      "obj": "locky_ransom:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 9,
-      "t_ms": 2007,
+      "t_ms": 4115,
       "source": "dynamic",
-      "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "behavior": "string_concat",
+      "obj": "locky_ransom:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 10,
-      "t_ms": 2909,
+      "t_ms": 5017,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 3548,
+      "t_ms": 5656,
       "source": "dynamic",
       "behavior": "registry_write",
       "obj": "HKCU\\...\\Run\\oblivionx",
@@ -116,7 +116,7 @@
     },
     {
       "id": 12,
-      "t_ms": 4269,
+      "t_ms": 6377,
       "source": "dynamic",
       "behavior": "file_encrypt",
       "obj": "xor-crypt(%TEMP%\\oblivionx_vault\\secret.txt)",
@@ -126,7 +126,7 @@
     },
     {
       "id": 13,
-      "t_ms": 4487,
+      "t_ms": 6595,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -139,7 +139,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 4487,
-    "analysis_time_ms": 0.10800361633300781
+    "duration_ms": 6595,
+    "analysis_time_ms": 0.0705718994140625
   }
 }

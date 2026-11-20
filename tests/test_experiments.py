@@ -10,7 +10,8 @@ def test_all_experiment_files_are_written(tiny_eval):
     for name in ("E1_reproduce_oblivion", "E2_static_vs_dynamic",
                  "E3_obfuscation", "E4_temporal_segmentation",
                  "E5_ground_truth", "E6_reconstruction", "E7_failures",
-                 "E8_performance"):
+                 "E8_performance", "E9_chain_order",
+                 "E10_completion_calibration"):
         assert (tiny_eval / f"{name}.json").exists(), name
 
 

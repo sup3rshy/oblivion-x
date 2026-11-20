@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 574,
-      "source": "dynamic",
+      "t_ms": 539,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 597,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 667,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "t_ms": 997,
+      "t_ms": 1067,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,27 +36,27 @@
     },
     {
       "id": 4,
-      "t_ms": 1217,
+      "t_ms": 1950,
       "source": "dynamic",
-      "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "behavior": "base64_encode",
+      "obj": "benign_formatting:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 5,
-      "t_ms": 1458,
+      "t_ms": 2915,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "chr_encode",
+      "obj": "benign_formatting:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1698,
+      "t_ms": 3155,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_formatting:data_copy",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 2014,
+      "t_ms": 3471,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_formatting:save_as_pdf",
@@ -79,7 +79,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 2014,
-    "analysis_time_ms": 0.09179115295410156
+    "duration_ms": 3471,
+    "analysis_time_ms": 0.05054473876953125
   }
 }

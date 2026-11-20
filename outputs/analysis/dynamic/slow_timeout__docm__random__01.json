@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 414,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 484,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 514,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 670,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 550,
-      "source": "dynamic",
+      "t_ms": 719,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 790,
+      "t_ms": 959,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -51,6 +51,6 @@
     "interaction_handled": true,
     "note": "busy loop exceeded analysis time limit",
     "duration_ms": 120000,
-    "analysis_time_ms": 0.07390975952148438
+    "analysis_time_ms": 0.03170967102050781
   }
 }

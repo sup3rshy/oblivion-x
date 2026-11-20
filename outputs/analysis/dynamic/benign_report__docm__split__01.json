@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 523,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 421,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 675,
-      "source": "dynamic",
+      "t_ms": 561,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 808,
-      "source": "dynamic",
+      "t_ms": 713,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1167,
+      "t_ms": 1139,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,17 +46,17 @@
     },
     {
       "id": 5,
-      "t_ms": 1272,
+      "t_ms": 1658,
       "source": "dynamic",
       "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "obj": "benign_report:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1436,
+      "t_ms": 1918,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_report:data_copy",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 1985,
+      "t_ms": 2082,
       "source": "dynamic",
       "behavior": "print_document",
       "obj": "benign_report:print_document",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 2207,
+      "t_ms": 2631,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_report:save_as_pdf",
@@ -89,7 +89,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 2207,
-    "analysis_time_ms": 0.09965896606445312
+    "duration_ms": 2631,
+    "analysis_time_ms": 0.09489059448242188
   }
 }

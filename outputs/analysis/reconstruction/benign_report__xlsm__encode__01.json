@@ -7,16 +7,18 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 776
     },
     {
       "stage": "defense_evasion",
       "evidence": [
-        5,
-        6
+        6,
+        5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1383
     },
     {
       "stage": "c2_download",
@@ -24,7 +26,8 @@
         7
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2807
     }
   ],
   "behaviors": [
@@ -76,20 +79,20 @@
     {
       "behavior": "chr_encode",
       "evidence": [
-        5
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
-    },
-    {
-      "behavior": "base64_encode",
-      "evidence": [
         6
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "benign_report:chr_encode"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_report:base64_encode"
     }
   ],
   "chain": "delivery -> defense_evasion -> c2_download",

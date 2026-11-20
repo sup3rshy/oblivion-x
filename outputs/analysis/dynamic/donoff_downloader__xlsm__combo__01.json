@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 377,
-      "source": "dynamic",
+      "t_ms": 424,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 479,
-      "source": "dynamic",
+      "t_ms": 542,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "t_ms": 870,
+      "t_ms": 933,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,47 +36,47 @@
     },
     {
       "id": 4,
-      "t_ms": 1059,
+      "t_ms": 1691,
       "source": "dynamic",
-      "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "behavior": "base64_encode",
+      "obj": "donoff_downloader:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 5,
-      "t_ms": 1134,
+      "t_ms": 1992,
       "source": "dynamic",
       "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "obj": "donoff_downloader:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1223,
+      "t_ms": 2351,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "dead_code",
+      "obj": "donoff_downloader:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1448,
+      "t_ms": 3254,
       "source": "dynamic",
-      "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "behavior": "string_concat",
+      "obj": "donoff_downloader:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 8,
-      "t_ms": 1999,
+      "t_ms": 3805,
       "source": "dynamic",
       "behavior": "window_hide",
       "obj": "donoff_downloader:window_hide",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 2748,
+      "t_ms": 4554,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 3124,
+      "t_ms": 4930,
       "source": "dynamic",
       "behavior": "powershell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command ...",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 3948,
+      "t_ms": 5754,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -116,7 +116,7 @@
     },
     {
       "id": 12,
-      "t_ms": 4754,
+      "t_ms": 6560,
       "source": "dynamic",
       "behavior": "http_download",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -126,7 +126,7 @@
     },
     {
       "id": 13,
-      "t_ms": 5584,
+      "t_ms": 7390,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -136,7 +136,7 @@
     },
     {
       "id": 14,
-      "t_ms": 6579,
+      "t_ms": 8385,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -146,7 +146,7 @@
     },
     {
       "id": 15,
-      "t_ms": 7294,
+      "t_ms": 9100,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -156,7 +156,7 @@
     },
     {
       "id": 16,
-      "t_ms": 8194,
+      "t_ms": 10000,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -166,7 +166,7 @@
     },
     {
       "id": 17,
-      "t_ms": 8938,
+      "t_ms": 10744,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -179,7 +179,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 8938,
-    "analysis_time_ms": 0.11682510375976562
+    "duration_ms": 10744,
+    "analysis_time_ms": 0.08678436279296875
   }
 }

@@ -7,7 +7,8 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 864
     },
     {
       "stage": "defense_evasion",
@@ -15,7 +16,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1604
     },
     {
       "stage": "execution",
@@ -23,7 +25,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2702
     },
     {
       "stage": "persistence",
@@ -32,7 +35,8 @@
         8
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3596
     },
     {
       "stage": "impact",
@@ -40,7 +44,8 @@
         9
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 5568
     }
   ],
   "behaviors": [
@@ -96,7 +101,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "laroux_replicator:string_concat"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> persistence -> impact",

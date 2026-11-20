@@ -6,18 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 534,
-      "source": "dynamic",
-      "behavior": "registry_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 2,
-      "t_ms": 610,
-      "source": "dynamic",
+      "t_ms": 617,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -25,9 +15,19 @@
       "evidence": "sim"
     },
     {
+      "id": 2,
+      "t_ms": 728,
+      "source": "os",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 3,
-      "t_ms": 715,
-      "source": "dynamic",
+      "t_ms": 804,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 824,
-      "source": "dynamic",
+      "t_ms": 909,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1178,
+      "t_ms": 1288,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,27 +56,47 @@
     },
     {
       "id": 6,
-      "t_ms": 1443,
+      "t_ms": 1797,
       "source": "dynamic",
-      "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "behavior": "base64_encode",
+      "obj": "valyria_dual:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1505,
+      "t_ms": 2858,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "chr_encode",
+      "obj": "valyria_dual:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 8,
-      "t_ms": 1961,
+      "t_ms": 3107,
+      "source": "dynamic",
+      "behavior": "http_download",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 3820,
+      "source": "dynamic",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 10,
+      "t_ms": 4030,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "valyria_dual:outlook_access",
@@ -91,6 +111,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.09369850158691406
+    "analysis_time_ms": 0.1289844512939453
   }
 }

@@ -4,7 +4,7 @@ Commands:
   corpus generate   build corpus sources + ground truth (Linux)
   corpus build      package sources into .docm/.xlsm files (Linux, offline)
   pipeline run      static + dynamic (simulator) + reconstruction
-  eval all          experiments E1-E8
+  eval all          experiments E1-E10
   report            markdown report + figures
   seg demo          temporal segmentation demo for one sample
 """

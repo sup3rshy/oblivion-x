@@ -41,7 +41,7 @@ oblivionx/
     segmentation.py         Bon-APT segmentation (N=1/5/10/20, combos)
   reconstruction/        Task 4: stage reconstruction (RQ1/RQ5)
   simulate/              dynamic telemetry simulator (Linux, deterministic)
-  eval/                  metrics (8), experiments E1-E8, markdown report
+  eval/                  metrics (8), experiments E1-E10, markdown report
   pipeline.py            end-to-end analysis pipeline
 scripts/
   build_corpus_windows.ps1   Word/Excel COM corpus builder (authoritative)
@@ -154,3 +154,5 @@ Unsupported behavior claim rate — implemented in `oblivionx/eval/metrics.py`.
 | E6 | Stage reconstruction | RQ1, RQ5 |
 | E7 | Failure analysis | failure taxonomy |
 | E8 | Performance / resource analysis | time per sample, timeouts |
+| E9 | Chain-order ablation | ontology order vs evidence (timestamp) order — RQ5 |
+| E10 | Completion calibration | can static evidence predict which analyses will finish? |

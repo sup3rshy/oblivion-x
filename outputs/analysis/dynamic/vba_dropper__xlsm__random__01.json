@@ -7,8 +7,8 @@
     {
       "id": 1,
       "t_ms": 452,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -17,8 +17,8 @@
     {
       "id": 2,
       "t_ms": 494,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -27,8 +27,8 @@
     {
       "id": 3,
       "t_ms": 562,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 974,
+      "t_ms": 1037,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1725,
+      "t_ms": 1752,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -56,7 +56,7 @@
     },
     {
       "id": 6,
-      "t_ms": 2440,
+      "t_ms": 2265,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 2953,
+      "t_ms": 2533,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 3221,
+      "t_ms": 3590,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 4656,
+      "t_ms": 5025,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -99,7 +99,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 4656,
-    "analysis_time_ms": 0.09608268737792969
+    "duration_ms": 5025,
+    "analysis_time_ms": 0.07796287536621094
   }
 }

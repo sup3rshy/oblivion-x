@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 308,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 326,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 472,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 490,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "t_ms": 712,
+      "t_ms": 714,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,27 +36,27 @@
     },
     {
       "id": 4,
-      "t_ms": 971,
+      "t_ms": 1507,
       "source": "dynamic",
-      "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "behavior": "base64_encode",
+      "obj": "benign_formatting:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 5,
-      "t_ms": 1033,
+      "t_ms": 2099,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "chr_encode",
+      "obj": "benign_formatting:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1479,
+      "t_ms": 2372,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_formatting:data_copy",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 1825,
+      "t_ms": 2804,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_formatting:save_as_pdf",
@@ -79,7 +79,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 1825,
-    "analysis_time_ms": 0.08845329284667969
+    "duration_ms": 2804,
+    "analysis_time_ms": 0.05626678466796875
   }
 }

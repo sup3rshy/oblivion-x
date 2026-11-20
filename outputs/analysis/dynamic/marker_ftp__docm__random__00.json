@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 570,
-      "source": "dynamic",
+      "t_ms": 579,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,18 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 619,
-      "source": "dynamic",
-      "behavior": "env_read",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 3,
-      "t_ms": 776,
-      "source": "dynamic",
+      "t_ms": 675,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -35,9 +25,19 @@
       "evidence": "sim"
     },
     {
+      "id": 3,
+      "t_ms": 757,
+      "source": "os",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 4,
-      "t_ms": 859,
-      "source": "dynamic",
+      "t_ms": 806,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1258,
+      "t_ms": 1205,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,7 +56,37 @@
     },
     {
       "id": 6,
-      "t_ms": 1591,
+      "t_ms": 1672,
+      "source": "dynamic",
+      "behavior": "cmd_run",
+      "obj": "cmd /c ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 2826,
+      "source": "dynamic",
+      "behavior": "env_read",
+      "obj": "Environ(TEMP/APPDATA)",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 3221,
+      "source": "dynamic",
+      "behavior": "shell_run",
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 3435,
       "source": "dynamic",
       "behavior": "ftp_upload",
       "obj": "ftp -s:... put oblivionx_log.txt",
@@ -71,6 +101,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: ftp",
     "missing_dependency": "ftp",
-    "analysis_time_ms": 0.08988380432128906
+    "analysis_time_ms": 0.07486343383789062
   }
 }

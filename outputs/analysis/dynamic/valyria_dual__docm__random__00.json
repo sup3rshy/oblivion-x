@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 343,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 416,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 382,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 518,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 496,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 686,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 957,
+      "t_ms": 1147,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,7 +46,27 @@
     },
     {
       "id": 5,
-      "t_ms": 1170,
+      "t_ms": 1374,
+      "source": "dynamic",
+      "behavior": "http_download",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 6,
+      "t_ms": 2341,
+      "source": "dynamic",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 7,
+      "t_ms": 2859,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "valyria_dual:outlook_access",
@@ -61,6 +81,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.08320808410644531
+    "analysis_time_ms": 0.07700920104980469
   }
 }

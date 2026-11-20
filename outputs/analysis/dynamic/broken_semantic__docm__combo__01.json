@@ -7,7 +7,7 @@
     {
       "id": 1,
       "t_ms": 456,
-      "source": "dynamic",
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -17,8 +17,8 @@
     {
       "id": 2,
       "t_ms": 509,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -40,6 +40,6 @@
     "failure": "dynamic_semantic",
     "interaction_handled": true,
     "error_detail": "Sub or Function not defined",
-    "analysis_time_ms": 0.07295608520507812
+    "analysis_time_ms": 0.06747245788574219
   }
 }

@@ -7,7 +7,8 @@
         3
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 809
     },
     {
       "stage": "defense_evasion",
@@ -17,7 +18,8 @@
         5
       ],
       "confidence": 0.95,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 809
     },
     {
       "stage": "c2_download",
@@ -25,7 +27,8 @@
         2
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 509
     }
   ],
   "behaviors": [

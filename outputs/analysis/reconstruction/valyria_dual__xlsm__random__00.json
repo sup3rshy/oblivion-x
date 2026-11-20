@@ -7,26 +7,30 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1014
     },
     {
       "stage": "c2_download",
       "evidence": [
-        2
+        5,
+        6
       ],
-      "confidence": 0.85,
-      "note": ""
+      "confidence": 0.99,
+      "note": "",
+      "first_seen_ms": 1658
     },
     {
       "stage": "exfiltration",
       "evidence": [
-        5,
+        7,
         4,
         5,
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1014
     }
   ],
   "behaviors": [
@@ -42,16 +46,16 @@
     {
       "behavior": "http_download",
       "evidence": [
-        2
+        5
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "XMLHTTP"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "http://127.0.0.1:9090/payload.exe"
     },
     {
       "behavior": "outlook_access",
       "evidence": [
-        5
+        7
       ],
       "confidence": 0.99,
       "supported": true,
@@ -67,6 +71,15 @@
       "confidence": 0.85,
       "supported": false,
       "obj": ".Send"
+    },
+    {
+      "behavior": "url_reference",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "http://127.0.0.1:9090/payload.exe"
     }
   ],
   "chain": "delivery -> c2_download -> exfiltration",

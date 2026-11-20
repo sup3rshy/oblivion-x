@@ -7,7 +7,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1119
     },
     {
       "stage": "defense_evasion",
@@ -15,29 +16,28 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1354
     },
     {
       "stage": "execution",
       "evidence": [
-        2,
-        3,
-        6,
-        7,
-        8,
         9,
-        10
+        7,
+        8
       ],
-      "confidence": 0.85,
-      "note": ""
+      "confidence": 0.99,
+      "note": "",
+      "first_seen_ms": 1557
     },
     {
       "stage": "exfiltration",
       "evidence": [
-        7
+        10
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3925
     },
     {
       "stage": "impact",
@@ -46,7 +46,8 @@
         5
       ],
       "confidence": 0.85,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 739
     }
   ],
   "behaviors": [
@@ -62,20 +63,20 @@
     {
       "behavior": "shell_run",
       "evidence": [
-        2
+        9
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Shell \""
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ..."
     },
     {
       "behavior": "cmd_run",
       "evidence": [
-        3
+        7
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "cmd /c"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "cmd /c ..."
     },
     {
       "behavior": "file_write",
@@ -90,20 +91,16 @@
     {
       "behavior": "env_read",
       "evidence": [
-        6,
-        7,
-        8,
-        9,
-        10
+        8
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Environ("
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
     },
     {
       "behavior": "ftp_upload",
       "evidence": [
-        7
+        10
       ],
       "confidence": 0.99,
       "supported": true,
@@ -116,7 +113,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "marker_ftp:string_concat"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> exfiltration -> impact",

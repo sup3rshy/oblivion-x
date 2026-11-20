@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 382,
-      "source": "dynamic",
+      "t_ms": 365,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 408,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 478,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 530,
-      "source": "dynamic",
+      "t_ms": 577,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 789,
+      "t_ms": 836,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,47 +46,47 @@
     },
     {
       "id": 5,
-      "t_ms": 1000,
+      "t_ms": 1681,
       "source": "dynamic",
-      "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "behavior": "base64_encode",
+      "obj": "benign_report:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1223,
+      "t_ms": 2576,
       "source": "dynamic",
       "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "obj": "benign_report:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1298,
+      "t_ms": 2877,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "dead_code",
+      "obj": "benign_report:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 8,
-      "t_ms": 1395,
+      "t_ms": 3265,
       "source": "dynamic",
-      "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "behavior": "string_concat",
+      "obj": "benign_report:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 9,
-      "t_ms": 1989,
+      "t_ms": 3859,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_report:data_copy",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 2154,
+      "t_ms": 4024,
       "source": "dynamic",
       "behavior": "print_document",
       "obj": "benign_report:print_document",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 2641,
+      "t_ms": 4511,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_report:save_as_pdf",
@@ -119,7 +119,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 2641,
-    "analysis_time_ms": 0.2734661102294922
+    "duration_ms": 4511,
+    "analysis_time_ms": 0.10991096496582031
   }
 }

@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 296,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 208,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 369,
-      "source": "dynamic",
+      "t_ms": 259,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 552,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 306,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 598,
-      "source": "dynamic",
+      "t_ms": 329,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 922,
+      "t_ms": 653,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,17 +56,37 @@
     },
     {
       "id": 6,
-      "t_ms": 1199,
+      "t_ms": 1761,
       "source": "dynamic",
       "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "obj": "valyria_dual:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1673,
+      "t_ms": 2510,
+      "source": "dynamic",
+      "behavior": "http_download",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 3203,
+      "source": "dynamic",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 3565,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "valyria_dual:outlook_access",
@@ -81,6 +101,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.09679794311523438
+    "analysis_time_ms": 0.08511543273925781
   }
 }

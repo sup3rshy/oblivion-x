@@ -7,8 +7,8 @@
     {
       "id": 1,
       "t_ms": 452,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -17,8 +17,8 @@
     {
       "id": 2,
       "t_ms": 510,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -27,8 +27,8 @@
     {
       "id": 3,
       "t_ms": 690,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -160,6 +160,6 @@
     "failure": null,
     "interaction_handled": true,
     "duration_ms": 9426,
-    "analysis_time_ms": 0.110626220703125
+    "analysis_time_ms": 0.0820159912109375
   }
 }

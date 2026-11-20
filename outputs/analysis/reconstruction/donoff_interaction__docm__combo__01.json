@@ -7,20 +7,22 @@
         3
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1019
     },
     {
       "stage": "defense_evasion",
       "evidence": [
         4,
         9,
-        5,
-        6,
         8,
-        7
+        6,
+        7,
+        5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1395
     },
     {
       "stage": "execution",
@@ -30,7 +32,8 @@
         11
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 6154
     },
     {
       "stage": "c2_download",
@@ -40,7 +43,8 @@
         17
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 8672
     },
     {
       "stage": "impact",
@@ -50,7 +54,8 @@
         16
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 9987
     }
   ],
   "behaviors": [
@@ -140,11 +145,11 @@
     {
       "behavior": "string_concat",
       "evidence": [
-        5
+        8
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "donoff_interaction:string_concat"
     },
     {
       "behavior": "chr_encode",
@@ -153,25 +158,25 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+      "obj": "donoff_interaction:chr_encode"
     },
     {
       "behavior": "dead_code",
-      "evidence": [
-        8
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
-    },
-    {
-      "behavior": "base64_encode",
       "evidence": [
         7
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "donoff_interaction:dead_code"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "donoff_interaction:base64_encode"
     },
     {
       "behavior": "file_write",

@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 330,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 448,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 497,
-      "source": "dynamic",
+      "t_ms": 620,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 658,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 684,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 932,
+      "t_ms": 958,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,27 +46,27 @@
     },
     {
       "id": 5,
-      "t_ms": 1132,
+      "t_ms": 1758,
       "source": "dynamic",
-      "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "behavior": "base64_encode",
+      "obj": "benign_report:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1205,
+      "t_ms": 2050,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "chr_encode",
+      "obj": "benign_report:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1587,
+      "t_ms": 2432,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_report:data_copy",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 1808,
+      "t_ms": 2653,
       "source": "dynamic",
       "behavior": "print_document",
       "obj": "benign_report:print_document",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 2357,
+      "t_ms": 3202,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_report:save_as_pdf",
@@ -99,7 +99,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 2357,
-    "analysis_time_ms": 0.09632110595703125
+    "duration_ms": 3202,
+    "analysis_time_ms": 0.21314620971679688
   }
 }

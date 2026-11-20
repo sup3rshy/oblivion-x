@@ -7,17 +7,19 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1205
     },
     {
       "stage": "defense_evasion",
       "evidence": [
         8,
-        6,
-        7
+        7,
+        6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2223
     },
     {
       "stage": "execution",
@@ -27,7 +29,8 @@
         9
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3730
     },
     {
       "stage": "c2_download",
@@ -37,7 +40,8 @@
         16
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 6552
     },
     {
       "stage": "impact",
@@ -47,7 +51,8 @@
         15
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 8228
     }
   ],
   "behaviors": [
@@ -128,20 +133,20 @@
     {
       "behavior": "chr_encode",
       "evidence": [
-        6
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
-    },
-    {
-      "behavior": "base64_encode",
-      "evidence": [
         7
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "donoff_downloader:chr_encode"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "donoff_downloader:base64_encode"
     },
     {
       "behavior": "file_write",

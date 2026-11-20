@@ -7,16 +7,18 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 715
     },
     {
       "stage": "defense_evasion",
       "evidence": [
-        5,
-        6
+        6,
+        5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1355
     },
     {
       "stage": "execution",
@@ -24,7 +26,8 @@
         7
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2719
     },
     {
       "stage": "c2_download",
@@ -32,7 +35,8 @@
         7
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2719
     },
     {
       "stage": "persistence",
@@ -41,7 +45,8 @@
         8
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3008
     },
     {
       "stage": "impact",
@@ -49,7 +54,8 @@
         10
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 4534
     }
   ],
   "behaviors": [
@@ -110,20 +116,20 @@
     {
       "behavior": "chr_encode",
       "evidence": [
-        5
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
-    },
-    {
-      "behavior": "base64_encode",
-      "evidence": [
         6
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "laroux_replicator:chr_encode"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "laroux_replicator:base64_encode"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> c2_download -> persistence -> impact",

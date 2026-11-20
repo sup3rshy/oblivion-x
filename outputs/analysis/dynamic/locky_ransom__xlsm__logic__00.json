@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 448,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 521,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 572,
-      "source": "dynamic",
+      "t_ms": 620,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -26,18 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 653,
-      "source": "dynamic",
-      "behavior": "registry_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 4,
-      "t_ms": 742,
-      "source": "dynamic",
+      "t_ms": 781,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -45,8 +35,18 @@
       "evidence": "sim"
     },
     {
+      "id": 4,
+      "t_ms": 821,
+      "source": "os",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 5,
-      "t_ms": 1143,
+      "t_ms": 1222,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,17 +56,17 @@
     },
     {
       "id": 6,
-      "t_ms": 1273,
+      "t_ms": 1744,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "locky_ransom:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1632,
+      "t_ms": 2103,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 2202,
+      "t_ms": 2673,
       "source": "dynamic",
       "behavior": "registry_write",
       "obj": "HKCU\\...\\Run\\oblivionx",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 2476,
+      "t_ms": 2947,
       "source": "dynamic",
       "behavior": "file_encrypt",
       "obj": "xor-crypt(%TEMP%\\oblivionx_vault\\secret.txt)",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 3202,
+      "t_ms": 3673,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -109,7 +109,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 3202,
-    "analysis_time_ms": 0.09632110595703125
+    "duration_ms": 3673,
+    "analysis_time_ms": 0.07295608520507812
   }
 }

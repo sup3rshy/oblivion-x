@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 547,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 617,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 665,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 817,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "t_ms": 1025,
+      "t_ms": 1177,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1466,
+      "t_ms": 1618,
       "source": "dynamic",
       "behavior": "msgbox_gate",
       "obj": "Enable content?",
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 2512,
+      "t_ms": 2664,
       "source": "dynamic",
       "behavior": "window_hide",
       "obj": "donoff_interaction:window_hide",
@@ -56,7 +56,7 @@
     },
     {
       "id": 6,
-      "t_ms": 3136,
+      "t_ms": 3288,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 4283,
+      "t_ms": 4435,
       "source": "dynamic",
       "behavior": "powershell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command ...",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 4993,
+      "t_ms": 5145,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 5951,
+      "t_ms": 6103,
       "source": "dynamic",
       "behavior": "http_download",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 6160,
+      "t_ms": 6312,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 7077,
+      "t_ms": 7229,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -116,7 +116,7 @@
     },
     {
       "id": 12,
-      "t_ms": 7640,
+      "t_ms": 7792,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -126,7 +126,7 @@
     },
     {
       "id": 13,
-      "t_ms": 8200,
+      "t_ms": 8352,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -136,7 +136,7 @@
     },
     {
       "id": 14,
-      "t_ms": 9573,
+      "t_ms": 9725,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -149,7 +149,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 9573,
-    "analysis_time_ms": 0.1125335693359375
+    "duration_ms": 9725,
+    "analysis_time_ms": 0.09298324584960938
   }
 }

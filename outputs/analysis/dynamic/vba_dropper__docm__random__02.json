@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 509,
-      "source": "dynamic",
+      "t_ms": 516,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -16,18 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 631,
-      "source": "dynamic",
-      "behavior": "registry_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 3,
-      "t_ms": 677,
-      "source": "dynamic",
+      "t_ms": 706,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -35,9 +25,19 @@
       "evidence": "sim"
     },
     {
+      "id": 3,
+      "t_ms": 814,
+      "source": "os",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 4,
-      "t_ms": 873,
-      "source": "dynamic",
+      "t_ms": 1012,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1126,
+      "t_ms": 1265,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,7 +56,7 @@
     },
     {
       "id": 6,
-      "t_ms": 2259,
+      "t_ms": 2398,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 3235,
+      "t_ms": 3374,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 4218,
+      "t_ms": 4357,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 4834,
+      "t_ms": 4973,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 5952,
+      "t_ms": 6091,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -109,7 +109,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 5952,
-    "analysis_time_ms": 0.1251697540283203
+    "duration_ms": 6091,
+    "analysis_time_ms": 0.08082389831542969
   }
 }

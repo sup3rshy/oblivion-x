@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 468,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 580,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 594,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 604,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 723,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 733,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 867,
-      "source": "dynamic",
+      "t_ms": 877,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1249,
+      "t_ms": 1229,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,17 +56,37 @@
     },
     {
       "id": 6,
-      "t_ms": 1375,
+      "t_ms": 2035,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "valyria_dual:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1878,
+      "t_ms": 2305,
+      "source": "dynamic",
+      "behavior": "http_download",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 8,
+      "t_ms": 3493,
+      "source": "dynamic",
+      "behavior": "url_reference",
+      "obj": "http://127.0.0.1:9090/payload.exe",
+      "args": {},
+      "confidence": 0.99,
+      "evidence": "sim"
+    },
+    {
+      "id": 9,
+      "t_ms": 4010,
       "source": "dynamic",
       "behavior": "outlook_access",
       "obj": "valyria_dual:outlook_access",
@@ -81,6 +101,6 @@
     "interaction_handled": true,
     "note": "missing environment dependency: outlook",
     "missing_dependency": "outlook",
-    "analysis_time_ms": 0.13113021850585938
+    "analysis_time_ms": 0.06103515625
   }
 }

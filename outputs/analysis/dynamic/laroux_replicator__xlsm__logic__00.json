@@ -6,28 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 360,
-      "source": "dynamic",
-      "behavior": "file_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 2,
-      "t_ms": 527,
-      "source": "dynamic",
-      "behavior": "file_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 3,
-      "t_ms": 581,
-      "source": "dynamic",
+      "t_ms": 257,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -35,8 +15,28 @@
       "evidence": "sim"
     },
     {
+      "id": 2,
+      "t_ms": 319,
+      "source": "os",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 495,
+      "source": "os",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 4,
-      "t_ms": 785,
+      "t_ms": 699,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,17 +46,17 @@
     },
     {
       "id": 5,
-      "t_ms": 941,
+      "t_ms": 1326,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "laroux_replicator:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 2050,
+      "t_ms": 2435,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 2264,
+      "t_ms": 2649,
       "source": "dynamic",
       "behavior": "office_template_infect",
       "obj": "SaveCopyAs XLSTART\\oblivionx_infected.xlsm",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 2752,
+      "t_ms": 3137,
       "source": "dynamic",
       "behavior": "startup_write",
       "obj": "laroux_replicator:startup_write",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 3763,
+      "t_ms": 4148,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -99,7 +99,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 3763,
-    "analysis_time_ms": 0.10371208190917969
+    "duration_ms": 4148,
+    "analysis_time_ms": 0.07867813110351562
   }
 }

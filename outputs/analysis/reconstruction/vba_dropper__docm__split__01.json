@@ -7,7 +7,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1103
     },
     {
       "stage": "defense_evasion",
@@ -15,7 +16,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1873
     },
     {
       "stage": "execution",
@@ -24,7 +26,8 @@
         7
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2350
     },
     {
       "stage": "impact",
@@ -34,7 +37,8 @@
         11
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3549
     }
   ],
   "behaviors": [
@@ -81,7 +85,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "vba_dropper:string_concat"
     },
     {
       "behavior": "file_execute",

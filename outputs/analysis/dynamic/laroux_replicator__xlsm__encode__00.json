@@ -6,18 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 480,
-      "source": "dynamic",
-      "behavior": "env_read",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 2,
-      "t_ms": 607,
-      "source": "dynamic",
+      "t_ms": 475,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -25,9 +15,9 @@
       "evidence": "sim"
     },
     {
-      "id": 3,
-      "t_ms": 805,
-      "source": "dynamic",
+      "id": 2,
+      "t_ms": 670,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -35,9 +25,19 @@
       "evidence": "sim"
     },
     {
+      "id": 3,
+      "t_ms": 800,
+      "source": "os",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 4,
-      "t_ms": 916,
-      "source": "dynamic",
+      "t_ms": 936,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1118,
+      "t_ms": 1138,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,27 +56,27 @@
     },
     {
       "id": 6,
-      "t_ms": 1171,
+      "t_ms": 1352,
       "source": "dynamic",
-      "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "behavior": "base64_encode",
+      "obj": "laroux_replicator:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1249,
+      "t_ms": 1664,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "chr_encode",
+      "obj": "laroux_replicator:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 8,
-      "t_ms": 2175,
+      "t_ms": 2590,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 2835,
+      "t_ms": 3250,
       "source": "dynamic",
       "behavior": "office_template_infect",
       "obj": "SaveCopyAs XLSTART\\oblivionx_infected.xlsm",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 3163,
+      "t_ms": 3578,
       "source": "dynamic",
       "behavior": "startup_write",
       "obj": "laroux_replicator:startup_write",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 4190,
+      "t_ms": 4605,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -119,7 +119,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 4190,
-    "analysis_time_ms": 0.12087821960449219
+    "duration_ms": 4605,
+    "analysis_time_ms": 0.06318092346191406
   }
 }

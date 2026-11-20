@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 635,
-      "source": "dynamic",
+      "t_ms": 683,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 671,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 785,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 714,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 956,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 819,
-      "source": "dynamic",
+      "t_ms": 1085,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1258,
+      "t_ms": 1524,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -61,6 +61,6 @@
     "interaction_handled": true,
     "note": "busy loop exceeded analysis time limit",
     "duration_ms": 120000,
-    "analysis_time_ms": 0.07581710815429688
+    "analysis_time_ms": 0.041484832763671875
   }
 }

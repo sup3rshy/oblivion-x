@@ -7,7 +7,8 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1084
     },
     {
       "stage": "defense_evasion",
@@ -17,7 +18,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1778
     },
     {
       "stage": "execution",
@@ -27,7 +29,8 @@
         9
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 4745
     },
     {
       "stage": "c2_download",
@@ -37,7 +40,8 @@
         15
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 7697
     },
     {
       "stage": "impact",
@@ -47,7 +51,8 @@
         14
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 9136
     }
   ],
   "behaviors": [
@@ -141,7 +146,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "donoff_interaction:string_concat"
     },
     {
       "behavior": "file_write",

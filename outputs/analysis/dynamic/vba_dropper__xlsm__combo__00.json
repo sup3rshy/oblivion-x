@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 340,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 249,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 465,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 313,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 570,
-      "source": "dynamic",
+      "t_ms": 438,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 651,
-      "source": "dynamic",
+      "t_ms": 543,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1014,
+      "t_ms": 866,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,47 +56,47 @@
     },
     {
       "id": 6,
-      "t_ms": 1302,
+      "t_ms": 2026,
       "source": "dynamic",
-      "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "behavior": "base64_encode",
+      "obj": "vba_dropper:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1513,
+      "t_ms": 2553,
       "source": "dynamic",
       "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "obj": "vba_dropper:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 8,
-      "t_ms": 1809,
+      "t_ms": 3706,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "dead_code",
+      "obj": "vba_dropper:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 9,
-      "t_ms": 2045,
+      "t_ms": 4550,
       "source": "dynamic",
-      "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "behavior": "string_concat",
+      "obj": "vba_dropper:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 10,
-      "t_ms": 2367,
+      "t_ms": 5737,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 2643,
+      "t_ms": 6684,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -116,7 +116,7 @@
     },
     {
       "id": 12,
-      "t_ms": 3477,
+      "t_ms": 7006,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -126,7 +126,7 @@
     },
     {
       "id": 13,
-      "t_ms": 4220,
+      "t_ms": 7282,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -136,7 +136,7 @@
     },
     {
       "id": 14,
-      "t_ms": 5197,
+      "t_ms": 8768,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -149,7 +149,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 5197,
-    "analysis_time_ms": 0.11777877807617188
+    "duration_ms": 8768,
+    "analysis_time_ms": 0.08678436279296875
   }
 }

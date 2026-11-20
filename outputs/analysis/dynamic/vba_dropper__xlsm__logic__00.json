@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 429,
-      "source": "dynamic",
+      "t_ms": 425,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 544,
-      "source": "dynamic",
+      "t_ms": 540,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 742,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 738,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1110,
+      "t_ms": 951,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,17 +46,17 @@
     },
     {
       "id": 5,
-      "t_ms": 1314,
+      "t_ms": 1411,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "vba_dropper:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 2400,
+      "t_ms": 2486,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 2626,
+      "t_ms": 3229,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 3086,
+      "t_ms": 3819,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 4161,
+      "t_ms": 4066,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 5647,
+      "t_ms": 4639,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -109,7 +109,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 5647,
-    "analysis_time_ms": 0.12183189392089844
+    "duration_ms": 4639,
+    "analysis_time_ms": 0.07796287536621094
   }
 }

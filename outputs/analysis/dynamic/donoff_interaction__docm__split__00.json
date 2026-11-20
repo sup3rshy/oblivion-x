@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 425,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 315,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 619,
-      "source": "dynamic",
+      "t_ms": 463,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 751,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 663,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1172,
+      "t_ms": 1084,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1866,
+      "t_ms": 1778,
       "source": "dynamic",
       "behavior": "msgbox_gate",
       "obj": "Enable content?",
@@ -56,17 +56,17 @@
     },
     {
       "id": 6,
-      "t_ms": 2156,
+      "t_ms": 2941,
       "source": "dynamic",
       "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "obj": "donoff_interaction:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 2764,
+      "t_ms": 3549,
       "source": "dynamic",
       "behavior": "window_hide",
       "obj": "donoff_interaction:window_hide",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 3960,
+      "t_ms": 4745,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 5092,
+      "t_ms": 5877,
       "source": "dynamic",
       "behavior": "powershell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command ...",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 6173,
+      "t_ms": 6958,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 6912,
+      "t_ms": 7697,
       "source": "dynamic",
       "behavior": "http_download",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -116,7 +116,7 @@
     },
     {
       "id": 12,
-      "t_ms": 7779,
+      "t_ms": 8564,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -126,7 +126,7 @@
     },
     {
       "id": 13,
-      "t_ms": 8351,
+      "t_ms": 9136,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -136,7 +136,7 @@
     },
     {
       "id": 14,
-      "t_ms": 8802,
+      "t_ms": 9587,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -146,7 +146,7 @@
     },
     {
       "id": 15,
-      "t_ms": 9971,
+      "t_ms": 10756,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -156,7 +156,7 @@
     },
     {
       "id": 16,
-      "t_ms": 10989,
+      "t_ms": 11774,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -169,7 +169,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 10989,
-    "analysis_time_ms": 0.13828277587890625
+    "duration_ms": 11774,
+    "analysis_time_ms": 0.10347366333007812
   }
 }

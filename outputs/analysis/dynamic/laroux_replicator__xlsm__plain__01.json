@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 558,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 529,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 640,
-      "source": "dynamic",
+      "t_ms": 608,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 755,
-      "source": "dynamic",
+      "t_ms": 690,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 887,
-      "source": "dynamic",
+      "t_ms": 805,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1375,
+      "t_ms": 1230,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,7 +56,7 @@
     },
     {
       "id": 6,
-      "t_ms": 1844,
+      "t_ms": 2423,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 2163,
+      "t_ms": 3274,
       "source": "dynamic",
       "behavior": "office_template_infect",
       "obj": "SaveCopyAs XLSTART\\oblivionx_infected.xlsm",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 3003,
+      "t_ms": 4326,
       "source": "dynamic",
       "behavior": "startup_write",
       "obj": "laroux_replicator:startup_write",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 4000,
+      "t_ms": 5103,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -99,7 +99,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 4000,
-    "analysis_time_ms": 0.15664100646972656
+    "duration_ms": 5103,
+    "analysis_time_ms": 0.0705718994140625
   }
 }

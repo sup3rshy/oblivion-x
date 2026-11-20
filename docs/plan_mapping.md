@@ -22,13 +22,14 @@ stages separate in time.
 
 | RQ | Question | Experiment | Result |
 |---|---|---|---|
-| RQ1 | How many behaviors does the system reconstruct vs ground truth? | E6 | behavior recall **0.987** (1.000 on completed runs) |
-| RQ2 | What do static and dynamic analysis each miss? | E2 | static recall **0.905**, dynamic **0.777**, view Jaccard **0.602** |
-| RQ3 | Does temporal segmentation separate attack stages? | E4 | boundary F1 **0.636** at N=5, purity **0.929** at N=10 |
+| RQ1 | How many behaviors does the system reconstruct vs ground truth? | E6 | behavior recall **0.990** (1.000 on completed runs) |
+| RQ2 | What do static and dynamic analysis each miss? | E2 | static recall **0.905**, dynamic **0.837**, view Jaccard **0.643** |
+| RQ3 | Does temporal segmentation separate attack stages? | E4 | boundary F1 **0.629** at N=5, purity **0.922** at N=10; permutation null mean z **0.91** |
 | RQ4 | How much does obfuscation reduce observability? | E3 | static recall 0.879–0.926 across variants; detection precision 1.0 |
-| RQ5 | Can the attack chain be reconstructed from evidence instead of a label? | E6 | stage accuracy **0.963**, evidence precision **1.000**, chain built from event IDs |
+| RQ5 | Can the attack chain be reconstructed from evidence instead of a label? | E6, E9 | stage accuracy **0.963** (ontology order) / **0.854** (evidence order), evidence precision **1.000** |
+| RQ5 (support) | Can an analyst anticipate which stages will be unobservable? | E10 | AUC **0.669** out of family; shared mechanisms predict, unique mechanisms do not |
 
-## 4. Mandatory experiments E1–E8
+## 4. Mandatory experiments E1–E10
 
 | ID | Experiment | Driver | Output |
 |---|---|---|---|
@@ -40,6 +41,8 @@ stages separate in time.
 | E6 | Stage reconstruction | `experiment_E6` | `E6_reconstruction.json` |
 | E7 | Failure analysis | `experiment_E7` | `E7_failures.json` |
 | E8 | Performance / resource | `experiment_E8` | `E8_performance.json` |
+| E9 | Chain-order ablation (extension) | `experiment_E9` | `E9_chain_order.json` |
+| E10 | Completion calibration (extension) | `experiment_E10` | `E10_completion_calibration.json` |
 
 Run with `./.venv/bin/python -m oblivionx eval all`. The markdown report is
 `outputs/report.md` (regenerate with `./.venv/bin/python -m oblivionx report`).
@@ -48,14 +51,14 @@ Run with `./.venv/bin/python -m oblivionx eval all`. The markdown report is
 
 | # | Metric | Definition in code | Value (all / completed runs) |
 |---|---|---|---|
-| 1 | Behavior Recall | `metrics.py:evaluate_sample` | 0.987 / 1.000 |
+| 1 | Behavior Recall | `metrics.py:evaluate_sample` | 0.990 / 1.000 |
 | 2 | Evidence Precision | claims with ≥1 event / claims | 1.000 / 1.000 |
 | 3 | Stage accuracy | LCS F1 of ordered stage chain | 0.963 / 0.964 |
 | 4 | Analysis completion rate | not timeout/crash | 0.952 / 1.000 |
 | 5 | Timeout rate | `dynamic_timeout` | 0.048 / 0.000 |
 | 6 | Deobfuscation success | hidden literal recovered (split/encode/combo) | 0.967 / 1.000 |
-| 7 | Analysis time/sample | static + telemetry ms | 21.0 ms mean, p95 26.1 ms |
-| 8 | Unsupported behavior claim rate | claims without direct evidence | 0.220 / 0.031 |
+| 7 | Analysis time/sample | static + telemetry ms | 2.4 ms mean, p95 3.7 ms (warm cache) |
+| 8 | Unsupported behavior claim rate | claims without direct evidence | 0.151 / 0.031 |
 
 Two auxiliary rates are reported alongside: **behavior precision** (0.968)
 and **execution success** (0.571 — the macro ran without an environment/date/
@@ -68,7 +71,7 @@ interaction gate).
 | 1. Office/macro corpus | 378 safe samples, 14 families (docm/xlsm where applicable) × 6 variants × 3 seeds | `corpus/` + `scripts/build_corpus_windows.ps1` |
 | 2. Oblivion reproduction | pre-processing taxonomy, static extraction/deobfuscation | `static/`, E1 |
 | 3. Telemetry + temporal segmentation | normalized event schema, Bon-APT segmentation | `telemetry/`, `simulate/` |
-| 4. Reconstruction / evaluation / error analysis | stage chain, 8 metrics, E1–E8 | `reconstruction/`, `eval/` |
+| 4. Reconstruction / evaluation / error analysis | stage chain, 8 metrics, E1–E10 | `reconstruction/`, `eval/` |
 
 ## 7. Eleven-week schedule
 
@@ -114,6 +117,13 @@ interaction gate).
   statements", which includes the `empty_macro` family only.
 - Stage accuracy uses an order-preserving LCS F1, not exact positional
   equality, because a missed middle stage should not zero the whole chain.
+- E9 shows that ontology ordering accounts for ~0.11 of the E6 stage
+  accuracy; the evidence-ordered score (0.854) is the defensible RQ5 number.
+- E10 is a negative result by design: completion prediction on static
+  features reaches AUC 0.669 out of family and is only reliable for failure
+  mechanisms shared across families. Unique gates (FTP, date, timeout,
+  semantic error) regress to the base rate, so the unsupported-claim rate
+  must be measured, not predicted.
 
 ## 10. Reproducibility and engineering quality
 

@@ -108,13 +108,36 @@ def test_short_timeout_budget():
     sample = simulate_sample("s", gt, "donoff_downloader", "plain", "docm",
                              timeout_ms=10)
     assert sample.meta["failure"] == "dynamic_timeout"
-    assert sample.events == []
+    # Nothing macro-related is observed, but OS-level startup noise may
+    # precede the macro and is recorded (never above the claim threshold).
+    assert all(event.source == "os" for event in sample.events)
+    assert [event for event in sample.events if event.confidence >= 0.5] == []
 
 
-def test_obfuscation_behaviors_are_replayed():
+def test_startup_noise_is_os_level_and_never_a_claim():
     gt = _gt("donoff_downloader")
-    gt["behaviors"] = gt["behaviors"] + ["string_concat", "chr_encode",
-                                         "dead_code"]
-    sample = simulate_sample("s", gt, "donoff_downloader", "combo", "docm")
-    behaviors = {event.behavior for event in sample.events}
-    assert {"string_concat", "chr_encode", "dead_code"} <= behaviors
+    sample = simulate_sample("s", gt, "donoff_downloader", "plain", "docm")
+    noise = [e for e in sample.events if e.obj == "startup-noise"]
+    assert noise, "the simulator always injects some startup noise"
+    assert all(e.source == "os" for e in noise)
+    assert all(e.confidence < 0.5 for e in noise)
+
+
+def test_missing_dependency_attempt_happens_at_the_exfiltration_stage():
+    gt = _gt("metacol_mailer")
+    sample = simulate_sample("s", gt, "metacol_mailer", "plain", "docm",
+                             env_available={"outlook": False})
+    claimed = [e for e in sample.events if e.confidence >= 0.5]
+    # entry point comes first, the failed Outlook attempt after it
+    assert claimed[0].behavior == "macro_entry"
+    assert claimed[-1].behavior == "outlook_access"
+    assert sample.events.index(claimed[0]) < sample.events.index(claimed[-1])
+
+
+def test_obfuscation_behaviors_are_replayed_after_the_entry_point():
+    gt = _gt("laroux_replicator")
+    gt["behaviors"] = gt["behaviors"] + ["string_concat", "chr_encode"]
+    sample = simulate_sample("s", gt, "laroux_replicator", "combo", "docm")
+    claimed = [e for e in sample.events if e.confidence >= 0.5]
+    assert claimed[0].behavior == "macro_entry"
+    assert {"string_concat", "chr_encode"} <= {e.behavior for e in claimed}

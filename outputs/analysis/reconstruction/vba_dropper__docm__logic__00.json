@@ -7,7 +7,8 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1065
     },
     {
       "stage": "defense_evasion",
@@ -15,7 +16,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1653
     },
     {
       "stage": "execution",
@@ -24,7 +26,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1981
     },
     {
       "stage": "impact",
@@ -34,7 +37,8 @@
         10
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3994
     }
   ],
   "behaviors": [
@@ -81,7 +85,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
+      "obj": "vba_dropper:dead_code"
     },
     {
       "behavior": "file_execute",

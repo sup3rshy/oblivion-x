@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 601,
-      "source": "dynamic",
+      "t_ms": 586,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 696,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 644,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 798,
-      "source": "dynamic",
+      "t_ms": 739,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 968,
-      "source": "dynamic",
+      "t_ms": 841,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1248,
+      "t_ms": 1121,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,17 +56,17 @@
     },
     {
       "id": 6,
-      "t_ms": 1451,
+      "t_ms": 1933,
       "source": "dynamic",
       "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "obj": "vba_dropper:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 2294,
+      "t_ms": 2776,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 2511,
+      "t_ms": 2993,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 2862,
+      "t_ms": 3344,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 3698,
+      "t_ms": 4180,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 5144,
+      "t_ms": 5626,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -119,7 +119,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 5144,
-    "analysis_time_ms": 0.10466575622558594
+    "duration_ms": 5626,
+    "analysis_time_ms": 0.051975250244140625
   }
 }

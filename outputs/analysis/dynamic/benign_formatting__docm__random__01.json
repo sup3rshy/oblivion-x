@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 243,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 272,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 285,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 356,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 435,
-      "source": "dynamic",
+      "t_ms": 398,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 771,
+      "t_ms": 859,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1004,
+      "t_ms": 1415,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_formatting:data_copy",
@@ -56,7 +56,7 @@
     },
     {
       "id": 6,
-      "t_ms": 1255,
+      "t_ms": 1701,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_formatting:save_as_pdf",
@@ -69,7 +69,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 1255,
-    "analysis_time_ms": 0.08749961853027344
+    "duration_ms": 1701,
+    "analysis_time_ms": 0.05507469177246094
   }
 }

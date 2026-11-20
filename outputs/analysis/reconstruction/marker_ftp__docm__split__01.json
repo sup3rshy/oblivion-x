@@ -7,7 +7,8 @@
         3
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 904
     },
     {
       "stage": "defense_evasion",
@@ -15,29 +16,28 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1639
     },
     {
       "stage": "execution",
       "evidence": [
-        2,
-        3,
         7,
-        8,
-        9,
-        10,
-        11
+        5,
+        6
       ],
-      "confidence": 0.85,
-      "note": ""
+      "confidence": 0.99,
+      "note": "",
+      "first_seen_ms": 2380
     },
     {
       "stage": "exfiltration",
       "evidence": [
-        5
+        8
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 4390
     },
     {
       "stage": "impact",
@@ -46,7 +46,8 @@
         6
       ],
       "confidence": 0.85,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2380
     }
   ],
   "behaviors": [
@@ -62,25 +63,25 @@
     {
       "behavior": "shell_run",
       "evidence": [
-        2
+        7
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Shell \""
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ..."
     },
     {
       "behavior": "cmd_run",
       "evidence": [
-        3
+        5
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "cmd /c"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "cmd /c ..."
     },
     {
       "behavior": "ftp_upload",
       "evidence": [
-        5
+        8
       ],
       "confidence": 0.99,
       "supported": true,
@@ -99,15 +100,11 @@
     {
       "behavior": "env_read",
       "evidence": [
-        7,
-        8,
-        9,
-        10,
-        11
+        6
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Environ("
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
     },
     {
       "behavior": "string_concat",
@@ -116,7 +113,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "marker_ftp:string_concat"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> exfiltration -> impact",

@@ -7,7 +7,8 @@
         3
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 704
     },
     {
       "stage": "defense_evasion",
@@ -15,7 +16,8 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1803
     },
     {
       "stage": "execution",
@@ -23,7 +25,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2025
     },
     {
       "stage": "persistence",
@@ -31,7 +34,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3183
     },
     {
       "stage": "impact",
@@ -40,7 +44,8 @@
         7
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3980
     }
   ],
   "behaviors": [
@@ -96,7 +101,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "locky_ransom:string_concat"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> persistence -> impact",

@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 527,
-      "source": "dynamic",
+      "t_ms": 536,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 624,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 598,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "t_ms": 1057,
+      "t_ms": 1031,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,17 +36,17 @@
     },
     {
       "id": 4,
-      "t_ms": 1281,
+      "t_ms": 1928,
       "source": "dynamic",
       "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "obj": "vba_dropper:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 5,
-      "t_ms": 1900,
+      "t_ms": 2547,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -56,7 +56,7 @@
     },
     {
       "id": 6,
-      "t_ms": 2423,
+      "t_ms": 3070,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 3505,
+      "t_ms": 4152,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 3726,
+      "t_ms": 4373,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 4288,
+      "t_ms": 4935,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -99,7 +99,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 4288,
-    "analysis_time_ms": 0.125885009765625
+    "duration_ms": 4935,
+    "analysis_time_ms": 0.0667572021484375
   }
 }

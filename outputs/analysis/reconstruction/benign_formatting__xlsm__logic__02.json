@@ -7,7 +7,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 743
     },
     {
       "stage": "defense_evasion",
@@ -15,7 +16,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 949
     }
   ],
   "behaviors": [
@@ -53,7 +55,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
+      "obj": "benign_formatting:dead_code"
     }
   ],
   "chain": "delivery -> defense_evasion",

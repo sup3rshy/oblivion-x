@@ -1,4 +1,4 @@
-"""Markdown report + figures generated from the E1-E8 JSON artifacts."""
+"""Markdown report + figures generated from the E1-E9 JSON artifacts."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -204,6 +204,29 @@ def write_figures(eval_dir: Path, fig_dir: Path) -> List[Path]:
              p, "ms", ylim=0)
         save(p)
 
+    # E10
+    e10_path = eval_dir / "E10_completion_calibration.json"
+    if e10_path.exists():
+        e10 = read_json(e10_path)
+        rel = e10.get("reliability", [])
+        if rel:
+            p = fig_dir / "E10_reliability.png"
+            plt.figure(figsize=(4.5, 4.5))
+            plt.plot([0, 1], [0, 1], "--", color="grey", linewidth=1,
+                     label="perfect calibration")
+            plt.plot([r["mean_predicted"] for r in rel],
+                     [r["observed_rate"] for r in rel], "o-",
+                     label="leave-one-family-out")
+            plt.xlabel("predicted completion probability")
+            plt.ylabel("observed completion rate")
+            plt.title("E10: reliability of completion prediction")
+            plt.ylim(-0.05, 1.05)
+            plt.legend(fontsize=8)
+            plt.tight_layout()
+            plt.savefig(p, dpi=120)
+            plt.close()
+            save(p)
+
     return written
 
 
@@ -320,19 +343,40 @@ def write_markdown_report(eval_dir: Path, out_path: Path,
     xs = sorted(by_n, key=int)
     parts.extend(_table(
         ["N", "Segment purity", "Stage concentration", "Boundary F1",
-         "Boundary precision", "Boundary recall"],
+         "Boundary precision", "Boundary recall", "Pk", "WindowDiff"],
         [[n, _fmt(by_n[n]["purity"]), _fmt(by_n[n]["concentration"]),
           _fmt(by_n[n]["boundary_f1"]), _fmt(by_n[n]["boundary_precision"]),
-          _fmt(by_n[n]["boundary_recall"])] for n in xs]))
+          _fmt(by_n[n]["boundary_recall"]), _fmt(by_n[n].get("pk")),
+          _fmt(by_n[n].get("windowdiff"))] for n in xs]))
     add("")
     best_n = e4.get("best_n_by_boundary_f1")
     add(f"- Best boundary F1 at **N={best_n}** "
         f"({_fmt(by_n[str(best_n)]['boundary_f1'])}).")
-    add(f"- Purity increases monotonically with N, but boundary F1 peaks at "
-        f"N={best_n}: too many segments fragment stages and produce spurious "
-        f"boundaries. Bon-APT's fixed multi-scale configuration is therefore "
-        f"justified, but N={best_n} is the informative scale for this "
-        f"corpus.\n")
+    add(f"- Pk and WindowDiff are the reference text-segmentation measures "
+        f"(lower is better). They keep improving with N because finer buckets "
+        f"approximate the truth more closely in window terms, which shows "
+        f"that a single fixed N is a trade-off rather than an optimum; the "
+        f"boundary F1 peak at N={best_n} is the scale at which whole stages "
+        f"fit inside a bucket.")
+    cp = e4.get("change_point_estimate") or {}
+    if cp:
+        add(f"- **Change-point estimate** (BIC-style penalty, held out from "
+            f"the labels): mean estimated segments {_fmt(cp.get('mean_estimated'))} "
+            f"vs mean ground-truth stages {_fmt(cp.get('mean_true'))}; exact "
+            f"agreement {_fmt(cp.get('exact_rate'))}, mean absolute error "
+            f"{_fmt(cp.get('mean_abs_error'))}. The estimator never sees the "
+            f"ground truth, so this asks whether N can be *found* instead of "
+            f"swept.")
+    nl = e4.get("null_purity") or {}
+    if nl:
+        add(f"- **Permutation null** at N={nl.get('n_segments')}: observed "
+            f"purity {_fmt(nl.get('mean_observed'))} vs shuffled order "
+            f"{_fmt(nl.get('mean_null'))} (mean z = {_fmt(nl.get('mean_z'))}); "
+            f"{_fmt(nl.get('share_p_below_0.01'))} of samples reach p < 0.01. "
+            f"A z near 1 means the stage separation at this scale is only "
+            f"marginally better than chance, which tempers the boundary-F1 "
+            f"headline.")
+    add("")
 
     # E5 -----------------------------------------------------------------
     e5 = read_json(eval_dir / "E5_ground_truth.json")
@@ -415,6 +459,88 @@ def write_markdown_report(eval_dir: Path, out_path: Path,
          ["Timeout rate", _fmt(e8.get("timeout_rate"))]]))
     add("")
     add(f"> {e8.get('note', '')}\n")
+
+    # E9 -----------------------------------------------------------------
+    e9 = read_json(eval_dir / "E9_chain_order.json")
+    add("## E9 — Chain-order ablation: ontology vs evidence (RQ5)\n")
+    summary = e9.get("summary", {})
+    modes = e9.get("modes", ["ontology", "timestamp"])
+    parts.extend(_table(
+        ["Ordering", "Stage accuracy", "Precision", "Recall",
+         "Exact-match rate"],
+        [[m, _fmt(summary[m]["stage_accuracy"]),
+          _fmt(summary[m]["stage_precision"]), _fmt(summary[m]["stage_recall"]),
+          _fmt(summary[m]["exact_match_rate"])] for m in modes
+         if m in summary]))
+    add("")
+    add(f"- The two orderings use the same events and produce the same set of "
+        f"stages; only the order differs. They disagree on "
+        f"**{e9.get('n_mode_disagreements', 0)}/{e9.get('n_samples', 0)}** "
+        f"samples and the accuracy delta (timestamp − ontology) is "
+        f"**{_fmt(e9.get('accuracy_delta_timestamp_minus_ontology'))}**.")
+    add(f"- An exact-match rate of "
+        f"{_fmt(summary.get('ontology', {}).get('exact_match_rate'))} under "
+        f"ontology ordering is partly true by construction. Under evidence "
+        f"ordering it is "
+        f"{_fmt(summary.get('timestamp', {}).get('exact_match_rate'))}, which "
+        f"is the number that shows the chronological chain is recovered from "
+        f"observations rather than assumed.")
+    add("- The residual gap is informative: recovered literals can add a "
+        "stage that no telemetry ever observed (`url_reference` from a "
+        "deobfuscated blob lands in `c2_download`). Under ontology ordering "
+        "it is silently slotted into its canonical position; under evidence "
+        "ordering it is visible as an untimed stage, which is the honest "
+        "reading — static evidence is *intent*, not an observed event.\n")
+
+    # E10 ----------------------------------------------------------------
+    e10 = read_json(eval_dir / "E10_completion_calibration.json")
+    add("## E10 — Calibration of completion prediction (extension)\n")
+    ov = e10.get("overall", {})
+    parts.extend(_table(
+        ["Measure", "Value"],
+        [["Samples", ov.get("n")],
+         ["Base rate (completed)", _fmt(ov.get("base_rate"))],
+         ["AUC (leave-one-family-out)", _fmt(ov.get("auc"))],
+         ["Brier", _fmt(ov.get("brier"))],
+         ["Brier baseline", _fmt(ov.get("brier_baseline"))],
+         ["Brier skill", _fmt(ov.get("brier_skill"))],
+         ["ECE (10 bins)", _fmt(ov.get("ece"))],
+         ["AUC, in-sample (reference)", _fmt(ov.get("in_sample_auc"))]]))
+    add("")
+    rel = e10.get("reliability", [])
+    if rel:
+        add("Reliability (equal-width probability bins):\n")
+        parts.extend(_table(
+            ["Predicted bin", "n", "Mean predicted", "Observed rate"],
+            [[f"{row['bin_lo']:.1f}–{row['bin_hi']:.1f}", row["n"],
+              _fmt(row["mean_predicted"]), _fmt(row["observed_rate"])]
+             for row in rel]))
+        add("")
+    by_failure = e10.get("by_failure", {})
+    if by_failure:
+        add("By failure mechanism (family counts show whether the cause can "
+            "generalise):\n")
+        parts.extend(_table(
+            ["Mechanism", "n", "Families", "Observed completed",
+             "Mean predicted"],
+            [[name, row["n"], row["n_families"],
+              _fmt(row["observed_rate"]), _fmt(row["mean_predicted"])]
+             for name, row in by_failure.items()]))
+        add("")
+    add("- Static evidence predicts completion only when the blocking "
+        "mechanism generalises across families. Empty projects are predicted "
+        "almost perfectly (0.03) and Outlook-gated families are predicted "
+        "low because another family also references Outlook; FTP, date gates, "
+        "busy loops and runtime errors occur in a single family each, so a "
+        "held-out family regresses to the base rate.")
+    add(f"- The gap between the in-sample AUC "
+        f"({_fmt(ov.get('in_sample_auc'))}) and the leave-one-family-out AUC "
+        f"({_fmt(ov.get('auc'))}) is the amount of family composition the "
+        f"model would memorise. The out-of-fold Brier skill "
+        f"({_fmt(ov.get('brier_skill'))}) is barely positive: an analyst "
+        f"cannot reliably anticipate the unsupported-claim rate from static "
+        f"evidence alone, which is precisely why the pipeline measures and "
+        f"reports it instead of estimating it.\n")
 
     if fig_dir:
         figs = write_figures(eval_dir, fig_dir)

@@ -7,18 +7,20 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 760
     },
     {
       "stage": "defense_evasion",
       "evidence": [
-        5,
-        6,
         8,
-        7
+        6,
+        7,
+        5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1720
     },
     {
       "stage": "c2_download",
@@ -26,7 +28,8 @@
         7
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2569
     }
   ],
   "behaviors": [
@@ -78,11 +81,11 @@
     {
       "behavior": "string_concat",
       "evidence": [
-        5
+        8
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "benign_report:string_concat"
     },
     {
       "behavior": "chr_encode",
@@ -91,25 +94,25 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+      "obj": "benign_report:chr_encode"
     },
     {
       "behavior": "dead_code",
-      "evidence": [
-        8
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
-    },
-    {
-      "behavior": "base64_encode",
       "evidence": [
         7
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "benign_report:dead_code"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        5
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "benign_report:base64_encode"
     }
   ],
   "chain": "delivery -> defense_evasion -> c2_download",

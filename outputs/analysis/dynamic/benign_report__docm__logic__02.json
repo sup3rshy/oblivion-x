@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 369,
-      "source": "dynamic",
+      "t_ms": 398,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 499,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 585,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 602,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 611,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1053,
+      "t_ms": 1062,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,17 +46,17 @@
     },
     {
       "id": 5,
-      "t_ms": 1113,
+      "t_ms": 1302,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "benign_report:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1597,
+      "t_ms": 1786,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_report:data_copy",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 2001,
+      "t_ms": 2190,
       "source": "dynamic",
       "behavior": "print_document",
       "obj": "benign_report:print_document",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 2235,
+      "t_ms": 2424,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_report:save_as_pdf",
@@ -89,7 +89,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 2235,
-    "analysis_time_ms": 0.1480579376220703
+    "duration_ms": 2424,
+    "analysis_time_ms": 0.11301040649414062
   }
 }

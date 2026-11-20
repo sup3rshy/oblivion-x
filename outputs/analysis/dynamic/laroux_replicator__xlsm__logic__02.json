@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 519,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 626,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 540,
-      "source": "dynamic",
+      "t_ms": 680,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 737,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 786,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1165,
+      "t_ms": 1214,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,17 +46,17 @@
     },
     {
       "id": 5,
-      "t_ms": 1287,
+      "t_ms": 1705,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "laroux_replicator:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 2148,
+      "t_ms": 2566,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 3049,
+      "t_ms": 3467,
       "source": "dynamic",
       "behavior": "office_template_infect",
       "obj": "SaveCopyAs XLSTART\\oblivionx_infected.xlsm",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 3974,
+      "t_ms": 4392,
       "source": "dynamic",
       "behavior": "startup_write",
       "obj": "laroux_replicator:startup_write",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 4355,
+      "t_ms": 4773,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -99,7 +99,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 4355,
-    "analysis_time_ms": 0.09894371032714844
+    "duration_ms": 4773,
+    "analysis_time_ms": 0.06103515625
   }
 }

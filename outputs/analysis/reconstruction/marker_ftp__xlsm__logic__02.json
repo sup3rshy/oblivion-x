@@ -7,7 +7,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 856
     },
     {
       "stage": "defense_evasion",
@@ -15,29 +16,28 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1310
     },
     {
       "stage": "execution",
       "evidence": [
-        2,
-        3,
-        7,
-        8,
         9,
-        10,
-        11
+        7,
+        8
       ],
-      "confidence": 0.85,
-      "note": ""
+      "confidence": 0.99,
+      "note": "",
+      "first_seen_ms": 2133
     },
     {
       "stage": "exfiltration",
       "evidence": [
-        7
+        10
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 3688
     },
     {
       "stage": "impact",
@@ -46,7 +46,8 @@
         6
       ],
       "confidence": 0.85,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 856
     }
   ],
   "behaviors": [
@@ -62,25 +63,25 @@
     {
       "behavior": "shell_run",
       "evidence": [
-        2
+        9
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Shell \""
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ..."
     },
     {
       "behavior": "cmd_run",
       "evidence": [
-        3
+        7
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "cmd /c"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "cmd /c ..."
     },
     {
       "behavior": "ftp_upload",
       "evidence": [
-        7
+        10
       ],
       "confidence": 0.99,
       "supported": true,
@@ -99,15 +100,11 @@
     {
       "behavior": "env_read",
       "evidence": [
-        7,
-        8,
-        9,
-        10,
-        11
+        8
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Environ("
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
     },
     {
       "behavior": "dead_code",
@@ -116,7 +113,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
+      "obj": "marker_ftp:dead_code"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> exfiltration -> impact",

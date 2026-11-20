@@ -7,29 +7,28 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1268
     },
     {
       "stage": "execution",
       "evidence": [
-        2,
-        3,
         7,
-        8,
-        9,
-        10,
-        11
+        5,
+        6
       ],
-      "confidence": 0.85,
-      "note": ""
+      "confidence": 0.99,
+      "note": "",
+      "first_seen_ms": 2449
     },
     {
       "stage": "exfiltration",
       "evidence": [
-        5
+        8
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 4356
     },
     {
       "stage": "impact",
@@ -38,7 +37,8 @@
         6
       ],
       "confidence": 0.85,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2449
     }
   ],
   "behaviors": [
@@ -54,25 +54,25 @@
     {
       "behavior": "shell_run",
       "evidence": [
-        2
+        7
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Shell \""
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ..."
     },
     {
       "behavior": "cmd_run",
       "evidence": [
-        3
+        5
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "cmd /c"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "cmd /c ..."
     },
     {
       "behavior": "ftp_upload",
       "evidence": [
-        5
+        8
       ],
       "confidence": 0.99,
       "supported": true,
@@ -91,15 +91,11 @@
     {
       "behavior": "env_read",
       "evidence": [
-        7,
-        8,
-        9,
-        10,
-        11
+        6
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Environ("
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
     }
   ],
   "chain": "delivery -> execution -> exfiltration -> impact",

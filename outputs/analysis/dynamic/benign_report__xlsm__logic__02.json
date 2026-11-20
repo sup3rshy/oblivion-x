@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 656,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 529,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,18 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 704,
-      "source": "dynamic",
-      "behavior": "env_read",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 3,
-      "t_ms": 815,
-      "source": "dynamic",
+      "t_ms": 666,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -35,8 +25,18 @@
       "evidence": "sim"
     },
     {
+      "id": 3,
+      "t_ms": 744,
+      "source": "os",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 4,
-      "t_ms": 1187,
+      "t_ms": 1116,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,17 +46,17 @@
     },
     {
       "id": 5,
-      "t_ms": 1438,
+      "t_ms": 2120,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "benign_report:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1608,
+      "t_ms": 2290,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_report:data_copy",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 1844,
+      "t_ms": 2526,
       "source": "dynamic",
       "behavior": "print_document",
       "obj": "benign_report:print_document",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 2201,
+      "t_ms": 2883,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_report:save_as_pdf",
@@ -89,7 +89,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 2201,
-    "analysis_time_ms": 0.09942054748535156
+    "duration_ms": 2883,
+    "analysis_time_ms": 0.1010894775390625
   }
 }

@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 433,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 453,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 466,
-      "source": "dynamic",
+      "t_ms": 479,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 532,
-      "source": "dynamic",
+      "t_ms": 505,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,9 +36,9 @@
     },
     {
       "id": 4,
-      "t_ms": 652,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 555,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -49,6 +49,6 @@
     "simulated": true,
     "failure": "static_empty",
     "interaction_handled": true,
-    "analysis_time_ms": 0.06961822509765625
+    "analysis_time_ms": 0.030279159545898438
   }
 }

@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 342,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 266,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 381,
-      "source": "dynamic",
+      "t_ms": 303,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -29,6 +29,6 @@
     "simulated": true,
     "failure": "static_empty",
     "interaction_handled": true,
-    "analysis_time_ms": 0.06771087646484375
+    "analysis_time_ms": 0.027894973754882812
   }
 }

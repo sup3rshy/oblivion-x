@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 513,
-      "source": "dynamic",
+      "t_ms": 534,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 547,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 621,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,7 +26,7 @@
     },
     {
       "id": 3,
-      "t_ms": 945,
+      "t_ms": 1019,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 1321,
+      "t_ms": 1395,
       "source": "dynamic",
       "behavior": "msgbox_gate",
       "obj": "Enable content?",
@@ -46,47 +46,47 @@
     },
     {
       "id": 5,
-      "t_ms": 1513,
+      "t_ms": 2164,
       "source": "dynamic",
-      "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "behavior": "base64_encode",
+      "obj": "donoff_interaction:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 6,
-      "t_ms": 1791,
+      "t_ms": 3277,
       "source": "dynamic",
       "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "obj": "donoff_interaction:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1893,
+      "t_ms": 3687,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "dead_code",
+      "obj": "donoff_interaction:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 8,
-      "t_ms": 2137,
+      "t_ms": 4663,
       "source": "dynamic",
-      "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "behavior": "string_concat",
+      "obj": "donoff_interaction:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 9,
-      "t_ms": 2955,
+      "t_ms": 5481,
       "source": "dynamic",
       "behavior": "window_hide",
       "obj": "donoff_interaction:window_hide",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 3628,
+      "t_ms": 6154,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 4741,
+      "t_ms": 7267,
       "source": "dynamic",
       "behavior": "powershell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command ...",
@@ -116,7 +116,7 @@
     },
     {
       "id": 12,
-      "t_ms": 5261,
+      "t_ms": 7787,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -126,7 +126,7 @@
     },
     {
       "id": 13,
-      "t_ms": 6146,
+      "t_ms": 8672,
       "source": "dynamic",
       "behavior": "http_download",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -136,7 +136,7 @@
     },
     {
       "id": 14,
-      "t_ms": 6676,
+      "t_ms": 9202,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -146,7 +146,7 @@
     },
     {
       "id": 15,
-      "t_ms": 7461,
+      "t_ms": 9987,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -156,7 +156,7 @@
     },
     {
       "id": 16,
-      "t_ms": 8049,
+      "t_ms": 10575,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -166,7 +166,7 @@
     },
     {
       "id": 17,
-      "t_ms": 8578,
+      "t_ms": 11104,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -176,7 +176,7 @@
     },
     {
       "id": 18,
-      "t_ms": 9487,
+      "t_ms": 12013,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -189,7 +189,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 9487,
-    "analysis_time_ms": 0.12969970703125
+    "duration_ms": 12013,
+    "analysis_time_ms": 0.12373924255371094
   }
 }

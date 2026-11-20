@@ -7,7 +7,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1331
     },
     {
       "stage": "defense_evasion",
@@ -15,27 +16,30 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1689
     },
     {
       "stage": "c2_download",
       "evidence": [
-        2,
-        3
+        7,
+        8
       ],
-      "confidence": 0.85,
-      "note": ""
+      "confidence": 0.99,
+      "note": "",
+      "first_seen_ms": 2822
     },
     {
       "stage": "exfiltration",
       "evidence": [
-        7,
+        9,
         5,
         6,
         7
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1331
     }
   ],
   "behaviors": [
@@ -51,25 +55,25 @@
     {
       "behavior": "http_download",
       "evidence": [
-        2
+        7
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "XMLHTTP"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "http://127.0.0.1:9090/payload.exe"
     },
     {
       "behavior": "url_reference",
       "evidence": [
-        3
+        8
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "http://127.0.0.1:9090/second-stage.bin"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "http://127.0.0.1:9090/payload.exe"
     },
     {
       "behavior": "outlook_access",
       "evidence": [
-        7
+        9
       ],
       "confidence": 0.99,
       "supported": true,
@@ -93,7 +97,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
+      "obj": "valyria_dual:dead_code"
     }
   ],
   "chain": "delivery -> defense_evasion -> c2_download -> exfiltration",

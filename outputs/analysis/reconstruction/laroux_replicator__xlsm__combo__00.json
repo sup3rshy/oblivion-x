@@ -7,18 +7,20 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1479
     },
     {
       "stage": "defense_evasion",
       "evidence": [
-        6,
-        7,
         9,
-        8
+        7,
+        8,
+        6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1738
     },
     {
       "stage": "execution",
@@ -26,7 +28,8 @@
         10
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 5300
     },
     {
       "stage": "c2_download",
@@ -34,7 +37,8 @@
         7
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2669
     },
     {
       "stage": "persistence",
@@ -43,7 +47,8 @@
         12
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 6035
     },
     {
       "stage": "impact",
@@ -51,7 +56,8 @@
         13
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 7804
     }
   ],
   "behaviors": [
@@ -112,11 +118,11 @@
     {
       "behavior": "string_concat",
       "evidence": [
-        6
+        9
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "laroux_replicator:string_concat"
     },
     {
       "behavior": "chr_encode",
@@ -125,25 +131,25 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+      "obj": "laroux_replicator:chr_encode"
     },
     {
       "behavior": "dead_code",
-      "evidence": [
-        9
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
-    },
-    {
-      "behavior": "base64_encode",
       "evidence": [
         8
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "laroux_replicator:dead_code"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        6
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "laroux_replicator:base64_encode"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> c2_download -> persistence -> impact",

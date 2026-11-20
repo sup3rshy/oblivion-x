@@ -7,7 +7,8 @@
         4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 699
     },
     {
       "stage": "defense_evasion",
@@ -15,7 +16,8 @@
         5
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1326
     },
     {
       "stage": "execution",
@@ -23,7 +25,8 @@
         6
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2435
     },
     {
       "stage": "persistence",
@@ -32,7 +35,8 @@
         7
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2649
     },
     {
       "stage": "impact",
@@ -40,7 +44,8 @@
         9
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 4148
     }
   ],
   "behaviors": [
@@ -96,7 +101,7 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
+      "obj": "laroux_replicator:dead_code"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> persistence -> impact",

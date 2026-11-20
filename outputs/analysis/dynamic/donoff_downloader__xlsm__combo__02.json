@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 315,
-      "source": "dynamic",
+      "t_ms": 292,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,18 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 493,
-      "source": "dynamic",
-      "behavior": "env_read",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 3,
-      "t_ms": 565,
-      "source": "dynamic",
+      "t_ms": 419,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -35,9 +25,9 @@
       "evidence": "sim"
     },
     {
-      "id": 4,
-      "t_ms": 690,
-      "source": "dynamic",
+      "id": 3,
+      "t_ms": 607,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -45,8 +35,18 @@
       "evidence": "sim"
     },
     {
+      "id": 4,
+      "t_ms": 635,
+      "source": "os",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 5,
-      "t_ms": 1038,
+      "t_ms": 983,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,47 +56,47 @@
     },
     {
       "id": 6,
-      "t_ms": 1274,
+      "t_ms": 1927,
       "source": "dynamic",
-      "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "behavior": "base64_encode",
+      "obj": "donoff_downloader:base64_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1365,
+      "t_ms": 2291,
       "source": "dynamic",
       "behavior": "chr_encode",
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic",
+      "obj": "donoff_downloader:chr_encode",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 8,
-      "t_ms": 1429,
+      "t_ms": 2549,
       "source": "dynamic",
-      "behavior": "base64_encode",
-      "obj": "Base64-encoded payload present",
+      "behavior": "dead_code",
+      "obj": "donoff_downloader:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 9,
-      "t_ms": 1505,
+      "t_ms": 2854,
       "source": "dynamic",
-      "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "behavior": "string_concat",
+      "obj": "donoff_downloader:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 10,
-      "t_ms": 2132,
+      "t_ms": 3481,
       "source": "dynamic",
       "behavior": "window_hide",
       "obj": "donoff_downloader:window_hide",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 2386,
+      "t_ms": 3735,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -116,7 +116,7 @@
     },
     {
       "id": 12,
-      "t_ms": 2812,
+      "t_ms": 4161,
       "source": "dynamic",
       "behavior": "powershell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command ...",
@@ -126,7 +126,7 @@
     },
     {
       "id": 13,
-      "t_ms": 3441,
+      "t_ms": 4790,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -136,7 +136,7 @@
     },
     {
       "id": 14,
-      "t_ms": 3707,
+      "t_ms": 5056,
       "source": "dynamic",
       "behavior": "http_download",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -146,7 +146,7 @@
     },
     {
       "id": 15,
-      "t_ms": 4508,
+      "t_ms": 5857,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -156,7 +156,7 @@
     },
     {
       "id": 16,
-      "t_ms": 5373,
+      "t_ms": 6722,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -166,7 +166,7 @@
     },
     {
       "id": 17,
-      "t_ms": 6320,
+      "t_ms": 7669,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -176,7 +176,7 @@
     },
     {
       "id": 18,
-      "t_ms": 7453,
+      "t_ms": 8802,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -186,7 +186,7 @@
     },
     {
       "id": 19,
-      "t_ms": 8752,
+      "t_ms": 10101,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -199,7 +199,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 8752,
-    "analysis_time_ms": 0.11587142944335938
+    "duration_ms": 10101,
+    "analysis_time_ms": 0.08058547973632812
   }
 }

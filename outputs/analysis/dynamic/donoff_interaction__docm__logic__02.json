@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 368,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 311,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 541,
-      "source": "dynamic",
+      "t_ms": 460,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 693,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 550,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,7 +36,7 @@
     },
     {
       "id": 4,
-      "t_ms": 977,
+      "t_ms": 834,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1399,
+      "t_ms": 1256,
       "source": "dynamic",
       "behavior": "msgbox_gate",
       "obj": "Enable content?",
@@ -56,17 +56,17 @@
     },
     {
       "id": 6,
-      "t_ms": 1571,
+      "t_ms": 1947,
       "source": "dynamic",
       "behavior": "dead_code",
-      "obj": "Logic obfuscation: unreachable code / decoy routines",
+      "obj": "donoff_interaction:dead_code",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1899,
+      "t_ms": 2275,
       "source": "dynamic",
       "behavior": "window_hide",
       "obj": "donoff_interaction:window_hide",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 3051,
+      "t_ms": 3427,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 4080,
+      "t_ms": 4456,
       "source": "dynamic",
       "behavior": "powershell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -Command ...",
@@ -96,7 +96,7 @@
     },
     {
       "id": 10,
-      "t_ms": 5241,
+      "t_ms": 5617,
       "source": "dynamic",
       "behavior": "shell_run",
       "obj": "powershell.exe -NoProfile -WindowStyle Hidden ...",
@@ -106,7 +106,7 @@
     },
     {
       "id": 11,
-      "t_ms": 6183,
+      "t_ms": 6559,
       "source": "dynamic",
       "behavior": "http_download",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -116,7 +116,7 @@
     },
     {
       "id": 12,
-      "t_ms": 7140,
+      "t_ms": 7516,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -126,7 +126,7 @@
     },
     {
       "id": 13,
-      "t_ms": 8230,
+      "t_ms": 8606,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -136,7 +136,7 @@
     },
     {
       "id": 14,
-      "t_ms": 9348,
+      "t_ms": 9724,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -146,7 +146,7 @@
     },
     {
       "id": 15,
-      "t_ms": 10455,
+      "t_ms": 10831,
       "source": "dynamic",
       "behavior": "url_reference",
       "obj": "http://127.0.0.1:9090/payload.exe",
@@ -156,7 +156,7 @@
     },
     {
       "id": 16,
-      "t_ms": 11556,
+      "t_ms": 11932,
       "source": "dynamic",
       "behavior": "file_execute",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -169,7 +169,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 11556,
-    "analysis_time_ms": 0.11324882507324219
+    "duration_ms": 11932,
+    "analysis_time_ms": 0.12636184692382812
   }
 }

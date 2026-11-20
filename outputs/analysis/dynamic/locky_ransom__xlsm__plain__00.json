@@ -6,38 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 515,
-      "source": "dynamic",
-      "behavior": "registry_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 2,
-      "t_ms": 563,
-      "source": "dynamic",
-      "behavior": "env_read",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 3,
-      "t_ms": 701,
-      "source": "dynamic",
-      "behavior": "registry_write",
-      "obj": "startup-noise",
-      "args": {},
-      "confidence": 0.3,
-      "evidence": "sim"
-    },
-    {
-      "id": 4,
-      "t_ms": 895,
-      "source": "dynamic",
+      "t_ms": 653,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -45,8 +15,38 @@
       "evidence": "sim"
     },
     {
+      "id": 2,
+      "t_ms": 765,
+      "source": "os",
+      "behavior": "file_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 3,
+      "t_ms": 961,
+      "source": "os",
+      "behavior": "env_read",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
+      "id": 4,
+      "t_ms": 1019,
+      "source": "os",
+      "behavior": "registry_write",
+      "obj": "startup-noise",
+      "args": {},
+      "confidence": 0.3,
+      "evidence": "sim"
+    },
+    {
       "id": 5,
-      "t_ms": 1260,
+      "t_ms": 1384,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,7 +56,7 @@
     },
     {
       "id": 6,
-      "t_ms": 1580,
+      "t_ms": 1704,
       "source": "dynamic",
       "behavior": "env_read",
       "obj": "Environ(TEMP/APPDATA)",
@@ -66,7 +66,7 @@
     },
     {
       "id": 7,
-      "t_ms": 1979,
+      "t_ms": 2103,
       "source": "dynamic",
       "behavior": "registry_write",
       "obj": "HKCU\\...\\Run\\oblivionx",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 2964,
+      "t_ms": 3088,
       "source": "dynamic",
       "behavior": "file_encrypt",
       "obj": "xor-crypt(%TEMP%\\oblivionx_vault\\secret.txt)",
@@ -86,7 +86,7 @@
     },
     {
       "id": 9,
-      "t_ms": 4144,
+      "t_ms": 4268,
       "source": "dynamic",
       "behavior": "file_write",
       "obj": "%TEMP%\\oblivionx_payload.exe",
@@ -99,7 +99,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 4144,
-    "analysis_time_ms": 0.09822845458984375
+    "duration_ms": 4268,
+    "analysis_time_ms": 0.0514984130859375
   }
 }

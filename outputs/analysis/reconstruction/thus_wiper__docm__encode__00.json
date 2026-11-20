@@ -7,7 +7,8 @@
         3
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 958
     },
     {
       "stage": "defense_evasion",
@@ -16,7 +17,8 @@
         6
       ],
       "confidence": 0.95,
-      "note": ""
+      "note": "",
+      "first_seen_ms": null
     },
     {
       "stage": "execution",
@@ -24,7 +26,8 @@
         3
       ],
       "confidence": 0.85,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 958
     },
     {
       "stage": "c2_download",
@@ -32,7 +35,8 @@
         4
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": null
     },
     {
       "stage": "impact",
@@ -40,7 +44,8 @@
         2
       ],
       "confidence": 0.85,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 753
     }
   ],
   "behaviors": [

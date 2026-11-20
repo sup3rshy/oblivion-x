@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 517,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 597,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 693,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 656,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -29,6 +29,6 @@
     "simulated": true,
     "failure": "static_empty",
     "interaction_handled": true,
-    "analysis_time_ms": 0.06771087646484375
+    "analysis_time_ms": 0.03170967102050781
   }
 }

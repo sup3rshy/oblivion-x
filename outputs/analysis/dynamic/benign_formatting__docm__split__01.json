@@ -6,9 +6,9 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 422,
-      "source": "dynamic",
-      "behavior": "env_read",
+      "t_ms": 356,
+      "source": "os",
+      "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -16,8 +16,8 @@
     },
     {
       "id": 2,
-      "t_ms": 591,
-      "source": "dynamic",
+      "t_ms": 541,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -26,8 +26,8 @@
     },
     {
       "id": 3,
-      "t_ms": 778,
-      "source": "dynamic",
+      "t_ms": 709,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 892,
-      "source": "dynamic",
+      "t_ms": 794,
+      "source": "os",
       "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1290,
+      "t_ms": 1192,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,17 +56,17 @@
     },
     {
       "id": 6,
-      "t_ms": 1514,
+      "t_ms": 2091,
       "source": "dynamic",
       "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "obj": "benign_formatting:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1674,
+      "t_ms": 2251,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_formatting:data_copy",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 2251,
+      "t_ms": 2828,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_formatting:save_as_pdf",
@@ -89,7 +89,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 2251,
-    "analysis_time_ms": 0.118255615234375
+    "duration_ms": 2828,
+    "analysis_time_ms": 0.053882598876953125
   }
 }

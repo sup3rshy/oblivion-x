@@ -2,8 +2,8 @@
   "experiment": "E2",
   "title": "Static vs dynamic observability (RQ2)",
   "mean_static_recall": 0.9052477871922316,
-  "mean_dynamic_recall": 0.7766345427059713,
-  "mean_view_jaccard": 0.6015672672418705,
+  "mean_dynamic_recall": 0.8368228772990678,
+  "mean_view_jaccard": 0.6431146454955978,
   "most_static_missed": [
     [
       "file_write",
@@ -32,24 +32,8 @@
   ],
   "most_dynamic_missed": [
     [
-      "cmd_run",
-      54
-    ],
-    [
       "outlook_send",
       54
-    ],
-    [
-      "shell_run",
-      54
-    ],
-    [
-      "http_download",
-      36
-    ],
-    [
-      "url_reference",
-      36
     ],
     [
       "base64_encode",
@@ -57,6 +41,10 @@
     ],
     [
       "chr_encode",
+      18
+    ],
+    [
+      "cmd_run",
       18
     ],
     [
@@ -68,16 +56,20 @@
       18
     ],
     [
+      "shell_run",
+      18
+    ],
+    [
       "string_concat",
       18
     ],
     [
-      "env_read",
-      13
+      "file_write",
+      10
     ],
     [
-      "file_write",
-      11
+      "env_read",
+      8
     ]
   ],
   "static_only": [
@@ -86,22 +78,6 @@
       54
     ],
     [
-      "shell_run",
-      54
-    ],
-    [
-      "cmd_run",
-      53
-    ],
-    [
-      "http_download",
-      36
-    ],
-    [
-      "url_reference",
-      30
-    ],
-    [
       "base64_encode",
       18
     ],
@@ -118,12 +94,20 @@
       18
     ],
     [
-      "env_read",
-      13
+      "shell_run",
+      18
+    ],
+    [
+      "cmd_run",
+      17
     ],
     [
       "file_write",
-      11
+      10
+    ],
+    [
+      "env_read",
+      8
     ],
     [
       "string_concat",
@@ -142,6 +126,10 @@
     [
       "string_concat",
       11
+    ],
+    [
+      "url_reference",
+      6
     ],
     [
       "outlook_access",
@@ -200,8 +188,8 @@
     "marker_ftp": {
       "n": 36,
       "static_recall": 1.0,
-      "dynamic_recall": 0.6497685185185186,
-      "gap": -0.3502314814814814
+      "dynamic_recall": 0.960515873015873,
+      "gap": -0.039484126984126955
     },
     "metacol_mailer": {
       "n": 18,
@@ -218,14 +206,14 @@
     "thus_wiper": {
       "n": 18,
       "static_recall": 0.9345238095238096,
-      "dynamic_recall": 0.4082010582010582,
-      "gap": -0.5263227513227515
+      "dynamic_recall": 0.39246031746031745,
+      "gap": -0.5420634920634921
     },
     "valyria_dual": {
       "n": 36,
       "static_recall": 0.9604938271604938,
-      "dynamic_recall": 0.5063492063492064,
-      "gap": -0.45414462081128737
+      "dynamic_recall": 0.8354497354497354,
+      "gap": -0.12504409171075836
     },
     "vba_dropper": {
       "n": 36,
@@ -436,6 +424,7 @@
         "http_download",
         "macro_entry",
         "powershell_run",
+        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -525,7 +514,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "string_concat",
         "url_reference",
@@ -573,7 +561,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "string_concat",
         "url_reference",
@@ -823,7 +810,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -871,7 +857,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -919,7 +904,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -972,7 +956,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "string_concat",
         "url_reference",
@@ -1136,7 +1119,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -1181,7 +1163,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -1226,7 +1207,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -1271,6 +1251,7 @@
         "http_download",
         "macro_entry",
         "powershell_run",
+        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -1406,6 +1387,7 @@
         "http_download",
         "macro_entry",
         "powershell_run",
+        "registry_write",
         "shell_run",
         "string_concat",
         "url_reference",
@@ -1602,7 +1584,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -1702,7 +1683,6 @@
         "http_download",
         "macro_entry",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -2003,7 +1983,7 @@
         "outlook_send"
       ],
       "dynamic_observed": [
-        "file_write",
+        "env_read",
         "macro_entry",
         "outlook_access",
         "registry_write"
@@ -2033,6 +2013,7 @@
         "outlook_send"
       ],
       "dynamic_observed": [
+        "env_read",
         "macro_entry",
         "outlook_access",
         "registry_write"
@@ -2063,7 +2044,6 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "file_write",
         "macro_entry",
         "outlook_access",
         "registry_write"
@@ -2093,10 +2073,10 @@
         "outlook_send"
       ],
       "dynamic_observed": [
+        "env_read",
         "file_write",
         "macro_entry",
-        "outlook_access",
-        "registry_write"
+        "outlook_access"
       ],
       "gt": [
         "macro_entry",
@@ -2183,10 +2163,9 @@
         "string_concat"
       ],
       "dynamic_observed": [
-        "file_write",
+        "env_read",
         "macro_entry",
         "outlook_access",
-        "registry_write",
         "string_concat"
       ],
       "gt": [
@@ -2219,7 +2198,6 @@
         "file_write",
         "macro_entry",
         "outlook_access",
-        "registry_write",
         "string_concat"
       ],
       "gt": [
@@ -2287,6 +2265,7 @@
         "base64_encode",
         "chr_encode",
         "env_read",
+        "file_write",
         "macro_entry",
         "outlook_access"
       ],
@@ -2323,7 +2302,7 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
-        "file_write",
+        "env_read",
         "macro_entry",
         "outlook_access",
         "registry_write"
@@ -2361,6 +2340,7 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "env_read",
         "file_write",
         "macro_entry",
         "outlook_access"
@@ -2395,7 +2375,6 @@
       ],
       "dynamic_observed": [
         "dead_code",
-        "file_write",
         "macro_entry",
         "outlook_access",
         "registry_write"
@@ -2428,10 +2407,10 @@
       ],
       "dynamic_observed": [
         "dead_code",
+        "env_read",
         "file_write",
         "macro_entry",
-        "outlook_access",
-        "registry_write"
+        "outlook_access"
       ],
       "gt": [
         "dead_code",
@@ -2461,10 +2440,9 @@
       ],
       "dynamic_observed": [
         "dead_code",
-        "env_read",
+        "file_write",
         "macro_entry",
-        "outlook_access",
-        "registry_write"
+        "outlook_access"
       ],
       "gt": [
         "dead_code",
@@ -2503,7 +2481,6 @@
         "file_write",
         "macro_entry",
         "outlook_access",
-        "registry_write",
         "string_concat"
       ],
       "gt": [
@@ -2591,6 +2568,7 @@
         "chr_encode",
         "dead_code",
         "env_read",
+        "file_write",
         "macro_entry",
         "outlook_access",
         "string_concat"
@@ -2727,6 +2705,7 @@
         "file_write",
         "macro_entry",
         "office_template_infect",
+        "registry_write",
         "startup_write"
       ],
       "gt": [
@@ -2790,6 +2769,7 @@
         "file_write",
         "macro_entry",
         "office_template_infect",
+        "registry_write",
         "startup_write"
       ],
       "gt": [
@@ -2891,7 +2871,6 @@
         "file_write",
         "macro_entry",
         "office_template_infect",
-        "registry_write",
         "startup_write",
         "string_concat"
       ],
@@ -3085,6 +3064,7 @@
         "file_write",
         "macro_entry",
         "office_template_infect",
+        "registry_write",
         "startup_write"
       ],
       "gt": [
@@ -3119,6 +3099,7 @@
         "file_write",
         "macro_entry",
         "office_template_infect",
+        "registry_write",
         "startup_write"
       ],
       "gt": [
@@ -3253,6 +3234,7 @@
         "file_write",
         "macro_entry",
         "office_template_infect",
+        "registry_write",
         "startup_write",
         "string_concat"
       ],
@@ -4685,7 +4667,6 @@
         "file_execute",
         "file_write",
         "macro_entry",
-        "registry_write",
         "shell_run"
       ],
       "gt": [
@@ -4855,7 +4836,6 @@
         "file_execute",
         "file_write",
         "macro_entry",
-        "registry_write",
         "shell_run",
         "string_concat"
       ],
@@ -5016,7 +4996,6 @@
         "file_execute",
         "file_write",
         "macro_entry",
-        "registry_write",
         "shell_run"
       ],
       "gt": [
@@ -5052,6 +5031,7 @@
         "file_execute",
         "file_write",
         "macro_entry",
+        "registry_write",
         "shell_run"
       ],
       "gt": [
@@ -5087,6 +5067,7 @@
         "file_execute",
         "file_write",
         "macro_entry",
+        "registry_write",
         "shell_run"
       ],
       "gt": [
@@ -5175,6 +5156,7 @@
         "file_execute",
         "file_write",
         "macro_entry",
+        "registry_write",
         "shell_run",
         "string_concat"
       ],
@@ -5394,7 +5376,6 @@
         "file_execute",
         "file_write",
         "macro_entry",
-        "registry_write",
         "shell_run"
       ],
       "gt": [
@@ -5944,10 +5925,13 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
+        "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -5958,18 +5942,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__plain__01",
@@ -5984,9 +5960,13 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
+        "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -5997,18 +5977,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__plain__02",
@@ -6023,10 +5995,13 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6037,16 +6012,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__random__00",
@@ -6061,11 +6030,13 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6076,16 +6047,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__random__01",
@@ -6100,11 +6065,13 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6115,16 +6082,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__random__02",
@@ -6139,10 +6100,12 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6154,17 +6117,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
+        "file_write"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "marker_ftp__docm__split__00",
@@ -6180,11 +6139,13 @@
         "string_concat"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
         "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -6197,16 +6158,10 @@
         "string_concat"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__split__01",
@@ -6222,10 +6177,12 @@
         "string_concat"
       ],
       "dynamic_observed": [
-        "file_write",
+        "cmd_run",
+        "env_read",
         "ftp_upload",
         "macro_entry",
         "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -6239,17 +6196,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "env_read",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "env_read",
-        "shell_run"
+        "file_write"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "marker_ftp__docm__split__02",
@@ -6265,10 +6218,12 @@
         "string_concat"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
+        "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -6281,18 +6236,10 @@
         "string_concat"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__encode__00",
@@ -6312,10 +6259,13 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
+        "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "base64_encode",
@@ -6328,19 +6278,12 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "env_read",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
       "static_only": [
-        "cmd_run",
-        "env_read",
-        "shell_run",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.625
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__encode__01",
@@ -6360,11 +6303,13 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "base64_encode",
@@ -6377,17 +6322,12 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
       "static_only": [
-        "cmd_run",
-        "shell_run",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.75
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__encode__02",
@@ -6407,10 +6347,12 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "env_read",
-        "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "base64_encode",
@@ -6424,16 +6366,14 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "shell_run",
+        "file_write",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.75
+      "dynamic_recall": 0.875
     },
     {
       "id": "marker_ftp__docm__logic__00",
@@ -6449,11 +6389,14 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "dead_code",
         "env_read",
         "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6465,16 +6408,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__logic__01",
@@ -6490,11 +6427,14 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "dead_code",
         "env_read",
         "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6506,16 +6446,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__logic__02",
@@ -6531,12 +6465,14 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "dead_code",
         "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6548,16 +6484,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__combo__00",
@@ -6579,10 +6509,14 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "dead_code",
         "env_read",
+        "file_write",
         "ftp_upload",
         "macro_entry",
+        "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -6598,19 +6532,12 @@
         "string_concat"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
       "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__combo__01",
@@ -6632,11 +6559,14 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "dead_code",
         "env_read",
+        "file_write",
         "ftp_upload",
         "macro_entry",
         "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -6652,19 +6582,12 @@
         "string_concat"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
       "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__docm__combo__02",
@@ -6686,12 +6609,13 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "dead_code",
         "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -6707,17 +6631,12 @@
         "string_concat"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
       "static_only": [
-        "cmd_run",
-        "shell_run",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.8
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__plain__00",
@@ -6732,10 +6651,12 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6747,17 +6668,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
+        "file_write"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "marker_ftp__xlsm__plain__01",
@@ -6772,10 +6689,13 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
+        "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6786,18 +6706,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__plain__02",
@@ -6812,10 +6724,13 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
+        "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6826,18 +6741,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "env_read",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "env_read",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__random__00",
@@ -6852,10 +6759,12 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6867,17 +6776,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
+        "file_write"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "marker_ftp__xlsm__random__01",
@@ -6892,10 +6797,13 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
+        "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6906,18 +6814,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "env_read",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "env_read",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__random__02",
@@ -6932,10 +6832,12 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -6946,16 +6848,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__split__00",
@@ -6971,10 +6867,12 @@
         "string_concat"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "ftp_upload",
         "macro_entry",
         "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -6988,17 +6886,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "file_write",
-        "shell_run"
+        "file_write"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "marker_ftp__xlsm__split__01",
@@ -7014,11 +6908,12 @@
         "string_concat"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
-        "file_write",
         "ftp_upload",
         "macro_entry",
         "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -7032,15 +6927,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "shell_run"
+        "file_write"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "marker_ftp__xlsm__split__02",
@@ -7056,11 +6949,13 @@
         "string_concat"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
         "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -7073,16 +6968,10 @@
         "string_concat"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__encode__00",
@@ -7102,9 +6991,12 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
+        "env_read",
+        "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "shell_run"
       ],
       "gt": [
         "base64_encode",
@@ -7117,21 +7009,12 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "env_read",
-        "file_write",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
       "static_only": [
-        "cmd_run",
-        "env_read",
-        "file_write",
-        "shell_run",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__encode__01",
@@ -7151,10 +7034,12 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "env_read",
-        "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "base64_encode",
@@ -7168,16 +7053,14 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "shell_run",
+        "file_write",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.75
+      "dynamic_recall": 0.875
     },
     {
       "id": "marker_ftp__xlsm__encode__02",
@@ -7197,10 +7080,13 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "env_read",
         "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "base64_encode",
@@ -7213,17 +7099,12 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
       "static_only": [
-        "cmd_run",
-        "shell_run",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.75
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__logic__00",
@@ -7239,11 +7120,14 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "dead_code",
+        "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
-        "registry_write"
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -7255,18 +7139,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "env_read",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "env_read",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__logic__01",
@@ -7282,11 +7158,12 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "dead_code",
         "env_read",
-        "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -7299,15 +7176,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "shell_run"
+        "file_write"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "marker_ftp__xlsm__logic__02",
@@ -7323,11 +7198,14 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "cmd_run",
         "dead_code",
         "env_read",
         "file_write",
         "ftp_upload",
-        "macro_entry"
+        "macro_entry",
+        "registry_write",
+        "shell_run"
       ],
       "gt": [
         "cmd_run",
@@ -7339,16 +7217,10 @@
         "shell_run"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
-      "static_only": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
+      "static_only": [],
       "static_recall": 1.0,
-      "dynamic_recall": 0.7142857142857143
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__combo__00",
@@ -7370,11 +7242,12 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "dead_code",
         "env_read",
-        "file_write",
         "ftp_upload",
         "macro_entry",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -7391,16 +7264,14 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
+        "file_write"
       ],
       "static_only": [
-        "cmd_run",
-        "shell_run",
+        "file_write",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.8
+      "dynamic_recall": 0.9
     },
     {
       "id": "marker_ftp__xlsm__combo__01",
@@ -7422,11 +7293,14 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "dead_code",
         "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
+        "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -7442,17 +7316,12 @@
         "string_concat"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
       "static_only": [
-        "cmd_run",
-        "shell_run",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.8
+      "dynamic_recall": 1.0
     },
     {
       "id": "marker_ftp__xlsm__combo__02",
@@ -7474,11 +7343,14 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
+        "cmd_run",
         "dead_code",
         "env_read",
         "file_write",
         "ftp_upload",
         "macro_entry",
+        "registry_write",
+        "shell_run",
         "string_concat"
       ],
       "gt": [
@@ -7494,17 +7366,12 @@
         "string_concat"
       ],
       "static_missed": [],
-      "dynamic_missed": [
-        "cmd_run",
-        "shell_run"
-      ],
+      "dynamic_missed": [],
       "static_only": [
-        "cmd_run",
-        "shell_run",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.8
+      "dynamic_recall": 1.0
     },
     {
       "id": "thus_wiper__docm__plain__00",
@@ -7516,7 +7383,6 @@
         "macro_entry"
       ],
       "dynamic_observed": [
-        "env_read",
         "file_write",
         "macro_entry",
         "registry_write"
@@ -7528,13 +7394,15 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
+        "env_read",
         "file_delete"
       ],
       "static_only": [
+        "env_read",
         "file_delete"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 0.3333333333333333
     },
     {
       "id": "thus_wiper__docm__plain__01",
@@ -7575,8 +7443,8 @@
         "macro_entry"
       ],
       "dynamic_observed": [
-        "macro_entry",
-        "registry_write"
+        "env_read",
+        "macro_entry"
       ],
       "gt": [
         "env_read",
@@ -7585,15 +7453,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "env_read",
         "file_delete"
       ],
       "static_only": [
-        "env_read",
         "file_delete"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.3333333333333333
+      "dynamic_recall": 0.6666666666666666
     },
     {
       "id": "thus_wiper__docm__random__00",
@@ -7606,7 +7472,8 @@
       ],
       "dynamic_observed": [
         "file_write",
-        "macro_entry"
+        "macro_entry",
+        "registry_write"
       ],
       "gt": [
         "env_read",
@@ -7635,7 +7502,6 @@
         "macro_entry"
       ],
       "dynamic_observed": [
-        "env_read",
         "macro_entry",
         "registry_write"
       ],
@@ -7646,13 +7512,15 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
+        "env_read",
         "file_delete"
       ],
       "static_only": [
+        "env_read",
         "file_delete"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 0.3333333333333333
     },
     {
       "id": "thus_wiper__docm__random__02",
@@ -7665,8 +7533,8 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "file_write",
-        "macro_entry"
+        "macro_entry",
+        "registry_write"
       ],
       "gt": [
         "env_read",
@@ -7727,8 +7595,7 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "macro_entry",
-        "registry_write"
+        "macro_entry"
       ],
       "gt": [
         "env_read",
@@ -7759,8 +7626,9 @@
         "macro_entry"
       ],
       "dynamic_observed": [
-        "macro_entry",
-        "registry_write"
+        "env_read",
+        "file_write",
+        "macro_entry"
       ],
       "gt": [
         "env_read",
@@ -7772,16 +7640,14 @@
         "string_concat"
       ],
       "dynamic_missed": [
-        "env_read",
         "file_delete",
         "string_concat"
       ],
       "static_only": [
-        "env_read",
         "file_delete"
       ],
       "static_recall": 0.75,
-      "dynamic_recall": 0.25
+      "dynamic_recall": 0.5
     },
     {
       "id": "thus_wiper__docm__encode__00",
@@ -7796,6 +7662,7 @@
         "url_reference"
       ],
       "dynamic_observed": [
+        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -7836,7 +7703,7 @@
         "url_reference"
       ],
       "dynamic_observed": [
-        "env_read",
+        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -7851,16 +7718,18 @@
       "dynamic_missed": [
         "base64_encode",
         "chr_encode",
+        "env_read",
         "file_delete"
       ],
       "static_only": [
         "base64_encode",
         "chr_encode",
+        "env_read",
         "file_delete",
         "url_reference"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.2
     },
     {
       "id": "thus_wiper__docm__encode__02",
@@ -7982,6 +7851,7 @@
       ],
       "dynamic_observed": [
         "env_read",
+        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -8018,8 +7888,7 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "macro_entry",
-        "registry_write"
+        "macro_entry"
       ],
       "gt": [
         "base64_encode",
@@ -8064,57 +7933,7 @@
         "url_reference"
       ],
       "dynamic_observed": [
-        "file_write",
-        "macro_entry",
-        "registry_write"
-      ],
-      "gt": [
-        "base64_encode",
-        "chr_encode",
-        "dead_code",
         "env_read",
-        "file_delete",
-        "macro_entry",
-        "string_concat"
-      ],
-      "static_missed": [
-        "string_concat"
-      ],
-      "dynamic_missed": [
-        "base64_encode",
-        "chr_encode",
-        "dead_code",
-        "env_read",
-        "file_delete",
-        "string_concat"
-      ],
-      "static_only": [
-        "base64_encode",
-        "chr_encode",
-        "dead_code",
-        "env_read",
-        "file_delete",
-        "url_reference"
-      ],
-      "static_recall": 0.8571428571428571,
-      "dynamic_recall": 0.14285714285714285
-    },
-    {
-      "id": "thus_wiper__docm__combo__02",
-      "family": "thus_wiper",
-      "variant": "combo",
-      "static_observed": [
-        "base64_encode",
-        "chr_encode",
-        "dead_code",
-        "env_read",
-        "file_delete",
-        "macro_entry",
-        "url_reference"
-      ],
-      "dynamic_observed": [
-        "env_read",
-        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -8148,6 +7967,54 @@
       "dynamic_recall": 0.2857142857142857
     },
     {
+      "id": "thus_wiper__docm__combo__02",
+      "family": "thus_wiper",
+      "variant": "combo",
+      "static_observed": [
+        "base64_encode",
+        "chr_encode",
+        "dead_code",
+        "env_read",
+        "file_delete",
+        "macro_entry",
+        "url_reference"
+      ],
+      "dynamic_observed": [
+        "file_write",
+        "macro_entry"
+      ],
+      "gt": [
+        "base64_encode",
+        "chr_encode",
+        "dead_code",
+        "env_read",
+        "file_delete",
+        "macro_entry",
+        "string_concat"
+      ],
+      "static_missed": [
+        "string_concat"
+      ],
+      "dynamic_missed": [
+        "base64_encode",
+        "chr_encode",
+        "dead_code",
+        "env_read",
+        "file_delete",
+        "string_concat"
+      ],
+      "static_only": [
+        "base64_encode",
+        "chr_encode",
+        "dead_code",
+        "env_read",
+        "file_delete",
+        "url_reference"
+      ],
+      "static_recall": 0.8571428571428571,
+      "dynamic_recall": 0.14285714285714285
+    },
+    {
       "id": "valyria_dual__docm__plain__00",
       "family": "valyria_dual",
       "variant": "plain",
@@ -8159,11 +8026,12 @@
         "url_reference"
       ],
       "dynamic_observed": [
-        "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8174,17 +8042,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__docm__plain__01",
@@ -8198,10 +8062,12 @@
         "url_reference"
       ],
       "dynamic_observed": [
-        "file_write",
+        "env_read",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8212,17 +8078,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__docm__plain__02",
@@ -8236,9 +8098,12 @@
         "url_reference"
       ],
       "dynamic_observed": [
+        "env_read",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8249,17 +8114,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__docm__random__00",
@@ -8273,9 +8134,11 @@
       ],
       "dynamic_observed": [
         "env_read",
+        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8288,16 +8151,13 @@
         "url_reference"
       ],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
         "outlook_send"
       ],
       "static_recall": 0.8,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__docm__random__01",
@@ -8312,8 +8172,11 @@
       "dynamic_observed": [
         "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
-        "outlook_access"
+        "outlook_access",
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8326,16 +8189,13 @@
         "url_reference"
       ],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
         "outlook_send"
       ],
       "static_recall": 0.8,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__docm__random__02",
@@ -8348,9 +8208,12 @@
         "outlook_send"
       ],
       "dynamic_observed": [
+        "env_read",
+        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8363,16 +8226,13 @@
         "url_reference"
       ],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
         "outlook_send"
       ],
       "static_recall": 0.8,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__docm__split__00",
@@ -8389,9 +8249,11 @@
       "dynamic_observed": [
         "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "string_concat"
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8403,17 +8265,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__docm__split__01",
@@ -8428,10 +8286,12 @@
         "url_reference"
       ],
       "dynamic_observed": [
+        "http_download",
         "macro_entry",
         "outlook_access",
         "registry_write",
-        "string_concat"
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8443,17 +8303,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__docm__split__02",
@@ -8469,9 +8325,12 @@
       ],
       "dynamic_observed": [
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "string_concat"
+        "registry_write",
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8483,17 +8342,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__docm__encode__00",
@@ -8512,9 +8367,11 @@
         "base64_encode",
         "chr_encode",
         "env_read",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -8527,17 +8384,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "valyria_dual__docm__encode__01",
@@ -8555,10 +8408,11 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
-        "file_write",
+        "env_read",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -8571,17 +8425,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "valyria_dual__docm__encode__02",
@@ -8601,8 +8451,11 @@
         "chr_encode",
         "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
-        "outlook_access"
+        "outlook_access",
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -8615,17 +8468,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "valyria_dual__docm__logic__00",
@@ -8642,10 +8491,10 @@
       "dynamic_observed": [
         "dead_code",
         "env_read",
-        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "url_reference"
       ],
       "gt": [
         "dead_code",
@@ -8657,17 +8506,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__docm__logic__01",
@@ -8684,10 +8529,10 @@
       "dynamic_observed": [
         "dead_code",
         "env_read",
-        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "url_reference"
       ],
       "gt": [
         "dead_code",
@@ -8699,17 +8544,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__docm__logic__02",
@@ -8726,10 +8567,11 @@
       "dynamic_observed": [
         "dead_code",
         "env_read",
-        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "dead_code",
@@ -8741,17 +8583,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__docm__combo__00",
@@ -8772,9 +8610,12 @@
         "chr_encode",
         "dead_code",
         "env_read",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "string_concat"
+        "registry_write",
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -8791,17 +8632,13 @@
         "string_concat"
       ],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 0.8888888888888888,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 0.8888888888888888
     },
     {
       "id": "valyria_dual__docm__combo__01",
@@ -8822,10 +8659,12 @@
         "base64_encode",
         "chr_encode",
         "dead_code",
+        "http_download",
         "macro_entry",
         "outlook_access",
         "registry_write",
-        "string_concat"
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -8840,17 +8679,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 0.8888888888888888
     },
     {
       "id": "valyria_dual__docm__combo__02",
@@ -8871,11 +8706,13 @@
         "base64_encode",
         "chr_encode",
         "dead_code",
-        "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "string_concat"
+        "registry_write",
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -8890,17 +8727,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 0.8888888888888888
     },
     {
       "id": "valyria_dual__xlsm__plain__00",
@@ -8915,9 +8748,12 @@
       ],
       "dynamic_observed": [
         "env_read",
+        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8928,17 +8764,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__xlsm__plain__01",
@@ -8953,10 +8785,11 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -8967,17 +8800,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__xlsm__plain__02",
@@ -8992,9 +8821,12 @@
       ],
       "dynamic_observed": [
         "env_read",
+        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -9005,17 +8837,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__xlsm__random__00",
@@ -9028,11 +8856,12 @@
         "outlook_send"
       ],
       "dynamic_observed": [
-        "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -9045,16 +8874,13 @@
         "url_reference"
       ],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
         "outlook_send"
       ],
       "static_recall": 0.8,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__xlsm__random__01",
@@ -9067,10 +8893,12 @@
         "outlook_send"
       ],
       "dynamic_observed": [
-        "file_write",
+        "env_read",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -9083,16 +8911,13 @@
         "url_reference"
       ],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
         "outlook_send"
       ],
       "static_recall": 0.8,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__xlsm__random__02",
@@ -9107,9 +8932,11 @@
       "dynamic_observed": [
         "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -9122,16 +8949,13 @@
         "url_reference"
       ],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
         "outlook_send"
       ],
       "static_recall": 0.8,
-      "dynamic_recall": 0.4
+      "dynamic_recall": 0.8
     },
     {
       "id": "valyria_dual__xlsm__split__00",
@@ -9148,10 +8972,12 @@
       "dynamic_observed": [
         "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
         "registry_write",
-        "string_concat"
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -9163,17 +8989,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__xlsm__split__01",
@@ -9189,9 +9011,12 @@
       ],
       "dynamic_observed": [
         "env_read",
+        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "string_concat"
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -9203,17 +9028,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__xlsm__split__02",
@@ -9229,10 +9050,12 @@
       ],
       "dynamic_observed": [
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
         "registry_write",
-        "string_concat"
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "http_download",
@@ -9244,17 +9067,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__xlsm__encode__00",
@@ -9272,10 +9091,12 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
-        "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
-        "outlook_access"
+        "outlook_access",
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -9288,17 +9109,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "valyria_dual__xlsm__encode__01",
@@ -9316,10 +9133,11 @@
       "dynamic_observed": [
         "base64_encode",
         "chr_encode",
-        "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
-        "outlook_access"
+        "outlook_access",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -9332,17 +9150,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "valyria_dual__xlsm__encode__02",
@@ -9361,9 +9175,11 @@
         "base64_encode",
         "chr_encode",
         "env_read",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -9376,17 +9192,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5714285714285714
+      "dynamic_recall": 0.8571428571428571
     },
     {
       "id": "valyria_dual__xlsm__logic__00",
@@ -9404,9 +9216,11 @@
         "dead_code",
         "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "dead_code",
@@ -9418,17 +9232,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__xlsm__logic__01",
@@ -9445,9 +9255,11 @@
       "dynamic_observed": [
         "dead_code",
         "env_read",
+        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "url_reference"
       ],
       "gt": [
         "dead_code",
@@ -9459,17 +9271,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__xlsm__logic__02",
@@ -9486,10 +9294,11 @@
       "dynamic_observed": [
         "dead_code",
         "env_read",
-        "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write"
+        "registry_write",
+        "url_reference"
       ],
       "gt": [
         "dead_code",
@@ -9501,17 +9310,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.5
+      "dynamic_recall": 0.8333333333333334
     },
     {
       "id": "valyria_dual__xlsm__combo__00",
@@ -9533,10 +9338,11 @@
         "dead_code",
         "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
-        "registry_write",
-        "string_concat"
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -9553,17 +9359,13 @@
         "string_concat"
       ],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 0.8888888888888888,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 0.8888888888888888
     },
     {
       "id": "valyria_dual__xlsm__combo__01",
@@ -9584,12 +9386,13 @@
         "base64_encode",
         "chr_encode",
         "dead_code",
-        "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
         "registry_write",
-        "string_concat"
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -9604,17 +9407,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 0.8888888888888888
     },
     {
       "id": "valyria_dual__xlsm__combo__02",
@@ -9635,12 +9434,13 @@
         "base64_encode",
         "chr_encode",
         "dead_code",
-        "env_read",
         "file_write",
+        "http_download",
         "macro_entry",
         "outlook_access",
         "registry_write",
-        "string_concat"
+        "string_concat",
+        "url_reference"
       ],
       "gt": [
         "base64_encode",
@@ -9655,17 +9455,13 @@
       ],
       "static_missed": [],
       "dynamic_missed": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_only": [
-        "http_download",
-        "outlook_send",
-        "url_reference"
+        "outlook_send"
       ],
       "static_recall": 1.0,
-      "dynamic_recall": 0.6666666666666666
+      "dynamic_recall": 0.8888888888888888
     },
     {
       "id": "benign_formatting__docm__plain__00",
@@ -9678,6 +9474,7 @@
       ],
       "dynamic_observed": [
         "data_copy",
+        "env_read",
         "macro_entry",
         "registry_write",
         "save_as_pdf"
@@ -9704,9 +9501,9 @@
       ],
       "dynamic_observed": [
         "data_copy",
+        "env_read",
         "file_write",
         "macro_entry",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -9731,9 +9528,9 @@
       ],
       "dynamic_observed": [
         "data_copy",
+        "env_read",
         "file_write",
         "macro_entry",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -9784,7 +9581,7 @@
       ],
       "dynamic_observed": [
         "data_copy",
-        "env_read",
+        "file_write",
         "macro_entry",
         "registry_write",
         "save_as_pdf"
@@ -9812,6 +9609,7 @@
       "dynamic_observed": [
         "data_copy",
         "env_read",
+        "file_write",
         "macro_entry",
         "registry_write",
         "save_as_pdf"
@@ -9842,6 +9640,7 @@
         "env_read",
         "file_write",
         "macro_entry",
+        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -9899,7 +9698,7 @@
       ],
       "dynamic_observed": [
         "data_copy",
-        "env_read",
+        "file_write",
         "macro_entry",
         "registry_write",
         "save_as_pdf",
@@ -9936,6 +9735,7 @@
         "env_read",
         "file_write",
         "macro_entry",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -9972,7 +9772,6 @@
         "env_read",
         "file_write",
         "macro_entry",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10007,6 +9806,7 @@
         "chr_encode",
         "data_copy",
         "env_read",
+        "file_write",
         "macro_entry",
         "save_as_pdf"
       ],
@@ -10038,7 +9838,6 @@
       "dynamic_observed": [
         "data_copy",
         "dead_code",
-        "env_read",
         "file_write",
         "macro_entry",
         "registry_write",
@@ -10072,6 +9871,7 @@
         "env_read",
         "file_write",
         "macro_entry",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10099,7 +9899,6 @@
       "dynamic_observed": [
         "data_copy",
         "dead_code",
-        "env_read",
         "file_write",
         "macro_entry",
         "registry_write",
@@ -10137,8 +9936,8 @@
         "data_copy",
         "dead_code",
         "env_read",
+        "file_write",
         "macro_entry",
-        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -10178,6 +9977,7 @@
         "chr_encode",
         "data_copy",
         "dead_code",
+        "env_read",
         "file_write",
         "macro_entry",
         "registry_write",
@@ -10221,8 +10021,8 @@
         "data_copy",
         "dead_code",
         "env_read",
-        "file_write",
         "macro_entry",
+        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -10255,6 +10055,7 @@
       "dynamic_observed": [
         "data_copy",
         "env_read",
+        "file_write",
         "macro_entry",
         "registry_write",
         "save_as_pdf"
@@ -10284,7 +10085,6 @@
         "env_read",
         "file_write",
         "macro_entry",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10310,7 +10110,6 @@
       "dynamic_observed": [
         "data_copy",
         "env_read",
-        "file_write",
         "macro_entry",
         "registry_write",
         "save_as_pdf"
@@ -10337,9 +10136,8 @@
       ],
       "dynamic_observed": [
         "data_copy",
-        "file_write",
+        "env_read",
         "macro_entry",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10364,9 +10162,9 @@
       ],
       "dynamic_observed": [
         "data_copy",
+        "env_read",
         "file_write",
         "macro_entry",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10391,7 +10189,7 @@
       ],
       "dynamic_observed": [
         "data_copy",
-        "env_read",
+        "file_write",
         "macro_entry",
         "registry_write",
         "save_as_pdf"
@@ -10422,6 +10220,7 @@
         "env_read",
         "file_write",
         "macro_entry",
+        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -10450,7 +10249,9 @@
       "dynamic_observed": [
         "data_copy",
         "env_read",
+        "file_write",
         "macro_entry",
+        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -10478,6 +10279,7 @@
       ],
       "dynamic_observed": [
         "data_copy",
+        "env_read",
         "file_write",
         "macro_entry",
         "registry_write",
@@ -10513,7 +10315,6 @@
         "chr_encode",
         "data_copy",
         "env_read",
-        "file_write",
         "macro_entry",
         "save_as_pdf"
       ],
@@ -10585,8 +10386,9 @@
         "base64_encode",
         "chr_encode",
         "data_copy",
+        "env_read",
+        "file_write",
         "macro_entry",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10617,7 +10419,6 @@
       "dynamic_observed": [
         "data_copy",
         "dead_code",
-        "env_read",
         "file_write",
         "macro_entry",
         "registry_write",
@@ -10650,6 +10451,7 @@
         "dead_code",
         "env_read",
         "macro_entry",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10678,8 +10480,8 @@
         "data_copy",
         "dead_code",
         "env_read",
-        "file_write",
         "macro_entry",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10798,8 +10600,9 @@
         "chr_encode",
         "data_copy",
         "dead_code",
-        "file_write",
+        "env_read",
         "macro_entry",
+        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -10832,10 +10635,9 @@
       ],
       "dynamic_observed": [
         "data_copy",
-        "env_read",
+        "file_write",
         "macro_entry",
         "print_document",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10865,6 +10667,7 @@
         "file_write",
         "macro_entry",
         "print_document",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10891,9 +10694,9 @@
       ],
       "dynamic_observed": [
         "data_copy",
+        "env_read",
         "macro_entry",
         "print_document",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10920,7 +10723,7 @@
       ],
       "dynamic_observed": [
         "data_copy",
-        "file_write",
+        "env_read",
         "macro_entry",
         "print_document",
         "registry_write",
@@ -10951,9 +10754,9 @@
       "dynamic_observed": [
         "data_copy",
         "env_read",
-        "file_write",
         "macro_entry",
         "print_document",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -10980,10 +10783,10 @@
       ],
       "dynamic_observed": [
         "data_copy",
-        "env_read",
         "file_write",
         "macro_entry",
         "print_document",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -11012,6 +10815,7 @@
       "dynamic_observed": [
         "data_copy",
         "env_read",
+        "file_write",
         "macro_entry",
         "print_document",
         "registry_write",
@@ -11047,6 +10851,7 @@
         "file_write",
         "macro_entry",
         "print_document",
+        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -11076,7 +10881,7 @@
       ],
       "dynamic_observed": [
         "data_copy",
-        "env_read",
+        "file_write",
         "macro_entry",
         "print_document",
         "registry_write",
@@ -11113,10 +10918,10 @@
         "base64_encode",
         "chr_encode",
         "data_copy",
+        "env_read",
         "file_write",
         "macro_entry",
         "print_document",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -11191,6 +10996,7 @@
         "base64_encode",
         "chr_encode",
         "data_copy",
+        "env_read",
         "macro_entry",
         "print_document",
         "registry_write",
@@ -11227,7 +11033,6 @@
         "data_copy",
         "dead_code",
         "env_read",
-        "file_write",
         "macro_entry",
         "print_document",
         "registry_write",
@@ -11260,10 +11065,10 @@
       "dynamic_observed": [
         "data_copy",
         "dead_code",
+        "env_read",
         "file_write",
         "macro_entry",
         "print_document",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -11293,10 +11098,10 @@
       "dynamic_observed": [
         "data_copy",
         "dead_code",
+        "env_read",
         "file_write",
         "macro_entry",
         "print_document",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -11331,6 +11136,7 @@
         "chr_encode",
         "data_copy",
         "dead_code",
+        "env_read",
         "file_write",
         "macro_entry",
         "print_document",
@@ -11377,6 +11183,8 @@
         "chr_encode",
         "data_copy",
         "dead_code",
+        "env_read",
+        "file_write",
         "macro_entry",
         "print_document",
         "registry_write",
@@ -11423,6 +11231,7 @@
         "data_copy",
         "dead_code",
         "env_read",
+        "file_write",
         "macro_entry",
         "print_document",
         "save_as_pdf",
@@ -11461,9 +11270,9 @@
       "dynamic_observed": [
         "data_copy",
         "env_read",
+        "file_write",
         "macro_entry",
         "print_document",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -11494,6 +11303,7 @@
         "file_write",
         "macro_entry",
         "print_document",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -11520,6 +11330,7 @@
       ],
       "dynamic_observed": [
         "data_copy",
+        "env_read",
         "file_write",
         "macro_entry",
         "print_document",
@@ -11584,7 +11395,6 @@
         "file_write",
         "macro_entry",
         "print_document",
-        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -11642,10 +11452,10 @@
       ],
       "dynamic_observed": [
         "data_copy",
+        "env_read",
         "file_write",
         "macro_entry",
         "print_document",
-        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -11679,6 +11489,7 @@
         "file_write",
         "macro_entry",
         "print_document",
+        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -11708,6 +11519,7 @@
       ],
       "dynamic_observed": [
         "data_copy",
+        "file_write",
         "macro_entry",
         "print_document",
         "registry_write",
@@ -11822,7 +11634,7 @@
         "base64_encode",
         "chr_encode",
         "data_copy",
-        "env_read",
+        "file_write",
         "macro_entry",
         "print_document",
         "registry_write",
@@ -11858,9 +11670,10 @@
       "dynamic_observed": [
         "data_copy",
         "dead_code",
-        "file_write",
+        "env_read",
         "macro_entry",
         "print_document",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -11890,7 +11703,7 @@
       "dynamic_observed": [
         "data_copy",
         "dead_code",
-        "env_read",
+        "file_write",
         "macro_entry",
         "print_document",
         "registry_write",
@@ -11927,6 +11740,7 @@
         "file_write",
         "macro_entry",
         "print_document",
+        "registry_write",
         "save_as_pdf"
       ],
       "gt": [
@@ -12056,6 +11870,7 @@
         "file_write",
         "macro_entry",
         "print_document",
+        "registry_write",
         "save_as_pdf",
         "string_concat"
       ],
@@ -12147,7 +11962,6 @@
         "macro_entry",
         "msgbox_gate",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -12338,7 +12152,6 @@
         "macro_entry",
         "msgbox_gate",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -12489,7 +12302,6 @@
         "macro_entry",
         "msgbox_gate",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "string_concat",
         "url_reference",
@@ -12543,6 +12355,7 @@
         "macro_entry",
         "msgbox_gate",
         "powershell_run",
+        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -12596,7 +12409,6 @@
         "macro_entry",
         "msgbox_gate",
         "powershell_run",
-        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -12650,6 +12462,7 @@
         "macro_entry",
         "msgbox_gate",
         "powershell_run",
+        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -12701,6 +12514,7 @@
         "macro_entry",
         "msgbox_gate",
         "powershell_run",
+        "registry_write",
         "shell_run",
         "url_reference",
         "window_hide"
@@ -13016,6 +12830,7 @@
         "macro_entry"
       ],
       "dynamic_observed": [
+        "env_read",
         "macro_entry",
         "registry_write"
       ],
@@ -13079,8 +12894,8 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "macro_entry",
-        "registry_write"
+        "file_write",
+        "macro_entry"
       ],
       "gt": [
         "macro_entry"
@@ -13099,8 +12914,9 @@
         "macro_entry"
       ],
       "dynamic_observed": [
-        "file_write",
-        "macro_entry"
+        "env_read",
+        "macro_entry",
+        "registry_write"
       ],
       "gt": [
         "macro_entry"
@@ -13120,7 +12936,6 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -13168,8 +12983,9 @@
         "macro_entry"
       ],
       "dynamic_observed": [
-        "env_read",
-        "macro_entry"
+        "file_write",
+        "macro_entry",
+        "registry_write"
       ],
       "gt": [
         "macro_entry",
@@ -13223,8 +13039,7 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "macro_entry",
-        "registry_write"
+        "macro_entry"
       ],
       "gt": [
         "base64_encode",
@@ -13256,8 +13071,8 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "file_write",
-        "macro_entry"
+        "macro_entry",
+        "registry_write"
       ],
       "gt": [
         "base64_encode",
@@ -13288,10 +13103,8 @@
         "url_reference"
       ],
       "dynamic_observed": [
-        "env_read",
         "file_write",
-        "macro_entry",
-        "registry_write"
+        "macro_entry"
       ],
       "gt": [
         "base64_encode",
@@ -13442,6 +13255,7 @@
         "url_reference"
       ],
       "dynamic_observed": [
+        "env_read",
         "macro_entry",
         "registry_write"
       ],
@@ -13517,8 +13331,7 @@
       "variant": "plain",
       "static_observed": [],
       "dynamic_observed": [
-        "env_read",
-        "registry_write"
+        "file_write"
       ],
       "gt": [],
       "static_missed": [],
@@ -13548,8 +13361,7 @@
       "variant": "plain",
       "static_observed": [],
       "dynamic_observed": [
-        "file_write",
-        "registry_write"
+        "file_write"
       ],
       "gt": [],
       "static_missed": [],
@@ -13564,8 +13376,8 @@
       "variant": "random",
       "static_observed": [],
       "dynamic_observed": [
-        "file_write",
-        "registry_write"
+        "env_read",
+        "file_write"
       ],
       "gt": [],
       "static_missed": [],
@@ -13580,7 +13392,7 @@
       "variant": "random",
       "static_observed": [],
       "dynamic_observed": [
-        "file_write",
+        "env_read",
         "registry_write"
       ],
       "gt": [],
@@ -13612,7 +13424,7 @@
       "variant": "split",
       "static_observed": [],
       "dynamic_observed": [
-        "file_write",
+        "env_read",
         "registry_write"
       ],
       "gt": [],
@@ -13628,8 +13440,8 @@
       "variant": "split",
       "static_observed": [],
       "dynamic_observed": [
-        "file_write",
-        "registry_write"
+        "env_read",
+        "file_write"
       ],
       "gt": [],
       "static_missed": [],
@@ -13645,6 +13457,7 @@
       "static_observed": [],
       "dynamic_observed": [
         "env_read",
+        "file_write",
         "registry_write"
       ],
       "gt": [],
@@ -13660,7 +13473,8 @@
       "variant": "encode",
       "static_observed": [],
       "dynamic_observed": [
-        "file_write"
+        "file_write",
+        "registry_write"
       ],
       "gt": [],
       "static_missed": [],
@@ -13675,7 +13489,8 @@
       "variant": "encode",
       "static_observed": [],
       "dynamic_observed": [
-        "file_write"
+        "file_write",
+        "registry_write"
       ],
       "gt": [],
       "static_missed": [],
@@ -13690,8 +13505,8 @@
       "variant": "encode",
       "static_observed": [],
       "dynamic_observed": [
-        "env_read",
-        "file_write"
+        "file_write",
+        "registry_write"
       ],
       "gt": [],
       "static_missed": [],
@@ -13706,7 +13521,7 @@
       "variant": "logic",
       "static_observed": [],
       "dynamic_observed": [
-        "env_read",
+        "file_write",
         "registry_write"
       ],
       "gt": [],
@@ -13738,6 +13553,7 @@
       "variant": "logic",
       "static_observed": [],
       "dynamic_observed": [
+        "env_read",
         "file_write"
       ],
       "gt": [],
@@ -13771,7 +13587,6 @@
       "static_observed": [],
       "dynamic_observed": [
         "env_read",
-        "file_write",
         "registry_write"
       ],
       "gt": [],
@@ -13807,7 +13622,6 @@
         "shell_run"
       ],
       "dynamic_observed": [
-        "env_read",
         "file_write",
         "macro_entry",
         "registry_write"
@@ -13839,7 +13653,7 @@
         "shell_run"
       ],
       "dynamic_observed": [
-        "env_read",
+        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -13871,8 +13685,8 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "macro_entry",
-        "registry_write"
+        "file_write",
+        "macro_entry"
       ],
       "gt": [
         "cmd_run",
@@ -13901,8 +13715,9 @@
         "shell_run"
       ],
       "dynamic_observed": [
-        "macro_entry",
-        "registry_write"
+        "env_read",
+        "file_write",
+        "macro_entry"
       ],
       "gt": [
         "cmd_run",
@@ -13933,8 +13748,7 @@
       "dynamic_observed": [
         "env_read",
         "file_write",
-        "macro_entry",
-        "registry_write"
+        "macro_entry"
       ],
       "gt": [
         "cmd_run",
@@ -13996,8 +13810,8 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "file_write",
-        "macro_entry"
+        "macro_entry",
+        "registry_write"
       ],
       "gt": [
         "cmd_run",
@@ -14030,8 +13844,9 @@
         "string_concat"
       ],
       "dynamic_observed": [
-        "env_read",
-        "macro_entry"
+        "file_write",
+        "macro_entry",
+        "registry_write"
       ],
       "gt": [
         "cmd_run",
@@ -14102,6 +13917,8 @@
         "url_reference"
       ],
       "dynamic_observed": [
+        "env_read",
+        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -14142,9 +13959,8 @@
         "url_reference"
       ],
       "dynamic_observed": [
-        "env_read",
-        "macro_entry",
-        "registry_write"
+        "file_write",
+        "macro_entry"
       ],
       "gt": [
         "base64_encode",
@@ -14184,7 +14000,6 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -14224,6 +14039,7 @@
       ],
       "dynamic_observed": [
         "env_read",
+        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -14292,9 +14108,9 @@
         "shell_run"
       ],
       "dynamic_observed": [
+        "env_read",
         "file_write",
-        "macro_entry",
-        "registry_write"
+        "macro_entry"
       ],
       "gt": [
         "cmd_run",
@@ -14331,7 +14147,6 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "file_write",
         "macro_entry",
         "registry_write"
       ],
@@ -14429,7 +14244,6 @@
       ],
       "dynamic_observed": [
         "env_read",
-        "file_write",
         "macro_entry",
         "registry_write"
       ],

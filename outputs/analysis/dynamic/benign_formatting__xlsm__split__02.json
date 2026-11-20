@@ -6,8 +6,8 @@
   "events": [
     {
       "id": 1,
-      "t_ms": 606,
-      "source": "dynamic",
+      "t_ms": 584,
+      "source": "os",
       "behavior": "registry_write",
       "obj": "startup-noise",
       "args": {},
@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "t_ms": 696,
-      "source": "dynamic",
-      "behavior": "file_write",
+      "t_ms": 621,
+      "source": "os",
+      "behavior": "env_read",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -26,9 +26,9 @@
     },
     {
       "id": 3,
-      "t_ms": 813,
-      "source": "dynamic",
-      "behavior": "registry_write",
+      "t_ms": 738,
+      "source": "os",
+      "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
       "confidence": 0.3,
@@ -36,8 +36,8 @@
     },
     {
       "id": 4,
-      "t_ms": 997,
-      "source": "dynamic",
+      "t_ms": 922,
+      "source": "os",
       "behavior": "file_write",
       "obj": "startup-noise",
       "args": {},
@@ -46,7 +46,7 @@
     },
     {
       "id": 5,
-      "t_ms": 1221,
+      "t_ms": 1229,
       "source": "dynamic",
       "behavior": "macro_entry",
       "obj": "Document_Open",
@@ -56,17 +56,17 @@
     },
     {
       "id": 6,
-      "t_ms": 1501,
+      "t_ms": 1587,
       "source": "dynamic",
       "behavior": "string_concat",
-      "obj": "Strings split and chained with & / + (split obfuscation)",
+      "obj": "benign_formatting:string_concat",
       "args": {},
       "confidence": 0.99,
       "evidence": "sim"
     },
     {
       "id": 7,
-      "t_ms": 1758,
+      "t_ms": 1912,
       "source": "dynamic",
       "behavior": "data_copy",
       "obj": "benign_formatting:data_copy",
@@ -76,7 +76,7 @@
     },
     {
       "id": 8,
-      "t_ms": 1987,
+      "t_ms": 2298,
       "source": "dynamic",
       "behavior": "save_as_pdf",
       "obj": "benign_formatting:save_as_pdf",
@@ -89,7 +89,7 @@
     "simulated": true,
     "failure": null,
     "interaction_handled": true,
-    "duration_ms": 1987,
-    "analysis_time_ms": 0.09179115295410156
+    "duration_ms": 2298,
+    "analysis_time_ms": 0.07176399230957031
   }
 }

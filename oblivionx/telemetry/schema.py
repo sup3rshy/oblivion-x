@@ -111,6 +111,10 @@ class StageClaim:
     evidence: List[int] = field(default_factory=list)   # event ids
     confidence: float = 0.0
     note: str = ""
+    # First observed timestamp (ms) of any supporting event; null when the
+    # stage is supported only by static evidence. Used to order the chain
+    # from evidence instead of from the ontology (``stage_order`` mode).
+    first_seen_ms: Optional[int] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -149,8 +153,11 @@ class Reconstruction:
     def from_dict(d: Dict[str, Any]) -> "Reconstruction":
         r = Reconstruction(d["sample_id"], chain=d.get("chain", ""),
                            status=d.get("status", "ok"))
-        r.stages = [StageClaim(**{k: s.get(k) for k in
-                      StageClaim.__dataclass_fields__}) for s in d.get("stages", [])]
+        # Unknown keys are tolerated so reconstructions written by an older
+        # version load cleanly (and vice versa for legacy artifacts).
+        r.stages = [StageClaim(**{k: s.get(k)
+                      for k in StageClaim.__dataclass_fields__
+                      if k in s}) for s in d.get("stages", [])]
         r.behaviors = [BehaviorClaim(**{k: b.get(k) for k in
                        BehaviorClaim.__dataclass_fields__})
                        for b in d.get("behaviors", [])]

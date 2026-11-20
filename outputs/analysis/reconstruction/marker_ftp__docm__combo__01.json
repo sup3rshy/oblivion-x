@@ -7,32 +7,31 @@
         3
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 819
     },
     {
       "stage": "defense_evasion",
       "evidence": [
-        4,
-        5,
         7,
-        6
+        5,
+        6,
+        4
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 1421
     },
     {
       "stage": "execution",
       "evidence": [
-        2,
-        3,
-        7,
-        8,
-        9,
         10,
-        11
+        8,
+        9
       ],
-      "confidence": 0.85,
-      "note": ""
+      "confidence": 0.99,
+      "note": "",
+      "first_seen_ms": 4776
     },
     {
       "stage": "c2_download",
@@ -40,15 +39,17 @@
         13
       ],
       "confidence": 0.9,
-      "note": ""
+      "note": "",
+      "first_seen_ms": null
     },
     {
       "stage": "exfiltration",
       "evidence": [
-        8
+        11
       ],
       "confidence": 0.99,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 7125
     },
     {
       "stage": "impact",
@@ -57,7 +58,8 @@
         6
       ],
       "confidence": 0.85,
-      "note": ""
+      "note": "",
+      "first_seen_ms": 2540
     }
   ],
   "behaviors": [
@@ -73,25 +75,25 @@
     {
       "behavior": "shell_run",
       "evidence": [
-        2
+        10
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Shell \""
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "powershell.exe -NoProfile -WindowStyle Hidden ..."
     },
     {
       "behavior": "cmd_run",
       "evidence": [
-        3
+        8
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "cmd /c"
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "cmd /c ..."
     },
     {
       "behavior": "ftp_upload",
       "evidence": [
-        8
+        11
       ],
       "confidence": 0.99,
       "supported": true,
@@ -110,15 +112,11 @@
     {
       "behavior": "env_read",
       "evidence": [
-        7,
-        8,
-        9,
-        10,
-        11
+        9
       ],
-      "confidence": 0.85,
-      "supported": false,
-      "obj": "Environ("
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "Environ(TEMP/APPDATA)"
     },
     {
       "behavior": "url_reference",
@@ -132,11 +130,11 @@
     {
       "behavior": "string_concat",
       "evidence": [
-        4
+        7
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Strings split and chained with & / + (split obfuscation)"
+      "obj": "marker_ftp:string_concat"
     },
     {
       "behavior": "chr_encode",
@@ -145,25 +143,25 @@
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Characters built via Chr/ChrW/Asc/Hex arithmetic"
+      "obj": "marker_ftp:chr_encode"
     },
     {
       "behavior": "dead_code",
-      "evidence": [
-        7
-      ],
-      "confidence": 0.99,
-      "supported": true,
-      "obj": "Logic obfuscation: unreachable code / decoy routines"
-    },
-    {
-      "behavior": "base64_encode",
       "evidence": [
         6
       ],
       "confidence": 0.99,
       "supported": true,
-      "obj": "Base64-encoded payload present"
+      "obj": "marker_ftp:dead_code"
+    },
+    {
+      "behavior": "base64_encode",
+      "evidence": [
+        4
+      ],
+      "confidence": 0.99,
+      "supported": true,
+      "obj": "marker_ftp:base64_encode"
     }
   ],
   "chain": "delivery -> defense_evasion -> execution -> c2_download -> exfiltration -> impact",
